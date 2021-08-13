@@ -516,9 +516,10 @@ perspective: 800px;
         width: 80%;
         justify-content: center;
         margin: auto;
+        padding: 2rem;
 
             .card {
-                transform: rotateY(20deg);
+                transform: rotateY(-20deg);
                 position: relative;
                 background-color: $white;
                 display: flex;
@@ -570,8 +571,8 @@ transition: all .5s ease-in-out;
 
                 .button {
                     box-shadow: initial;
-                    width: 100%;
-                    padding: 2rem 8.75rem;
+                    // width: 100%;
+                     padding: 8% 16%;
                     border: 1px solid $purple-accent;
                     color: $purple-accent;
 
