@@ -511,32 +511,14 @@ dd {
 
         .card-wrapper {
             position: relative;
-
-            .first-row {
-                width: 100%;
-                margin-top: 13.18rem;
-                display: flex;
-                justify-content: space-between;
-                position: relative;
-
-            }
-
-            .second-row {
-                transition: all 1s ease-in-out;
-                width: 80%;
-                justify-content: space-around;
-                display: flex;
-                position: absolute;
-                top: -6rem;
-                left: 10vw;
-
-                &:hover {
-                    z-index: 99;
-                }
-
-            }
+perspective: 800px;
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        margin: auto;
 
             .card {
+                transform: rotateY(20deg);
                 position: relative;
                 background-color: $white;
                 display: flex;
@@ -544,7 +526,7 @@ dd {
                 align-items: center;
                 padding: 2.5rem;
                 box-shadow: 10px 10px 40px #E9E9EB;
-
+transition: all .5s ease-in-out;
                 max-width: 20vw;
 
                 ul {
@@ -596,6 +578,7 @@ dd {
                 }
 
                 &:hover {
+                    transform: rotateY(0deg);
                     h3 {
                         color: $aqua-accent;
                     }

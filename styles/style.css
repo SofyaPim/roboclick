@@ -519,39 +519,21 @@ dd {
 
 .wrapper .prices .card-wrapper {
   position: relative;
-}
-
-.wrapper .prices .card-wrapper .first-row {
-  width: 100%;
-  margin-top: 13.18rem;
+  -webkit-perspective: 800px;
+          perspective: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-}
-
-.wrapper .prices .card-wrapper .second-row {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
   width: 80%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: -6rem;
-  left: 10vw;
-}
-
-.wrapper .prices .card-wrapper .second-row:hover {
-  z-index: 99;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
 }
 
 .wrapper .prices .card-wrapper .card {
+  -webkit-transform: rotateY(20deg);
+          transform: rotateY(20deg);
   position: relative;
   background-color: #ffffff;
   display: -webkit-box;
@@ -567,6 +549,8 @@ dd {
   padding: 2.5rem;
   -webkit-box-shadow: 10px 10px 40px #E9E9EB;
           box-shadow: 10px 10px 40px #E9E9EB;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   max-width: 20vw;
 }
 
@@ -613,6 +597,11 @@ dd {
   padding: 2rem 8.75rem;
   border: 1px solid #5333ed;
   color: #5333ed;
+}
+
+.wrapper .prices .card-wrapper .card:hover {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 .wrapper .prices .card-wrapper .card:hover h3 {
