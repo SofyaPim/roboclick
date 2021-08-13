@@ -637,4 +637,22 @@ dd {
 .wrapper .faq h2 {
   color: inherit;
 }
+
+.wrapper .faq .faq-item {
+  color: #363739;
+  padding: 2rem;
+  background-color: #2cd4d9;
+  opacity: .5;
+}
+
+.wrapper .faq .faq-item.active + .answ-item {
+  display: block;
+}
+
+.wrapper .faq .answ-item {
+  display: none;
+  color: #363739;
+  padding: 2rem;
+  background-color: #F2F5FE;
+}
 /*# sourceMappingURL=style.css.map */

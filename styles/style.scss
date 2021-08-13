@@ -627,6 +627,21 @@ dd {
         h2{
             color: inherit;
         }
+        .faq-item{
+            color:$gray;
+            padding: 2rem;
+            background-color:$aqua-accent;
+            opacity: .5;
+        }
+        .faq-item.active+.answ-item{
+            display: block;
+        }
+        .answ-item{
+            display: none;
+            color: $gray;
+            padding: 2rem;
+            background-color: $light-font;
+        }
         // .faq-item.active+.answer-item{
         //     display: flex;
         // }

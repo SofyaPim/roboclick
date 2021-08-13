@@ -33,3 +33,4 @@ const accordion = (triggersSelector, itemsSelector) => {
     //     });
     // });
 }
+accordion('.faq-item', '.answ-item');
