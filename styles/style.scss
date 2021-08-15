@@ -176,8 +176,8 @@ dd {
 
             input {
                 border: 1px solid $purple-accent;
-                height: 3rem;
-                width: 80%;
+                // height: 3rem;
+                // width: 80%;
 
                 padding: 1rem;
                 margin: auto;
@@ -220,12 +220,12 @@ dd {
         .popup-recall {
             @include popup();
             padding: 5rem;
-            width: 60%;
-            height: 40%;
+            // width: 60%;
+            // height: 40%;
 
             margin: 10% auto;
 
-            background-image: url('/images/manager.png');
+            background-image: url('http://localhost:8888/roboclick/images/manager.png');
             background-repeat: no-repeat;
             background-position: -40% 4%;
 
@@ -244,9 +244,9 @@ dd {
     }
 
     .header {
-        width: 100%;
+        // width: 100%;
         height: 7.625rem;
-        padding: 1rem 6.25rem;
+        // padding: 1rem 6.25rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -394,7 +394,7 @@ dd {
             ul {
                 // margin-left: ;
                 width: 80%;
-                list-style: url('/images/list-marker.png');
+                // list-style: url('http://localhost:8888/roboclick/images/list-marker.png');
 
                 p {
                     font-weight: 300;
@@ -413,8 +413,8 @@ dd {
     }
 
     .hints {
-        // position: fixed;
-        position: relative;
+      
+       position: relative;
         background-color: $purple-accent;
         color: $light-font;
         // height: 59.625rem;
@@ -477,7 +477,7 @@ dd {
                         // bottom: -7rem;
                         // right: 0;
 
-                        width: 70%;
+                        width: 15vw;
 
                     }
 
@@ -499,6 +499,39 @@ dd {
 
     .work-with-us {
         background-color: $gray;
+        h2{
+            color:$light-font;
+        }
+        .stage-slider{
+            display: flex;
+            flex-direction: row;
+            .stage-header{
+                display: flex;
+                flex-direction: column;
+            background-color:$light-font;
+            padding-top: 2rem;
+            
+
+            .stage-block{
+                background-color:$gray;
+                color:$light-font;
+                margin-bottom: 2rem;
+opacity: .5;
+            }
+        }
+        .stage-block.active{
+            opacity: 1;
+        }
+        .stage-content{
+            display: flex;
+            flex-direction: column;
+            &__block{
+margin: auto;
+            }
+        }
+        }
+        
+        
 
     }
 
@@ -513,7 +546,7 @@ dd {
             position: relative;
 perspective: 800px;
         display: flex;
-        width: 80%;
+        // width: 90%;
         justify-content: center;
         margin: auto;
         padding: 2rem;
@@ -531,7 +564,7 @@ transition: all .5s ease-in-out;
                 max-width: 20vw;
 
                 ul {
-                    list-style: url('/images/roboclick-marker.svg');
+                    // list-style: url('http://localhost:8888/roboclick/images/roboclick-marker.svg');
 
                     li {
 
@@ -605,7 +638,7 @@ transition: all .5s ease-in-out;
 
     }
     .faq{
-        background-color: $aqua-accent;
+        background-color: $purple-accent;
 
         color: $light-font;
         h2{
@@ -614,21 +647,54 @@ transition: all .5s ease-in-out;
         .faq-item{
             color:$gray;
             padding: 2rem;
-            background-color:$aqua-accent;
-            opacity: .5;
+            background-color:$white;
+            margin-bottom: .5rem;
+            position: relative;
+
+            z-index: 66;
         }
         .faq-item.active+.answ-item{
             display: block;
         }
         .answ-item{
-            display: none;
-            color: $gray;
+             background-color: $aqua-accent;
+            // max-height: 0;//2var
+            opacity: 0;
+            transition: all .3s ease-in-out;
+            margin: .5rem;
+             z-index: 10;
+             display: none; //1var
+             color: $gray; //1var
+             padding: 2rem;//var
+             p{
+               
+                 animation: fadeInBlock 5s linear .1s;
+             }
+            
+        }
+        .answ-item.active-content{
+            // opacity: 1;//var2
             padding: 2rem;
-            background-color: $light-font;
+            color:$gray;
+            position: relative;
+          
         }
         // .faq-item.active+.answer-item{
         //     display: flex;
         // }
 
     }
+}
+@keyframes fadeInBlock {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+.status-message{
+    display: block;
+    color:red;
 }

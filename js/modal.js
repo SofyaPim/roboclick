@@ -39,5 +39,5 @@ const modals = (triggerSelector, modalSelector, closeSelector, closeClickOverlay
     })
 
 };
-modals('.button', '.overlay', '.popup__close', false);
-modals('.popup-button', '.overlay-recall', '.popup-recall__close', true);
+modals('.button', '.overlay', '.popup__close', true);
+// modals('.popup-button', '.overlay-recall', '.popup-recall__close', true);

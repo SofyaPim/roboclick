@@ -81,4 +81,4 @@ const sliders = (slides, dir, prev, next) => {
     // });
 
 };
-sliders('.feedback-slider-item', '', '.main-prev-btn', '.main-next-btn')
+// sliders('.feedback-slider-item', '', '.main-prev-btn', '.main-next-btn')
