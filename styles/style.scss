@@ -512,7 +512,7 @@ dd {
             background-color: $light-font;
 
             .stage-header {
-                
+
                 display: flex;
                 flex-direction: column;
                 background-color: $light-font;
@@ -554,100 +554,230 @@ dd {
             padding-left: 8.75rem;
         }
 
-        .card-wrapper {
-            position: relative;
-            perspective: 800px;
-            display: flex;
-            // width: 90%;
-            justify-content: center;
-            margin: auto;
-            padding: 2rem;
+        // .card-wrapper {
+        //     position: relative;
+        //     perspective: 800px;
+        //     display: none;
+        //     // display: flex;
+        //     // width: 90%;
+        //     justify-content: center;
+        //     margin: auto;
+        //     padding: 2rem;
 
-            .card {
-                transform: rotateY(-20deg);
-                position: relative;
-                background-color: $white;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 2.5rem;
-                box-shadow: 10px 10px 40px #E9E9EB;
-                transition: all .5s ease-in-out;
-                max-width: 20vw;
+        //     .card {
+        //         transform: rotateY(-20deg);
+        //         position: relative;
+        //         background-color: $white;
+        //         display: flex;
+        //         flex-direction: column;
+        //         align-items: center;
+        //         padding: 2.5rem;
+        //         box-shadow: 10px 10px 40px #E9E9EB;
+        //         transition: all .5s ease-in-out;
+        //         max-width: 20vw;
 
-                ul {
-                    // list-style: url('http://localhost:8888/roboclick/images/roboclick-marker.svg');
+        //         ul {
+        //             // list-style: url('http://localhost:8888/roboclick/images/roboclick-marker.svg');
 
-                    li {
+        //             li {
 
-                        margin-bottom: 1rem;
+        //                 margin-bottom: 1rem;
 
-                        p {
-                            padding-left: 2rem;
-                            padding-top: 0;
-                        }
+        //                 p {
+        //                     padding-left: 2rem;
+        //                     padding-top: 0;
+        //                 }
 
-                        &::marker {
+        //                 &::marker {
 
-                            width: 1rem;
+        //                     width: 1rem;
 
-                        }
-                    }
-                }
+        //                 }
+        //             }
+        //         }
 
-                .blue-rect {
-                    position: absolute;
-                    width: 25%;
-                    height: 60%;
-                    background-color: $aqua-accent;
-                    opacity: .2;
-                    left: 0;
-                }
+        //         .blue-rect {
+        //             position: absolute;
+        //             width: 25%;
+        //             height: 60%;
+        //             background-color: $aqua-accent;
+        //             opacity: .2;
+        //             left: 0;
+        //         }
 
-                h3,
-                h2 {
-                    padding-left: 0;
-                }
+        //         h3,
+        //         h2 {
+        //             padding-left: 0;
+        //         }
 
-                .price-title {
-                    text-align: center;
-                    margin-bottom: 2rem;
-                }
+        //         .price-title {
+        //             text-align: center;
+        //             margin-bottom: 2rem;
+        //         }
 
-                .button {
-                    box-shadow: initial;
-                    // width: 100%;
-                    padding: 8% 16%;
-                    border: 1px solid $purple-accent;
-                    color: $purple-accent;
+        //         .button {
+        //             box-shadow: initial;
+        //             // width: 100%;
+        //             padding: 8% 16%;
+        //             border: 1px solid $purple-accent;
+        //             color: $purple-accent;
 
-                }
+        //         }
 
-                &:hover {
-                    transform: rotateY(0deg);
+        //         &:hover {
+        //             transform: rotateY(0deg);
 
-                    h3 {
-                        color: $aqua-accent;
-                    }
+        //             h3 {
+        //                 color: $aqua-accent;
+        //             }
 
-                    .price-title {
-                        color: $dark-font;
-                    }
+        //             .price-title {
+        //                 color: $dark-font;
+        //             }
 
-                    .button {
-                        background-color: $aqua-accent;
-                        color: $light-font;
-                        border: none;
+        //             .button {
+        //                 background-color: $aqua-accent;
+        //                 color: $light-font;
+        //                 border: none;
 
-                    }
+        //             }
 
-                }
+        //         }
 
+
+        //     }
+
+        // }
+
+//         .card-slider {
+
+// display: none;
+//             width: 90%;
+//             overflow: hidden;
+
+//             .card-track {
+//                 display: flex;
+//                 flex-direction: row;
+//                 flex-wrap: nowrap;
+
+//                 .card {
+//                     margin: 2rem;
+//                 }
+//             }
+//         }
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card {
+    transform: rotateY(-20deg);
+    position: relative;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    box-shadow: 10px 10px 40px #E9E9EB;
+    transition: all .5s ease-in-out;
+    max-width: 20vw;
+
+    ul {
+        // list-style: url('http://localhost:8888/roboclick/images/roboclick-marker.svg');
+
+        li {
+
+            margin-bottom: 1rem;
+
+            p {
+                padding-left: 2rem;
+                padding-top: 0;
+            }
+
+            &::marker {
+
+                width: 1rem;
 
             }
+        }
+    }
+
+    .blue-rect {
+        position: absolute;
+        width: 25%;
+        height: 60%;
+        background-color: $aqua-accent;
+        opacity: .2;
+        left: 0;
+    }
+
+    h3,
+    h2 {
+        padding-left: 0;
+    }
+
+    .price-title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .button {
+        box-shadow: initial;
+        // width: 100%;
+        padding: 8% 16%;
+        border: 1px solid $purple-accent;
+        color: $purple-accent;
+
+    }
+
+    &:hover {
+        transform: rotateY(0deg);
+
+        h3 {
+            color: $aqua-accent;
+        }
+
+        .price-title {
+            color: $dark-font;
+        }
+
+        .button {
+            background-color: $aqua-accent;
+            color: $light-font;
+            border: none;
 
         }
 
+    }
+
+
+}
 
     }
 
