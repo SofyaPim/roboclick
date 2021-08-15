@@ -413,8 +413,8 @@ dd {
     }
 
     .hints {
-      
-       position: relative;
+
+        position: relative;
         background-color: $purple-accent;
         color: $light-font;
         // height: 59.625rem;
@@ -499,39 +499,51 @@ dd {
 
     .work-with-us {
         background-color: $gray;
-        h2{
-            color:$light-font;
+
+        h2 {
+            color: $light-font;
         }
-        .stage-slider{
+
+        .stage-slider {
             display: flex;
             flex-direction: row;
-            .stage-header{
+            padding: 2rem;
+            padding-left: 0;
+            background-color: $light-font;
+
+            .stage-header {
+                
                 display: flex;
                 flex-direction: column;
-            background-color:$light-font;
-            padding-top: 2rem;
-            
+                background-color: $light-font;
+                padding: 2rem;
+                padding-top: 2rem;
 
-            .stage-block{
-                background-color:$gray;
-                color:$light-font;
-                margin-bottom: 2rem;
-opacity: .5;
+
+                .stage-block {
+                    background-color: $gray;
+                    color: $light-font;
+                    margin-bottom: 2rem;
+                    padding: .5rem 1rem;
+                    opacity: .5;
+                }
+            }
+
+            .stage-block.active {
+                opacity: 1;
+            }
+
+            .stage-content {
+                display: flex;
+                flex-direction: column;
+
+                &__block {
+                    margin: auto;
+                }
             }
         }
-        .stage-block.active{
-            opacity: 1;
-        }
-        .stage-content{
-            display: flex;
-            flex-direction: column;
-            &__block{
-margin: auto;
-            }
-        }
-        }
-        
-        
+
+
 
     }
 
@@ -544,12 +556,12 @@ margin: auto;
 
         .card-wrapper {
             position: relative;
-perspective: 800px;
-        display: flex;
-        // width: 90%;
-        justify-content: center;
-        margin: auto;
-        padding: 2rem;
+            perspective: 800px;
+            display: flex;
+            // width: 90%;
+            justify-content: center;
+            margin: auto;
+            padding: 2rem;
 
             .card {
                 transform: rotateY(-20deg);
@@ -560,7 +572,7 @@ perspective: 800px;
                 align-items: center;
                 padding: 2.5rem;
                 box-shadow: 10px 10px 40px #E9E9EB;
-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
                 max-width: 20vw;
 
                 ul {
@@ -605,7 +617,7 @@ transition: all .5s ease-in-out;
                 .button {
                     box-shadow: initial;
                     // width: 100%;
-                     padding: 8% 16%;
+                    padding: 8% 16%;
                     border: 1px solid $purple-accent;
                     color: $purple-accent;
 
@@ -613,6 +625,7 @@ transition: all .5s ease-in-out;
 
                 &:hover {
                     transform: rotateY(0deg);
+
                     h3 {
                         color: $aqua-accent;
                     }
@@ -637,64 +650,75 @@ transition: all .5s ease-in-out;
 
 
     }
-    .faq{
+
+    .faq {
         background-color: $purple-accent;
 
         color: $light-font;
-        h2{
+
+        h2 {
             color: inherit;
         }
-        .faq-item{
-            color:$gray;
+
+        .faq-item {
+            color: $gray;
             padding: 2rem;
-            background-color:$white;
+            background-color: $white;
             margin-bottom: .5rem;
             position: relative;
 
             z-index: 66;
         }
-        .faq-item.active+.answ-item{
+
+        .faq-item.active+.answ-item {
             display: block;
         }
-        .answ-item{
-             background-color: $aqua-accent;
+
+        .answ-item {
+            background-color: $aqua-accent;
             // max-height: 0;//2var
             opacity: 0;
             transition: all .3s ease-in-out;
             margin: .5rem;
-             z-index: 10;
-             display: none; //1var
-             color: $gray; //1var
-             padding: 2rem;//var
-             p{
-               
-                 animation: fadeInBlock 5s linear .1s;
-             }
-            
+            z-index: 10;
+            display: none; //1var
+            color: $gray; //1var
+            padding: 2rem; //var
+
+            p {
+
+                animation: fadeInBlock 5s linear .1s;
+            }
+
         }
-        .answ-item.active-content{
+
+        .answ-item.active-content {
             // opacity: 1;//var2
             padding: 2rem;
-            color:$gray;
+            color: $gray;
             position: relative;
-          
+
         }
+
         // .faq-item.active+.answer-item{
         //     display: flex;
         // }
 
     }
 }
+
 @keyframes fadeInBlock {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
-    
+
 }
-.status-message{
+
+.status-message {
     display: block;
-    color:red;
+    color: red;
 }

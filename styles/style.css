@@ -514,6 +514,9 @@ dd {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding: 2rem;
+  padding-left: 0;
+  background-color: #F2F5FE;
 }
 
 .wrapper .work-with-us .stage-slider .stage-header {
@@ -525,6 +528,7 @@ dd {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #F2F5FE;
+  padding: 2rem;
   padding-top: 2rem;
 }
 
@@ -532,6 +536,7 @@ dd {
   background-color: #363739;
   color: #F2F5FE;
   margin-bottom: 2rem;
+  padding: .5rem 1rem;
   opacity: .5;
 }
 
