@@ -1,7 +1,9 @@
 new Swiper(".pricesSwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1.2,
     spaceBetween: 30,
     freeMode: true,
+    initialSlide: 2,
+    centeredSlides: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

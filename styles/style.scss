@@ -703,10 +703,10 @@ dd {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.5rem;
+   // padding: 2.5rem;
     box-shadow: 10px 10px 40px #E9E9EB;
     transition: all .5s ease-in-out;
-    max-width: 20vw;
+    width: 100%;
 
     ul {
         // list-style: url('http://localhost:8888/roboclick/images/roboclick-marker.svg');
