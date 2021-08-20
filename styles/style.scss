@@ -2255,6 +2255,15 @@ dd {
             }
 
         }
+        .transform45deg {
+            transform: rotate(45deg) translateY(1.1rem);
+        
+        }
+        
+        .transformMin45deg {
+            transform: rotate(-45deg) translateY(-1.0rem);
+        
+        }
 
     }
 
@@ -2366,6 +2375,17 @@ dd {
                 }
 
             }
+        }
+
+
+        .transform45deg {
+            transform: rotate(45deg) translateY(1.1rem);
+        
+        }
+        
+        .transformMin45deg {
+            transform: rotate(-45deg) translateY(-1.0rem);
+        
         }
     }
 }

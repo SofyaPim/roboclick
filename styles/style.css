@@ -1631,6 +1631,12 @@ dd {
   .wrapper .footer .social-icons img {
     margin: 0;
   }
+  .wrapper .transform45deg {
+    transform: rotate(45deg) translateY(1.1rem);
+  }
+  .wrapper .transformMin45deg {
+    transform: rotate(-45deg) translateY(-1rem);
+  }
 
   .mobile-prices-wrapper .mobile-prices-card .card-title {
     font-size: calc(1.5rem + 1.5vw);
@@ -1693,6 +1699,12 @@ dd {
   }
   .wrapper .work-with-us .stage-wrapper .stage-content__block__items p {
     line-height: 1.5;
+  }
+  .wrapper .transform45deg {
+    transform: rotate(45deg) translateY(1.1rem);
+  }
+  .wrapper .transformMin45deg {
+    transform: rotate(-45deg) translateY(-1rem);
   }
 }
 @media all and (max-width: 480px) {
