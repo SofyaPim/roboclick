@@ -38,15 +38,7 @@ h1,
 h2,
 h3,
 h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
+p {
   margin: 0;
 }
 
@@ -369,7 +361,7 @@ dd {
   position: absolute;
   content: "";
   background-color: #363739;
-  top: 3rem;
+  top: 4rem;
   width: 0rem;
   height: 1px;
 }
@@ -379,7 +371,7 @@ dd {
 .wrapper .about {
   padding-top: 10rem;
   padding-right: 6.25rem;
-  background: linear-gradient(250.03deg, #F2F5FE -31.14%, #5637ED 33.24%), #5333ED;
+  background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #5333ED;
   color: #F2F5FE;
   position: relative;
   display: grid;
@@ -402,6 +394,7 @@ dd {
 .wrapper .about .phone-header .phone-button {
   width: initial;
   border: 1px solid #5333ed;
+  background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
   padding: 1rem 2rem;
   margin-right: 3rem;
 }
@@ -438,6 +431,7 @@ dd {
   width: 16rem;
   height: 5rem;
   border: 1px solid #F2F5FE;
+  background: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%);
 }
 .wrapper .about__main .button h3 {
   margin-bottom: 0;
@@ -486,22 +480,9 @@ dd {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-.wrapper .propose__list ul {
-  width: 90%;
-  list-style: url("/images/list-marker.png");
-}
-.wrapper .propose__list ul p {
-  font-weight: 300;
-  font-size: calc(1rem + .7vw);
-  line-height: calc(2rem + 1vh);
-  padding: 0 1.5rem;
-}
-.wrapper .propose__list ul li {
-  margin-bottom: 2rem;
-}
 .wrapper .hints {
   position: relative;
-  background-color: #5333ed;
+  background: linear-gradient(180deg, #50D3E8 -50.31%, #5333ED 43.61%);
   color: #F2F5FE;
 }
 .wrapper .hints h2 {
@@ -554,7 +535,7 @@ dd {
   left: 70vw;
 }
 .wrapper .work-with-us {
-  background-color: #2cd4d9;
+  background: linear-gradient(270deg, rgba(87, 71, 239, 0.8) -16.43%, rgba(122, 216, 231, 0) 46.28%), #50D3E8;
 }
 .wrapper .work-with-us h2 {
   position: relative;
@@ -584,6 +565,7 @@ dd {
 .wrapper .work-with-us .stage-wrapper .stage-header__block {
   color: #363739;
   background-color: #F2F5FE;
+  border-radius: 0px 10px 10px 0px;
   padding: 1rem 2rem;
   opacity: 0.5;
 }
@@ -600,6 +582,7 @@ dd {
   margin-bottom: 2rem;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block {
+  border-radius: 10px 0px 0px 10px;
   background-color: #F2F5FE;
   padding: 4rem;
 }
@@ -652,7 +635,6 @@ dd {
   margin-top: 0.5rem;
   padding: 1vw 5vw;
   border: 1px solid #5333ed;
-  color: #5333ed;
 }
 .wrapper .prices .card-wrapper .wrap .card .gift-icon {
   top: 0.5%;
@@ -669,7 +651,10 @@ dd {
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
   display: flex;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
+}
+.wrapper .prices .card-wrapper .wrap .card .u-list .list-item .checkbox {
+  width: 2vw;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
   font-size: 100%;
@@ -679,11 +664,11 @@ dd {
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
   width: 25%;
-  height: 70%;
+  height: 60%;
   background-color: #2cd4d9;
   opacity: 0.2;
   left: 0;
-  top: 4rem;
+  top: 5rem;
 }
 .wrapper .prices .card-wrapper .wrap .card .card-title {
   margin-bottom: 2rem;
@@ -707,9 +692,9 @@ dd {
   opacity: 1;
 }
 .wrapper .prices .card-wrapper .wrap .card:hover .button {
-  background-color: #2cd4d9;
-  color: #F2F5FE;
   border: none;
+  background: linear-gradient(262.51deg, rgba(83, 51, 237, 0.8) 35.48%, rgba(80, 211, 232, 0.8) 59.7%), #50D3E8;
+  color: #F2F5FE;
 }
 .wrapper .prices .card-wrapper .wrap .card:hover .blue-rect {
   opacity: 1;
@@ -752,7 +737,6 @@ dd {
   margin-top: 0.5rem;
   padding: 1vw 5vw;
   border: 1px solid #5333ed;
-  color: #5333ed;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
   font-size: 2rem;
@@ -789,11 +773,10 @@ dd {
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list {
   position: relative;
   z-index: 70;
-  height: 23rem;
+  height: 18rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item {
   display: flex;
-  margin-bottom: 0.5rem;
   padding-top: 0;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item .checkbox {
@@ -813,7 +796,7 @@ dd {
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 10% 90%;
-  background-color: #2cd4d9;
+  background: linear-gradient(112.76deg, rgba(21, 136, 156, 0.8) -17.64%, rgba(80, 211, 232, 0.8) 50%), #50D3E8;
   position: relative;
   color: #F2F5FE;
 }
@@ -903,7 +886,7 @@ dd {
   display: block;
 }
 .wrapper .contacts {
-  background-color: #363739;
+  background: linear-gradient(270deg, rgba(54, 55, 57, 0.8) 72.86%, rgba(80, 211, 232, 0.8) 132.76%), #363739;
   padding: 0;
   position: relative;
   overflow: visible;
@@ -946,7 +929,7 @@ dd {
 }
 .wrapper .contacts .contacts-items .feedback-form {
   opacity: 0.7;
-  background-color: #363739;
+  background-color: initial;
   display: flex;
   flex-direction: column;
   padding: 4rem;
@@ -954,7 +937,7 @@ dd {
   margin-right: 2rem;
 }
 .wrapper .contacts .contacts-items .feedback-form input {
-  background-color: #363739;
+  background-color: initial;
   margin: 1rem;
   border-bottom: 1px solid #F2F5FE;
   padding: 1rem 4rem;
@@ -1009,9 +992,8 @@ dd {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  background-color: #363739;
+  background: linear-gradient(270deg, rgba(54, 55, 57, 0.8) 74.49%, rgba(80, 211, 232, 0.8) 132.76%), #363739;
   padding: 6.25rem 6.25rem 7.5rem 6.25rem;
-  margin-top: -1px;
   color: #F2F5FE;
   position: relative;
 }
@@ -1059,7 +1041,7 @@ dd {
   width: 2rem;
 }
 .wrapper .footer .social-icons a {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 .wrapper .footer .copyright {
   position: absolute;
@@ -1092,12 +1074,6 @@ dd {
   }
   .wrapper .propose__image .robot {
     width: 40vw;
-  }
-  .wrapper .propose__list ul {
-    width: 100%;
-  }
-  .wrapper .propose__list ul li {
-    margin-bottom: 1rem;
   }
   .wrapper .hints h3 {
     padding-left: 6rem;
@@ -1147,6 +1123,9 @@ dd {
   .wrapper .prices .card-wrapper .wrap .card {
     padding: 1.5rem;
     width: 16vw;
+  }
+  .wrapper .prices .card-wrapper .wrap .card .u-list {
+    height: 22.25rem;
   }
   .wrapper .prices .card-wrapper .wrap .card .blue-rect {
     height: 60%;
@@ -1284,18 +1263,6 @@ dd {
     grid-column: 2/3;
     grid-row: 2/3;
   }
-  .wrapper .propose__list ul {
-    width: 90%;
-  }
-  .wrapper .propose__list ul p {
-    font-weight: 300;
-    font-size: calc(1rem + .5vw);
-    line-height: 2rem;
-    padding: 0 0.5rem;
-  }
-  .wrapper .propose__list ul li {
-    margin-bottom: 1rem;
-  }
   .wrapper .hints h3 {
     padding-left: 3rem;
   }
@@ -1387,17 +1354,17 @@ dd {
     width: 16vw;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list {
-    height: 22rem;
+    height: 18rem;
     z-index: 70;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
     display: flex;
-    margin-bottom: 0.5rem;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item .checkbox {
     width: 12%;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
+    font-size: 90%;
     padding-left: 0.5rem;
     padding-top: 0;
     line-height: 1rem;
@@ -1448,7 +1415,6 @@ dd {
     justify-content: center;
   }
   .wrapper .contacts .contacts-items .feedback-form {
-    background-color: #363739;
     display: flex;
     flex-direction: column;
     padding: 4rem;
@@ -1547,6 +1513,7 @@ dd {
     transform: rotate(0deg);
     opacity: 0.7;
     font-size: calc(1rem + 1vw);
+    width: 70%;
   }
   .wrapper .contacts {
     grid-template-rows: 20% 40% 40%;
@@ -1559,9 +1526,9 @@ dd {
   }
   .wrapper .contacts .search {
     left: 80%;
-    bottom: 61%;
+    bottom: 81%;
     z-index: 89;
-    width: 20vw;
+    width: 15vw;
   }
   .wrapper .contacts .contacts-items {
     grid-row: 2/3;
@@ -1604,7 +1571,7 @@ dd {
   .wrapper .propose__list {
     grid-column: 1/3;
   }
-  .wrapper .propose__list ul p {
+  .wrapper .propose__list p {
     font-size: calc(.9rem + .5vw);
   }
   .wrapper .propose .search {
@@ -1646,6 +1613,9 @@ dd {
   }
   .wrapper .footer .social-icons img {
     margin: 0;
+  }
+  .wrapper .footer .social-icons a {
+    margin-left: 1rem;
   }
   .wrapper .transform45deg {
     transform: rotate(45deg) translateY(1.1rem);
@@ -1692,7 +1662,7 @@ dd {
   .wrapper .propose__image {
     grid-column: 1/3;
   }
-  .wrapper .propose__list ul p {
+  .wrapper .propose__list p {
     font-size: calc(.7rem + .5vw);
   }
   .wrapper .hints p {
@@ -1721,6 +1691,12 @@ dd {
   .wrapper .work-with-us .stage-wrapper .stage-content__block__items p {
     line-height: 1.5;
   }
+  .wrapper .contacts .contacts-items .subscribe {
+    padding-left: 0;
+    margin-left: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+  }
   .wrapper .transform45deg {
     transform: rotate(45deg) translateY(1.1rem);
   }
@@ -1746,7 +1722,7 @@ dd {
     font-size: calc(1rem + 1vw);
   }
   .wrapper h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-left: 2rem;
     font-weight: 400;
     padding-bottom: 2rem;
@@ -1915,6 +1891,12 @@ dd {
     font-size: 0.9rem;
     font-weight: 300;
     margin-left: 0;
+  }
+  .wrapper .contacts .contacts-items .feedback-form [type=submit] {
+    margin-top: 1rem;
+  }
+  .wrapper .contacts .contacts-items .subscribe {
+    display: none;
   }
   .wrapper .transform45deg {
     transform: rotate(45deg) translateY(1rem);
