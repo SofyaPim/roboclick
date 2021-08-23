@@ -480,6 +480,19 @@ p {
   grid-column: 2/3;
   grid-row: 2/3;
 }
+.wrapper .propose__list ul {
+  width: 90%;
+  list-style: url("/images/list-marker.png");
+}
+.wrapper .propose__list ul p {
+  font-weight: 300;
+  font-size: calc(1rem + .7vw);
+  line-height: calc(2rem + 1vh);
+  padding: 0 1.5rem;
+}
+.wrapper .propose__list ul li {
+  margin-bottom: 2rem;
+}
 .wrapper .hints {
   position: relative;
   background: linear-gradient(180deg, #50D3E8 -50.31%, #5333ED 43.61%);
@@ -1074,6 +1087,12 @@ p {
   }
   .wrapper .propose__image .robot {
     width: 40vw;
+  }
+  .wrapper .propose__list ul {
+    width: 100%;
+  }
+  .wrapper .propose__list ul li {
+    margin-bottom: 1rem;
   }
   .wrapper .hints h3 {
     padding-left: 6rem;
