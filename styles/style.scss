@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@400;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url(fonts/Raleway/static/Raleway-Medium.ttf ) format(ttf);
+}
+@font-face {
+    font-family: 'Lato', sans-serif;
+    src: url(fonts/Lato/Lato-Regular.ttf) format(ttf);
+}
 $dark-font: #060411;
 $light-font: #F2F5FE;
 $gray-shadow: #363739d3;
