@@ -1762,6 +1762,7 @@ p {
     display: none;
   }
   .wrapper section.about {
+    background: #5333ed;
     padding: 10rem 2rem 0rem 2rem;
   }
   .wrapper .about {
