@@ -26,3 +26,4 @@ const getAnswers = (triggerSelector, contentselector )=> {
 
 }
 getAnswers('.faq-item', '.answer-item');
+

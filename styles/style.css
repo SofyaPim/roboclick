@@ -647,7 +647,8 @@ p {
   box-shadow: initial;
   margin-top: 0.5rem;
   padding: 1vw 5vw;
-  border: 1px solid #5333ed;
+  border: 1px solid #2cd4d9;
+  background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
 }
 .wrapper .prices .card-wrapper .wrap .card .gift-icon {
   top: 0.5%;
@@ -749,7 +750,8 @@ p {
   box-shadow: initial;
   margin-top: 0.5rem;
   padding: 1vw 5vw;
-  border: 1px solid #5333ed;
+  border: 1px solid #2cd4d9;
+  background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
   font-size: 2rem;
