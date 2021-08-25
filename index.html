@@ -114,18 +114,15 @@
             <div class="propose__list">
                 <ul>
                     <li>
-                        <p> привлечь максисамальное количество клиентов, за счет нашей робототизированной системы
-                            поисковых
-                            подсказок</p>
+                        <p>привлечь максимум клиентов, благодаря нашей роботизированной системе поисковых подсказок</p>
                     </li>
                     <li>
-                        <p>первую позицию в поисковой выдаче для вашего сайта (или несколько при специальном подборе
-                            подсказки</p>
+                        <p>обеспечить первую позицию в поисковой выдаче для вашего сайта (или несколько при специальном подборе
+                            подсказки)</p>
                     </li>
                     <li>
-                        <p>имиджевую рекламу Вашей торговой марки, тк как всем, набирающим ключевое слово Вашего
-                            бизнеса,
-                            показывается подсказка, вызывающая доверие и предпочтение</p>
+                        <p>рекламу имиджа Вашей торговой марки, каждый набирающий ключевое слово Вашего
+                            бизнеса увидит подсказку, вызывающую доверие и предпочтение</p>
                     </li>
                     <li>
                         <p>инструмент, которым пользуется 80% аудитории Яндекса</p>
@@ -782,9 +779,9 @@
 
 
                 </div>
-                <div class="swiper-pagination"></div>
+               
             </div>
-
+ <div class="swiper-pagination"></div>
         </section>
 
         <section class="faq" id="faq">
@@ -843,21 +840,26 @@
         </section>
         <section class="contacts" id="contacts">
 
-            <h2>Контакты</h2>
+         
             <div class="contacts-items">
+                   <h2>Контакты</h2>
+                  
                 <form class="feedback-form">
-                    <h4 class="subscribe">Будьте в курсе наших новинок</h4>
-                    <input type="text" name="name" id="name" placeholder="Ваше имя">
-                    <input type="email" name="email" id="email" placeholder="Ваш email">
+                   
+                    <input type="text" name="name" id="name" placeholder="Ваше имя" class="_req">
+                    <input type="email" name="email" id="email" placeholder="Ваш email" class="_req _email">
                     <!-- <input type="textarea" name="message" id="message" placeholder="Ваше сообщение"> -->
-                    <input type="submit" value="Подписаться">
+                    <input type="submit" class="_submit" value="Подписаться на рассылку">
 
-
+                    <div class="form-agree">
+                        <input type="checkbox" checked  name="agreement" id="formAgreement" class="checkbox_input">
+                        <label for="formAgreement" class="checkbox_label"> <span>Я даю свое согласие на обработку персональных данных</span></label>
+                 </div>
 
                 </form>
 
 
-                <h4> <span> Пресненская набережная</span> <br>
+                <h4> <span> Пресненская набережная</span>
                     <span>дом 12, этаж 22</span> <br>
                     <span class="phone">+7 (495) 155-5-155</span>
                 </h4>
@@ -896,13 +898,18 @@
 
         <div class="overlay" data-modal>
             
-            <form class="popup">
+            <form class="popup form__body" action="#" id="form">
                 <h3 class="popup-title">Оформление заказа</h3>
                 <!-- <h4>Вы выбрали тариф <span class="tariff-name"> Classic</span></h4> -->
-                <input type="text" name="name" id="popup-name" placeholder="Ваше имя">
-                <input type="email" placeholder="Ваш Email">
-                <input type="tel" name="phone" id="popup-phone" placeholder="+7 (777) 777 77 77">
-                <input type="submit" value="Отправить" class="button-recall">
+                <input type="text" name="name" id="formName" placeholder="Ваше имя" class="_req">
+                <input type="email" placeholder="Ваш Email" id="formEmail" class="_req _email">
+                <input type="tel" name="phone" id="formPhone" placeholder="+7 (777) 777 77 77" class="_req">
+                <input type="submit" value="Отправить" class="button-recall _submit">
+                <div class="form-agree">
+                       <input type="checkbox"  checked  name="agreement" id="formAgreement">
+                       <label for="formAgreement" class="checkbox_label"> <span>Я даю свое согласие на обработку персональных данных</span></label>
+                </div>
+             
                 <div class="popup__close">
                     <img src="images/close-dark.svg" alt="close">
                     <!-- <img src="/images/close.svg" alt="" srcset=""> -->
@@ -922,12 +929,15 @@
         </div>
 
 
-    </div>
+    </div> 
     <script src="scripts/section-nav.js"></script>
     <script src="scripts/nav-burger.js"></script>
     <script src="scripts/modal.js"></script>
+<script src="scripts/form.js"></script>
+
     <script src="scripts/accordion.js"></script>
     <script src="scripts/tabs.js"></script>
+   
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/swiper.js"></script>
