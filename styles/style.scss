@@ -2,10 +2,12 @@
     font-family: 'Raleway', sans-serif;
     src: url(fonts/Raleway/static/Raleway-Medium.ttf ) format(ttf);
 }
+
 @font-face {
     font-family: 'Lato', sans-serif;
     src: url(fonts/Lato/Lato-Regular.ttf) format(ttf);
 }
+
 $dark-font: #060411;
 $light-font: #F2F5FE;
 $gray-shadow: #363739d3;
@@ -124,10 +126,12 @@ p {
     }
 
 }
-.status-message{
+
+.status-message {
     color: $aqua-accent;
     font-size: .9rem;
 }
+
 .displayNone {
     display: none;
 }
@@ -156,11 +160,13 @@ p {
         text-decoration: line-through;
     }
 }
-.commit p{
+
+.commit p {
     margin: 0;
     font-size: .5rem;
     color: $purple-accent;
 }
+
 .price-title {
     text-align: center;
 
@@ -206,6 +212,7 @@ p {
     height: 100%;
     object-fit: cover;
 }
+
 // .swiper-pagination{
 //     width: 100vw;
 // display: flex;
@@ -216,19 +223,23 @@ p {
 
 // }
 
-.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
     bottom: -3rem;
     left: 0px;
 }
+
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 14px;
-  
+
 }
 
 .swiper-pagination-bullet {
     width: 10px;
-    height: 10px; 
-     margin-right: 2rem;
+    height: 10px;
+    margin-right: 2rem;
 }
 
 .wrapper {
@@ -312,7 +323,7 @@ p {
     }
 
     .overlay {
-      //  display: none;
+        //  display: none;
         @include overlay();
         transform: scale(0);
         transition: transform .5s ease-in;
@@ -342,7 +353,8 @@ p {
                 padding: 1rem;
                 margin-bottom: 1rem;
                 border-radius: .5rem;
-outline: none;
+                outline: none;
+
                 &:focus {
 
                     border: 2px solid $aqua-accent;
@@ -350,10 +362,11 @@ outline: none;
                 }
 
             }
-            input._error{
+
+            input._error {
                 border: 2px solid rgb(151, 9, 9);
             }
-            
+
             ::placeholder {
                 font-size: calc(.5rem + .5vw);
                 opacity: .5;
@@ -379,29 +392,34 @@ outline: none;
                 }
 
             }
-            .form-agree{
+
+            .form-agree {
                 width: calc(50% + 2vw);
                 display: flex;
                 align-items: center;
-                input{
+
+                input {
                     width: 2rem;
                     margin-bottom: 0;
                     margin-right: 1rem;
                 }
-                .checkbox_input{
+
+                .checkbox_input {
                     display: none;
                 }
-                 .checkbox_label{
-                   display: inline-flex; 
-                   align-items: center;
-                font-size: .7rem;
-                &::before{
-                    content:"";
-                    align-self: flex-start;
-                    
+
+                .checkbox_label {
+                    display: inline-flex;
+                    align-items: center;
+                    font-size: .7rem;
+
+                    &::before {
+                        content: "";
+                        align-self: flex-start;
+
+                    }
+
                 }
-              
-            }
 
             }
 
@@ -522,7 +540,7 @@ outline: none;
                 margin-bottom: 1rem;
                 padding: 1rem;
                 position: relative;
-cursor: pointer;
+                cursor: pointer;
             }
 
             a::before {
@@ -1035,18 +1053,19 @@ cursor: pointer;
     }
 
     .mobile-prices {
-position: relative;
+        position: relative;
         display: none;
-        .swiper-pagination{
+
+        .swiper-pagination {
             width: 90vw;
-        display: flex;
-        /* margin: 0 auto; */
-        justify-content: center;
-        //margin-left: 27%;
-        margin-top: 3%;
-        
+            display: flex;
+            /* margin: 0 auto; */
+            justify-content: center;
+            //margin-left: 27%;
+            margin-top: 3%;
+
         }
-        
+
         .mobile-prices-wrapper {
             .mobile-prices-card {
                 @include card();
@@ -1112,7 +1131,7 @@ position: relative;
                             margin-right: 1rem;
                         }
 
-                      //  margin-bottom: .5rem;
+                        //  margin-bottom: .5rem;
 
                         // p {
                         //     font-size: calc(1rem + 1vw);
@@ -1334,25 +1353,29 @@ position: relative;
                     padding-left: 0;
                     color: $light-font;
                     font-size: calc(.5rem + .9vw);
-                   outline: none;
+                    outline: none;
 
                 }
+
                 input:invalid {
                     border: none;
                     border-bottom: 1px solid $light-font;
-                  }
-                  input:invalid:required {
-                   // background-image: linear-gradient(to right, pink, lightgreen);
-                   border: none;
-                   border-bottom: 1px solid $light-font;
-                  }
-                  input:valid {
-                      border: none;
+                }
+
+                input:invalid:required {
+                    // background-image: linear-gradient(to right, pink, lightgreen);
+                    border: none;
+                    border-bottom: 1px solid $light-font;
+                }
+
+                input:valid {
+                    border: none;
                     border-bottom: 1px solid $aqua-accent;
-                  }
-                input._error{
+                }
+
+                input._error {
                     border-bottom: 1px solid rgb(129, 28, 28);
-                    
+
 
                 }
 
@@ -1371,7 +1394,8 @@ position: relative;
                     font-size: calc(.5rem + .9vw);
 
                 }
-                .checkbox_label{
+
+                .checkbox_label {
                     font-size: .5rem;
                     color: $light-font;
                 }
@@ -1745,10 +1769,12 @@ position: relative;
 
     .wrapper {
         max-width: 1024px;
+
         .nav-bar nav a::before {
-          
+
             top: 4rem;
         }
+
         h1 {
             font-size: calc(2rem + 1vw);
         }
@@ -1812,8 +1838,8 @@ position: relative;
                         width: 1.5rem;
                     }
                 }
-              
-               
+
+
             }
         }
 
@@ -2031,7 +2057,7 @@ position: relative;
                                     width: 12%;
                                 }
 
-                               // margin-bottom: .5rem;
+                                // margin-bottom: .5rem;
 
                                 p {
                                     font-size: 90%;
@@ -2218,16 +2244,18 @@ position: relative;
     .wrapper {
         padding-top: 70px;
         padding-left: 0;
- .nav-bar nav a::before {
-              
-                top: 3rem;
-            }
+
+        .nav-bar nav a::before {
+
+            top: 3rem;
+        }
+
         .header {
             width: 100vw;
             height: 70px;
             flex-direction: row;
             border-right: none;
-           
+
             .nav-burger {
                 height: 1.5rem;
             }
@@ -2308,7 +2336,7 @@ position: relative;
 
             }
 
-           
+
         }
 
         .propose__list {
@@ -2412,9 +2440,10 @@ position: relative;
 @media all and (max-width:640px) {
     .wrapper {
         .nav-bar nav a::before {
-          
+
             top: 3rem;
         }
+
         section {
             padding: 4rem 2rem;
         }
@@ -2514,34 +2543,39 @@ position: relative;
 
             }
         }
-        .contacts{
+
+        .contacts {
             flex-direction: column;
         }
+
         .contacts .global-map-wrapper {
             width: 100vw;
             height: 50vh;
             position: relative;
         }
+
         .contacts .contacts-items form {
             width: 70%;
         }
+
         .contacts .contacts-items .subscribe {
             padding-left: 0;
             margin-left: 0;
             font-family: "Raleway", sans-serif;
             font-size: 1rem;
         }
-.contacts .contacts-items h4{
-    
-        display: flex;
-        font-size: calc(.7rem + .5vw);
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-content: center;
-        width: 60%;
-        margin: 1% auto;
-    
-}
+
+        .contacts .contacts-items h4 {
+
+            display: flex;
+            font-size: calc(.7rem + .5vw);
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: center;
+            width: 60%;
+            margin: 1% auto;
+
+        }
 
 
         .transform45deg {
@@ -2689,6 +2723,7 @@ position: relative;
             padding-top: 4rem;
             padding-bottom: 4rem;
             grid-template-rows: 10% 90%;
+
             .search {
                 top: 6%;
                 left: 69%;
@@ -2832,17 +2867,20 @@ position: relative;
         }
 
         .contacts .contacts-items h4 {
-           
+
             font-size: .9rem;
             font-weight: 300;
-          
+
         }
+
         .contacts .contacts-items .feedback-form [type=submit] {
             margin-top: 1rem;
         }
-        .contacts .contacts-items .subscribe{
+
+        .contacts .contacts-items .subscribe {
             display: none;
         }
+
         .transform45deg {
             transform: rotate(45deg) translateY(1rem);
 
@@ -2907,10 +2945,12 @@ position: relative;
         font-size: 1.5rem;
         padding: 1vw 8vw;
     }
+
     .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list {
-      
+
         height: 14rem;
     }
+
     .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item p {
         line-height: 1.2;
     }
