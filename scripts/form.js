@@ -1,7 +1,7 @@
 const forms = () => {
     const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('._req');
-      
+
     const message = {
         loading: 'Загрузка ...',
         success: 'Спасибо, скоро с Вами свяжемся',
@@ -10,7 +10,7 @@ const forms = () => {
 
 
     }
-    
+
 
     const postData = async (url, data) => {
         document.querySelector('.status-message').textContent = message.loading;
@@ -21,36 +21,36 @@ const forms = () => {
         return await res.text();
     }
     const clearInputs = () => {
-       
+
         inputs.forEach(item => {
-           
-                item.value = '';
-           
-               
-           
-          
-        }) 
+
+            item.value = '';
+
+
+
+
+        })
     }
-const isInputEmpty = () => { //проверка на пустоту
-    inputs.forEach(item => {
-        if(item.value.length !== ''){
-            return false;
-        }
-    })
-}
-isInputEmpty();
-const emaiValidate = () => { //проверка соответствию регулярному выражению email -inputa
-   
-    inputs.forEach(item => {
-        if(item.classList.contains('_email')){
-           let emailInput =  item;
+    const isInputEmpty = () => { //проверка на пустоту
+        inputs.forEach(item => {
+            if (item.value.length !== '') {
+                return false;
+            }
+        })
+    }
+    isInputEmpty();
+    const emaiValidate = () => { //проверка соответствию регулярному выражению email -inputa
 
-            return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(emailInput.value);
-        }
-    })
-}
+        inputs.forEach(item => {
+            if (item.classList.contains('_email')) {
+                let emailInput = item;
 
-emaiValidate();
+                return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(emailInput.value);
+            }
+        })
+    }
+
+    emaiValidate();
 
     // inputs.forEach(input => {
     //     if (input.value.length === 0) {
@@ -65,44 +65,44 @@ emaiValidate();
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
-           
 
-       const formData = new FormData(item);
 
-            console.log(formData.get('name'));//данные формы 
+            const formData = new FormData(item);
+
+            console.log(formData.get('name')); //данные формы 
             console.log(formData.get('phone'));
             console.log(formData.get('email'));
-            
-             //    if(isInputEmpty === true && emaiValidate === true){  // куда ???
 
-        //    }
-                 postData('./server.php', formData)//./sendmail.php не проверено //
+            //    if(isInputEmpty === true && emaiValidate === true){  // куда ???
+
+            //    }
+            postData('./sendmail.php', formData) // c ./server.php  проверено //
                 .then(res => {
-                   
+
                     console.log(res);
-                   //   isInputEmpty === true && emaiValidate === true
+                    //   isInputEmpty === true && emaiValidate === true
                     statusMessage.textContent = message.success;
-                    
+
                 })
                 .catch(() => {
                     statusMessage.textContent = message.failure;
-                    
+
                 })
                 .finally(() => {
-                   
-                          clearInputs();
-                          
-                  
+
+                    clearInputs();
+
+
                     setTimeout(() => {
                         statusMessage.remove();
                     }, 3000);
                 })
-        
-         
-           
 
-             
-                
+
+
+
+
+
 
 
 
