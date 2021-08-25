@@ -28,9 +28,11 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
 
             modalProto.forEach(item => {
                 item.style.display = 'none';
+              // item.style.transform = 'scale(1)';
 
             })
-            modal.style.display = 'block';
+             modal.style.display = 'block';
+           // item.style.transform = 'scale(0)';
             document.body.style.overflow = 'hidden';
 
         })
@@ -39,7 +41,8 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
     close.addEventListener('click', () => {
 
         modalProto.forEach(item => {
-            item.style.display = 'none';
+             item.style.display = 'none';
+            //item.style.transform = 'scale(0)';
 
 
         })
