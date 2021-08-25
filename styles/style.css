@@ -132,12 +132,9 @@ p {
      object-fit: cover;
 }
 
-.swiper-pagination {
-  width: 100vw;
-  display: flex;
-  /* margin: 0 auto; */
-  justify-content: center;
-  margin-top: 3%;
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: -3rem;
+  left: 0px;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -288,10 +285,14 @@ p {
   width: 2rem;
 }
 .wrapper .overlay .popup .form-agree {
-  width: 80%;
+  width: calc(50% + 2vw);
+  display: flex;
+  align-items: center;
 }
 .wrapper .overlay .popup .form-agree input {
-  width: 2vw;
+  width: 2rem;
+  margin-bottom: 0;
+  margin-right: 1rem;
 }
 .wrapper .overlay .popup .form-agree .checkbox_input {
   display: none;
@@ -746,7 +747,15 @@ p {
   transform: rotateY(-30deg);
 }
 .wrapper .mobile-prices {
+  position: relative;
   display: none;
+}
+.wrapper .mobile-prices .swiper-pagination {
+  width: 90vw;
+  display: flex;
+  /* margin: 0 auto; */
+  justify-content: center;
+  margin-top: 3%;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
   position: relative;
@@ -1880,6 +1889,7 @@ p {
   .wrapper .propose {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    grid-template-rows: 10% 90%;
   }
   .wrapper .propose .search {
     top: 6%;
@@ -1968,10 +1978,8 @@ p {
     font-size: 1rem;
   }
   .wrapper .contacts .contacts-items h4 {
-    margin-bottom: -2rem;
     font-size: 0.9rem;
     font-weight: 300;
-    margin-left: 0;
   }
   .wrapper .contacts .contacts-items .feedback-form [type=submit] {
     margin-top: 1rem;

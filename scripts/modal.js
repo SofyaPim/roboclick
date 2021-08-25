@@ -20,7 +20,7 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
             if (title.querySelector('.card-title')) {
 
                 let tarifname = title.querySelector('.card-title').innerText;
-                smallHeader.innerHTML = `Вы выбрали тариф ${tarifname}`;
+                smallHeader.innerHTML = `Вы выбрали тариф <br> ${tarifname}`;
                 modalHeader.append(smallHeader); //добавление названия тарифа
                 console.log(tarifname); // вывод  названия тарифа в консоль
 

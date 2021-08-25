@@ -1,6 +1,6 @@
 const forms = () => {
     const form = document.querySelectorAll('form'),
-        inputs = document.querySelectorAll('input');
+        inputs = document.querySelectorAll('._req');
       
     const message = {
         loading: 'Загрузка ...',
@@ -23,9 +23,9 @@ const forms = () => {
     const clearInputs = () => {
        
         inputs.forEach(item => {
-           if (!item.getAttribute('submit')) {
+           
                 item.value = '';
-           }
+           
                
            
           
@@ -51,6 +51,7 @@ const forms = () => {
             console.log(formData.get('name'));//данные формы 
             console.log(formData.get('phone'));
             console.log(formData.get('email'));
+            console.log(FormData.values());
            
                  postData('./server.php', formData)//./sendmail.php не проверено //
                 .then(res => {
