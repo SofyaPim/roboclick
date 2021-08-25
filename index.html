@@ -114,18 +114,15 @@
             <div class="propose__list">
                 <ul>
                     <li>
-                        <p> привлечь максисамальное количество клиентов, за счет нашей робототизированной системы
-                            поисковых
-                            подсказок</p>
+                        <p>привлечь максимум клиентов, благодаря нашей роботизированной системе поисковых подсказок</p>
                     </li>
                     <li>
-                        <p>первую позицию в поисковой выдаче для вашего сайта (или несколько при специальном подборе
-                            подсказки</p>
+                        <p>обеспечить первую позицию в поисковой выдаче для вашего сайта (или несколько при специальном подборе
+                            подсказки)</p>
                     </li>
                     <li>
-                        <p>имиджевую рекламу Вашей торговой марки, тк как всем, набирающим ключевое слово Вашего
-                            бизнеса,
-                            показывается подсказка, вызывающая доверие и предпочтение</p>
+                        <p>рекламу имиджа Вашей торговой марки, каждый набирающий ключевое слово Вашего
+                            бизнеса увидит подсказку, вызывающую доверие и предпочтение</p>
                     </li>
                     <li>
                         <p>инструмент, которым пользуется 80% аудитории Яндекса</p>
@@ -782,9 +779,9 @@
 
 
                 </div>
-                <div class="swiper-pagination"></div>
+               
             </div>
-
+ <div class="swiper-pagination"></div>
         </section>
 
         <section class="faq" id="faq">
@@ -843,16 +840,20 @@
         </section>
         <section class="contacts" id="contacts">
 
-            <h2>Контакты</h2>
+         
             <div class="contacts-items">
-                <form class="feedback-form">
+                   <h2>Контакты</h2>
+                <form class="feedback-form" action="#">
                     <h4 class="subscribe">Будьте в курсе наших новинок</h4>
-                    <input type="text" name="name" id="name" placeholder="Ваше имя">
-                    <input type="email" name="email" id="email" placeholder="Ваш email">
+                    <input type="text" name="name" id="name" placeholder="Ваше имя" class="_req" required>
+                    <input type="email" name="email" id="email" placeholder="Ваш email" class="_req _email" required>
                     <!-- <input type="textarea" name="message" id="message" placeholder="Ваше сообщение"> -->
                     <input type="submit" value="Подписаться">
 
-
+                    <div class="form-agree">
+                        <input type="checkbox" checked  name="agreement" id="formAgreement" class="checkbox_input">
+                        <label for="formAgreement" class="checkbox_label"> <span>Я даю свое согласие на обработку персональных данных</span></label>
+                 </div>
 
                 </form>
 
@@ -896,13 +897,18 @@
 
         <div class="overlay" data-modal>
             
-            <form class="popup">
+            <form class="popup form__body" action="#" id="form" >
                 <h3 class="popup-title">Оформление заказа</h3>
                 <!-- <h4>Вы выбрали тариф <span class="tariff-name"> Classic</span></h4> -->
-                <input type="text" name="name" id="popup-name" placeholder="Ваше имя">
-                <input type="email" placeholder="Ваш Email">
-                <input type="tel" name="phone" id="popup-phone" placeholder="+7 (777) 777 77 77">
+                <input type="text" name="name" id="formName" placeholder="Ваше имя" class="_req" required>
+                <input type="email"  name="email" placeholder="Ваш Email" id="formEmail" class="_req _email" required>
+                <input type="tel" name="phone" id="formPhone"  class="_req" required>
                 <input type="submit" value="Отправить" class="button-recall">
+                <div class="form-agree">
+                       <input type="checkbox"  checked  name="agreement" id="formAgreement">
+                       <label for="formAgreement" class="checkbox_label"> <span>Я даю свое согласие на обработку персональных данных</span></label>
+                </div>
+             
                 <div class="popup__close">
                     <img src="images/close-dark.svg" alt="close">
                     <!-- <img src="/images/close.svg" alt="" srcset=""> -->
@@ -910,7 +916,7 @@
             </form>
 
         </div>
-        <div class="overlay-recall" data-modal>
+        <!-- <div class="overlay-recall" data-modal>
             <div class="popup-recall">
                 <h4>Вы успешно отправили заявку</h4>
                 <p>Наш менеджер свяжется с Вами в течении 15-ти минут</p>
@@ -919,15 +925,19 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
 
-    </div>
+    </div> 
     <script src="scripts/section-nav.js"></script>
     <script src="scripts/nav-burger.js"></script>
     <script src="scripts/modal.js"></script>
+<script src="scripts/form.js"></script>
+ <script src="scripts/inputmask.min.js"></script>
+ <script src="scripts/phone-mask.js"></script>   
     <script src="scripts/accordion.js"></script>
     <script src="scripts/tabs.js"></script>
+   
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/swiper.js"></script>

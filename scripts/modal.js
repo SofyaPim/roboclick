@@ -4,36 +4,35 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
         modalHeader = modal.querySelector('.popup-title'),
         close = document.querySelector(closeSelector),
         modalProto = document.querySelectorAll('[data-modal]');
- let smallHeader = document.createElement('h4');
+    let smallHeader = document.createElement('h4');
 
     trigger.forEach(item => {
         item.addEventListener('click', (e) => {
             if (e.target) {
                 e.preventDefault();
+
             }
 
             // обращение к родителю
             let title = item.parentElement.parentElement;
 
-           
+
             if (title.querySelector('.card-title')) {
 
                 let tarifname = title.querySelector('.card-title').innerText;
                 smallHeader.innerHTML = `Вы выбрали тариф ${tarifname}`;
-
-
-
-               // smallHeader.innerHTML.insertAdjacentHTML('afterend', '<h3 class="popup-title">Оформление заказа</h3>');
-               modalHeader.append(smallHeader); //добавление названия тарифа
+                modalHeader.append(smallHeader); //добавление названия тарифа
                 console.log(tarifname); // вывод  названия тарифа в консоль
 
             }
 
             modalProto.forEach(item => {
-                item.style.display = 'none';
+               //item.style.display = 'none';
+              item.style.transform = 'scale(0)';
 
             })
-            modal.style.display = 'block';
+            // modal.style.display = 'block';
+            modal.style.transform = 'scale(1)';
             document.body.style.overflow = 'hidden';
 
         })
@@ -42,12 +41,14 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
     close.addEventListener('click', () => {
 
         modalProto.forEach(item => {
-            item.style.display = 'none';
+            // item.style.display = 'none';
+            item.style.transform = 'scale(0)';
 
 
         })
         smallHeader.remove();
-        modal.style.display = 'none';
+      //  modal.style.display = 'none';
+     modal.style.transform = 'scale(0)';
         document.body.style.overflow = '';
     })
     modal.addEventListener('click', (e) => {
@@ -55,12 +56,14 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
         if (e.target == modal && clickModal) {
 
             modalProto.forEach(item => {
-                item.style.display = 'none';
+            //    item.style.display = 'none';
+            item.style.transform = 'scale(0)';
 
 
             })
             smallHeader.remove();
-            modal.style.display = 'none';
+          //  modal.style.display = 'none';
+          modal.style.transform = 'scale(0)';
             document.body.style.overflow = '';
 
         }
@@ -78,5 +81,4 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
 
 
 };
-modals('.button', '.overlay', '.popup__close', '.tariff-name', false);
-modals('.button-recall', '.overlay-recall', '.popup-recall__close', true)
+modals('.button', '.overlay', '.popup__close', '.tariff-name', true);
