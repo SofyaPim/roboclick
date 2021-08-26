@@ -44,9 +44,10 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
   $mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Бланчард');
   
   // Кому
-//   foreach ( $admin_email as $key => $value ) {
-//    } 
-   $mail->addAddress($admin_email->$value);
+   foreach ( $admin_email as $key => $value ) {
+        $mail->addAddress($value);
+   } 
+  
   // Тема письма
   $mail->Subject = $form_subject;
   
@@ -55,13 +56,13 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
   // $mail->isHTML(true); это если прям верстка
   $mail->msgHTML($body);
 
-  
-//   $mail->send();
-  if(!$mail->send()){
-    $message = 'Ошибка';
-    } else {
-        $message = 'данные отправлены!';
-    }
+  echo $body;
+ $mail->send();
+//   if(!$mail->send()){
+//     $message = 'Ошибка';
+//     } else {
+//         $message = 'данные отправлены!';
+//     }
 
    
-echo $body;
+
