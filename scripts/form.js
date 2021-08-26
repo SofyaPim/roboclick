@@ -1,16 +1,16 @@
 const forms = () => {
     const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('._req');
-      
+
+
     const message = {
         loading: 'Загрузка ...',
         success: 'Спасибо, скоро с Вами свяжемся',
         failure: 'Что-то пошло не так',
-        validate: 'Заполните поля'
-
+        validate: 'Заполните это поле'
 
     }
-    
+
 
     const postData = async (url, data) => {
         document.querySelector('.status-message').textContent = message.loading;
@@ -21,71 +21,136 @@ const forms = () => {
         return await res.text();
     }
     const clearInputs = () => {
-       
+
         inputs.forEach(item => {
-                item.value = '';
-        }) 
+            item.value = '';
+        })
     }
 
-    const isInputEmpty = function(){ //проверка на пустоту
+    function Validate(inputs) { //проверка соответствию
+        let err = 0;
+
+        function addErr() {
+            err++;
+        }
+        console.log(inputs);
         inputs.forEach(item => {
-             
-                return item.value;
-            
-        })
-    }
-    isInputEmpty();
-    const emaiValidate = function(){ //проверка соответствию регулярному выражению email -inputa
-       
-        inputs.forEach(item => {
-            if(item.classList.contains('_email')){
-               let emailInput =  item;
-    
-                return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(emailInput.value);
+            console.log(item);
+            let statusMessage = document.createElement('div');
+            statusMessage.classList.add('status-message');
+            item.addEventListener('input', (e) => {
+                // item = e.target;//не работает???
+                let sibling = item.nextElementSibling;
+                item.classList.remove('_error');
+
+                sibling.style.opacity = 0;
+            })
+
+            switch (item.name) {
+
+                case 'phone':
+                    if (item.value.length === 0) {
+                        let sibling = item.nextElementSibling;
+                        addErr();
+                        item.classList.add('_error');
+                        sibling.style.opacity = 1;
+                    }
+
+                    break;
+                case 'name':
+                    if (item.value.length === 0) {
+                        let sibling = item.nextElementSibling;
+                        addErr();
+                        item.classList.add('_error');
+                        sibling.style.opacity = 1;
+                    }
+
+                    break;
+                case 'agreement':
+                    if (item.checked === false) {
+                        let sibling = item.nextElementSibling;
+                        addErr();
+                        item.classList.add('_error');
+                        sibling.style.opacity = 1;
+                    }
+
+
+                    break;
+                case 'email':
+                    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(item.value)) {
+                        let sibling = item.nextElementSibling;
+                        addErr();
+                        item.classList.add('_error');
+                        sibling.style.opacity = 1;
+                    }
+
+                    break;
+                    default:
+
+                        break;
             }
+
+
+
         })
+        if (err <= 0) {
+            console.log(err);
+            return true;
+        } else {
+            console.log(err);
+            return false;
+        }
+
+
     }
-    emaiValidate();
+
 
     form.forEach(item => {
         item.addEventListener('submit', (e) => {
+
             e.preventDefault();
 
+            let inputsForm = item.querySelectorAll('input');
+            console.log(inputsForm);
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
-           
-       const formData = new FormData(item);
 
-            console.log(formData.get('name'));//данные формы 
+            
+            if (!Validate(inputsForm)) {
+                return;
+            }
+
+            const formData = new FormData(item);
+
+            console.log(formData.get('name')); //данные формы 
             console.log(formData.get('phone'));
             console.log(formData.get('email'));
-            console.log(isInputEmpty);
           
-        //    if(isInputEmpty === true && emaiValidate === true){  // куда ???
 
-        //    }
-                 postData('./sendmail.php', formData)// c ./server.php  проверено //
+
+            postData('./sendmail.php', formData) // c ./server.php  проверено //
                 .then(res => {
                     console.log(res);
-                 
+
+
                     statusMessage.textContent = message.success;
-                    
+
                 })
                 .catch(() => {
                     statusMessage.textContent = message.failure;
-                    
+
                 })
                 .finally(() => {
-                   
-                          clearInputs();
-                          
-                  
+
+                    clearInputs();
+
+
                     setTimeout(() => {
                         statusMessage.remove();
                     }, 3000);
                 })
-        
+
 
 
 

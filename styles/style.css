@@ -65,6 +65,15 @@ p {
     opacity: 1;
   }
 }
+.message {
+  opacity: 0;
+  color: #970909;
+}
+
+.aftercheckbox {
+  display: block;
+}
+
 .status-message {
   color: #2cd4d9;
   font-size: 0.9rem;
@@ -268,12 +277,17 @@ p {
   font-size: calc(.5rem + .5vw);
   opacity: 0.5;
 }
-.wrapper .overlay .popup input[type=submit] {
+.wrapper .overlay .popup button {
+  width: 29vw;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
   background-color: #5333ed;
   color: #F2F5FE;
   font-size: calc(1rem + .5vw);
+  outline: none;
 }
-.wrapper .overlay .popup input[type=submit]:focus {
+.wrapper .overlay .popup button:focus {
   background-color: #2cd4d9;
 }
 .wrapper .overlay .popup__close {
@@ -287,12 +301,14 @@ p {
 .wrapper .overlay .popup .form-agree {
   width: calc(50% + 2vw);
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .wrapper .overlay .popup .form-agree input {
   width: 2rem;
   margin-bottom: 0;
   margin-right: 1rem;
+  align-self: flex-start;
 }
 .wrapper .overlay .popup .form-agree .checkbox_input {
   display: none;
@@ -1020,11 +1036,17 @@ p {
   font-size: calc(.5rem + .9vw);
   opacity: 0.5;
 }
-.wrapper .contacts .contacts-items .feedback-form input[type=submit] {
+.wrapper .contacts .contacts-items .feedback-form button {
   border: 1px solid #F2F5FE;
   border-radius: 0.7rem;
   color: #F2F5FE;
   font-size: calc(.5rem + .9vw);
+  background-color: initial;
+  margin: 1rem;
+  padding: 1rem;
+  padding-left: 0;
+  outline: none;
+  text-align: center;
 }
 .wrapper .contacts .contacts-items .feedback-form .checkbox_label {
   font-size: 0.5rem;
@@ -1191,7 +1213,7 @@ p {
     padding-top: 3rem;
   }
   .wrapper .prices .card-wrapper .wrap .card {
-    padding: 1.5rem;
+    padding: 1rem;
     width: 16vw;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list {

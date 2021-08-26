@@ -846,13 +846,19 @@
                    <h2>Контакты</h2>
                 <form class="feedback-form" action="#">
                     <h4 class="subscribe">Будьте в курсе наших новинок</h4>
-                    <input type="text" name="name" id="name" placeholder="Ваше имя" class="_req" required>
-                    <input type="email" name="email" id="email" placeholder="Ваш email" class="_req _email" required>
+                     <input type="hidden" name="form_subject" value="поисковые подсказки">
+                    <input type="text" name="name" id="name" placeholder="Ваше имя" class="_req" >
+                    <span class="message">Заполните корректно поле </span>
+                    <input type="email" name="email" id="email" placeholder="Ваш email" class="_req _email">
+                    <span class="message">Проверьте  адрес электронной почты</span>
+                   
                     <!-- <input type="textarea" name="message" id="message" placeholder="Ваше сообщение"> -->
-                    <input type="submit" value="Подписаться">
+                    <button type="submit">Подписаться</button>
 
                     <div class="form-agree">
-                        <input type="checkbox" checked  name="agreement" id="formAgreement" class="checkbox_input" required>
+                        <input type="checkbox" checked  name="agreement" id="subscribeAgreement" class="checkbox_input" >
+                        <span class="message aftercheckbox">Подтвердите согласие на обработку данных</span>
+
                         <label for="formAgreement" class="checkbox_label"> <span>Я даю свое согласие на обработку персональных данных</span></label>
                  </div>
 
@@ -901,13 +907,20 @@
             <form class="popup form__body" action="#" id="form" >
                 <h3 class="popup-title">Оформление заказа</h3>
                 <!-- <h4>Вы выбрали тариф <span class="tariff-name"> Classic</span></h4> -->
+
                 <input type="hidden" name="form_subject" value="поисковые подсказки">
-                <input type="text" name="name" id="formName" placeholder="Ваше имя" class="_req" required>
-                <input type="email"  name="email" placeholder="Ваш Email" id="formEmail" class="_req _email" required>
-                <input type="tel" name="phone" id="formPhone"  class="_req" required>
-                <input type="submit" value="Отправить" class="button-recall">
+                
+                <input type="text" name="name" id="formName" placeholder="Ваше имя" class="_req" >
+                <span class="message">Заполните корректно поле </span>
+                <input type="email"  name="email" placeholder="Ваш Email" id="formEmail" class="_req _email" >
+                <span class="message">Проверьте  адрес электронной почты</span>
+                <input type="tel" name="phone" id="formPhone"  class="_req" >
+                <span class="message">Уточните номер телефона</span>
+                
+                <button type="submit"  class="button-recall" >Отправить</button>
                 <div class="form-agree">
-                       <input type="checkbox"  checked  name="agreement" id="formAgreement" required>
+                       <input type="checkbox"  checked  name="agreement" id="formAgreement" >
+                       <span class="message aftercheckbox">Подтвердите согласие на обработку данных</span>
                        <label for="formAgreement" class="checkbox_label"> <span>Я даю свое согласие на обработку персональных данных</span></label>
                 </div>
              
