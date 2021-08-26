@@ -56,4 +56,9 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
   $mail->msgHTML($body);
 
   
-  $mail->send();
+//   $mail->send();
+  if(!$mail->send()){
+    $message = 'Ошибка';
+    } else {
+        $message = 'данные отправлены!';
+    }
