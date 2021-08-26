@@ -12,6 +12,8 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
 
  
 
+$form_subject = trim($_POST["form_subject"]);
+
   $mail = new PHPMailer;
   $mail->CharSet = 'UTF-8';
 
