@@ -63,6 +63,5 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
         $message = 'данные отправлены!';
     }
 
-    $response = ['message' => $message];
-header('Content-type: application/json');
-echo json_encode($response);
+   
+echo $body;
