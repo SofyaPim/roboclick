@@ -1,6 +1,6 @@
 const forms = () => {
     const form = document.querySelectorAll('form'),
-        inputs = document.querySelectorAll('input');
+        inputs = document.querySelectorAll('._req');
       
     const message = {
         loading: 'Загрузка ...',
@@ -23,19 +23,29 @@ const forms = () => {
     const clearInputs = () => {
        
         inputs.forEach(item => {
-           if (!item.getAttribute('submit')) {
                 item.value = '';
-           }
-               
-           
-          
         }) 
     }
-    // inputs.forEach(input => {
-    //     if (input.value.length === 0) {
-    //         statusMessage.textContent = message.validate;
-    //     }
-    // })
+
+    const isInputEmpty = function(){ //проверка на пустоту
+        inputs.forEach(item => {
+             
+                return item.value;
+            
+        })
+    }
+    isInputEmpty();
+    const emaiValidate = function(){ //проверка соответствию регулярному выражению email -inputa
+       
+        inputs.forEach(item => {
+            if(item.classList.contains('_email')){
+               let emailInput =  item;
+    
+                return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(emailInput.value);
+            }
+        })
+    }
+    emaiValidate();
 
     form.forEach(item => {
         item.addEventListener('submit', (e) => {
@@ -44,18 +54,21 @@ const forms = () => {
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
-            // let error = validateForm(form);
-
+           
        const formData = new FormData(item);
 
             console.log(formData.get('name'));//данные формы 
             console.log(formData.get('phone'));
             console.log(formData.get('email'));
-           
-                 postData('./server.php', formData)//./sendmail.php не проверено //
+            console.log(isInputEmpty);
+          
+        //    if(isInputEmpty === true && emaiValidate === true){  // куда ???
+
+        //    }
+                 postData('./sendmail.php', formData)// c ./server.php  проверено //
                 .then(res => {
                     console.log(res);
-                    
+                 
                     statusMessage.textContent = message.success;
                     
                 })
@@ -73,49 +86,6 @@ const forms = () => {
                     }, 3000);
                 })
         
-         
-           
-
-                // function validateForm(form) {
-                //     let error = 0;
-                //     let formReqInputs = document.querySelectorAll('._req');
-                //     for (let i = 0; i < formReqInputs.length; i++) {
-                //         const input = formReqInputs[i];
-                //         removeError(input);
-                //         if(input.classList.contains('_email')){
-                //             if(testEmail(input)){
-                //                 addError(input);
-                //                 error++;
-                //             }
-                //         }else if(input.getAttribute("type") === "checkbox" && input.checked === false){
-                //             addError(input);
-                //             error++;
-                //         }else {
-                //             if(input.value === ''){
-                //                 addError(input);
-                //                 error++;
-                //             }
-                //         }
-                //         return error;
-                //     }
-                    
-                // }
-                // function addError(input){
-                //     input.parentElement.classList.add('_error');
-                //     input.classList.add('_error');
-                // }
-                // function removeError(input){
-                //     input.parentElement.classList.remove('_error');
-                //     input.classList.remove('_error');
-                // }
-                // function testEmail(input) {
-                //     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-                // }
-                
-
-
-
-
 
 
 
@@ -127,3 +97,27 @@ const forms = () => {
 forms();
 
 
+// router.post("/", (req, res, next) => {
+//     foo().catch(bar).then(result => {
+//         res.send(result);
+//     , error => {
+//         console.error(error);
+//         res.sendStatus(500); // or next(error) or whatever
+//     });
+// })
+
+
+//foo()
+// .then((result) => {
+//     res.send(result)
+// })
+// .catch((error) => {
+//     console.log(error)
+//     bar()
+//     .then((data) => {
+//         res.send(data)
+//     })
+//     .catch((error) => {
+//         console.log(error)
+//     })
+// })

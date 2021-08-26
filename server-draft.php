@@ -1,15 +1,14 @@
-<?php
 require_once 'PHPMailer/PHPMailerAutoload.php';
   
 
-   $admin_email = 'walyawalikowa@gmail.com';
+  // $admin_email = 'ddr9626@yandex.ru';
 
-//   $admin_email = array();
-//   foreach ( $_POST["admin_email"] as $key => $value ) {
-//    array_push($admin_email, $value);
-//   }
+  $admin_email = array();
+  foreach ( $_POST["admin_email"] as $key => $value ) {
+   array_push($admin_email, $value);
+  }
 
-  $form_subject = "подсказки";
+  $form_subject = trim($_POST["form_subject"]);
 
   $mail = new PHPMailer;
   $mail->CharSet = 'UTF-8';
@@ -19,7 +18,7 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
   $c = true;
   $message = '';
   foreach ( $_POST as $key => $value ) {
-    if ( $value != "" && $key != "admin_email"&&  $key != "form_subject"  ) {
+    if ( $value != "" && $key != "admin_email" && $key != "form_subject" ) {
       if (is_array($value)) {
         $val_text = '';
         foreach ($value as $val) {
@@ -44,9 +43,9 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
   $mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Бланчард');
   
   // Кому
-//   foreach ( $admin_email as $key => $value ) {
-//    } 
-   $mail->addAddress($admin_email->$value);
+  foreach ( $admin_email as $key => $value ) {
+    $mail->addAddress($value);
+  }
   // Тема письма
   $mail->Subject = $form_subject;
   
