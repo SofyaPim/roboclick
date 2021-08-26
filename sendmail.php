@@ -2,14 +2,15 @@
 require_once 'PHPMailer/PHPMailerAutoload.php';
   
 
-   $admin_email = 'walyawalikowa@gmail.com';
+   $admin_email = array('walyawalikowa@gmail.com', 'sofanpim@mail.ru');
+
 
 //   $admin_email = array();
 //   foreach ( $_POST["admin_email"] as $key => $value ) {
 //    array_push($admin_email, $value);
 //   }
 
-  $form_subject = "подсказки";
+ 
 
   $mail = new PHPMailer;
   $mail->CharSet = 'UTF-8';
@@ -41,7 +42,7 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
 
 
   // От кого
-  $mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Бланчард');
+  $mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'JDow');
   
   // Кому
    foreach ( $admin_email as $key => $value ) {
