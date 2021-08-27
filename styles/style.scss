@@ -57,6 +57,7 @@ $error: rgb(245, 73, 6);
     border-radius: .5rem;
     width: 16vw;
     transition: all 1s ease-in-out;
+    cursor:pointer;
 
     .button {
         box-shadow: initial;
@@ -82,7 +83,9 @@ $error: rgb(245, 73, 6);
     scroll-behavior: smooth;
 
 }
-
+*:hover{
+transition: all .3s ease-in;
+}
 input,
 input:focus {
     padding: 0;
@@ -96,7 +99,7 @@ a,
 a:hover,
 a:focus,
 a:active {
-    display: block;
+   display: block;
     text-decoration: none;
     color: inherit;
 }
@@ -133,6 +136,8 @@ p {
     opacity: 0;
     color: $error;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 1rem;
+    font-size: .7rem;
 }
 
 .aftercheckbox {
@@ -255,7 +260,9 @@ p {
 }
 
 .wrapper {
-    max-width: 1920px;
+    //max-width: 1920px;
+    min-width: 100vw;
+    max-width: 100vw;
     overflow: hidden;
     padding-left: 100px;
     padding-top: 0;
@@ -292,13 +299,17 @@ p {
 
     h2 {
         font-weight: bold;
-        font-size: calc(2rem + 1vw);
+       // font-size: calc(2rem + 1vw);
+       
+    font-size: calc(170% + 1vw);
+
         line-height: 3rem;
         padding-left: 8.75rem;
     }
 
     h3 {
-        font-size: calc(1.2rem + 1vw);
+       // font-size: calc(1.2rem + 1vw);
+       font-size: calc(63% + 1vw);
         line-height: 2.5vw;
         font-weight: 300;
     }
@@ -318,7 +329,8 @@ p {
     }
 
     section {
-        padding: 6rem 4rem;
+       // padding: 6rem 4rem;
+       padding: 6% 4%;
 
         h2 {
             color: $gray-shadow;
@@ -353,7 +365,9 @@ p {
 
                 // margin-bottom: 2rem;
             }
-
+h3{
+    margin-bottom: 1rem;
+}
             h4 {
                 margin-top: 1rem;
                 margin-bottom: 1rem;
@@ -364,24 +378,26 @@ p {
             }
 
 
+
             input {
                 border: 1px solid $purple-accent;
                 width: 29vw; //2version
                 padding: 1rem;
-                margin-bottom: 1rem;
+              //  margin-bottom: 1rem;
                 border-radius: .5rem;
                 outline: none;
 
                 &:focus {
 
-                    border: 2px solid $aqua-accent;
+                    border: 1px solid $aqua-accent;
+                    border: 1px solid #2cd4d9;
 
                 }
 
             }
 
             input._error {
-                border: 2px solid $error;
+                border: 1px solid $error;
             }
 
             ::placeholder {
@@ -390,16 +406,22 @@ p {
             }
 
             button {
-                width: 29vw; //2version
+                width: 32vw; //2version
                 padding: 1rem;
                 margin-bottom: 1rem;
                 border-radius: .5rem;
                 background-color: $purple-accent;
+                border: 1px solid $purple-accent;
                 color: $light-font;
                 font-size: calc(1rem + .5vw);
                 outline: none;
-
+                transition: all .3s ease-in;
+&:hover{
+    transform: scale(1.01);
+}
                 &:focus {
+                    border: 1px solid $aqua-accent;
+                    outline: none;
                     background-color: $aqua-accent;
                 }
             }
@@ -422,7 +444,7 @@ p {
                 }
 
                 .checkbox_input:checked+.checkbox_label::after {
-                    transform: scale(1);
+                    opacity: 1;
                 }
 
                 .checkbox_label::before {
@@ -432,7 +454,7 @@ p {
                     content: "";
                     height: 1.5rem;
                     border-radius: 2px;
-                    background-color: $aqua-accent;
+                    border: 1px solid $purple-accent;
 
                 }
 
@@ -442,15 +464,12 @@ p {
 
                 .checkbox_label::after {
                     position: absolute;
-                    content: "";
-                    width: 1.1rem;
-                    height: 1.1rem;
-                    border-radius: 2px;
-                    background-color: $purple-accent;
-                    top: 2.5px;
-                    left: 2.5px;
-                    transform: scale(0);
-                    transition: transform .5s ease-in;
+                    content: url('../images/checked-mark.svg');
+                  opacity: 0;
+                    top: -.5rem;
+                    left: 0px;
+                  
+                    transition: all .5s ease-in;
                 }
 
                 .checkbox_label {
@@ -463,6 +482,7 @@ p {
 
                     span {
                         margin-left: 2.5rem;
+                        font-size: .7rem;
                     }
 
                     a {
@@ -523,14 +543,7 @@ p {
         top: 0;
         left: 0;
         border-right: .5px solid $gray;
-
-        .social-icons {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-
-            .nav-title {
+.nav-title {
                 margin-bottom: 15rem;
                 transform: rotate(-90deg);
                 width: 16rem;
@@ -538,13 +551,7 @@ p {
                 letter-spacing: 1.5px;
 
             }
-
-            img {
-                width: 1.5rem;
-                opacity: .7;
-                margin-top: 1rem;
-            }
-        }
+     
 
         .nav-burger {
             width: 2.5rem;
@@ -552,6 +559,8 @@ p {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            z-index: 89;
+            position: relative;
 
             .line {
                 background-color: $gray;
@@ -582,11 +591,14 @@ p {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: all 1s ease-in-out;
+        transition: all .5s ease-in-out;
 
-        nav {
+        .nav-bar-links {
+            
+                list-style-type: none;
+            
             a {
-                margin-bottom: 1rem;
+              //  margin-bottom: 1rem;
                 padding: 1rem;
                 position: relative;
                 cursor: pointer;
@@ -604,18 +616,33 @@ p {
 
             a:hover {
                 &::before {
-                    width: 4rem;
+                    width: 100%;
                 }
             }
+            
         }
+   .social-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+width: 50%;
+margin: 0 auto;
+            
 
+            img {
+                width: 1.5rem;
+                opacity: .7;
+                margin-top: 1rem;
+            }
+        }
     }
 
     .about {
-        padding-top: 10rem;
+      //  padding-top: 10rem;
+      padding-top: 10%;
         padding-right: 6.25rem;
         background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #5333ED;
-        // background-color: $purple-accent;
         color: $light-font;
         position: relative;
         display: grid;
@@ -642,8 +669,10 @@ p {
                 width: initial;
                 border: 1px solid $purple-accent;
                 background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
-                padding: 1rem 2rem;
-                margin-right: 3rem;
+                // padding: 1rem 2rem;
+                // margin-right: 3rem;
+                padding: 1.5% 3%;
+                margin-right: 3%;
 
                 p {
                     color: $purple-accent;
@@ -652,13 +681,18 @@ p {
                 &:hover {
 
                     background: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%);
-                    border-color: $light-font;
+               
 
                     p {
                         color: $white;
                     }
 
                 }
+                &:focus{
+                      transform: scale(1.1);// doesn`t work
+                    outline: none;
+                }
+               
             }
         }
 
@@ -690,10 +724,13 @@ p {
             }
 
             .button {
-                width: 16rem;
-                height: 5rem;
+                // width: 16rem;
+                // height: 5rem;
+                width: 24%;
+                height: 8%;
                 border: 1px solid $light-font;
                 background: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%); //new version
+                padding: 5% 20%;
 
                 h3 {
                     margin-bottom: 0;
@@ -723,8 +760,9 @@ p {
     }
 
     .propose {
-        padding-top: 8.125rem;
-        padding-bottom: 8.125rem;
+       // padding-top: 8.125rem;
+      //  padding-bottom: 8.125rem;
+      padding-bottom: 8%;
         background-color: $light-font;
         color: $dark-font;
         // height: 50rem;
@@ -752,7 +790,9 @@ p {
             grid-row: 2/3;
 
             .robot {
-                width: 50vw;
+                //width: 50vw;
+                width: 70%;
+
             }
         }
 
@@ -762,13 +802,15 @@ p {
 
             ul {
                 // margin-left: ;
-                width: 90%;
+                width: 100%;
                 list-style-image: url('../images/list-marker.png');
 
                 p {
                     font-weight: 300;
-                    font-size: calc(1rem + .7vw);
-                    line-height: calc(2rem + 1vh);
+                   // font-size: calc(1rem + .7vw);
+                   
+    font-size: calc(90% + .7vw);
+                    line-height: 130%;
                     padding: 0 1.5rem;
                 }
 
@@ -816,7 +858,7 @@ p {
                         opacity: .5;
                         font-weight: normal;
                         font-size: calc(1rem + 1vw);
-                        line-height: 2rem;
+                        line-height: 1.2;
                     }
                 }
 
@@ -824,13 +866,16 @@ p {
                     position: relative;
 
                     .card__content {
-                        height: 16.25rem;
-                        padding: 0 2rem;
+                       // height: 16.25rem;
+                       height: 40%;
+                        //padding: 0 2rem;
+                        padding: 0 6%;
                         padding-right: 0;
                         border-left: 1px solid $light-font;
 
                         p {
-                            font-size: calc(1rem + .5vw);
+                           // font-size: calc(1rem + .5vw);
+                            font-size: calc(90% + .5vw);
                         }
 
                     }
@@ -888,9 +933,10 @@ p {
 
                 h3 {
                     text-align: center;
-                    font-size: calc(1rem + 1vw);
+                  //  font-size: calc(1rem + 1vw);
                     font-weight: 700;
                 }
+                
 
 
                 &__block {
@@ -899,7 +945,14 @@ p {
                     border-radius: 0px 10px 10px 0px;
                     padding: 1rem 2rem;
                     opacity: .5;
-
+                    cursor: pointer;
+                    &:hover{
+                        opacity: .7;
+                        h3{
+                           text-shadow: 3px 2px 4px $aqua-accent;
+                        }
+                      
+                    }
                     .stage-icon {
                         display: none;
                     }
@@ -909,6 +962,14 @@ p {
 
             .active-header {
                 opacity: 1;
+                color: $aqua-accent;
+                &:hover{
+                    h3{
+                        text-shadow: none;
+                    }
+                    opacity: 1;
+                    
+                }
             }
 
             .stage-content {
@@ -930,7 +991,7 @@ p {
                         flex-direction: column;
                         align-items: flex-start;
                         justify-content: space-between;
-                        height: 25rem;
+                     //   height: 25rem;
 
                         p {
                             text-align: left;
@@ -990,12 +1051,12 @@ p {
 
                         .list-item {
                             display: flex;
+                            margin-bottom: 3%;
 
                             .checkbox {
-                                width: 2vw;
+                                width: 12%;
                             }
 
-                            margin-bottom: 0rem;
 
                             p {
                                 //  font-size: calc(.5rem + .5vw);
@@ -1007,6 +1068,9 @@ p {
 
 
                         }
+                    }
+                    .u-list + div{
+                        margin-top: 15%;
                     }
 
                     .blue-rect {
@@ -1034,7 +1098,7 @@ p {
                         font-size: calc(1.5rem + 1vw);
                     }
 
-                    &:hover {
+                    &:hover,&:focus {
 
                         transform: rotateY(0deg);
                         z-index: 99;
@@ -1048,22 +1112,33 @@ p {
                             opacity: 1;
                         }
 
-                        .button {
-                            // background-color: $aqua-accent;
-                            //color: $light-font;
-                            border: none;
-                            background: linear-gradient(262.51deg, rgba(83, 51, 237, 0.8) 35.48%, rgba(80, 211, 232, 0.8) 59.7%), #50D3E8;
-                            color: $light-font;
+                        // .button {
+                        //     // background-color: $aqua-accent;
+                        //     //color: $light-font;
+                        //     border: none;
+                        //     background: linear-gradient(262.51deg, rgba(83, 51, 237, 0.8) 35.48%, rgba(80, 211, 232, 0.8) 59.7%), #50D3E8;
+                        //     color: $light-font;
 
 
 
-                        }
+                        // }
 
                         .blue-rect {
 
                             opacity: 1;
 
                         }
+
+
+
+                    }
+                    
+                    .button:hover {
+                        // background-color: $aqua-accent;
+                        //color: $light-font;
+                        border: none;
+                        background: linear-gradient(262.51deg, rgba(83, 51, 237, 0.8) 35.48%, rgba(80, 211, 232, 0.8) 59.7%), #50D3E8;
+                        color: $light-font;
 
 
 
@@ -1253,13 +1328,14 @@ p {
 
             p {
                 font-size: calc(.5rem + 1vw);
-                line-height: 1.5rem;
+                line-height: 1;
             }
 
             .faq-item {
                 width: 100%;
                 color: $gray;
                 border-radius: .5rem;
+                border: 1px solid $light-font;
                 padding: 2rem 2rem;
                 background-color: $light-font;
                 // opacity: .8;
@@ -1269,7 +1345,7 @@ p {
                 align-items: center;
                 position: relative;
                 z-index: 88;
-
+outline: none;
                 .faq-mark {
                     width: 1.5rem;
                     height: 1rem;
@@ -1279,11 +1355,12 @@ p {
                     background-position: center center;
                 }
 
-                &:hover {
+                &:hover, &:focus {
                     cursor: pointer;
                     background-color: $aqua-accent;
                     border: 1px solid $light-font;
                     color: $light-font;
+                    outline: none;
 
                     .faq-mark {
 
@@ -1321,7 +1398,7 @@ p {
 
                 p {
                     animation-delay: 1s;
-                    line-height: 1.5rem;
+                    line-height: 1;
                 }
 
 
@@ -1469,7 +1546,7 @@ p {
                     }
 
                     .checkbox_input:checked+.checkbox_label::after {
-                        transform: scale(1);
+                        opacity: 1;
                     }
 
                     .checkbox_label::before {
@@ -1487,15 +1564,12 @@ p {
 
                     .checkbox_label::after {
                         position: absolute;
-                        content: "";
-                        width: 1.1rem;
-                        height: 1.1rem;
-                        border-radius: 2px;
-                        background-color: $purple-accent;
-                        top: 2.5px;
-                        left: 2.5px;
-                        transform: scale(0);
-                        transition: transform .5s ease-in;
+                        content: url('../images/checked-mark.svg');
+                        top: -.5rem;
+                        left: 0px;
+                        height: 1.5rem;
+                       opacity: 0;
+                        transition: all .3s ease-in;
                     }
 
                     .checkbox_label {
@@ -1663,9 +1737,9 @@ p {
             padding-left: 6rem;
         }
 
-        h3 {
-            font-size: calc(1rem + 1vw);
-        }
+        // h3 {
+        //     font-size: calc(1rem + 1vw);
+        // }
 
         h4 {
 
@@ -1800,7 +1874,7 @@ p {
                         width: 16vw;
 
                         .u-list {
-                            height: 22.25rem;
+                            height: 20.25rem;
                         }
 
                         .blue-rect {
@@ -2102,7 +2176,7 @@ p {
                         h3 {
                             //  width: 7rem;
                             font-weight: 700;
-                            font-size: calc(1rem + .5vw);
+                          //  font-size: calc(1rem + .5vw);
                         }
 
                     }
@@ -2137,7 +2211,7 @@ p {
                                 width: 60%;
                             }
 
-                            height: 16rem;
+                          //  height: 16rem;
 
 
                         }
@@ -2375,11 +2449,18 @@ p {
             height: 70px;
             flex-direction: row;
             border-right: none;
+            box-shadow: 0px 2px 20px #9d9fa5;
 
             .nav-burger {
                 height: 1.5rem;
             }
-
+  .nav-title {
+                    margin-bottom: 0;
+                    transform: rotate(0deg);
+                    opacity: .7;
+                    font-size: calc(1rem + 1vw);
+                    width: 30%;
+                }
             .social-icons {
                 flex-direction: row;
 
@@ -2388,13 +2469,7 @@ p {
                     margin-left: 1rem;
                 }
 
-                .nav-title {
-                    margin-bottom: 0;
-                    transform: rotate(0deg);
-                    opacity: .7;
-                    font-size: calc(1rem + 1vw);
-                    width: 70%;
-                }
+              
             }
 
         }
@@ -2479,6 +2554,7 @@ p {
             display: none;
         }
 
+        
         .hints .search {
             width: 5rem;
             top: 90%;
@@ -2572,9 +2648,7 @@ p {
             padding: 6rem 2rem;
         }
 
-        p {
-            font-size: calc(.7rem + 1vw);
-        }
+        
 
         h3 {
             font-size: calc(.7rem + .7vw);
@@ -2652,7 +2726,7 @@ p {
 
             .stage-wrapper {
                 .stage-content__block__items {
-                    height: 25vh;
+                   // height: 25vh;
 
                     p {
                         line-height: 1.5;
@@ -2921,6 +2995,7 @@ p {
 
                     .stage-icon {
                         display: block;
+                        width: 90%;
                     }
 
                     h3 {
@@ -2936,7 +3011,7 @@ p {
 
                 .stage-content__block__items {
 
-                    height: 60vh;
+                   // height: 60vh;
 
                     p {
                         font-size: calc(1.2rem + .5vw);
@@ -3069,6 +3144,12 @@ p {
 
     .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item p {
         line-height: 1.2;
+    }
+    .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item .checkbox{
+        display: none;
+    }
+    .wrapper .contacts .contacts-items .feedback-form {
+        padding: 1rem;
     }
 }
 

@@ -3,7 +3,8 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
         modal = document.querySelector(modalSelector),
         modalHeader = modal.querySelector('.popup-title'),
         close = document.querySelector(closeSelector),
-        modalProto = document.querySelectorAll('[data-modal]');
+        modalProto = document.querySelectorAll('[data-modal]'),
+        errorItems = document.querySelectorAll('._error');
     let smallHeader = document.createElement('h4');
 
     trigger.forEach(item => {
@@ -27,8 +28,8 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
             }
 
             modalProto.forEach(item => {
-               //item.style.display = 'none';
-              item.style.transform = 'scale(0)';
+                //item.style.display = 'none';
+                item.style.transform = 'scale(0)';
 
             })
             // modal.style.display = 'block';
@@ -39,7 +40,9 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
 
     })
     close.addEventListener('click', () => {
-
+        // errorItems.forEach(item => {
+        //     item.classList.remove('_error');
+        // })
         modalProto.forEach(item => {
             // item.style.display = 'none';
             item.style.transform = 'scale(0)';
@@ -47,23 +50,25 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
 
         })
         smallHeader.remove();
-      //  modal.style.display = 'none';
-     modal.style.transform = 'scale(0)';
+        //  modal.style.display = 'none';
+        modal.style.transform = 'scale(0)';
         document.body.style.overflow = '';
     })
     modal.addEventListener('click', (e) => {
-
+//  errorItems.forEach(item => {
+//             item.classList.remove('_error');
+//         })
         if (e.target == modal && clickModal) {
 
             modalProto.forEach(item => {
-            //    item.style.display = 'none';
-            item.style.transform = 'scale(0)';
+                //    item.style.display = 'none';
+                item.style.transform = 'scale(0)';
 
 
             })
             smallHeader.remove();
-          //  modal.style.display = 'none';
-          modal.style.transform = 'scale(0)';
+            //  modal.style.display = 'none';
+            modal.style.transform = 'scale(0)';
             document.body.style.overflow = '';
 
         }
