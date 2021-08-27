@@ -4,8 +4,10 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
         modalHeader = modal.querySelector('.popup-title'),
         close = document.querySelector(closeSelector),
         modalProto = document.querySelectorAll('[data-modal]'),
-        errorItems = document.querySelectorAll('._error');
-    let smallHeader = document.createElement('h4');
+        
+     smallHeader = document.createElement('h4');
+
+     console.log(close);
 
     trigger.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -40,9 +42,11 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
 
     })
     close.addEventListener('click', () => {
-        // errorItems.forEach(item => {
-        //     item.classList.remove('_error');
-        // })
+        let errorItems = document.querySelectorAll('._error');
+        console.log(errorItems);
+        errorItems.forEach(item => {
+            item.classList.remove('_error');
+        })
         modalProto.forEach(item => {
             // item.style.display = 'none';
             item.style.transform = 'scale(0)';

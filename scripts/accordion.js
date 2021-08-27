@@ -7,7 +7,7 @@ const getAnswers = (triggerSelector, contentselector) => {
 
     })
     questBlocks.forEach(btn => {
-        btn.addEventListener('click', function () {
+        btn.addEventListener('click', function (e) {
             // if (!this.classList.contains('active')) {
             //    questBlocks.forEach(btn => {
             //         btn.classList.remove('active');
@@ -22,17 +22,34 @@ const getAnswers = (triggerSelector, contentselector) => {
 
             // }
 
-            answBlocks.forEach(item => {
-                item.style.height = 'none';
+            // answBlocks.forEach(item => {
+                
+            //     item.style.display = 'none';
+
+
+                
+                
+            // })
+let answ =  document.querySelectorAll('.answer-item');
+
+             btn.nextElementSibling.classList.toggle('displayNone');
+
+
+            answ.forEach(item => {
+              
+                if(item.previousElementSibling !== e.target){
+ console.log(item.previousElementSibling);
+
+                        item.classList.add('displayNone');
+                }
+               
             })
+            
 
+            // if (answ.style.display !== 'block') {
 
-            let answ = btn.nextElementSibling;
-
-            if (answ.style.display !== 'block') {
-
-                answ.style.display = 'block';
-            } else answ.style.display = 'none';
+            //     answ.style.display = 'block';
+            // } else answ.style.display = 'none';
 
         });
     });
