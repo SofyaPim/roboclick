@@ -449,6 +449,7 @@ p {
   display: flex;
   align-items: center;
   padding: 1rem;
+  cursor: pointer;
 }
 .wrapper .about .phone-header h3 {
   color: #363739;
@@ -465,7 +466,8 @@ p {
   color: #5333ed;
 }
 .wrapper .about .phone-header .phone-button:hover {
-  background-color: #5333ed;
+  background: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%);
+  border-color: #F2F5FE;
 }
 .wrapper .about .phone-header .phone-button:hover p {
   color: #ffffff;
@@ -501,7 +503,7 @@ p {
   font-weight: 300;
 }
 .wrapper .about__main .button:hover {
-  background-color: #F2F5FE;
+  background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
   color: #5333ed;
 }
 .wrapper .about__mac-image {
@@ -712,6 +714,7 @@ p {
   padding: 1vw 5vw;
   border: 1px solid #2cd4d9;
   background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
+  cursor: pointer;
 }
 .wrapper .prices .card-wrapper .wrap .card .gift-icon {
   top: 0.5%;
@@ -824,6 +827,7 @@ p {
   padding: 1vw 5vw;
   border: 1px solid #2cd4d9;
   background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
+  cursor: pointer;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
   font-size: 2rem;
@@ -1078,6 +1082,10 @@ p {
   outline: none;
   text-align: center;
 }
+.wrapper .contacts .contacts-items .feedback-form button:hover {
+  background: linear-gradient(270deg, #363739 0%, #EEF1FA 100%);
+  color: #363739;
+}
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_input {
   display: none;
 }
@@ -1302,9 +1310,6 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card .button {
     padding: 1vw 4.5vw;
-  }
-  .wrapper .faq .faq-wrapper {
-    overflow: hidden;
   }
   .wrapper .faq .faq-wrapper p {
     line-height: 2rem;

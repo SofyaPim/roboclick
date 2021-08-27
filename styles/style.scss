@@ -66,6 +66,7 @@ $error: rgb(245, 73, 6);
         //  color: $light-font;
         border: 1px solid $aqua-accent;
         background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
+        cursor: pointer;
 
     }
 
@@ -629,7 +630,7 @@ p {
             display: flex;
             align-items: center;
             padding: 1rem;
-
+cursor: pointer;
             h3 {
                 color: $gray;
                 margin: auto;
@@ -648,7 +649,8 @@ p {
 
                 &:hover {
 
-                    background-color: $purple-accent;
+                    background: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%);
+                    border-color: $light-font;
 
                     p {
                         color: $white;
@@ -697,7 +699,7 @@ p {
                 }
 
                 &:hover {
-                    background-color: $light-font;
+                    background: linear-gradient( 266.22deg , rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
                     color: $purple-accent;
                 }
             }
@@ -1450,7 +1452,10 @@ p {
                     padding-left: 0;
                     outline: none;
                     text-align: center;
-
+&:hover{
+    background: linear-gradient(270deg, #363739 0%, #EEF1FA 100%);
+    color: $gray;
+}
 
                 }
 
@@ -1829,7 +1834,7 @@ p {
 
 
             .faq-wrapper {
-                overflow: hidden;
+              
 
                 p {
                     line-height: 2rem;
