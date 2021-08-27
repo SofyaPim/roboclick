@@ -39,11 +39,16 @@ const forms = () => {
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.addEventListener('input', (e) => {
-                // item = e.target;//не работает???
+              
                 let sibling = item.nextElementSibling;
                 item.classList.remove('_error');
 
                 sibling.style.opacity = 0;
+                if(item.name === 'agreement'){
+                    let prev = item.previousElementSibling ;
+                    sibling.style.opacity = 1;
+                    prev.style.opacity = 0;
+                }
             })
 
             switch (item.name) {
@@ -68,10 +73,10 @@ const forms = () => {
                     break;
                 case 'agreement':
                     if (item.checked === false) {
-                        let sibling = item.nextElementSibling;
+                        let prev = item.previousElementSibling ;
                         addErr();
                         item.classList.add('_error');
-                        sibling.style.opacity = 1;
+                        prev.style.opacity = 1;
                     }
 
 

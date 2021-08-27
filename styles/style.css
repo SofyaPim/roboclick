@@ -67,7 +67,8 @@ p {
 }
 .message {
   opacity: 0;
-  color: #970909;
+  color: #f54906;
+  font-family: "Lato", sans-serif;
 }
 
 .aftercheckbox {
@@ -141,7 +142,10 @@ p {
      object-fit: cover;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: -3rem;
   left: 0px;
 }
@@ -244,12 +248,14 @@ p {
   padding-left: 10vw;
 }
 .wrapper .overlay .popup .popup-title {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .wrapper .overlay .popup h4 {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .wrapper .overlay .popup input {
   border: 1px solid #5333ed;
@@ -263,7 +269,7 @@ p {
   border: 2px solid #2cd4d9;
 }
 .wrapper .overlay .popup input._error {
-  border: 2px solid #970909;
+  border: 2px solid #f54906;
 }
 .wrapper .overlay .popup ::-moz-placeholder {
   font-size: calc(.5rem + .5vw);
@@ -298,29 +304,49 @@ p {
 .wrapper .overlay .popup__close img {
   width: 2rem;
 }
-.wrapper .overlay .popup .form-agree {
-  width: calc(50% + 2vw);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.wrapper .overlay .popup .form-agree input {
-  width: 2rem;
-  margin-bottom: 0;
-  margin-right: 1rem;
-  align-self: flex-start;
-}
 .wrapper .overlay .popup .form-agree .checkbox_input {
   display: none;
 }
-.wrapper .overlay .popup .form-agree .checkbox_label {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.9rem;
+.wrapper .overlay .popup .form-agree .checkbox_input:checked + .checkbox_label::after {
+  transform: scale(1);
 }
 .wrapper .overlay .popup .form-agree .checkbox_label::before {
-  content: "";
   align-self: flex-start;
+  flex: 0 0 1.5rem;
+  content: "";
+  height: 1.5rem;
+  border-radius: 2px;
+  background-color: #2cd4d9;
+}
+.wrapper .overlay .popup .form-agree .checkbox_label::before._error {
+  box-shadow: 1px 1px 2px #f54906;
+}
+.wrapper .overlay .popup .form-agree .checkbox_label::after {
+  position: absolute;
+  content: "";
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 2px;
+  background-color: #5333ed;
+  top: 2.5px;
+  left: 2.5px;
+  transform: scale(0);
+  transition: transform 0.5s ease-in;
+}
+.wrapper .overlay .popup .form-agree .checkbox_label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: 0.7rem;
+  color: #5333ed;
+}
+.wrapper .overlay .popup .form-agree .checkbox_label span {
+  margin-left: 2.5rem;
+}
+.wrapper .overlay .popup .form-agree .checkbox_label a {
+  display: inline;
+  color: #2cd4d9;
 }
 .wrapper .header {
   width: 6.25rem;
@@ -519,7 +545,7 @@ p {
 }
 .wrapper .propose__list ul {
   width: 90%;
-  list-style: url(/images/list-marker.png);
+  list-style-image: url("/images/list-marker.png");
 }
 .wrapper .propose__list ul p {
   font-weight: 300;
@@ -697,7 +723,7 @@ p {
   width: 10%;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list {
-  height: 28.25rem;
+  height: 25.25rem;
   z-index: 70;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
@@ -711,11 +737,12 @@ p {
   font-size: 100%;
   padding-left: 0.5rem;
   padding-top: 0;
+  line-height: 1.5;
 }
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
   width: 25%;
-  height: 60%;
+  height: 67%;
   background-color: #2cd4d9;
   opacity: 0.2;
   left: 0;
@@ -902,7 +929,7 @@ p {
 .wrapper .faq .faq-wrapper .faq-item .faq-mark {
   width: 1.5rem;
   height: 1rem;
-  background-image: url("/images/+.svg");
+  background-image: url("images/plus.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -914,7 +941,7 @@ p {
   color: #F2F5FE;
 }
 .wrapper .faq .faq-wrapper .faq-item:hover .faq-mark {
-  background-image: url("/images/+White.svg");
+  background-image: url("/images/plusWhite.svg");
 }
 .wrapper .faq .faq-wrapper .faq-item.active {
   background-color: #F2F5FE;
@@ -922,7 +949,7 @@ p {
 }
 .wrapper .faq .faq-wrapper .faq-item.active .faq-mark {
   border: #2cd4d9;
-  background-image: url("/images/-aqua.svg");
+  background-image: url("/images/minusAqua.svg");
   height: 2px;
 }
 .wrapper .faq .faq-wrapper .answer-item {
@@ -1019,7 +1046,7 @@ p {
   border-bottom: 1px solid #2cd4d9;
 }
 .wrapper .contacts .contacts-items .feedback-form input._error {
-  border-bottom: 1px solid #811c1c;
+  border-bottom: 1px solid #f54906;
 }
 .wrapper .contacts .contacts-items .feedback-form input::-moz-placeholder {
   color: #F2F5FE;
@@ -1050,6 +1077,47 @@ p {
   padding-left: 0;
   outline: none;
   text-align: center;
+}
+.wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_input {
+  display: none;
+}
+.wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_input:checked + .checkbox_label::after {
+  transform: scale(1);
+}
+.wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label::before {
+  align-self: flex-start;
+  flex: 0 0 1.5rem;
+  content: "";
+  height: 1.5rem;
+  border-radius: 2px;
+  background-color: #F2F5FE;
+}
+.wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label::after {
+  position: absolute;
+  content: "";
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 2px;
+  background-color: #5333ed;
+  top: 2.5px;
+  left: 2.5px;
+  transform: scale(0);
+  transition: transform 0.5s ease-in;
+}
+.wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: 0.7rem;
+  color: #F2F5FE;
+}
+.wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label span {
+  margin-left: 2.5rem;
+}
+.wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label a {
+  display: inline;
+  color: #2cd4d9;
 }
 .wrapper .contacts .global-map-wrapper {
   width: 50vw;
@@ -1453,6 +1521,7 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
     display: flex;
+    margin-bottom: 0.3rem;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item .checkbox {
     width: 12%;
@@ -1464,7 +1533,7 @@ p {
     line-height: 1rem;
   }
   .wrapper .prices .card-wrapper .wrap .card .blue-rect {
-    height: 56%;
+    top: 3rem;
   }
   .wrapper .prices .card-wrapper .wrap .card .card-title {
     margin-bottom: 2rem;
@@ -1479,7 +1548,6 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card .button {
     box-shadow: initial;
-    margin-top: 1rem;
     padding: 1vw 4vw;
   }
   .wrapper .faq h2 {
