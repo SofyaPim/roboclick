@@ -349,9 +349,9 @@ p {
             padding-left: 10vw;
 
             .popup-title {
-                margin-top: 2rem; 
-               
-               // margin-bottom: 2rem;
+                margin-top: 2rem;
+
+                // margin-bottom: 2rem;
             }
 
             h4 {
@@ -435,7 +435,8 @@ p {
                     background-color: $aqua-accent;
 
                 }
-                .checkbox_label::before._error{
+
+                .checkbox_label::before._error {
                     box-shadow: 1px 1px 2px $error;
                 }
 
@@ -630,7 +631,8 @@ p {
             display: flex;
             align-items: center;
             padding: 1rem;
-cursor: pointer;
+            cursor: pointer;
+
             h3 {
                 color: $gray;
                 margin: auto;
@@ -699,7 +701,7 @@ cursor: pointer;
                 }
 
                 &:hover {
-                    background: linear-gradient( 266.22deg , rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
+                    background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
                     color: $purple-accent;
                 }
             }
@@ -761,7 +763,7 @@ cursor: pointer;
             ul {
                 // margin-left: ;
                 width: 90%;
-                list-style-image: url('/images/list-marker.png');
+                list-style-image: url('../images/list-marker.png');
 
                 p {
                     font-weight: 300;
@@ -1119,7 +1121,7 @@ cursor: pointer;
         .mobile-prices-wrapper {
             .mobile-prices-card {
                 @include card();
-                background-image: url('/images/blue-top.svg');
+                background-image: url('../images/blue-top.svg');
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: top;
@@ -1131,7 +1133,7 @@ cursor: pointer;
                 }
 
                 &:hover {
-                    background-image: url('/images/aqua-top.svg');
+                    background-image: url('../images/aqua-top.svg');
 
                     h3 {
                         color: $light-font;
@@ -1271,7 +1273,7 @@ cursor: pointer;
                 .faq-mark {
                     width: 1.5rem;
                     height: 1rem;
-                    background-image: url('images/plus.svg');
+                    background-image: url('../images/plus.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center center;
@@ -1285,7 +1287,7 @@ cursor: pointer;
 
                     .faq-mark {
 
-                        background-image: url('/images/plusWhite.svg');
+                        background-image: url('../images/plusWhite.svg');
                     }
 
                 }
@@ -1298,7 +1300,7 @@ cursor: pointer;
 
                 .faq-mark {
                     border: $aqua-accent;
-                    background-image: url('/images/minusAqua.svg');
+                    background-image: url('../images/minusAqua.svg');
                     height: 2px;
                 }
 
@@ -1452,10 +1454,11 @@ cursor: pointer;
                     padding-left: 0;
                     outline: none;
                     text-align: center;
-&:hover{
-    background: linear-gradient(270deg, #363739 0%, #EEF1FA 100%);
-    color: $gray;
-}
+
+                    &:hover {
+                        background: linear-gradient(270deg, #363739 0%, #EEF1FA 100%);
+                        color: $gray;
+                    }
 
                 }
 
@@ -1834,7 +1837,7 @@ cursor: pointer;
 
 
             .faq-wrapper {
-              
+
 
                 p {
                     line-height: 2rem;
@@ -2186,8 +2189,8 @@ cursor: pointer;
 
                         .blue-rect {
 
-                          
-                            top:3rem;
+
+                            top: 3rem;
 
                         }
 
@@ -2208,7 +2211,7 @@ cursor: pointer;
 
                         .button {
                             box-shadow: initial;
-                           // margin-top: 1rem;
+                            // margin-top: 1rem;
                             padding: 1vw 4vw;
                         }
                     }

@@ -547,7 +547,7 @@ p {
 }
 .wrapper .propose__list ul {
   width: 90%;
-  list-style-image: url("/images/list-marker.png");
+  list-style-image: url("../images/list-marker.png");
 }
 .wrapper .propose__list ul p {
   font-weight: 300;
@@ -815,7 +815,7 @@ p {
   border-radius: 0.5rem;
   width: 16vw;
   transition: all 1s ease-in-out;
-  background-image: url("/images/blue-top.svg");
+  background-image: url("../images/blue-top.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
@@ -834,7 +834,7 @@ p {
   padding: 1vw 15vw;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover {
-  background-image: url("/images/aqua-top.svg");
+  background-image: url("../images/aqua-top.svg");
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover h3 {
   color: #F2F5FE;
@@ -933,7 +933,7 @@ p {
 .wrapper .faq .faq-wrapper .faq-item .faq-mark {
   width: 1.5rem;
   height: 1rem;
-  background-image: url("images/plus.svg");
+  background-image: url("../images/plus.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -945,7 +945,7 @@ p {
   color: #F2F5FE;
 }
 .wrapper .faq .faq-wrapper .faq-item:hover .faq-mark {
-  background-image: url("/images/plusWhite.svg");
+  background-image: url("../images/plusWhite.svg");
 }
 .wrapper .faq .faq-wrapper .faq-item.active {
   background-color: #F2F5FE;
@@ -953,7 +953,7 @@ p {
 }
 .wrapper .faq .faq-wrapper .faq-item.active .faq-mark {
   border: #2cd4d9;
-  background-image: url("/images/minusAqua.svg");
+  background-image: url("../images/minusAqua.svg");
   height: 2px;
 }
 .wrapper .faq .faq-wrapper .answer-item {
