@@ -31,7 +31,6 @@ a,
 a:hover,
 a:focus,
 a:active {
-  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -99,11 +98,11 @@ p {
 }
 
 .transform45deg {
-  transform: rotate(45deg) translateY(1.35rem);
+  transform: rotate(45deg) translateY(11px) translateX(11px);
 }
 
 .transformMin45deg {
-  transform: rotate(-45deg) translateY(-1.35rem);
+  transform: rotate(-45deg) translateY(-11px) translateX(11px);
 }
 
 .disabled p {
@@ -427,23 +426,29 @@ p {
 .wrapper .nav-bar .nav-bar-links {
   padding-left: 0;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 40%;
+  justify-content: space-between;
 }
 .wrapper .nav-bar .nav-bar-links a {
   padding: 1rem;
   position: relative;
   cursor: pointer;
+  font-size: calc(1rem + .5vw);
 }
 .wrapper .nav-bar .nav-bar-links a::before {
   transition: all 0.5s ease-in-out;
   position: absolute;
   content: "";
   background-color: #363739;
-  top: 3rem;
+  top: 100%;
   width: 0rem;
   height: 1px;
 }
 .wrapper .nav-bar .nav-bar-links a:hover::before {
-  width: 100%;
+  width: 90%;
 }
 .wrapper .nav-bar .social-icons {
   display: flex;
@@ -719,6 +724,7 @@ p {
   padding-right: 2rem;
   padding-top: 1rem;
   font-size: calc(.9rem + .5vw);
+  height: 15vh;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items img {
   width: 60%;
@@ -746,7 +752,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  box-shadow: 10px 10px 40px #E9E9EB;
+  box-shadow: 10px 10px 40px #dedeec;
   border-radius: 0.5rem;
   width: 16vw;
   transition: all 1s ease-in-out;
@@ -770,7 +776,7 @@ p {
   width: 10%;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list {
-  height: 25.25rem;
+  height: 30%;
   z-index: 70;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
@@ -857,7 +863,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  box-shadow: 10px 10px 40px #E9E9EB;
+  box-shadow: 10px 10px 40px #dedeec;
   border-radius: 0.5rem;
   width: 16vw;
   transition: all 1s ease-in-out;
@@ -949,14 +955,12 @@ p {
   left: -5%;
 }
 .wrapper .faq .quest-image {
-  top: 16rem;
-  left: 5%;
+  margin-top: 2rem;
   width: 30vw;
 }
 .wrapper .faq .accordion {
   grid-column: 2/3;
   grid-row: 2/3;
-  height: 100%;
   overflow: hidden;
   position: absolute;
 }
@@ -1218,7 +1222,7 @@ p {
 .wrapper .contacts .search {
   position: absolute;
   left: 40%;
-  top: 96%;
+  top: 86%;
 }
 .wrapper .footer {
   display: flex;
@@ -1249,8 +1253,8 @@ p {
   margin: auto;
   font-size: calc(.5rem + .9vw);
   line-height: 1rem;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 300;
   text-align: start;
   position: relative;
@@ -1260,7 +1264,7 @@ p {
   position: absolute;
   content: "";
   background-color: #F2F5FE;
-  top: 3rem;
+  top: 100%;
   width: 0rem;
   height: 1px;
 }
@@ -1271,6 +1275,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 20%;
 }
 .wrapper .footer .social-icons img {
   width: 2rem;
@@ -1321,7 +1326,7 @@ p {
     width: 100%;
   }
   .wrapper .hints .hint-stages .stage__card .card__content p {
-    font-size: calc(1rem + .5vw);
+    font-size: calc(.7rem + .5vw);
   }
   .wrapper .hints .hint-stages .stage__card .card__icon {
     right: -5rem;
@@ -1560,7 +1565,6 @@ p {
     text-align: left;
     padding-right: 2rem;
     line-height: 1;
-    font-size: calc(.5rem + .5vw);
   }
   .wrapper .work-with-us .stage-wrapper .stage-content__block__items img {
     width: 60%;
@@ -1652,7 +1656,7 @@ p {
   }
   .wrapper .contacts .search {
     position: absolute;
-    left: 90%;
+    left: 40%;
     bottom: -10%;
   }
   .wrapper .footer {
@@ -1871,12 +1875,35 @@ p {
   }
   .wrapper .hints .hint-stages {
     margin-top: 2rem;
+    flex-direction: column;
   }
-  .wrapper .hints .hint-stages .stage__card .card__content {
-    height: 12rem;
+  .wrapper .hints .hint-stages .stage {
+    flex-direction: column;
   }
-  .wrapper .hints .hint-stages .stage__card .card__icon {
-    right: -2rem;
+  .wrapper .hints .hint-stages .stage .stage__num p {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    line-height: 1rem;
+    opacity: 1;
+    text-shadow: 10px 10px 20px #472BCB, -10px -10px 20px #7D62FE;
+  }
+  .wrapper .hints .hint-stages .stage .stage__card {
+    height: 14rem;
+  }
+  .wrapper .hints .hint-stages .stage .stage__card .card__content {
+    height: 3.5rem;
+    border-left: none;
+    border-top: 1px solid #F2F5FE;
+  }
+  .wrapper .hints .hint-stages .stage .stage__card .card__content p {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+  }
+  .wrapper .hints .hint-stages .stage .stage__card .card__icon {
+    right: -80%;
+    opacity: 0.5;
+    width: 40%;
+    bottom: 2rem;
   }
   .wrapper .hints .search {
     width: 5rem;
@@ -1888,6 +1915,17 @@ p {
   }
   .wrapper .work-with-us .stage-wrapper .stage-content__block__items p {
     line-height: 1.5;
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-header__block .stage-icon {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-header__block .stage-icon:hover, .wrapper .work-with-us .stage-wrapper .stage-header__block .stage-icon:focus {
+    filter: saturate(1) brightness(200%);
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-header__block h3 {
+    display: none;
   }
   .wrapper .faq .faq-wrapper p {
     font-size: 0.8rem;
@@ -1949,7 +1987,7 @@ p {
   }
   .wrapper h2 {
     font-size: 2rem;
-    padding-left: 2rem;
+    padding-left: 0rem;
     font-weight: 400;
     padding-bottom: 2rem;
   }
@@ -2037,7 +2075,7 @@ p {
     padding-bottom: 0;
   }
   .wrapper .hints h3 {
-    padding-left: 2rem;
+    padding-left: 0rem;
     line-height: 1.2;
   }
   .wrapper .hints .hint-stages {
@@ -2092,7 +2130,7 @@ p {
     padding-bottom: 2rem;
   }
   .wrapper section.work-with-us .stage-wrapper .stage-content__block__items p {
-    font-size: calc(1.2rem + .5vw);
+    height: 20vh;
   }
   .wrapper section.work-with-us .stage-wrapper .stage-content__block__items img {
     width: 100%;
@@ -2112,11 +2150,14 @@ p {
     font-size: 1rem;
   }
   .wrapper .faq .quest-image {
-    width: 45vw;
+    width: 55vw;
     opacity: 0;
   }
   .wrapper .faq .accordion {
     grid-column: 1/3;
+  }
+  .wrapper .contacts h2 {
+    padding-left: 2rem;
   }
   .wrapper .contacts .contacts-items h4 {
     font-size: 0.9rem;
@@ -2141,7 +2182,15 @@ p {
     width: 18%;
   }
   .wrapper .footer .footer-nav {
+    width: 80%;
     padding-top: 0rem;
+  }
+  .wrapper .footer .social-icons {
+    margin: auto;
+    width: 50%;
+  }
+  .wrapper .footer .social-icons a {
+    margin-left: 0;
   }
   .wrapper .footer .social-icons img {
     margin: 0rem;
@@ -2173,6 +2222,10 @@ p {
 
   .wrapper .propose {
     grid-template-rows: 10% 90%;
+  }
+
+  .wrapper .propose__list ul {
+    width: 120%;
   }
 
   .wrapper .hints .hint-stages .stage .stage__card .card__icon {

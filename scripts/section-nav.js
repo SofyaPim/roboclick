@@ -10,6 +10,10 @@ document.addEventListener('scroll', () => {
       l2 = document.querySelector('.line2'),
       l3 = document.querySelector('.line3');
 
+
+    console.log(linksItem[0]);
+    console.log(linksItem[1]);
+    
     pageItem.forEach((item, ind) => {
       if (item.getBoundingClientRect().top < 50 && item.getBoundingClientRect().bottom > 50) {
         headerTitle.textContent = linksItem[ind].innerText;
