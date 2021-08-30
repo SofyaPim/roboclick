@@ -134,7 +134,6 @@ p {
 .swiper-slide {
   text-align: center;
   background: #fff;
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,6 +320,9 @@ p {
 .wrapper .overlay .popup__close img {
   width: 2rem;
 }
+.wrapper .overlay .popup .form-agree {
+  position: relative;
+}
 .wrapper .overlay .popup .form-agree .checkbox_input {
   display: none;
 }
@@ -361,6 +363,10 @@ p {
 .wrapper .overlay .popup .form-agree .checkbox_label a {
   display: inline;
   color: #2cd4d9;
+}
+.wrapper .overlay .popup .form-agree span.message {
+  position: absolute;
+  top: 2rem;
 }
 .wrapper .header {
   width: 6.25rem;
@@ -419,6 +425,7 @@ p {
   transition: all 0.5s ease-in-out;
 }
 .wrapper .nav-bar .nav-bar-links {
+  padding-left: 0;
   list-style-type: none;
 }
 .wrapper .nav-bar .nav-bar-links a {
@@ -431,7 +438,7 @@ p {
   position: absolute;
   content: "";
   background-color: #363739;
-  top: 5rem;
+  top: 3rem;
   width: 0rem;
   height: 1px;
 }
@@ -471,9 +478,10 @@ p {
   padding: 1rem;
   cursor: pointer;
 }
-.wrapper .about .phone-header h3 {
+.wrapper .about .phone-header a {
   color: #363739;
   margin: auto;
+  font-size: 150%;
 }
 .wrapper .about .phone-header .phone-button {
   width: initial;
@@ -838,7 +846,6 @@ p {
 .wrapper .mobile-prices .swiper-pagination {
   width: 90vw;
   display: flex;
-  /* margin: 0 auto; */
   justify-content: center;
   margin-top: 3%;
 }
@@ -928,7 +935,6 @@ p {
   grid-template-columns: 30% 70%;
   grid-template-rows: 10% 90%;
   background: linear-gradient(112.76deg, rgba(21, 136, 156, 0.8) -17.64%, rgba(80, 211, 232, 0.8) 50%), #50D3E8;
-  position: relative;
   color: #F2F5FE;
 }
 .wrapper .faq h2 {
@@ -937,34 +943,45 @@ p {
   color: inherit;
 }
 .wrapper .faq .search {
+  width: 22vw;
   position: absolute;
   top: 20%;
   left: -5%;
 }
 .wrapper .faq .quest-image {
-  position: absolute;
   top: 16rem;
   left: 5%;
   width: 30vw;
 }
-.wrapper .faq .faq-wrapper {
+.wrapper .faq .accordion {
   grid-column: 2/3;
-  margin-top: 7.56rem;
-  margin-bottom: 12.5rem;
+  grid-row: 2/3;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+.wrapper .faq .accordion__items {
+  position: absolute;
+  list-style: none;
+}
+.wrapper .faq .faq-wrapper {
+  width: 100%;
   position: relative;
+  padding-left: 0;
 }
 .wrapper .faq .faq-wrapper p {
   font-size: calc(.5rem + 1vw);
   line-height: 1;
+  width: 90%;
 }
 .wrapper .faq .faq-wrapper .faq-item {
   width: 100%;
   color: #363739;
   border-radius: 0.5rem;
   border: 1px solid #F2F5FE;
-  padding: 2rem 2rem;
+  padding: 3%;
   background-color: #F2F5FE;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -990,11 +1007,11 @@ p {
 .wrapper .faq .faq-wrapper .faq-item:hover .faq-mark, .wrapper .faq .faq-wrapper .faq-item:focus .faq-mark {
   background-image: url("../images/plusWhite.svg");
 }
-.wrapper .faq .faq-wrapper .faq-item.active {
+.wrapper .faq .faq-wrapper .active > .faq-item {
   background-color: #F2F5FE;
   color: #2cd4d9;
 }
-.wrapper .faq .faq-wrapper .faq-item.active .faq-mark {
+.wrapper .faq .faq-wrapper .active > .faq-item .faq-mark {
   border: #2cd4d9;
   background-image: url("../images/minusAqua.svg");
   height: 2px;
@@ -1002,21 +1019,29 @@ p {
 .wrapper .faq .faq-wrapper .answer-item {
   color: #363739;
   width: 100%;
-  padding: 2rem;
+  padding: 0rem;
   background-color: #7aeff3;
   margin-top: -0.3rem;
   margin-bottom: 0.3rem;
   border-radius: 0.5rem;
   position: relative;
   z-index: 70;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
 }
 .wrapper .faq .faq-wrapper .answer-item p {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
   line-height: 1;
+  opacity: 0;
 }
-.wrapper .faq .faq-wrapper .faq-item.active + .answer-item {
-  display: block;
+.wrapper .faq .faq-wrapper .active > .answer-item {
+  max-height: 20rem;
+  opacity: 1;
+  padding: 2rem;
+}
+.wrapper .faq .faq-wrapper .active > .answer-item p {
+  transition: all 0.8s ease-in-out;
+  opacity: 1;
 }
 .wrapper .contacts {
   background: linear-gradient(270deg, rgba(54, 55, 57, 0.8) 72.86%, rgba(80, 211, 232, 0.8) 132.76%), #363739;
@@ -1128,6 +1153,9 @@ p {
   background: linear-gradient(270deg, #363739 0%, #EEF1FA 100%);
   color: #363739;
 }
+.wrapper .contacts .contacts-items .feedback-form .form-agree {
+  position: relative;
+}
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_input {
   display: none;
 }
@@ -1140,7 +1168,8 @@ p {
   content: "";
   height: 1.5rem;
   border-radius: 2px;
-  background-color: #F2F5FE;
+  background-color: inherit;
+  border: 1px solid #F2F5FE;
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label::after {
   position: absolute;
@@ -1166,6 +1195,10 @@ p {
   display: inline;
   color: #2cd4d9;
 }
+.wrapper .contacts .contacts-items .feedback-form .form-agree span.message {
+  position: absolute;
+  bottom: -2rem;
+}
 .wrapper .contacts .global-map-wrapper {
   width: 50vw;
   position: relative;
@@ -1184,8 +1217,8 @@ p {
 }
 .wrapper .contacts .search {
   position: absolute;
-  left: 90%;
-  bottom: -10%;
+  left: 40%;
+  top: 96%;
 }
 .wrapper .footer {
   display: flex;
@@ -1215,8 +1248,10 @@ p {
 .wrapper .footer .footer-nav nav a {
   margin: auto;
   font-size: calc(.5rem + .9vw);
-  line-height: 2rem;
+  line-height: 1rem;
   padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
   text-align: start;
   position: relative;
 }
@@ -1225,12 +1260,12 @@ p {
   position: absolute;
   content: "";
   background-color: #F2F5FE;
-  top: 2rem;
+  top: 3rem;
   width: 0rem;
   height: 1px;
 }
 .wrapper .footer .footer-nav nav a:hover::before {
-  width: 4rem;
+  width: 100%;
 }
 .wrapper .footer .social-icons {
   display: flex;
@@ -1239,9 +1274,6 @@ p {
 }
 .wrapper .footer .social-icons img {
   width: 2rem;
-}
-.wrapper .footer .social-icons a {
-  margin-left: 2rem;
 }
 .wrapper .footer .copyright {
   position: absolute;
@@ -1347,9 +1379,6 @@ p {
   .wrapper .prices .card-wrapper .wrap .card .button {
     padding: 1vw 4.5vw;
   }
-  .wrapper .faq .faq-wrapper p {
-    line-height: 2rem;
-  }
   .wrapper .contacts .contacts-items {
     display: flex;
     justify-content: center;
@@ -1379,7 +1408,7 @@ p {
     max-width: 1024px;
   }
   .wrapper .nav-bar nav a::before {
-    top: 4rem;
+    top: 2rem;
   }
   .wrapper h1 {
     font-size: calc(2rem + 1vw);
@@ -1501,9 +1530,6 @@ p {
     top: 90%;
     left: 70vw;
   }
-  .wrapper .work-with-us h2 {
-    margin-bottom: 0;
-  }
   .wrapper .work-with-us .stage-wrapper {
     width: 90%;
   }
@@ -1587,26 +1613,6 @@ p {
     box-shadow: initial;
     padding: 1vw 4vw;
   }
-  .wrapper .faq h2 {
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  .wrapper .faq .search {
-    top: 10%;
-    left: -5%;
-    width: 20vw;
-  }
-  .wrapper .faq .faq-wrapper {
-    grid-column: 2/3;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
-  .wrapper .faq .faq-wrapper p {
-    line-height: 1;
-  }
-  .wrapper .faq .faq-wrapper .faq-item.active + .answer-item {
-    display: block;
-  }
   .wrapper .contacts {
     padding-bottom: 0;
   }
@@ -1616,7 +1622,7 @@ p {
   .wrapper .contacts .contacts-items .feedback-form {
     display: flex;
     flex-direction: column;
-    padding: 4rem;
+    padding: 2rem;
     margin-left: 0;
   }
   .wrapper .contacts .contacts-items .feedback-form input {
@@ -1656,11 +1662,10 @@ p {
     width: 6vw;
   }
   .wrapper .footer .footer-nav {
-    padding-top: 2rem;
-    width: 80%;
+    width: 60%;
   }
   .wrapper .footer .footer-nav nav {
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -1709,7 +1714,7 @@ p {
     transform: rotate(0deg);
     opacity: 0.7;
     font-size: calc(1rem + 1vw);
-    width: 30%;
+    width: 40%;
   }
   .wrapper .header .social-icons {
     flex-direction: row;
@@ -1717,6 +1722,16 @@ p {
   .wrapper .header .social-icons img {
     margin-top: 0;
     margin-left: 1rem;
+  }
+  .wrapper .faq .faq-wrapper p {
+    font-size: 1rem;
+  }
+  .wrapper .faq .faq-wrapper .faq-item {
+    padding: 1rem;
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-header__block {
+    padding: 0.7rem 0.7rem;
+    opacity: 0.5;
   }
   .wrapper .contacts h2 {
     padding-top: 2rem;
@@ -1790,9 +1805,6 @@ p {
   .wrapper .faq .faq-wrapper {
     grid-column: 1/3;
     margin-bottom: 0rem;
-  }
-  .wrapper .faq .quest-image {
-    display: none;
   }
   .wrapper .faq h2 {
     z-index: 55;
@@ -1877,6 +1889,18 @@ p {
   .wrapper .work-with-us .stage-wrapper .stage-content__block__items p {
     line-height: 1.5;
   }
+  .wrapper .faq .faq-wrapper p {
+    font-size: 0.8rem;
+  }
+  .wrapper .faq .faq-wrapper .faq-item {
+    padding: 0.7rem;
+  }
+  .wrapper .faq .faq-wrapper .active .answer-item {
+    padding: 1rem;
+  }
+  .wrapper .faq .faq-wrapper .quest-image {
+    width: 35vw;
+  }
   .wrapper .contacts {
     flex-direction: column;
   }
@@ -1946,7 +1970,7 @@ p {
   }
   .wrapper section.about {
     background: #5333ed;
-    padding: 10rem 2rem 0rem 2rem;
+    padding: 10rem 2rem 2rem 2rem;
   }
   .wrapper .about {
     grid-template-columns: 1fr 1fr;
@@ -2031,7 +2055,7 @@ p {
     text-shadow: 10px 10px 20px #472BCB, -10px -10px 20px #7D62FE;
   }
   .wrapper .hints .hint-stages .stage .stage__card {
-    height: 12.5rem;
+    height: 14rem;
   }
   .wrapper .hints .hint-stages .stage .stage__card .card__content {
     height: 3.5rem;
@@ -2078,8 +2102,7 @@ p {
     padding-left: 0;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item .checkbox {
-    width: 10%;
-    margin-right: 1rem;
+    display: none;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
     margin-top: -1rem;
@@ -2087,6 +2110,13 @@ p {
   }
   .wrapper .faq .faq-wrapper p {
     font-size: 1rem;
+  }
+  .wrapper .faq .quest-image {
+    width: 45vw;
+    opacity: 0;
+  }
+  .wrapper .faq .accordion {
+    grid-column: 1/3;
   }
   .wrapper .contacts .contacts-items h4 {
     font-size: 0.9rem;
@@ -2114,7 +2144,7 @@ p {
     padding-top: 0rem;
   }
   .wrapper .footer .social-icons img {
-    margin: 0.5rem;
+    margin: 0rem;
   }
 }
 @media all and (max-width: 375px) {
@@ -2124,9 +2154,13 @@ p {
   .wrapper .overlay .popup input {
     width: 62vw;
   }
+  .wrapper .header .nav-title {
+    display: none;
+  }
 
   .wrapper h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    padding-left: 0;
   }
 
   .wrapper .about .phone-header .phone-button p {
@@ -2160,6 +2194,10 @@ p {
 
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item .checkbox {
     display: none;
+  }
+
+  .wrapper .faq .quest-image {
+    width: 90vw;
   }
 
   .wrapper .contacts .contacts-items .feedback-form {

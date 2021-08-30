@@ -33,19 +33,19 @@ const forms = () => {
         function addErr() {
             err++;
         }
-        console.log(inputs);
+
         inputs.forEach(item => {
-            console.log(item);
+
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.addEventListener('input', (e) => {
-              
+
                 let sibling = item.nextElementSibling;
                 item.classList.remove('_error');
 
                 sibling.style.opacity = 0;
-                if(item.name === 'agreement'){
-                    let prev = item.previousElementSibling ;
+                if (item.name === 'agreement') {
+                    let prev = item.previousElementSibling;
                     sibling.style.opacity = 1;
                     prev.style.opacity = 0;
                 }
@@ -73,7 +73,7 @@ const forms = () => {
                     break;
                 case 'agreement':
                     if (item.checked === false) {
-                        let prev = item.previousElementSibling ;
+                        let prev = item.previousElementSibling;
                         addErr();
                         item.classList.add('_error');
                         prev.style.opacity = 1;
@@ -90,9 +90,9 @@ const forms = () => {
                     }
 
                     break;
-                    default:
+                default:
 
-                        break;
+                    break;
             }
 
 
@@ -121,7 +121,7 @@ const forms = () => {
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
 
-            
+
             if (!Validate(inputsForm)) {
                 return;
             }
@@ -131,7 +131,7 @@ const forms = () => {
             console.log(formData.get('name')); //данные формы 
             console.log(formData.get('phone'));
             console.log(formData.get('email'));
-          
+
 
 
             postData('./sendmail.php', formData) // c ./server.php  проверено //

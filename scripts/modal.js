@@ -4,10 +4,10 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
         modalHeader = modal.querySelector('.popup-title'),
         close = document.querySelector(closeSelector),
         modalProto = document.querySelectorAll('[data-modal]'),
-        
-     smallHeader = document.createElement('h4');
+        messageItems = document.querySelectorAll('span.message'),
+        smallHeader = document.createElement('h4');
 
-     console.log(close);
+    //  console.log(messageItems);
 
     trigger.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -43,10 +43,16 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
     })
     close.addEventListener('click', () => {
         let errorItems = document.querySelectorAll('._error');
-        console.log(errorItems);
+
+        messageItems.forEach(item => {
+            item.style.opacity = 0;
+        })
+
+
         errorItems.forEach(item => {
             item.classList.remove('_error');
         })
+
         modalProto.forEach(item => {
             // item.style.display = 'none';
             item.style.transform = 'scale(0)';
@@ -59,9 +65,12 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
         document.body.style.overflow = '';
     })
     modal.addEventListener('click', (e) => {
-//  errorItems.forEach(item => {
-//             item.classList.remove('_error');
-//         })
+        //  errorItems.forEach(item => {
+        //             item.classList.remove('_error');
+        //         })
+        messageItems.forEach(item => {
+            item.style.opacity = 0;
+        })
         if (e.target == modal && clickModal) {
 
             modalProto.forEach(item => {
