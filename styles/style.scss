@@ -416,7 +416,7 @@ p {
             &__close {
                 position: absolute;
                 top: 2rem;
-                left: 25%;
+               left: 45%;
 
                 img {
                     width: 2rem;
@@ -527,7 +527,7 @@ p {
             justify-content: space-between;
             z-index: 89;
             position: relative;
-
+ cursor: pointer;
             .line {
                 background-color: $gray;
                 width: 100%;
@@ -558,6 +558,7 @@ p {
         align-items: center;
         justify-content: center;
         transition: all .5s ease-in-out;
+       
 
         .nav-bar-links {
             padding-left: 0;
@@ -639,7 +640,7 @@ height: 40%;
                 width: initial;
                 border: 1px solid $purple-accent;
                 background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
-            
+            cursor: pointer;
                 padding: 1.5% 3%;
                 margin-right: 3%;
 
@@ -700,15 +701,20 @@ height: 40%;
                 border: 1px solid $light-font;
                 background: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%); //new version
                 padding: 5% 20%;
+                cursor: pointer;
 
                 h3 {
                     margin-bottom: 0;
                     font-weight: 300;
+                    color: $light-font;
                 }
 
                 &:hover {
                     background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
-                    color: $purple-accent;
+                    h3{
+                        color: $purple-accent;
+                    }
+                    
                 }
             }
         }
@@ -1235,7 +1241,7 @@ height: 40%;
         display: grid;
         grid-template-columns: 30% 70%;
         grid-template-rows: 10% 90%;
-        background: linear-gradient(112.76deg, rgba(21, 136, 156, 0.8) -17.64%, rgba(80, 211, 232, 0.8) 50%), #50D3E8;
+        background: linear-gradient(180.65deg, rgba(21, 136, 156, 0.8) 35.71%, rgba(80, 211, 232, 0.8) 60.95%), #50D3E8;
 
         color: $light-font;
 
@@ -1389,6 +1395,11 @@ height: 40%;
 
         .adres {
             width: 80%;
+            .phone{
+                cursor: pointer;
+                color: $aqua-accent;
+               
+            }
         }
 
         h2 {

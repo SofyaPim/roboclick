@@ -111,6 +111,7 @@ const forms = () => {
 
 
     form.forEach(item => {
+        
         item.addEventListener('submit', (e) => {
 
             e.preventDefault();
