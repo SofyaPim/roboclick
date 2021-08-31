@@ -54,7 +54,8 @@ const forms = () => {
             switch (item.name) {
 
                 case 'phone':
-                    if (item.value.length === 0) {
+                    if (item.value.length === 0 && item.value.length < 11 ) {
+                        
                         let sibling = item.nextElementSibling;
                         addErr();
                         item.classList.add('_error');
@@ -99,10 +100,10 @@ const forms = () => {
 
         })
         if (err <= 0) {
-            console.log(err);
+          //  console.log(err);
             return true;
         } else {
-            console.log(err);
+            //console.log(err);
             return false;
         }
 
@@ -117,7 +118,7 @@ const forms = () => {
             e.preventDefault();
 
             let inputsForm = item.querySelectorAll('input');
-            console.log(inputsForm);
+         //   console.log(inputsForm);
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
@@ -129,10 +130,7 @@ const forms = () => {
 
             const formData = new FormData(item);
 
-            console.log(formData.get('name')); //данные формы 
-            console.log(formData.get('phone'));
-            console.log(formData.get('email'));
-
+          
 
 
             postData('./sendmail.php', formData) // c ./server.php  проверено //

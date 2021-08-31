@@ -5,9 +5,18 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
         close = document.querySelector(closeSelector),
         modalProto = document.querySelectorAll('[data-modal]'),
         messageItems = document.querySelectorAll('span.message'),
-        smallHeader = document.createElement('h4');
+        smallHeader = document.createElement('h4'),
+        inputs = document.querySelectorAll('._req');
 
     //  console.log(messageItems);
+       const clearInputs = () => {
+
+                inputs.forEach(item => {
+                    item.value = '';
+                })
+            }
+
+
 
     trigger.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -25,7 +34,7 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
                 let tarifname = title.querySelector('.card-title').innerText;
                 smallHeader.innerHTML = `Вы выбрали тариф <br> ${tarifname}`;
                 modalHeader.after(smallHeader); //добавление названия тарифа
-                console.log(tarifname); // вывод  названия тарифа в консоль
+                //  console.log(tarifname); // вывод  названия тарифа в консоль
 
             }
 
@@ -43,7 +52,7 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
     })
     close.addEventListener('click', () => {
         let errorItems = document.querySelectorAll('._error');
-
+       //  clearInputs();
         messageItems.forEach(item => {
             item.style.opacity = 0;
         })
@@ -51,12 +60,14 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
 
         errorItems.forEach(item => {
             item.classList.remove('_error');
+            
+
         })
 
         modalProto.forEach(item => {
             // item.style.display = 'none';
             item.style.transform = 'scale(0)';
-
+            
 
         })
         smallHeader.remove();
@@ -65,9 +76,13 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
         document.body.style.overflow = '';
     })
     modal.addEventListener('click', (e) => {
-        //  errorItems.forEach(item => {
-        //             item.classList.remove('_error');
-        //         })
+        let errorItems = document.querySelectorAll('._error');
+       
+        errorItems.forEach(item => {
+            item.classList.remove('_error');
+ 
+
+        })
         messageItems.forEach(item => {
             item.style.opacity = 0;
         })
@@ -85,12 +100,12 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
             document.body.style.overflow = '';
 
         }
-
+        //clearInputs();
 
 
     })
 
-
+//clearInputs();
 
 
 
