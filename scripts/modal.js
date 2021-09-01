@@ -1,4 +1,4 @@
-const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', clickModal = true) => {
+const modals = (triggerSelector, modalSelector, closeSelector, clickModal = true) => {
     const trigger = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector),
         modalHeader = modal.querySelector('.popup-title'),
@@ -19,10 +19,12 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
 
 
     trigger.forEach(item => {
+
+
         item.addEventListener('click', (e) => {
             if (e.target) {
                 e.preventDefault();
-
+clearInputs();
             }
 
             // обращение к родителю
@@ -77,7 +79,7 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
     })
     modal.addEventListener('click', (e) => {
         let errorItems = document.querySelectorAll('._error');
-       
+       // clearInputs();
         errorItems.forEach(item => {
             item.classList.remove('_error');
  
@@ -104,8 +106,9 @@ const modals = (triggerSelector, modalSelector, closeSelector, tariffName = '', 
 
 
     })
+  
 
-//clearInputs();
+
 
 
 

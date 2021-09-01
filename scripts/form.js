@@ -27,6 +27,31 @@ const forms = () => {
         })
     }
 
+    function phoneValidate(input) {
+        function validate(item) {
+
+            console.log(item);
+            item = item.replace(/[^0-9]/g, '');
+
+            console.log(item);
+            console.log(item.length);
+            if (item.length === 11) {
+                console.log('!');
+                return true;
+            }
+
+        }
+        // let phoneInput = document.querySelector('[type="tel"]').value;
+
+
+        return validate(input.value);
+
+
+
+    }
+
+
+
     function Validate(inputs) { //проверка соответствию
         let err = 0;
 
@@ -54,8 +79,9 @@ const forms = () => {
             switch (item.name) {
 
                 case 'phone':
-                    if (item.value.length === 0 && item.value.length < 11 ) {
-                        
+                 //   console.log(phoneValidate());
+                    if (!phoneValidate(item)) { //item.value.length === 0
+                        console.log("!");
                         let sibling = item.nextElementSibling;
                         addErr();
                         item.classList.add('_error');
@@ -100,7 +126,7 @@ const forms = () => {
 
         })
         if (err <= 0) {
-          //  console.log(err);
+            //  console.log(err);
             return true;
         } else {
             //console.log(err);
@@ -112,13 +138,13 @@ const forms = () => {
 
 
     form.forEach(item => {
-        
+
         item.addEventListener('submit', (e) => {
 
             e.preventDefault();
 
             let inputsForm = item.querySelectorAll('input');
-         //   console.log(inputsForm);
+            //   console.log(inputsForm);
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
@@ -130,7 +156,7 @@ const forms = () => {
 
             const formData = new FormData(item);
 
-          
+
 
 
             postData('./sendmail.php', formData) // c ./server.php  проверено //
