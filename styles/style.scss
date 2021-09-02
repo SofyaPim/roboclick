@@ -1417,7 +1417,7 @@ p{
         grid-template-columns: 30% 70%;
         grid-template-rows: 10% 90%;
         background: linear-gradient(180.65deg, rgba(21, 136, 156, 0.8) 35.71%, rgba(80, 211, 232, 0.8) 60.95%), #50D3E8;
-
+padding-bottom: 7rem;
         color: $light-font;
 
         h2 {
@@ -1672,7 +1672,7 @@ p{
 
                 }
 
-                .button {
+                .feedback-button {
                     border: 1px solid $light-font;
                     border-radius: .7rem;
                     color: $light-font;
@@ -3181,8 +3181,14 @@ p{
         .mobile-prices {
             .mobile-prices-wrapper {
                 .mobile-prices-card {
+                   .card-title{
+                        margin-bottom: 0;
+                    }
                     .u-list {
+                        padding-top: 2rem;
+                            margin-bottom: 0rem;
                         .list-item {
+                            
                             .checkbox {
                                 display: none;
                             }
@@ -3252,7 +3258,7 @@ p{
             flex-direction: column;
 
             .logo {
-                width: 28%;
+               // width: 28%;
                 margin-bottom: 1rem;
             }
 

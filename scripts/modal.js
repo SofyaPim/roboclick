@@ -8,6 +8,7 @@ const modals = (triggerSelector, modalSelector, closeSelector, clickModal = true
         messageItems = document.querySelectorAll('span.message'),
         smallHeader = document.createElement('h4'),
         inputs = document.querySelectorAll('._req');
+        //add popap
 
     //  console.log(messageItems);
     const clearInputs = () => {
@@ -76,6 +77,8 @@ const modals = (triggerSelector, modalSelector, closeSelector, clickModal = true
         document.body.style.overflow = '';
     })
     modal.addEventListener('click', (e) => {
+        // if( e_flag{ return})
+        console.log("!!");
         let errorItems = document.querySelectorAll('._error');
         // clearInputs();
         errorItems.forEach(item => {
@@ -100,5 +103,7 @@ const modals = (triggerSelector, modalSelector, closeSelector, clickModal = true
         }
    
     })
+    // add popup event - flag=true
+
 };
 document.addEventListener("DOMContentLoaded", modals('.button', '.overlay', '.popup__close', '.tariff-name', true) );

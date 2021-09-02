@@ -1,13 +1,14 @@
+
 const forms = () => {
     const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('._req');
 
-
+console.log(form);
+console.log(inputs);
     const message = {
         loading: 'Загрузка ...',
         success: 'Спасибо, скоро с Вами свяжемся',
-        failure: 'Что-то пошло не так',
-        validate: 'Заполните это поле'
+        failure: 'Что-то пошло не так'
 
     }
 
@@ -28,25 +29,18 @@ const forms = () => {
     }
 
     function phoneValidate(input) {
-        function validate(item) {
+        console.log('!');
+    let value = input.value;
+           
+            console.log(value);
+            value = value.replace(/[^0-9]/g, '');
 
-            console.log(item);
-            item = item.replace(/[^0-9]/g, '');
-
-            console.log(item);
-            console.log(item.length);
-            if (item.length === 11) {
+            console.log(value);
+            console.log(value.length);
+            if (value.length === 11) {
                 console.log('!');
                 return true;
             }
-
-        }
-        // let phoneInput = document.querySelector('[type="tel"]').value;
-
-
-        return validate(input.value);
-
-
 
     }
 
@@ -69,6 +63,7 @@ const forms = () => {
                 item.classList.remove('_error');
 
                 sibling.style.opacity = 0;
+                console.log("opacity");
                 if (item.name === 'agreement') {
                     let prev = item.previousElementSibling;
                     sibling.style.opacity = 1;
@@ -77,6 +72,7 @@ const forms = () => {
             })
 
             switch (item.name) {
+                
 
                 case 'phone':
                  //   console.log(phoneValidate());
@@ -87,7 +83,7 @@ const forms = () => {
                         item.classList.add('_error');
                         sibling.style.opacity = 1;
                     }
-
+console.log('phone');
                     break;
                 case 'name':
                     if (item.value.length === 0) {
@@ -96,7 +92,7 @@ const forms = () => {
                         item.classList.add('_error');
                         sibling.style.opacity = 1;
                     }
-
+                    console.log('name');
                     break;
                 case 'agreement':
                     if (item.checked === false) {
@@ -144,12 +140,10 @@ const forms = () => {
             e.preventDefault();
 
             let inputsForm = item.querySelectorAll('input');
-            //   console.log(inputsForm);
+              console.log(inputsForm);
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
-
-
             if (!Validate(inputsForm)) {
                 return;
             }
@@ -190,9 +184,8 @@ const forms = () => {
 
 }
 
+document.addEventListener("DOMContentLoaded",  forms );
 
-
-forms();
 
 
 // router.post("/", (req, res, next) => {
