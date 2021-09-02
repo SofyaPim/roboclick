@@ -1566,6 +1566,9 @@ p {
     bottom: 16rem;
     z-index: 99;
   }
+  .wrapper .footer nav {
+    margin-bottom: 1rem;
+  }
   .wrapper .footer .social-icons {
     width: 30%;
   }
