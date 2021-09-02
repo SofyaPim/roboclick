@@ -1,24 +1,31 @@
+function showAnswers() {
+
 let accordion = document.querySelector('.accordion');
 let items = accordion.querySelectorAll('.accordion__item');
 let title = accordion.querySelectorAll('.faq-item');
 
 function toggleAccordion() {
     let thisItem = this.parentNode;
-  //  console.log(thisItem);
+
 
     items.forEach(item => {
         if (thisItem == item) {
-            // if this item is equal to the clicked item, open it.
+           
             thisItem.classList.toggle('active');
             return;
         }
-        // otherwise, remove the open class
+      
         item.classList.remove('active');
     });
 }
 
 title.forEach(question => question.addEventListener('click', toggleAccordion));
 
+    
+}
+
+
+ document.addEventListener("DOMContentLoaded", showAnswers );
 
 
 

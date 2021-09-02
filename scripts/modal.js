@@ -1,3 +1,4 @@
+
 const modals = (triggerSelector, modalSelector, closeSelector, clickModal = true) => {
     const trigger = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector),
@@ -9,12 +10,12 @@ const modals = (triggerSelector, modalSelector, closeSelector, clickModal = true
         inputs = document.querySelectorAll('._req');
 
     //  console.log(messageItems);
-       const clearInputs = () => {
+    const clearInputs = () => {
 
-                inputs.forEach(item => {
-                    item.value = '';
-                })
-            }
+        inputs.forEach(item => {
+            item.value = '';
+        })
+    }
 
 
 
@@ -24,7 +25,7 @@ const modals = (triggerSelector, modalSelector, closeSelector, clickModal = true
         item.addEventListener('click', (e) => {
             if (e.target) {
                 e.preventDefault();
-clearInputs();
+                clearInputs();
             }
 
             // обращение к родителю
@@ -54,7 +55,7 @@ clearInputs();
     })
     close.addEventListener('click', () => {
         let errorItems = document.querySelectorAll('._error');
-       //  clearInputs();
+        //  clearInputs();
         messageItems.forEach(item => {
             item.style.opacity = 0;
         })
@@ -62,16 +63,13 @@ clearInputs();
 
         errorItems.forEach(item => {
             item.classList.remove('_error');
-            
-
         })
 
         modalProto.forEach(item => {
             // item.style.display = 'none';
             item.style.transform = 'scale(0)';
-            
-
         })
+
         smallHeader.remove();
         //  modal.style.display = 'none';
         modal.style.transform = 'scale(0)';
@@ -79,10 +77,9 @@ clearInputs();
     })
     modal.addEventListener('click', (e) => {
         let errorItems = document.querySelectorAll('._error');
-       // clearInputs();
+        // clearInputs();
         errorItems.forEach(item => {
             item.classList.remove('_error');
- 
 
         })
         messageItems.forEach(item => {
@@ -94,7 +91,6 @@ clearInputs();
                 //    item.style.display = 'none';
                 item.style.transform = 'scale(0)';
 
-
             })
             smallHeader.remove();
             //  modal.style.display = 'none';
@@ -102,19 +98,7 @@ clearInputs();
             document.body.style.overflow = '';
 
         }
-        //clearInputs();
-
-
+   
     })
-  
-
-
-
-
-
-
-
-
-
 };
-modals('.button', '.overlay', '.popup__close', '.tariff-name', true);
+document.addEventListener("DOMContentLoaded", modals('.button', '.overlay', '.popup__close', '.tariff-name', true) );

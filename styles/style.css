@@ -15,10 +15,6 @@
   scroll-behavior: smooth;
 }
 
-button {
-  transition: all 0.6s ease-in;
-}
-
 input,
 input:focus {
   padding: 0;
@@ -196,6 +192,7 @@ p {
 
 .price-title {
   text-align: center;
+  transition: opacity 0.3s ease;
   opacity: 0.5;
 }
 
@@ -247,6 +244,7 @@ p {
   min-width: 100vw;
   max-width: 100vw;
   overflow: hidden;
+  overflow-x: hidden;
   padding-left: 100px;
   padding-top: 0;
 }
@@ -374,7 +372,7 @@ p {
   font-size: calc(.5rem + .5vw);
   opacity: 0.5;
 }
-.wrapper .overlay .popup button {
+.wrapper .overlay .popup .button {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -384,15 +382,16 @@ p {
   color: #F2F5FE;
   font-size: calc(1rem + .5vw);
   outline: none;
-  transition: all 0.6s ease-in;
+  transition: box-shadow 0.3s ease-in;
 }
-.wrapper .overlay .popup button:hover {
-  transform: scale(1.01);
+.wrapper .overlay .popup .button:hover {
+  box-shadow: 2px 2px 10px #2cd4d9;
 }
-.wrapper .overlay .popup button:focus {
+.wrapper .overlay .popup .button:focus {
   border: 1px solid #2cd4d9;
   outline: none;
   background-color: #2cd4d9;
+  box-shadow: none;
 }
 .wrapper .overlay .popup__close {
   position: absolute;
@@ -419,6 +418,7 @@ p {
   height: 1.5rem;
   border-radius: 2px;
   border: 1px solid #5333ed;
+  transition: content 0.5s ease-in;
 }
 .wrapper .overlay .popup .form-agree .checkbox_label::before._error {
   box-shadow: 1px 1px 2px #f54906;
@@ -429,7 +429,7 @@ p {
   opacity: 0;
   top: -0.5rem;
   left: 0px;
-  transition: all 0.5s ease-in;
+  transition: content 0.5s ease-in;
 }
 .wrapper .overlay .popup .form-agree .checkbox_label {
   cursor: pointer;
@@ -492,6 +492,7 @@ p {
 .wrapper .header .logo {
   width: 4.25rem;
   height: 2.43rem;
+  cursor: pointer;
 }
 .wrapper .nav-bar {
   width: 40vw;
@@ -506,7 +507,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .wrapper .nav-bar .nav-bar-links {
   padding-left: 0;
@@ -547,6 +548,7 @@ p {
   width: 1.5rem;
   opacity: 0.7;
   margin-top: 1rem;
+  cursor: pointer;
 }
 .wrapper .about {
   padding-top: 10%;
@@ -572,6 +574,7 @@ p {
   color: #363739;
   margin: auto;
   font-size: 150%;
+  transition: color 0.3s;
 }
 .wrapper .about .phone-header a:hover {
   color: #2cd4d9;
@@ -579,28 +582,29 @@ p {
 .wrapper .about .phone-header .phone-button {
   width: initial;
   border: 1px solid #5333ed;
-  background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
+  background-color: #F2F5FE;
   cursor: pointer;
   padding: 1.5% 3%;
   margin-right: 3%;
+  transition: background-color 0.3s ease-in;
 }
 .wrapper .about .phone-header .phone-button p {
   color: #5333ed;
+  transition: color 0.3s ease-in;
 }
 .wrapper .about .phone-header .phone-button:hover {
-  background: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%);
+  background-color: #5333ed;
 }
 .wrapper .about .phone-header .phone-button:hover p {
-  color: #ffffff;
+  color: #F2F5FE;
 }
 .wrapper .about h1 {
   margin-bottom: calc(1rem + 1vh);
+  z-index: 5;
 }
 .wrapper .about .search {
   animation: floatSearch 25s infinite linear alternate-reverse, floatLeftSearch 15s linear infinite alternate-reverse;
   position: absolute;
-  left: 45%;
-  bottom: 12%;
   z-index: 0;
   width: 14vw;
 }
@@ -611,6 +615,7 @@ p {
   justify-content: center;
 }
 .wrapper .about__main h3 {
+  z-index: 5;
   margin-bottom: calc(2rem + 1vh);
   padding: 0;
 }
@@ -618,9 +623,12 @@ p {
   width: 24%;
   height: 8%;
   border: 1px solid #F2F5FE;
-  background-color: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%);
+  background-color: #5847eecb;
   padding: 5% 20%;
   cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 5;
+  position: relative;
 }
 .wrapper .about__main .button h3 {
   margin-bottom: 0;
@@ -628,16 +636,18 @@ p {
   color: #F2F5FE;
 }
 .wrapper .about__main .button:hover {
-  background: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
+  background-color: #F2F5FE;
 }
 .wrapper .about__main .button:hover h3 {
   color: #5333ed;
+  transition: color 0.3s;
 }
 .wrapper .about__mac-image {
   grid-column: 2/3;
   position: relative;
 }
 .wrapper .about__mac-image .mac-image {
+  margin-top: 2rem;
   width: 100%;
 }
 .wrapper .about__mac-image .iMac {
@@ -655,17 +665,17 @@ p {
 }
 .wrapper .propose .search {
   position: absolute;
-  top: 20%;
-  left: 30%;
-  width: 6.25rem;
+  width: 10%;
   height: auto;
   animation: floatSearch 15s infinite linear alternate-reverse, floatLeftSearch 10s linear infinite alternate-reverse;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  z-index: 0;
 }
 .wrapper .propose h2 {
   grid-row: 1/2;
   grid-column: 1/3;
+  z-index: 5;
 }
 .wrapper .propose__image {
   grid-column: 1/2;
@@ -681,10 +691,11 @@ p {
 .wrapper .propose__list ul {
   width: 100%;
   list-style-image: url("../images/list-marker.png");
+  z-index: 5;
+  position: relative;
 }
 .wrapper .propose__list ul p {
   font-weight: 300;
-  font-size: calc(90% + .7vw);
   line-height: 130%;
   padding: 0 1.5rem;
 }
@@ -698,9 +709,13 @@ p {
 }
 .wrapper .hints h2 {
   color: #F2F5FE;
+  z-index: 5;
+  position: relative;
 }
 .wrapper .hints h3 {
+  position: relative;
   padding-left: 8.75rem;
+  z-index: 5;
 }
 .wrapper .hints .hint-stages {
   margin-top: 4.125rem;
@@ -708,7 +723,9 @@ p {
 }
 .wrapper .hints .hint-stages .stage {
   display: flex;
-  width: 90%;
+  max-width: 25%;
+  position: relative;
+  z-index: 5;
 }
 .wrapper .hints .hint-stages .stage__num {
   padding-right: 1rem;
@@ -728,22 +745,21 @@ p {
   padding: 0 6%;
   padding-right: 0;
   border-left: 1px solid #F2F5FE;
+  margin-bottom: 10rem;
 }
 .wrapper .hints .hint-stages .stage__card .card__content p {
   font-size: calc(.7rem + .5vw);
 }
 .wrapper .hints .hint-stages .stage__card .card__icon {
-  position: relative;
+  position: absolute;
   bottom: 0rem;
   opacity: 0.7;
   width: 70%;
 }
 .wrapper .hints .search {
   position: absolute;
-  width: 12rem;
-  top: 80%;
-  left: 70vw;
-  z-index: 1;
+  width: 16%;
+  z-index: 0;
   -webkit-animation: floatSearch 30s infinite linear, floatLeftSearch 15s linear infinite;
           animation: floatSearch 30s infinite linear, floatLeftSearch 15s linear infinite;
   -webkit-animation-delay: 5s;
@@ -775,6 +791,8 @@ p {
 .wrapper .work-with-us .stage-wrapper .stage-header h3 {
   text-align: center;
   font-weight: 700;
+  transition: text-shadow 0.3s ease;
+  text-shadow: none;
 }
 .wrapper .work-with-us .stage-wrapper .stage-header__block {
   color: #363739;
@@ -784,12 +802,13 @@ p {
   opacity: 0.5;
   cursor: pointer;
   margin-bottom: 1rem;
+  transition: opacity 0.3s ease;
 }
 .wrapper .work-with-us .stage-wrapper .stage-header__block:last-child {
   margin-bottom: 0;
 }
 .wrapper .work-with-us .stage-wrapper .stage-header__block:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .wrapper .work-with-us .stage-wrapper .stage-header__block:hover h3 {
   text-shadow: 3px 2px 4px #2cd4d9;
@@ -819,7 +838,6 @@ p {
 }
 .wrapper .work-with-us .stage-wrapper .stage-content {
   grid-column: 1/2;
-  transition: all 0.6s ease-in;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block {
   border-radius: 10px 0px 0px 10px;
@@ -832,6 +850,7 @@ p {
   background-position: center center;
   background-size: cover;
   height: 100%;
+  transition: background-image 0.3s ease-in;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items .items-title {
   position: absolute;
@@ -880,12 +899,6 @@ p {
   display: flex;
   justify-content: space-between;
 }
-.wrapper .prices .card-wrapper .wrap {
-  perspective: 100rem;
-}
-.wrapper .prices .card-wrapper .wrap:hover {
-  perspective: 0rem;
-}
 .wrapper .prices .card-wrapper .wrap .card {
   position: relative;
   background-color: #ffffff;
@@ -904,9 +917,14 @@ p {
   box-shadow: initial;
   margin-top: 0.5rem;
   padding: 1vw 5vw;
-  background-color: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
-  transition: all 0.6s ease-in;
+  border: 1px solid #5333ed;
+  background-color: #F2F5FE;
+  transition: background-color 0.6s ease-in, color 0.6s ease-in;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  color: #5333ed;
   cursor: pointer;
+  outline: none;
 }
 .wrapper .prices .card-wrapper .wrap .card .gift-icon {
   top: 0.5%;
@@ -919,8 +937,10 @@ p {
   width: 8%;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list {
+  height: 20rem;
   z-index: 70;
   width: 100%;
+  margin-bottom: 2rem;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
   display: flex;
@@ -928,25 +948,26 @@ p {
   margin-bottom: 3%;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item .checkbox {
-  width: 2rem;
+  width: 1.5rem;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
-  font-size: calc(.7rem + .7vw);
+  font-size: 1rem;
   padding-left: 0.5rem;
   padding-top: 0;
   line-height: 1;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list + div {
-  margin-top: 15%;
+  margin-top: 4rem;
 }
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
   width: 25%;
-  height: 67%;
+  height: 60%;
   background-color: #2cd4d9;
   opacity: 0.2;
   left: 0;
   top: 5rem;
+  transition: opacity 0.3s ease;
 }
 .wrapper .prices .card-wrapper .wrap .card .card-title {
   margin-bottom: 2rem;
@@ -955,6 +976,7 @@ p {
 .wrapper .prices .card-wrapper .wrap .card h3 {
   font-size: calc(1rem + 1vw);
   padding-left: 0;
+  transition: color 0.3s ease;
 }
 .wrapper .prices .card-wrapper .wrap .card h2 {
   font-size: calc(1.5rem + 1vw);
@@ -972,9 +994,9 @@ p {
   opacity: 0.7;
 }
 .wrapper .prices .card-wrapper .wrap .card .button:hover {
-  border: none;
+  border: 1px solid #2cd4d9;
   color: #F2F5FE;
-  background-color: linear-gradient(90deg, rgba(105, 176, 249, 0.8) 0%, rgba(83, 51, 237, 0.8) 91.35%);
+  background-color: #2cd4d9;
 }
 .wrapper .mobile-prices {
   position: relative;
@@ -1003,20 +1025,25 @@ p {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
-  width: 18.75em;
+  transition: background-image 0.3s ease;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
   padding: 1vw 5vw;
-  background-color: linear-gradient(266.22deg, rgba(242, 245, 254, 0.2) 23.84%, rgba(80, 211, 232, 0.2) 98.02%), #F2F5FE;
-  transition: all 0.6s ease-in;
+  border: 1px solid #5333ed;
+  background-color: #F2F5FE;
+  transition: background-color 0.6s ease-in, color 0.6s ease-in;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  color: #5333ed;
   cursor: pointer;
+  outline: none;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
   font-size: 2rem;
   padding: 1vw 15vw;
-  border: none;
+  border: 1px solid #5333ed;
   outline: none;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover {
@@ -1031,6 +1058,7 @@ p {
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover .button {
   background-color: #2cd4d9;
   color: #F2F5FE;
+  border: 1px solid #2cd4d9;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card-title {
   margin-bottom: 4rem;
@@ -1049,10 +1077,16 @@ p {
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list {
   position: relative;
   z-index: 70;
+  padding-top: 4.5rem;
+  margin-bottom: 2rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item {
   display: flex;
+  align-items: center;
   padding-top: 0;
+}
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item p {
+  padding-top: 0.7rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item .checkbox {
   margin-right: 1rem;
@@ -1082,8 +1116,6 @@ p {
 .wrapper .faq .search {
   width: 22vw;
   position: absolute;
-  top: 20%;
-  left: -5%;
   z-index: 1;
   animation: floatSearch 30s infinite linear alternate-reverse, floatLeftSearch 15s linear infinite alternate-reverse;
   -webkit-animation-delay: 5s;
@@ -1277,22 +1309,22 @@ p {
   font-size: calc(.5rem + .9vw);
   opacity: 0.5;
 }
-.wrapper .contacts .contacts-items .feedback-form button {
+.wrapper .contacts .contacts-items .feedback-form .button {
   border: 1px solid #F2F5FE;
   border-radius: 0.7rem;
   color: #F2F5FE;
-  font-size: calc(.5rem + .9vw);
+  font-size: calc(.7rem + .9vw);
   background-color: initial;
   margin: 1rem;
   padding: 1rem;
   padding-left: 0;
   outline: none;
   text-align: center;
-  transition: all 0.6s ease-in;
+  transition: background-color 0.6s ease-in, color 0.6s ease-in;
 }
-.wrapper .contacts .contacts-items .feedback-form button:hover {
+.wrapper .contacts .contacts-items .feedback-form .button:hover {
   color: #363739;
-  background: linear-gradient(270deg, #363739 0%, #EEF1FA 100%);
+  background-color: #F2F5FE;
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree {
   position: relative;
@@ -1431,12 +1463,9 @@ p {
   .wrapper .overlay .popup {
     width: 50%;
   }
-  .wrapper .prices .card-wrapper .wrap .card .u-list {
-    height: 31.25rem;
-  }
   .wrapper .faq .quest-image {
     margin-top: 2rem;
-    width: 30vw;
+    width: 25vw;
   }
   .wrapper .footer .social-icons {
     width: 20%;
@@ -1501,9 +1530,6 @@ p {
     padding: 1rem;
     width: 16vw;
   }
-  .wrapper .prices .card-wrapper .wrap .card .u-list {
-    height: 34rem;
-  }
   .wrapper .prices .card-wrapper .wrap .card .blue-rect {
     height: 70%;
   }
@@ -1549,9 +1575,6 @@ p {
     display: none;
   }
 
-  .wrapper {
-    max-width: 1024px;
-  }
   .wrapper .nav-bar nav a::before {
     top: 2rem;
   }
@@ -1572,7 +1595,6 @@ p {
     font-size: calc(1rem + .5vw);
   }
   .wrapper p {
-    line-height: 2rem;
     font-weight: 400;
   }
   .wrapper section {
@@ -1583,11 +1605,6 @@ p {
     padding-left: 4rem;
     grid-template-columns: 50% 50%;
   }
-  .wrapper .about .search {
-    top: 62%;
-    left: 65%;
-    width: 24vw;
-  }
   .wrapper .about__main .button {
     width: 10rem;
     height: 3rem;
@@ -1597,11 +1614,6 @@ p {
     padding-bottom: 6.125rem;
     grid-template-columns: 30% 70%;
     grid-template-rows: 20% 80%;
-  }
-  .wrapper .propose .search {
-    top: 20%;
-    left: 2%;
-    width: 5rem;
   }
   .wrapper .propose__image {
     grid-column: 1/2;
@@ -1622,7 +1634,7 @@ p {
   }
   .wrapper .hints .hint-stages .stage {
     display: flex;
-    width: 90%;
+    max-width: 90%;
   }
   .wrapper .hints .hint-stages .stage__num {
     padding-right: 0.5rem;
@@ -1632,7 +1644,6 @@ p {
     position: relative;
   }
   .wrapper .hints .hint-stages .stage__card .card__content {
-    height: 16.25rem;
     padding: 0 1rem;
     padding-right: 0;
   }
@@ -1642,11 +1653,6 @@ p {
   .wrapper .hints .hint-stages .stage__card .card__icon {
     opacity: 0.7;
     width: 80%;
-  }
-  .wrapper .hints .search {
-    width: 10rem;
-    top: 90%;
-    left: 70vw;
   }
   .wrapper .prices h3 {
     padding-left: 3rem;
@@ -1662,15 +1668,11 @@ p {
     width: 16vw;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list {
-    height: 18rem;
     z-index: 70;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
     display: flex;
     margin-bottom: 0.3rem;
-  }
-  .wrapper .prices .card-wrapper .wrap .card .u-list .list-item .checkbox {
-    width: 12%;
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
     font-size: 90%;
@@ -1731,12 +1733,6 @@ p {
     width: 18rem;
     font-size: calc(.5rem + .9vw);
   }
-  .wrapper .contacts .contacts-items .feedback-form [type=submit] {
-    border: 1px solid #F2F5FE;
-    border-radius: 0.7rem;
-    color: #F2F5FE;
-    font-size: calc(.5rem + .9vw);
-  }
   .wrapper .contacts .search {
     position: absolute;
     left: 40%;
@@ -1744,9 +1740,6 @@ p {
   }
   .wrapper .footer {
     padding: 6rem 2rem 4rem 2rem;
-  }
-  .wrapper .footer .logo {
-    width: 6vw;
   }
   .wrapper .footer .social-icons {
     display: flex;
@@ -1759,7 +1752,7 @@ p {
   }
   .wrapper .footer .copyright {
     position: absolute;
-    bottom: -0.5rem;
+    bottom: 0.5rem;
     right: 1rem;
     font-size: 0.5rem;
     font-weight: 100;
@@ -1816,7 +1809,7 @@ p {
     padding: 1rem;
   }
   .wrapper .faq .quest-image {
-    width: 40vw;
+    width: 30vw;
     opacity: 0;
   }
   .wrapper .work-with-us .stage-wrapper .stage-header__block {
@@ -1856,9 +1849,6 @@ p {
   .wrapper .contacts .contacts-items .feedback-form ::placeholder {
     font-size: 0.8rem;
   }
-  .wrapper .contacts .contacts-items .feedback-form input[type=submit] {
-    margin-top: 2rem;
-  }
   .wrapper .contacts .contacts-items h4 {
     margin-bottom: 2rem;
   }
@@ -1871,18 +1861,8 @@ p {
   .wrapper .propose__list p {
     font-size: calc(.9rem + .5vw);
   }
-  .wrapper .propose .search {
-    top: 60%;
-    left: 87%;
-    width: 12rem;
-  }
   .wrapper .propose__image .robot {
     display: none;
-  }
-  .wrapper .hints .search {
-    width: 5rem;
-    top: 90%;
-    left: 10vw;
   }
   .wrapper .prices .card-wrapper {
     display: none;
@@ -1893,7 +1873,7 @@ p {
   .wrapper .prices .mobile-prices {
     margin-top: 4rem;
     display: block;
-    width: 80vw;
+    width: 90vw;
   }
   .wrapper .faq .faq-wrapper {
     grid-column: 1/3;
@@ -1907,9 +1887,6 @@ p {
   }
   .wrapper .footer .social-icons img {
     margin: 0;
-  }
-  .wrapper .footer .social-icons a {
-    margin-left: 1rem;
   }
   .wrapper .transform45deg {
     transform: rotate(45deg) translateY(1.1rem);
@@ -1993,11 +1970,7 @@ p {
     opacity: 1;
     text-shadow: 10px 10px 20px #472BCB, -10px -10px 20px #7D62FE;
   }
-  .wrapper .hints .hint-stages .stage .stage__card {
-    height: 14rem;
-  }
   .wrapper .hints .hint-stages .stage .stage__card .card__content {
-    height: 3.5rem;
     border-left: none;
     border-top: 1px solid #F2F5FE;
   }
@@ -2006,15 +1979,13 @@ p {
     font-size: 1.2rem;
   }
   .wrapper .hints .hint-stages .stage .stage__card .card__icon {
-    right: -80%;
+    right: -8%;
     opacity: 0.5;
     width: 40%;
     bottom: 2rem;
   }
-  .wrapper .hints .search {
-    width: 5rem;
-    top: 90%;
-    left: 10vw;
+  .wrapper .work-with-us {
+    padding: 2rem 0rem;
   }
   .wrapper .work-with-us h2 {
     margin-bottom: 0;
@@ -2040,7 +2011,7 @@ p {
     padding: 1rem;
   }
   .wrapper .faq .quest-image {
-    width: 50vw;
+    width: 30vw;
     opacity: 0;
   }
   .wrapper .faq .accordion {
@@ -2169,10 +2140,6 @@ p {
     padding-bottom: 4rem;
     grid-template-rows: 10% 90%;
   }
-  .wrapper .propose .search {
-    top: 6%;
-    left: 69%;
-  }
   .wrapper .hints h2 {
     padding-bottom: 0;
   }
@@ -2194,11 +2161,7 @@ p {
     opacity: 1;
     text-shadow: 10px 10px 20px #472BCB, -10px -10px 20px #7D62FE;
   }
-  .wrapper .hints .hint-stages .stage .stage__card {
-    height: 14rem;
-  }
   .wrapper .hints .hint-stages .stage .stage__card .card__content {
-    height: 3.5rem;
     border-left: none;
     border-top: 1px solid #F2F5FE;
   }
@@ -2207,8 +2170,6 @@ p {
     font-size: 1.2rem;
   }
   .wrapper .hints .hint-stages .stage .stage__card .card__icon {
-    right: -18rem;
-    opacity: 0.5;
     width: 50%;
     bottom: 2rem;
   }
@@ -2249,7 +2210,7 @@ p {
     font-size: 1rem;
   }
   .wrapper .faq .quest-image {
-    width: 85vw;
+    width: 55vw;
     opacity: 0;
   }
   .wrapper .faq .accordion {
@@ -2264,9 +2225,6 @@ p {
   .wrapper .contacts .contacts-items h4 {
     font-size: 0.9rem;
     font-weight: 300;
-  }
-  .wrapper .contacts .contacts-items .feedback-form [type=submit] {
-    margin-top: 1rem;
   }
   .wrapper .contacts .contacts-items .subscribe {
     display: none;
@@ -2337,14 +2295,6 @@ p {
     padding: 0 1rem;
   }
 
-  .wrapper .hints .hint-stages .stage .stage__card .card__icon {
-    right: -80%;
-  }
-
-  .wrapper .hints .hint-stages .stage .stage__card {
-    height: 12rem;
-  }
-
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
     font-size: 1.5rem;
     padding: 1vw 8vw;
@@ -2359,7 +2309,7 @@ p {
   }
 
   .wrapper .faq .quest-image {
-    width: 90vw;
+    width: 30vw;
   }
 
   .wrapper .faq .faq-wrapper p {
