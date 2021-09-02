@@ -745,14 +745,13 @@ p {
   padding: 0 6%;
   padding-right: 0;
   border-left: 1px solid #F2F5FE;
-  margin-bottom: 10rem;
+  padding-bottom: 4rem;
 }
 .wrapper .hints .hint-stages .stage__card .card__content p {
   font-size: calc(.7rem + .5vw);
+  padding-bottom: 2rem;
 }
 .wrapper .hints .hint-stages .stage__card .card__icon {
-  position: absolute;
-  bottom: 0rem;
   opacity: 0.7;
   width: 70%;
 }
@@ -910,7 +909,6 @@ p {
   box-shadow: 10px 10px 40px #dedeec;
   border-radius: 0.5rem;
   width: 16vw;
-  transition: all 0.3s;
   cursor: pointer;
 }
 .wrapper .prices .card-wrapper .wrap .card .button {
@@ -1019,7 +1017,6 @@ p {
   box-shadow: 10px 10px 40px #dedeec;
   border-radius: 0.5rem;
   width: 16vw;
-  transition: all 0.3s;
   cursor: pointer;
   background-image: url("../images/blue-top.svg");
   background-repeat: no-repeat;
@@ -1045,6 +1042,8 @@ p {
   padding: 1vw 15vw;
   border: 1px solid #5333ed;
   outline: none;
+  background-color: #F2F5FE;
+  transition: background-color 0.6s ease, color 0.6s ease, border 0.6s ease;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover {
   background-image: url("../images/aqua-top.svg");
@@ -1055,7 +1054,7 @@ p {
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover .price-title {
   opacity: 1;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover .button {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button:hover {
   background-color: #2cd4d9;
   color: #F2F5FE;
   border: 1px solid #2cd4d9;
@@ -1598,7 +1597,7 @@ p {
     font-weight: 400;
   }
   .wrapper section {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
   }
   .wrapper .about {
     padding-right: 4rem;
@@ -1630,7 +1629,7 @@ p {
     padding-left: 3rem;
   }
   .wrapper .hints .hint-stages {
-    margin-top: 4.125rem;
+    margin-top: 2rem;
   }
   .wrapper .hints .hint-stages .stage {
     display: flex;
@@ -1644,7 +1643,6 @@ p {
     position: relative;
   }
   .wrapper .hints .hint-stages .stage__card .card__content {
-    padding: 0 1rem;
     padding-right: 0;
   }
   .wrapper .hints .hint-stages .stage__card .card__content p {
@@ -1973,16 +1971,18 @@ p {
   .wrapper .hints .hint-stages .stage .stage__card .card__content {
     border-left: none;
     border-top: 1px solid #F2F5FE;
+    padding-bottom: 2rem;
   }
   .wrapper .hints .hint-stages .stage .stage__card .card__content p {
     padding-top: 2rem;
     font-size: 1.2rem;
+    padding-bottom: 0;
   }
   .wrapper .hints .hint-stages .stage .stage__card .card__icon {
-    right: -8%;
+    margin-left: 80%;
+    margin-top: -20%;
     opacity: 0.5;
     width: 40%;
-    bottom: 2rem;
   }
   .wrapper .work-with-us {
     padding: 2rem 0rem;

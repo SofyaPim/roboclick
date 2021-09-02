@@ -61,7 +61,7 @@ $error: rgb(245, 73, 6);
     box-shadow: 10px 10px 40px #dedeec;
     border-radius: .5rem;
     width: 16vw;
-    transition: all .3s;
+   // transition: all .3s;
     cursor: pointer;
 
     .button {
@@ -950,19 +950,20 @@ transition: opacity .3s ease ;
                         padding: 0 6%;
                         padding-right: 0;
                         border-left: 1px solid $light-font;
-                        margin-bottom: 10rem;
+                        padding-bottom: 4rem;
 
                         p {
 
                             font-size: calc(.7rem + .5vw);
+                            padding-bottom: 2rem;
                         }
 
                     }
 
                     .card__icon {
 
-                        position: absolute;
-                        bottom: 0rem;
+                      //  position: absolute;
+                       // bottom: 0rem;
 
                         opacity: .7;
                         width: 70%;
@@ -1319,6 +1320,10 @@ transition: opacity .3s ease ;
                     padding: 1vw 15vw;
                     border: 1px solid $purple-accent;
                     outline: none;
+                    background-color: $light-font;
+                    transition:  background-color .6s ease,
+                    color .6s ease,
+                    border .6s ease ;
                 }
 
                 &:hover {
@@ -1332,15 +1337,16 @@ transition: opacity .3s ease ;
                         opacity: 1;
                     }
 
-                    .button {
+                   
+
+                } 
+                .button:hover {
                         background-color: $aqua-accent;
                         color: $light-font;
                          border: 1px solid $aqua-accent;
 
 
                     }
-
-                }
 
                 .card-title {
                     margin-bottom: 4rem;
@@ -1974,6 +1980,7 @@ p{
                     &__card {
 
                         .card__content {
+                          // padding-bottom: 14rem;
 
                             p {
                                 font-size: calc(.5rem + .5vw);
@@ -2164,7 +2171,7 @@ p{
         }
 
         section {
-            padding: 4rem 2rem;
+            padding: 2rem 2rem;
         }
 
 
@@ -2226,7 +2233,7 @@ p{
             }
 
             .hint-stages {
-                margin-top: 4.125rem;
+                margin-top: 2rem;
 
                 .stage {
                     display: flex;
@@ -2244,7 +2251,7 @@ p{
                         .card__content {
 
                             //  height: 16.25rem;
-                            padding: 0 1rem;
+                           // padding: 0 1rem;
                             padding-right: 0;
 
                             p {
@@ -2791,19 +2798,22 @@ p{
                             // padding-right: 0;
                             border-left: none;
                             border-top: 1px solid #F2F5FE;
+                            padding-bottom: 2rem;
 
                             p {
                                 padding-top: 2rem;
                                 font-size: 1.2rem;
+                                padding-bottom: 0;
                             }
 
                         }
 
                         .card__icon {
-                            right: -8%;
+                            margin-left: 80% ;
+                            margin-top: -20%;
                             opacity: 0.5;
                             width: 40%;
-                            bottom: 2rem
+                           // bottom: 2rem
                         }
 
                     }
