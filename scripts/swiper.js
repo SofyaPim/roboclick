@@ -9,4 +9,4 @@ const swiper = new Swiper(".pricesSwiper", {
       el: ".swiper-pagination",
       clickable: true,
     },
-  });
+  })

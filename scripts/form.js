@@ -1,10 +1,9 @@
-
 const forms = () => {
     const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('._req');
 
-console.log(form);
-console.log(inputs);
+    console.log(form);
+    console.log(inputs);
     const message = {
         loading: 'Загрузка ...',
         success: 'Спасибо, скоро с Вами свяжемся',
@@ -30,17 +29,17 @@ console.log(inputs);
 
     function phoneValidate(input) {
         console.log('!');
-    let value = input.value;
-           
-            console.log(value);
-            value = value.replace(/[^0-9]/g, '');
+        let value = input.value;
 
-            console.log(value);
-            console.log(value.length);
-            if (value.length === 11) {
-                console.log('!');
-                return true;
-            }
+        console.log(value);
+        value = value.replace(/[^0-9]/g, '');
+
+        console.log(value);
+        console.log(value.length);
+        if (value.length === 11) {
+            console.log('!');
+            return true;
+        }
 
     }
 
@@ -72,10 +71,10 @@ console.log(inputs);
             })
 
             switch (item.name) {
-                
+
 
                 case 'phone':
-                 //   console.log(phoneValidate());
+                    //   console.log(phoneValidate());
                     if (!phoneValidate(item)) { //item.value.length === 0
                         console.log("!");
                         let sibling = item.nextElementSibling;
@@ -83,7 +82,7 @@ console.log(inputs);
                         item.classList.add('_error');
                         sibling.style.opacity = 1;
                     }
-console.log('phone');
+                    console.log('phone');
                     break;
                 case 'name':
                     if (item.value.length === 0) {
@@ -140,7 +139,7 @@ console.log('phone');
             e.preventDefault();
 
             let inputsForm = item.querySelectorAll('input');
-              console.log(inputsForm);
+            console.log(inputsForm);
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
@@ -184,7 +183,7 @@ console.log('phone');
 
 }
 
-document.addEventListener("DOMContentLoaded",  forms );
+document.addEventListener("DOMContentLoaded", forms);
 
 
 

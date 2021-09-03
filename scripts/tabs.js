@@ -1,4 +1,4 @@
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+function tabs(headerSelector, tabSelector, contentSelector, activeClass) {
     const header = document.querySelector(headerSelector),
           tab = document.querySelectorAll(tabSelector),
           content = document.querySelectorAll(contentSelector);
@@ -37,5 +37,8 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
             });
         }
     });
-};
+}
+
+
+// export default tabs;
 tabs('.stage-header', '.stage-header__block', '.stage-content__block','active-header');

@@ -239,8 +239,11 @@ p {
   left: 0px;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 14px;
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .swiper-pagination-bullet {
@@ -528,7 +531,7 @@ p {
   justify-content: space-between;
 }
 .wrapper .nav-bar .nav-bar-links a {
-  padding: 1rem;
+  padding: 0.3rem;
   position: relative;
   cursor: pointer;
   font-size: calc(1rem + .5vw);
@@ -907,7 +910,11 @@ p {
   display: flex;
   justify-content: space-between;
 }
+.wrapper .prices .card-wrapper .wrap {
+  min-height: 10rem;
+}
 .wrapper .prices .card-wrapper .wrap .card {
+  height: 100%;
   position: relative;
   background-color: #ffffff;
   display: flex;
@@ -917,13 +924,12 @@ p {
   padding: 2rem;
   box-shadow: 10px 10px 40px #dedeec;
   border-radius: 0.5rem;
-  width: 16vw;
   cursor: pointer;
 }
 .wrapper .prices .card-wrapper .wrap .card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
-  padding: 1vw 5vw;
+  padding: 1vw 4vw;
   border: 1px solid #5333ed;
   background-color: #F2F5FE;
   transition: background-color 0.6s ease-in, color 0.6s ease-in;
@@ -944,7 +950,6 @@ p {
   width: 8%;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list {
-  height: 20rem;
   z-index: 70;
   width: 100%;
   margin-bottom: 2rem;
@@ -955,7 +960,7 @@ p {
   margin-bottom: 3%;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item .checkbox {
-  width: 1.5rem;
+  width: 1.2rem;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
   font-size: 1rem;
@@ -963,13 +968,10 @@ p {
   padding-top: 0;
   line-height: 1;
 }
-.wrapper .prices .card-wrapper .wrap .card .u-list + div {
-  margin-top: 4rem;
-}
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
   width: 25%;
-  height: 60%;
+  height: 65%;
   background-color: #2cd4d9;
   opacity: 0.2;
   left: 0;
@@ -1014,8 +1016,13 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 3%;
+  margin-bottom: 2rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
+  min-height: 12rem;
+}
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
+  width: 100%;
   position: relative;
   background-color: #ffffff;
   display: flex;
@@ -1025,18 +1032,18 @@ p {
   padding: 2rem;
   box-shadow: 10px 10px 40px #dedeec;
   border-radius: 0.5rem;
-  width: 16vw;
   cursor: pointer;
   background-image: url("../images/blue-top.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
   transition: background-image 0.3s ease;
+  height: 100%;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
-  padding: 1vw 5vw;
+  padding: 1vw 4vw;
   border: 1px solid #5333ed;
   background-color: #F2F5FE;
   transition: background-color 0.6s ease-in, color 0.6s ease-in;
@@ -1046,65 +1053,66 @@ p {
   cursor: pointer;
   outline: none;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
   font-size: 2rem;
-  padding: 1vw 15vw;
   border: 1px solid #5333ed;
   outline: none;
   background-color: #F2F5FE;
   transition: background-color 0.6s ease, color 0.6s ease, border 0.6s ease;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:hover {
   background-image: url("../images/aqua-top.svg");
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover h3 {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:hover h3 {
   color: #F2F5FE;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card:hover .price-title {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:hover .price-title {
   opacity: 1;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button:hover {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:hover {
   background-color: #2cd4d9;
   color: #F2F5FE;
   border: 1px solid #2cd4d9;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card-title {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .card-title {
   margin-bottom: 4rem;
   font-weight: 600;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .gift-icon.small {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
   width: 9%;
   top: 2rem;
   right: 2rem;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .gift-icon.large {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.large {
   width: 12%;
   top: 1.8rem;
   right: 4rem;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list {
   position: relative;
   z-index: 70;
-  padding-top: 4.5rem;
+  padding-top: 0rem;
   margin-bottom: 2rem;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list .list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding-top: 0;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item p {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list .list-item p {
   padding-top: 0.7rem;
+  text-align: start;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item .checkbox {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list .list-item .checkbox {
   margin-right: 1rem;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card h3,
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card h2 {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h3,
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {
   padding-left: 0;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card h2 {
-  font-size: calc(2.5rem + 1vw);
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {
+  font-size: calc(1.7rem + 1vw);
   padding-top: 2rem;
 }
 .wrapper .faq {
@@ -1539,9 +1547,6 @@ p {
     padding: 1rem;
     width: 16vw;
   }
-  .wrapper .prices .card-wrapper .wrap .card .blue-rect {
-    height: 70%;
-  }
   .wrapper .prices .card-wrapper .wrap .card .card-title {
     margin-bottom: 2rem;
   }
@@ -1552,9 +1557,6 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card h2 {
     font-size: calc(1.5rem + 1vw);
-  }
-  .wrapper .prices .card-wrapper .wrap .card .button {
-    padding: 1vw 4.5vw;
   }
   .wrapper .contacts .contacts-items {
     display: flex;
@@ -1707,11 +1709,11 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card .button {
     box-shadow: initial;
-    padding: 1vw 4vw;
+    padding: 1rem 2rem;
   }
   .wrapper .faq .quest-image {
     margin-top: 2rem;
-    width: 40vw;
+    width: 30vw;
   }
   .wrapper .contacts {
     padding-bottom: 0;
@@ -1875,6 +1877,9 @@ p {
   .wrapper .propose__image .robot {
     display: none;
   }
+  .wrapper .prices {
+    padding: 4rem;
+  }
   .wrapper .prices .card-wrapper {
     display: none;
   }
@@ -1884,7 +1889,7 @@ p {
   .wrapper .prices .mobile-prices {
     margin-top: 4rem;
     display: block;
-    width: 90vw;
+    width: 100vw;
   }
   .wrapper .faq .faq-wrapper {
     grid-column: 1/3;
@@ -1940,7 +1945,7 @@ p {
     padding: 6rem 2rem;
   }
   .wrapper h3 {
-    font-size: calc(.7rem + .7vw);
+    font-size: calc(1rem + .7vw);
     font-weight: 600;
   }
   .wrapper .header .social-icons {
@@ -2205,9 +2210,21 @@ p {
   .wrapper section.work-with-us .stage-wrapper .stage-content h3 {
     padding-bottom: 2rem;
   }
+  .wrapper section.prices {
+    padding: 1rem;
+    padding-bottom: 4rem;
+  }
   .wrapper section.prices h3,
 .wrapper section.prices h2 {
     padding-left: 0;
+  }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
+    top: 4rem;
+    right: 2.5rem;
+  }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.large {
+    top: 4rem;
+    right: 0.5rem;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card-title {
     margin-bottom: 0;
@@ -2218,10 +2235,6 @@ p {
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item .checkbox {
     display: none;
-  }
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
-    margin-top: -1rem;
-    padding: 1vw 10vw;
   }
   .wrapper .faq {
     padding-bottom: 4rem;
@@ -2266,7 +2279,7 @@ p {
   }
   .wrapper .footer .social-icons {
     margin: auto;
-    width: 50%;
+    width: 70%;
   }
   .wrapper .footer .social-icons a {
     margin-left: 0;
@@ -2281,6 +2294,9 @@ p {
   }
 }
 @media all and (max-width: 375px) {
+  .wrapper p {
+    font-size: 0.8rem;
+  }
   .wrapper .overlay .popup {
     width: 100%;
   }
@@ -2314,9 +2330,12 @@ p {
     padding: 0 1rem;
   }
 
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .button {
-    font-size: 1.5rem;
-    padding: 1vw 8vw;
+  .wrapper .prices .mobile-prices {
+    margin-top: 0rem;
+  }
+
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
+    font-size: 1rem;
   }
 
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item p {
@@ -2342,6 +2361,40 @@ p {
 @media all and (max-width: 320px) {
   .wrapper .faq {
     padding-bottom: 12rem;
+  }
+
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card h2 {
+    font-size: calc(1.1rem + 1vw);
+  }
+
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
+    padding: 1rem;
+  }
+
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .card-title {
+    margin-bottom: 1rem;
+  }
+
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
+    height: 25rem;
+  }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
+    top: 2rem;
+    right: 0.5rem;
+  }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.large {
+    top: 4rem;
+    right: 0.5rem;
+  }
+
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {
+    font-size: calc(1rem + 1vw);
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .mobile-prices-wrapper .mobile-prices-card .card-title {
+    font-size: calc(1rem + 1.5vw);
   }
 }
 .wrapper .transformTransX {

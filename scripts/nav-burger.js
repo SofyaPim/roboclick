@@ -1,4 +1,4 @@
-const showNav = (burger, nav) => {
+function showNav(burger, nav){
   const btn = document.querySelector(burger),
     navBar = document.querySelector(nav);
   btn.addEventListener('click', () => {
@@ -17,4 +17,5 @@ const showNav = (burger, nav) => {
 
 
 }
-showNav('.nav-burger', '.nav-bar');
+export default showNav;
+//showNav('.nav-burger', '.nav-bar');
