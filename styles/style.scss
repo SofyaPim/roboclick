@@ -1532,12 +1532,14 @@ p {
                 z-index: 70;
                 max-height: 0;
                 opacity: 0;
-                transition: all .6s ease-in-out;
+                transition: opacity .7s ease-in-out;
 
                 p {
                     opacity: 0;
-                    text-align: justify;
+                   // text-align: justify;
                     max-height: 20rem;
+                  //  transition: opacity .1s ease-in-out;
+
                 }
             }
 
@@ -1547,7 +1549,7 @@ p {
                 padding: 2rem;
 
                 p {
-                    transition: all 1s ease-in;
+                   
                     opacity: .8;
                 }
             }

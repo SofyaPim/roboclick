@@ -1219,11 +1219,10 @@ p {
   z-index: 70;
   max-height: 0;
   opacity: 0;
-  transition: all 0.6s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
 }
 .wrapper .faq .faq-wrapper .answer-item p {
   opacity: 0;
-  text-align: justify;
   max-height: 20rem;
 }
 .wrapper .faq .faq-wrapper .active > .answer-item {
@@ -1232,7 +1231,6 @@ p {
   padding: 2rem;
 }
 .wrapper .faq .faq-wrapper .active > .answer-item p {
-  transition: all 1s ease-in;
   opacity: 0.8;
 }
 .wrapper .contacts {
