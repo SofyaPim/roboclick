@@ -930,7 +930,7 @@ p {
 .wrapper .prices .card-wrapper .wrap .card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
-  padding: 1vw 4vw;
+  padding: 1vw 3.5vw;
   border: 1px solid #5333ed;
   background-color: #F2F5FE;
   transition: background-color 0.6s ease-in, color 0.6s ease-in;
@@ -939,6 +939,7 @@ p {
   color: #5333ed;
   cursor: pointer;
   outline: none;
+  margin: auto;
 }
 .wrapper .prices .card-wrapper .wrap .card .gift-icon {
   top: 0.5%;
@@ -1042,12 +1043,13 @@ p {
   background-size: 105%;
   background-position: top;
   transition: background-image 0.3s ease;
+  padding: 1rem;
   height: 100%;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
-  padding: 1vw 4vw;
+  padding: 1vw 3.5vw;
   border: 1px solid #5333ed;
   background-color: #F2F5FE;
   transition: background-color 0.6s ease-in, color 0.6s ease-in;
@@ -1056,6 +1058,7 @@ p {
   color: #5333ed;
   cursor: pointer;
   outline: none;
+  margin: auto;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
   font-size: 2rem;
@@ -1090,7 +1093,7 @@ p {
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.large {
   width: 12%;
   top: 1.8rem;
-  right: 4rem;
+  right: 5.5rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list {
   position: relative;
@@ -1891,7 +1894,6 @@ p {
     display: block;
   }
   .wrapper .prices .mobile-prices {
-    margin-top: 4rem;
     display: block;
     width: 100vw;
   }
@@ -2233,7 +2235,7 @@ p {
     padding-bottom: 0;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
-    top: 4rem;
+    top: 2rem;
     right: 2.5rem;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.large {
@@ -2369,6 +2371,15 @@ p {
     display: none;
   }
 
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
+    top: 2rem;
+    right: 0.5rem;
+  }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.large {
+    top: 3.5rem;
+    right: 0.3rem;
+  }
+
   .wrapper .faq .quest-image {
     width: 30vw;
   }
@@ -2396,15 +2407,6 @@ p {
 
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .card-title {
     margin-bottom: 1rem;
-  }
-
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
-    top: 2rem;
-    right: 0.5rem;
-  }
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.large {
-    top: 4rem;
-    right: 0.5rem;
   }
 
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {

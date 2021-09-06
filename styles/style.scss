@@ -67,7 +67,7 @@ $error: rgb(245, 73, 6);
     .button {
         box-shadow: initial;
         margin-top: .5rem;
-        padding: 1vw 4vw;
+        padding: 1vw 3.5vw;
         border: 1px solid $purple-accent;
         background-color: $light-font;
         transition: background-color .6s ease-in,
@@ -77,6 +77,7 @@ $error: rgb(245, 73, 6);
         color: $purple-accent;
         cursor: pointer;
         outline: none;
+        margin: auto;
 
     }
 
@@ -1312,6 +1313,7 @@ p {
                     background-size: 105%;
                     background-position: top;
                     transition: background-image .3s ease;
+                    padding: 1rem;
 
                     height: 100%;
 
@@ -1363,7 +1365,7 @@ p {
                     .gift-icon.large {
                         width: 12%;
                         top: 1.8rem;
-                        right: 4rem;
+                        right: 5.5rem;
                     }
 
                     .u-list {
@@ -2527,7 +2529,7 @@ p {
         }
 
         .prices .mobile-prices {
-            margin-top: 4rem;
+           // margin-top: 4rem;
             display: block;
             width: 100vw;
         }
@@ -3055,7 +3057,7 @@ p {
                         }
     
                         .gift-icon.small {
-                            top: 4rem;
+                            top: 2rem;
                             right: 2.5rem;
                         }
 
@@ -3244,7 +3246,31 @@ p {
     .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list .list-item .checkbox {
         display: none;
     }
+    .wrapper .mobile-prices {
+        .mobile-prices-wrapper {
+            .mobile-prices-card {
+               // height: 28rem;
 
+                .card {
+                    .gift-icon.small {
+                        top: 2rem;
+                        right: .5rem;
+                    }
+
+                    .gift-icon.large {
+                        top: 3.5rem;
+                        right: .3rem;
+                    }
+                }
+
+
+
+
+
+            }
+        }
+
+    }
     .wrapper .faq .quest-image {
         width: 30vw;
     }
@@ -3277,31 +3303,31 @@ p {
         margin-bottom: 1rem;
     }
 
-    .wrapper .mobile-prices {
-        .mobile-prices-wrapper {
-            .mobile-prices-card {
-               // height: 28rem;
+    // .wrapper .mobile-prices {
+    //     .mobile-prices-wrapper {
+    //         .mobile-prices-card {
+    //            // height: 28rem;
 
-                .card {
-                    .gift-icon.small {
-                        top: 2rem;
-                        right: .5rem;
-                    }
+    //             .card {
+    //                 .gift-icon.small {
+    //                     top: 2rem;
+    //                     right: .5rem;
+    //                 }
 
-                    .gift-icon.large {
-                        top: 4rem;
-                        right: .5rem;
-                    }
-                }
-
-
+    //                 .gift-icon.large {
+    //                     top: 3.5rem;
+    //                     right: .3rem;
+    //                 }
+    //             }
 
 
 
-            }
-        }
 
-    }
+
+    //         }
+    //     }
+
+    // }
 
     .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {
         font-size: calc(1rem + 1vw);
