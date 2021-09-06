@@ -2635,7 +2635,7 @@ p {
 
         h3 {
             font-size: calc(1rem + .7vw);
-            font-weight: 600;
+          //  font-weight: 600;
         }
 
         .header {
@@ -2804,19 +2804,23 @@ p {
             font-size: 1rem;
         }
 
-        .contacts .contacts-items h4 {
-
-            display: flex;
-            font-size: calc(.7rem + .5vw);
+        .contacts .contacts-items{
+            .adres{
+                  font-size: calc(1rem + .5vw);
+display: flex;
+          
             justify-content: space-between;
             flex-wrap: wrap;
             align-content: center;
 
-            margin: 1% auto;
+            margin: auto;
+
+
+            }
+             
+
 
         }
-
-
         .transform45deg {
             transform: rotate(45deg) translateY(1.1rem);
 
@@ -3046,7 +3050,7 @@ p {
         }
 
        .prices {
-            padding: 1rem;
+            padding: 2rem 1rem;
             padding-bottom: 4rem;
 
             h3,
@@ -3142,7 +3146,13 @@ p {
             font-weight: 300;
 
         }
-
+         .contacts .adres .phone {
+          
+            margin: auto;
+            a{
+                font-size: 1.5rem; 
+            }
+        }
         .contacts .contacts-items .subscribe {
             display: none;
         }
@@ -3171,7 +3181,8 @@ p {
 
             .social-icons {
                 margin: auto;
-                width: 70%;
+                width: 60%;
+                margin-bottom: 2rem;
 
                 a {
                     margin-left: 0;

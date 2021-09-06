@@ -2,8 +2,8 @@ const forms = () => {
     const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('._req');
 
-    console.log(form);
-    console.log(inputs);
+  //  console.log(form);
+  //  console.log(inputs);
     const message = {
         loading: 'Загрузка ...',
         success: 'Спасибо, скоро с Вами свяжемся',
@@ -187,27 +187,3 @@ document.addEventListener("DOMContentLoaded", forms);
 
 
 
-// router.post("/", (req, res, next) => {
-//     foo().catch(bar).then(result => {
-//         res.send(result);
-//     , error => {
-//         console.error(error);
-//         res.sendStatus(500); // or next(error) or whatever
-//     });
-// })
-
-
-//foo()
-// .then((result) => {
-//     res.send(result)
-// })
-// .catch((error) => {
-//     console.log(error)
-//     bar()
-//     .then((data) => {
-//         res.send(data)
-//     })
-//     .catch((error) => {
-//         console.log(error)
-//     })
-// })

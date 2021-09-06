@@ -1964,7 +1964,6 @@ p {
   }
   .wrapper h3 {
     font-size: calc(1rem + .7vw);
-    font-weight: 600;
   }
   .wrapper .header .social-icons {
     opacity: 0.7;
@@ -2074,13 +2073,13 @@ p {
     font-family: "Raleway", sans-serif;
     font-size: 1rem;
   }
-  .wrapper .contacts .contacts-items h4 {
+  .wrapper .contacts .contacts-items .adres {
+    font-size: calc(1rem + .5vw);
     display: flex;
-    font-size: calc(.7rem + .5vw);
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
-    margin: 1% auto;
+    margin: auto;
   }
   .wrapper .transform45deg {
     transform: rotate(45deg) translateY(1.1rem);
@@ -2235,7 +2234,7 @@ p {
     padding-bottom: 2rem;
   }
   .wrapper .prices {
-    padding: 1rem;
+    padding: 2rem 1rem;
     padding-bottom: 4rem;
   }
   .wrapper .prices h3,
@@ -2294,6 +2293,12 @@ p {
     font-size: 0.9rem;
     font-weight: 300;
   }
+  .wrapper .contacts .adres .phone {
+    margin: auto;
+  }
+  .wrapper .contacts .adres .phone a {
+    font-size: 1.5rem;
+  }
   .wrapper .contacts .contacts-items .subscribe {
     display: none;
   }
@@ -2314,7 +2319,8 @@ p {
   }
   .wrapper .footer .social-icons {
     margin: auto;
-    width: 70%;
+    width: 60%;
+    margin-bottom: 2rem;
   }
   .wrapper .footer .social-icons a {
     margin-left: 0;
