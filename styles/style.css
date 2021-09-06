@@ -1903,8 +1903,11 @@ p {
     display: block;
     width: 100vw;
   }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
+    padding: 2rem;
+  }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
-    padding: 2vw 10vw;
+    margin-bottom: 1rem;
   }
   .wrapper .faq .faq-wrapper {
     grid-column: 1/3;
