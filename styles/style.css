@@ -1100,6 +1100,7 @@ p {
   z-index: 70;
   padding-top: 0rem;
   margin-bottom: 2rem;
+  min-height: 16rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list .list-item {
   display: flex;
@@ -2220,12 +2221,12 @@ p {
   .wrapper section.work-with-us .stage-wrapper .stage-content h3 {
     padding-bottom: 2rem;
   }
-  .wrapper section.prices {
+  .wrapper .prices {
     padding: 1rem;
     padding-bottom: 4rem;
   }
-  .wrapper section.prices h3,
-.wrapper section.prices h2 {
+  .wrapper .prices h3,
+.wrapper .prices h2 {
     padding-left: 0;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price-title {
@@ -2234,7 +2235,7 @@ p {
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
     top: 2rem;
-    right: 2.5rem;
+    right: 2rem;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.large {
     top: 4rem;

@@ -1373,6 +1373,7 @@ p {
                         z-index: 70;
                         padding-top: 0rem;
                         margin-bottom: 2rem;
+                        min-height: 16rem;
 
                         .list-item {
                             display: flex;
@@ -1533,13 +1534,9 @@ p {
                 max-height: 0;
                 opacity: 0;
                 transition: opacity .7s ease-in-out;
-
                 p {
                     opacity: 0;
-                   // text-align: justify;
                     max-height: 20rem;
-                  //  transition: opacity .1s ease-in-out;
-
                 }
             }
 
@@ -1549,7 +1546,6 @@ p {
                 padding: 2rem;
 
                 p {
-                   
                     opacity: .8;
                 }
             }
@@ -3036,7 +3032,7 @@ p {
             }
         }
 
-        section.prices {
+       .prices {
             padding: 1rem;
             padding-bottom: 4rem;
 
@@ -3060,7 +3056,7 @@ p {
     
                         .gift-icon.small {
                             top: 2rem;
-                            right: 2.5rem;
+                            right: 2rem;
                         }
 
                         .gift-icon.large {
