@@ -1230,17 +1230,17 @@ p {
   transition: all 0.6s ease-in-out;
 }
 .wrapper .faq .faq-wrapper .answer-item p {
-  transition: opacity 0.7s ease-in-out;
+  padding: 2rem;
   opacity: 0;
-  max-height: 20rem;
 }
 .wrapper .faq .faq-wrapper .active > .answer-item {
   max-height: 20rem;
   opacity: 1;
-  padding: 2rem;
 }
 .wrapper .faq .faq-wrapper .active > .answer-item p {
+  transition: opacity 0.9s ease-in-out;
   opacity: 0.8;
+  padding: 2rem;
 }
 .wrapper .contacts {
   background: linear-gradient(270deg, rgba(54, 55, 57, 0.8) 72.86%, rgba(80, 211, 232, 0.8) 132.76%), #363739;
