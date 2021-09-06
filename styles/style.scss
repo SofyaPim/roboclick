@@ -1219,9 +1219,9 @@ p {
                         }
                     }
 
-                    // .u-list+div {
-                    //     margin-top: 4rem;
-                    // }
+                    .u-list+div {
+                       width: 100%;
+                    }
 
                     .blue-rect {
                         position: absolute;
@@ -1299,8 +1299,10 @@ p {
 
         .mobile-prices-wrapper {
             .mobile-prices-card {
-                min-height: 20rem;
+                // min-height: 20rem;
                border-radius: 20px;
+             //  height: 1px;
+   // min-height: 32rem;
 
                 .card {
                     width: 100%;
@@ -3043,7 +3045,7 @@ p {
         .mobile-prices {
             .mobile-prices-wrapper {
                 .mobile-prices-card {
-                    height: 36rem;
+                   // height: 36rem;
 
                     .card {
 
@@ -3080,7 +3082,7 @@ p {
                         }
 
                         .button {
-
+                            border-radius: 5px;
                             padding: 2vw 5vw;
                         }
 
@@ -3225,8 +3227,8 @@ p {
         margin-top: 0rem;
     }
 
-    .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
-        height: 32rem;
+    .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
+        padding: 1rem;
     }
     .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
         font-size: 1rem;
@@ -3278,7 +3280,7 @@ p {
     .wrapper .mobile-prices {
         .mobile-prices-wrapper {
             .mobile-prices-card {
-                height: 28rem;
+               // height: 28rem;
 
                 .card {
                     .gift-icon.small {

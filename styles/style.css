@@ -969,6 +969,9 @@ p {
   padding-top: 0;
   line-height: 1;
 }
+.wrapper .prices .card-wrapper .wrap .card .u-list + div {
+  width: 100%;
+}
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
   width: 25%;
@@ -1020,7 +1023,6 @@ p {
   margin-bottom: 2rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
-  min-height: 20rem;
   border-radius: 20px;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
@@ -2226,9 +2228,6 @@ p {
 .wrapper section.prices h2 {
     padding-left: 0;
   }
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
-    height: 36rem;
-  }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price-title {
     padding-top: 0;
     padding-bottom: 0;
@@ -2252,6 +2251,7 @@ p {
     display: none;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
+    border-radius: 5px;
     padding: 2vw 5vw;
   }
   .wrapper .faq {
@@ -2352,8 +2352,8 @@ p {
     margin-top: 0rem;
   }
 
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
-    height: 32rem;
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
+    padding: 1rem;
   }
 
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
@@ -2398,9 +2398,6 @@ p {
     margin-bottom: 1rem;
   }
 
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
-    height: 28rem;
-  }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
     top: 2rem;
     right: 0.5rem;
