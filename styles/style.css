@@ -1227,9 +1227,10 @@ p {
   z-index: 70;
   max-height: 0;
   opacity: 0;
-  transition: opacity 0.7s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 .wrapper .faq .faq-wrapper .answer-item p {
+  transition: opacity 0.7s ease-in-out;
   opacity: 0;
   max-height: 20rem;
 }
