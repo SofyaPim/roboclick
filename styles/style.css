@@ -930,7 +930,6 @@ p {
 .wrapper .prices .card-wrapper .wrap .card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
-  padding: 1vw 3.5vw;
   border: 1px solid #5333ed;
   background-color: #F2F5FE;
   transition: background-color 0.6s ease-in, color 0.6s ease-in;
@@ -970,8 +969,12 @@ p {
   padding-top: 0;
   line-height: 1;
 }
-.wrapper .prices .card-wrapper .wrap .card .u-list + div {
+.wrapper .prices .card-wrapper .wrap .card .price {
   width: 100%;
+}
+.wrapper .prices .card-wrapper .wrap .card .price .button {
+  width: 100%;
+  padding: 0.5rem;
 }
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
@@ -1049,7 +1052,6 @@ p {
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
-  padding: 1vw 3.5vw;
   border: 1px solid #5333ed;
   background-color: #F2F5FE;
   transition: background-color 0.6s ease-in, color 0.6s ease-in;
@@ -1062,6 +1064,8 @@ p {
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
   font-size: 2rem;
+  width: 90%;
+  padding: 0.5rem;
   border: 1px solid #5333ed;
   outline: none;
   background-color: #F2F5FE;
@@ -1100,7 +1104,7 @@ p {
   z-index: 70;
   padding-top: 0rem;
   margin-bottom: 2rem;
-  min-height: 16rem;
+  min-height: 25.5rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list .list-item {
   display: flex;
@@ -1114,6 +1118,9 @@ p {
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list .list-item .checkbox {
   margin-right: 1rem;
+}
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price {
+  width: 100%;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h3,
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {
@@ -2027,6 +2034,9 @@ p {
   .wrapper .work-with-us .stage-wrapper .stage-header__block h3 {
     display: none;
   }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list {
+    min-height: 20rem;
+  }
   .wrapper .faq .faq-wrapper p {
     font-size: 0.8rem;
   }
@@ -2245,7 +2255,7 @@ p {
     margin-bottom: 2rem;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list {
-    padding-top: 0rem;
+    padding-top: 2rem;
     margin-bottom: 0rem;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list .list-item .checkbox {
@@ -2254,6 +2264,9 @@ p {
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
     border-radius: 5px;
     padding: 2vw 5vw;
+  }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list {
+    min-height: 18rem;
   }
   .wrapper .faq {
     padding-bottom: 4rem;
@@ -2406,6 +2419,10 @@ p {
 
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .card-title {
     margin-bottom: 1rem;
+  }
+
+  .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list {
+    min-height: 14rem;
   }
 
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {

@@ -67,7 +67,7 @@ $error: rgb(245, 73, 6);
     .button {
         box-shadow: initial;
         margin-top: .5rem;
-        padding: 1vw 3.5vw;
+       // padding: 1vw 3.5vw;
         border: 1px solid $purple-accent;
         background-color: $light-font;
         transition: background-color .6s ease-in,
@@ -1220,8 +1220,12 @@ p {
                         }
                     }
 
-                    .u-list+div {
+                    .price{
                        width: 100%;
+                       .button{
+                           width: 100%;
+                           padding: .5rem;
+                       }
                     }
 
                     .blue-rect {
@@ -1319,7 +1323,8 @@ p {
 
                     .button {
                         font-size: 2rem;
-                        // padding: 1rem 4rem;
+                      width: 90%;
+                      padding: .5rem;
                         border: 1px solid $purple-accent;
                         outline: none;
                         background-color: $light-font;
@@ -1373,7 +1378,7 @@ p {
                         z-index: 70;
                         padding-top: 0rem;
                         margin-bottom: 2rem;
-                        min-height: 16rem;
+                        min-height: 25.5rem;
 
                         .list-item {
                             display: flex;
@@ -1392,9 +1397,11 @@ p {
                             padding-top: 0;
                         }
 
-
-                    }
-
+                   }
+.price{
+    width: 100%;
+}
+ 
 
                     h3,
                     h2 {
@@ -2741,7 +2748,10 @@ p {
                 display: none;
             }
         }
-
+        .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list {
+          
+            min-height: 20rem;
+        }
         .faq {
             .faq-wrapper {
                 p {
@@ -3070,7 +3080,7 @@ p {
                         }
 
                         .u-list {
-                            padding-top: 0rem;
+                            padding-top: 2rem;
                             margin-bottom: 0rem;
 
                             .list-item {
@@ -3088,7 +3098,9 @@ p {
 
 
                     }
-
+.u-list{
+    min-height: 18rem;
+}
 
 
                 }
@@ -3301,31 +3313,10 @@ p {
         margin-bottom: 1rem;
     }
 
-    // .wrapper .mobile-prices {
-    //     .mobile-prices-wrapper {
-    //         .mobile-prices-card {
-    //            // height: 28rem;
-
-    //             .card {
-    //                 .gift-icon.small {
-    //                     top: 2rem;
-    //                     right: .5rem;
-    //                 }
-
-    //                 .gift-icon.large {
-    //                     top: 3.5rem;
-    //                     right: .3rem;
-    //                 }
-    //             }
-
-
-
-
-
-    //         }
-    //     }
-
-    // }
+    .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list {
+          
+        min-height: 14rem;
+    }
 
     .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {
         font-size: calc(1rem + 1vw);
