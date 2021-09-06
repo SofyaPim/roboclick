@@ -599,15 +599,11 @@ p {
   padding: 1.5% 3%;
   margin-right: 3%;
   transition: background-color 0.3s ease-in;
-}
-.wrapper .about .phone-header .phone-button p {
   color: #5333ed;
   transition: color 0.3s ease-in;
 }
 .wrapper .about .phone-header .phone-button:hover {
   background-color: #5333ed;
-}
-.wrapper .about .phone-header .phone-button:hover p {
   color: #F2F5FE;
 }
 .wrapper .about h1 {
@@ -641,16 +637,13 @@ p {
   transition: background-color 0.3s;
   z-index: 5;
   position: relative;
-}
-.wrapper .about__main .button h3 {
+  font-size: calc(1rem + 1vw);
   margin-bottom: 0;
   font-weight: 300;
   color: #F2F5FE;
 }
 .wrapper .about__main .button:hover {
   background-color: #F2F5FE;
-}
-.wrapper .about__main .button:hover h3 {
   color: #5333ed;
   transition: color 0.3s;
 }
@@ -2169,10 +2162,7 @@ p {
   .wrapper .about__main .button {
     width: 90vw;
     height: 4rem;
-  }
-  .wrapper .about__main .button h3 {
-    font-weight: 600;
-    font-size: 2rem;
+    font-size: calc(1.5rem + 1vw);
   }
   .wrapper .about .search {
     display: none;
