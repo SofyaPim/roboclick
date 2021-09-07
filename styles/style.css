@@ -601,9 +601,9 @@ p {
   cursor: pointer;
   padding: 1.5% 3%;
   margin-right: 3%;
-  transition: background-color 0.3s ease-in;
+  transition-property: background-color color;
+  transition-duration: 0.3s, 0.3s;
   color: #5333ed;
-  transition: color 0.3s ease-in;
 }
 .wrapper .about .phone-header .phone-button:hover {
   background-color: #5333ed;
@@ -637,7 +637,8 @@ p {
   background-color: #5847eecb;
   padding: 5% 20%;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition-property: background-color color;
+  transition-duration: 0.3s, 0.3s;
   z-index: 5;
   position: relative;
   font-size: calc(1rem + 1vw);
@@ -648,7 +649,6 @@ p {
 .wrapper .about__main .button:hover {
   background-color: #F2F5FE;
   color: #5333ed;
-  transition: color 0.3s;
 }
 .wrapper .about__mac-image {
   grid-column: 2/3;
@@ -675,10 +675,8 @@ p {
   position: absolute;
   width: 10%;
   height: auto;
-  animation: floatSearch 15s infinite linear alternate-reverse, floatLeftSearch 10s linear infinite alternate-reverse;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
   z-index: 0;
+  display: none;
 }
 .wrapper .propose h2 {
   grid-row: 1/2;
@@ -767,10 +765,7 @@ p {
   position: absolute;
   width: 16%;
   z-index: 0;
-  -webkit-animation: floatSearch 30s infinite linear, floatLeftSearch 15s linear infinite;
-          animation: floatSearch 30s infinite linear, floatLeftSearch 15s linear infinite;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  display: none;
 }
 .wrapper .work-with-us {
   background: linear-gradient(270deg, rgba(87, 71, 239, 0.8) -16.43%, rgba(122, 216, 231, 0) 46.28%), #50D3E8;
@@ -1145,9 +1140,7 @@ p {
   width: 22vw;
   position: absolute;
   z-index: 1;
-  animation: floatSearch 30s infinite linear alternate-reverse, floatLeftSearch 15s linear infinite alternate-reverse;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  display: none;
 }
 .wrapper .faq .quest-image {
   margin-top: 2rem;
