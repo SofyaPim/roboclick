@@ -812,9 +812,6 @@ p {
 .wrapper .work-with-us .stage-wrapper .stage-header__block:hover {
   opacity: 0.8;
 }
-.wrapper .work-with-us .stage-wrapper .stage-header__block:hover h3 {
-  text-shadow: 3px 2px 4px #2cd4d9;
-}
 .wrapper .work-with-us .stage-wrapper .stage-header__block .stage-icon {
   display: none;
 }
@@ -825,18 +822,12 @@ p {
 .wrapper .work-with-us .stage-wrapper .stage-header__block.active-header:hover {
   opacity: 1;
 }
-.wrapper .work-with-us .stage-wrapper .stage-header__block.active-header:hover h3 {
-  text-shadow: none;
-}
 .wrapper .work-with-us .stage-wrapper .active-header {
   opacity: 1;
   color: #2cd4d9;
 }
 .wrapper .work-with-us .stage-wrapper .active-header:hover {
   opacity: 1;
-}
-.wrapper .work-with-us .stage-wrapper .active-header:hover h3 {
-  text-shadow: none;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content {
   grid-column: 1/2;
@@ -875,19 +866,19 @@ p {
   width: 100%;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items.meeting {
-  background-image: url("../images/stage-meeting.webp");
+  background-image: url("../images/stage-meeting.jpg");
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items.tariff {
-  background-image: url("../images/stage-tariff.webp");
+  background-image: url("../images/stage-tariff.jpg");
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items.payment {
-  background-image: url("../images/stage-payment.webp");
+  background-image: url("../images/stage-payment.jpg");
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items.learning {
-  background-image: url("../images/mashine-learning.webp");
+  background-image: url("../images/mashine-learning.jpg");
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items.money {
-  background-image: url("../images/stage-money.webp");
+  background-image: url("../images/stage-money.jpg");
 }
 .wrapper .prices {
   background-color: #F2F5FE;
@@ -1060,7 +1051,7 @@ p {
   border: 1px solid #5333ed;
   outline: none;
   background-color: #F2F5FE;
-  transition: background-color 0.6s ease-in, color 0.6s ease, border 0.6s ease;
+  transition: background-color 0.3s ease-in, color 0.3s ease, border 0.3s ease;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:hover {
   background-image: url("../images/aqua-top.svg");
@@ -1340,7 +1331,8 @@ p {
   padding-left: 0;
   outline: none;
   text-align: center;
-  transition: background-color 0.6s ease-in, color 0.6s ease-in;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  cursor: pointer;
 }
 .wrapper .contacts .contacts-items .feedback-form .feedback-button:hover {
   color: #363739;
@@ -1447,8 +1439,9 @@ p {
   font-weight: 300;
   text-align: start;
   position: relative;
-  padding: 1rem;
+  padding-bottom: 1rem;
   margin: auto;
+  margin-right: 1rem;
 }
 .wrapper .footer .footer-nav nav a::before {
   transition: all 0.5s ease-in;
