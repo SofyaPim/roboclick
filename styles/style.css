@@ -43,7 +43,6 @@ a:active {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  overflow: hidden;
   color: #363739d3;
 }
 
