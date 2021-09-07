@@ -302,7 +302,7 @@ p {
   line-height: 1;
 }
 .wrapper p {
-  font-size: calc(.9rem + .5vw);
+  font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
 }
