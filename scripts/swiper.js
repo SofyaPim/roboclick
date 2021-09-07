@@ -45,3 +45,4 @@ const swiper = new Swiper(".pricesSwiper", {
       clickable: true,
     }
   })
+//swiper();
