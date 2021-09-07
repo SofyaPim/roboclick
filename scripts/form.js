@@ -10,10 +10,10 @@ const forms = () => {
         failure: 'Что-то пошло не так'
 
     }
-
+//
 
     const postData = async (url, data) => {
-        document.querySelector('.status-message').textContent = message.loading;
+        // document.querySelector('.status-message').textContent = message.loading;
         let res = await fetch(url, {
             method: "POST",
             body: data
@@ -150,7 +150,7 @@ const forms = () => {
             const formData = new FormData(item);
 
 
-
+           statusMessage.textContent = message.loading;
 
             postData('./sendmail.php', formData) // c ./server.php  проверено //
                 .then(res => {
