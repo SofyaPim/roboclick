@@ -17,7 +17,7 @@
 
 img {
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease-in;
 }
 
 img[data-src] {
@@ -201,7 +201,7 @@ p {
 
 .price-title {
   text-align: center;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-in;
   opacity: 0.5;
 }
 
@@ -499,7 +499,7 @@ p {
   background-color: #363739;
   width: 100%;
   height: 1px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in;
 }
 .wrapper .header .logo {
   width: 4.25rem;
@@ -519,7 +519,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in;
   padding-left: 3rem;
 }
 .wrapper .nav-bar .nav-bar-links {
@@ -538,7 +538,7 @@ p {
   font-size: calc(1rem + .5vw);
 }
 .wrapper .nav-bar .nav-bar-links a::before {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in;
   position: absolute;
   content: "";
   background-color: #363739;
@@ -583,13 +583,13 @@ p {
   align-items: stretch;
   justify-content: center;
   padding: 1rem;
-  cursor: pointer;
 }
 .wrapper .about .phone-header a {
   color: #363739;
   margin: auto;
   font-size: 150%;
-  transition: color 0.3s;
+  transition: color 0.3s ease-in;
+  cursor: pointer;
 }
 .wrapper .about .phone-header a:hover {
   color: #2cd4d9;
@@ -793,7 +793,7 @@ p {
 .wrapper .work-with-us .stage-wrapper .stage-header h3 {
   text-align: center;
   font-weight: 700;
-  transition: text-shadow 0.3s ease;
+  transition: text-shadow 0.3s ease-in;
   text-shadow: none;
 }
 .wrapper .work-with-us .stage-wrapper .stage-header__block {
@@ -804,7 +804,7 @@ p {
   opacity: 0.5;
   cursor: pointer;
   margin-bottom: 1rem;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-in;
 }
 .wrapper .work-with-us .stage-wrapper .stage-header__block:last-child {
   margin-bottom: 0;
@@ -923,7 +923,7 @@ p {
   margin-top: 0.5rem;
   border: 1px solid #5333ed;
   background-color: #F2F5FE;
-  transition: background-color 0.6s ease-in, color 0.6s ease-in;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
   color: #5333ed;
@@ -975,16 +975,16 @@ p {
   opacity: 0.2;
   left: 0;
   top: 5rem;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-in;
 }
 .wrapper .prices .card-wrapper .wrap .card .card-title {
   margin-bottom: 2rem;
+  transition: color 0.3s ease-in;
 }
 .wrapper .prices .card-wrapper .wrap .card h2,
 .wrapper .prices .card-wrapper .wrap .card h3 {
   font-size: calc(1rem + 1vw);
   padding-left: 0;
-  transition: color 0.3s ease;
 }
 .wrapper .prices .card-wrapper .wrap .card h2 {
   font-size: calc(1.5rem + 1vw);
@@ -992,7 +992,7 @@ p {
 .wrapper .prices .card-wrapper .wrap .card:hover, .wrapper .prices .card-wrapper .wrap .card:focus {
   z-index: 99;
 }
-.wrapper .prices .card-wrapper .wrap .card:hover h3, .wrapper .prices .card-wrapper .wrap .card:focus h3 {
+.wrapper .prices .card-wrapper .wrap .card:hover .card-title, .wrapper .prices .card-wrapper .wrap .card:focus .card-title {
   color: #2cd4d9;
 }
 .wrapper .prices .card-wrapper .wrap .card:hover .price-title, .wrapper .prices .card-wrapper .wrap .card:focus .price-title {
@@ -1036,7 +1036,7 @@ p {
   background-repeat: no-repeat;
   background-size: 105%;
   background-position: top;
-  transition: background-image 0.3s ease;
+  transition: background-image 0.3s ease-in;
   padding: 1rem;
   height: 100%;
 }
@@ -1045,7 +1045,7 @@ p {
   margin-top: 0.5rem;
   border: 1px solid #5333ed;
   background-color: #F2F5FE;
-  transition: background-color 0.6s ease-in, color 0.6s ease-in;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
   color: #5333ed;
@@ -1060,7 +1060,7 @@ p {
   border: 1px solid #5333ed;
   outline: none;
   background-color: #F2F5FE;
-  transition: background-color 0.6s ease, color 0.6s ease, border 0.6s ease;
+  transition: background-color 0.6s ease-in, color 0.6s ease, border 0.6s ease;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:hover {
   background-image: url("../images/aqua-top.svg");
@@ -1216,7 +1216,7 @@ p {
   z-index: 70;
   max-height: 0;
   opacity: 0;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in;
 }
 .wrapper .faq .faq-wrapper .answer-item p {
   padding: 2rem;
@@ -1227,7 +1227,7 @@ p {
   opacity: 1;
 }
 .wrapper .faq .faq-wrapper .active > .answer-item p {
-  transition: opacity 0.9s ease-in-out;
+  transition: opacity 0.9s ease-in;
   opacity: 0.8;
   padding: 2rem;
 }
@@ -1451,7 +1451,7 @@ p {
   margin: auto;
 }
 .wrapper .footer .footer-nav nav a::before {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in;
   position: absolute;
   content: "";
   background-color: #F2F5FE;
