@@ -1885,7 +1885,7 @@ p {
     display: none;
   }
   .wrapper .prices {
-    padding: 4rem;
+    padding-bottom: 4rem;
   }
   .wrapper .prices .card-wrapper {
     display: none;
@@ -2039,7 +2039,10 @@ p {
   .wrapper .faq .faq-wrapper .faq-item {
     padding: 0.7rem;
   }
-  .wrapper .faq .faq-wrapper .active .answer-item {
+  .wrapper .faq .faq-wrapper .answer-item p {
+    padding: 1rem;
+  }
+  .wrapper .faq .faq-wrapper .active > .answer-item p {
     padding: 1rem;
   }
   .wrapper .faq .quest-image {
@@ -2262,6 +2265,7 @@ p {
     min-height: 18rem;
   }
   .wrapper .faq {
+    padding: 1rem;
     padding-bottom: 4rem;
   }
   .wrapper .faq .faq-wrapper p {
