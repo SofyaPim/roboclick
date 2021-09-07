@@ -1,7 +1,6 @@
 function modal(triggerSelector, modalSelector, closeSelector) {
     const trigger = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector),
-
         modalHeader = modal.querySelector('.popup-title'),
         close = document.querySelector(closeSelector),
         modalProto = document.querySelectorAll('[data-modal]'),
@@ -22,12 +21,9 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
     trigger.forEach(item => {
 
-
         item.addEventListener('click', (e) => {
 
-            // обращение к родителю
             let title = item.parentElement.parentElement;
-
 
             if (title.querySelector('.card-title')) {
 
@@ -41,17 +37,20 @@ function modal(triggerSelector, modalSelector, closeSelector) {
                 item.style.display = 'none';
             })
 
-       
+
             modal.style.display = 'block';
             setTimeout(() => {
-                formPopup.style.transform = 'scale(1)';
-                       }, 300)
-          
+                formPopup.style.cssText = `transform: scale(1);
+                opacity: 1;`;
+
+            }, 300)
+
             document.body.style.overflow = 'hidden';
 
         })
 
     })
+
     close.addEventListener('click', () => {
         let errorItems = document.querySelectorAll('._error');
         clearInputs();
@@ -64,31 +63,29 @@ function modal(triggerSelector, modalSelector, closeSelector) {
             item.classList.remove('_error');
         })
 
-        modalProto.forEach(item => {
-
-
-            item.style.display = 'none';
-
-
-
-
-
-        })
+        // modalProto.forEach(item => {
+        //     item.style.display = 'none';
+        // })
 
 
         smallHeader.remove();
 
+        formPopup.style.cssText = `transform: scale(0);
+opacity: 0;`;
+
         setTimeout(() => {
-            formPopup.style.transform = 'scale(0)';
-                      },300);
-        setTimeout(() => {
-         modal.style.display = 'none';
-        },500);
+            console.log('set');
+            modal.style.display = 'none';
+        }, 200)
 
 
 
         document.body.style.overflow = '';
     })
+
+
+
+
     modal.addEventListener('click', (e) => {
 
         if (e._clickWithoutModal) {
@@ -101,26 +98,34 @@ function modal(triggerSelector, modalSelector, closeSelector) {
             item.classList.remove('_error');
 
         })
+
         messageItems.forEach(item => {
             item.style.opacity = 0;
         })
+
         if (e.target === modal) {
 
             modalProto.forEach(item => {
-                item.style.display = 'none';
-                
+
+              //  item.style.display = 'none';
                 clearInputs();
 
             })
             smallHeader.remove();
-            setTimeout(() => {
-  formPopup.style.transform = 'scale(0)';
-            },300);
-           
-            setTimeout(() => {
-               modal.style.display = 'none';
-            },500);
 
+
+
+
+            //  formPopup.style.transform = 'scale(0)';
+
+
+            formPopup.style.cssText = `transform: scale(0);
+                                        opacity: 0;`;
+
+            setTimeout(() => {
+                console.log('set');
+                modal.style.display = 'none';
+            }, 200)
 
 
             document.body.style.overflow = '';
