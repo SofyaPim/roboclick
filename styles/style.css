@@ -43,6 +43,7 @@ a:active {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
+  overflow: hidden;
   color: #363739d3;
 }
 
@@ -517,9 +518,10 @@ p {
   opacity: 0.9;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   transition: transform 0.5s ease-in-out;
+  padding-left: 3rem;
 }
 .wrapper .nav-bar .nav-bar-links {
   padding-left: 0;
@@ -554,7 +556,6 @@ p {
   justify-content: space-between;
   align-items: center;
   width: 50%;
-  margin: 0 auto;
 }
 .wrapper .nav-bar .social-icons img {
   width: 1.5rem;
@@ -578,7 +579,10 @@ p {
   top: 0;
   left: 0;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
   padding: 1rem;
   cursor: pointer;
 }
@@ -1545,7 +1549,7 @@ p {
     margin-bottom: 2rem;
   }
   .wrapper .prices h3 {
-    padding-left: 8.75rem;
+    padding-left: 6rem;
   }
   .wrapper .prices .card-wrapper {
     padding-top: 3rem;
@@ -1631,8 +1635,6 @@ p {
     height: 3rem;
   }
   .wrapper .propose {
-    padding-top: 6.125rem;
-    padding-bottom: 6.125rem;
     grid-template-columns: 30% 70%;
     grid-template-rows: 20% 80%;
   }
@@ -1894,6 +1896,7 @@ p {
     display: block;
   }
   .wrapper .prices .mobile-prices {
+    margin-top: 2rem;
     display: block;
     width: 100vw;
   }
@@ -1933,6 +1936,10 @@ p {
     align-items: flex-start;
     justify-content: flex-start;
     margin-bottom: 1rem;
+  }
+
+  .wrapper .nav-bar .social-icons {
+    width: 70%;
   }
 
   .wrapper .footer .footer-nav nav a {
@@ -2016,8 +2023,8 @@ p {
   .wrapper .work-with-us {
     padding: 2rem 0rem;
   }
-  .wrapper .work-with-us h2 {
-    margin-bottom: 0;
+  .wrapper .work-with-us .stage-wrapper {
+    width: 90%;
   }
   .wrapper .work-with-us .stage-wrapper .stage-header__block .stage-icon {
     display: block;
@@ -2135,6 +2142,8 @@ p {
   .wrapper .about .phone-header .phone-button {
     padding: 0.7rem 1.4rem;
     margin-right: 0rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
   }
   .wrapper .about__mac-image {
     grid-row: 1/4;
@@ -2163,7 +2172,8 @@ p {
     text-align: start;
   }
   .wrapper .about__main .button {
-    width: 90vw;
+    width: 100%;
+    margin: 0;
     height: 4rem;
     font-size: calc(1.5rem + 1vw);
   }
