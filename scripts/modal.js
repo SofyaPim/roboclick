@@ -1,7 +1,7 @@
-
- function modal(triggerSelector, modalSelector, closeSelector){
+function modal(triggerSelector, modalSelector, closeSelector) {
     const trigger = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector),
+
         modalHeader = modal.querySelector('.popup-title'),
         close = document.querySelector(closeSelector),
         modalProto = document.querySelectorAll('[data-modal]'),
@@ -9,7 +9,7 @@
         smallHeader = document.createElement('h4'),
         inputs = document.querySelectorAll('._req'),
         formPopup = document.querySelector('.popup');
-        
+
 
     const clearInputs = () => {
 
@@ -38,12 +38,15 @@
             }
 
             modalProto.forEach(item => {
-              
-                item.style.transform = 'scale(0)';
-
+                item.style.display = 'none';
             })
-           
-            modal.style.transform = 'scale(1)';
+
+       
+            modal.style.display = 'block';
+            setTimeout(() => {
+                formPopup.style.transform = 'scale(1)';
+                       }, 300)
+          
             document.body.style.overflow = 'hidden';
 
         })
@@ -51,7 +54,7 @@
     })
     close.addEventListener('click', () => {
         let errorItems = document.querySelectorAll('._error');
-         clearInputs();
+        clearInputs();
         messageItems.forEach(item => {
             item.style.opacity = 0;
         })
@@ -62,23 +65,38 @@
         })
 
         modalProto.forEach(item => {
-          
-            item.style.transform = 'scale(0)';
+
+
+            item.style.display = 'none';
+
+
+
+
+
         })
 
+
         smallHeader.remove();
-     
-        modal.style.transform = 'scale(0)';
+
+        setTimeout(() => {
+            formPopup.style.transform = 'scale(0)';
+                      },300);
+        setTimeout(() => {
+         modal.style.display = 'none';
+        },500);
+
+
+
         document.body.style.overflow = '';
     })
     modal.addEventListener('click', (e) => {
-   
+
         if (e._clickWithoutModal) {
             return;
-         }
+        }
         console.log("!!");
         let errorItems = document.querySelectorAll('._error');
-       
+
         errorItems.forEach(item => {
             item.classList.remove('_error');
 
@@ -89,20 +107,28 @@
         if (e.target === modal) {
 
             modalProto.forEach(item => {
-            
-                item.style.transform = 'scale(0)'; 
+                item.style.display = 'none';
+                
                 clearInputs();
 
             })
             smallHeader.remove();
+            setTimeout(() => {
+  formPopup.style.transform = 'scale(0)';
+            },300);
            
-            modal.style.transform = 'scale(0)';
+            setTimeout(() => {
+               modal.style.display = 'none';
+            },500);
+
+
+
             document.body.style.overflow = '';
 
         }
-   
+
     })
-   
+
     formPopup.addEventListener('click', (e) => {
         e._clickWithoutModal = true;
     })

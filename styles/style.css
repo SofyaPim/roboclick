@@ -320,22 +320,22 @@ p {
   z-index: 99;
   left: 0;
   top: 0;
+  background-color: rgba(83, 51, 237, 0.2);
   position: fixed;
   bottom: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  transform: scale(0);
-  transition: transform 0.5s ease-in;
+  display: none;
   padding: 2rem;
 }
 .wrapper .overlay .popup {
+  transition: transform 0.5s ease-in;
   background-color: #f2f5fee5;
   padding: 5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-radius: 0.5rem;
   color: #5333ed;
   position: absolute;
   overflow: visible;
@@ -345,6 +345,7 @@ p {
   height: 100%;
   top: 0;
   width: 50%;
+  transform: scale(0);
 }
 .wrapper .overlay .popup .popup-title {
   margin-top: 2rem;
