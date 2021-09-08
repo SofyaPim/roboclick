@@ -17,7 +17,7 @@ function showNav(burger, nav) {
 
     }else if (e.target != navBar && e.target != header) {
       if (navBar.classList.contains('transformTransX')) {
-        console.log('hi');
+        // console.log('hi');
         navBar.classList.remove('transformTransX');
         l2.classList.remove('displayNone');
         l1.classList.remove('transform45deg');

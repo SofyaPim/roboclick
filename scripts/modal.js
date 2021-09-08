@@ -10,13 +10,20 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         formPopup = document.querySelector('.popup');
 
 
-    const clearInputs = (items) => {
+    function clearInputs(items){
        
 
        items.forEach(item => {
+     if (item.getAttribute('checkbox')) {
+         console.log('check');
+         item.checked = true;
+     }
+         console.log('all');
+          item.value = '';
      
-             item.value = '';
             
+            
+
 
 //  let checkbox = item.closest('.checkbox_label');
 //  let afterElem = document.createElement(':after');
@@ -33,6 +40,20 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
     }
 
+    function closeForm(message, form, overlay ){
+
+        message.remove();
+
+        form.style.cssText = `transform: scale(0);
+                                    opacity: 0;`;
+
+        setTimeout(() => {
+           overlay.style.display = 'none';
+        }, 200)
+
+        document.body.style.overflow = '';
+
+    }
 
 
     trigger.forEach(item => {
@@ -52,7 +73,6 @@ function modal(triggerSelector, modalSelector, closeSelector) {
             modalProto.forEach(item => {
                 item.style.display = 'none';
             })
-
 
             modal.style.display = 'block';
             setTimeout(() => {
@@ -79,24 +99,10 @@ function modal(triggerSelector, modalSelector, closeSelector) {
             item.classList.remove('_error');
         })
 
-        // modalProto.forEach(item => {
-        //     item.style.display = 'none';
-        // })
+        
+        closeForm(smallHeader, formPopup, modal);
 
-
-        smallHeader.remove();
-
-        formPopup.style.cssText = `transform: scale(0);
-opacity: 0;`;
-
-        setTimeout(() => {
-            // console.log('set');
-            modal.style.display = 'none';
-        }, 200)
-
-
-
-        document.body.style.overflow = '';
+        
     })
 
 
@@ -107,7 +113,7 @@ opacity: 0;`;
         if (e._clickWithoutModal) {
             return;
         }
-        console.log("!!");
+
         let errorItems = document.querySelectorAll('._error');
 
         errorItems.forEach(item => {
@@ -127,25 +133,9 @@ opacity: 0;`;
                 clearInputs(inputs);
 
             })
-            smallHeader.remove();
 
 
-
-
-            //  formPopup.style.transform = 'scale(0)';
-
-
-            formPopup.style.cssText = `transform: scale(0);
-                                        opacity: 0;`;
-
-            setTimeout(() => {
-                console.log('set');
-                modal.style.display = 'none';
-            }, 200)
-
-
-            document.body.style.overflow = '';
-
+            closeForm(smallHeader, formPopup, modal);
         }
 
     })

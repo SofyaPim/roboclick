@@ -1467,6 +1467,10 @@ p {
 .wrapper .footer .footer-nav nav a:active {
   color: #2cd4d9;
 }
+.wrapper .footer .footer-nav nav a:active::before {
+  width: 100%;
+  background-color: #2cd4d9;
+}
 .wrapper .footer .social-icons {
   display: flex;
   justify-content: space-between;
