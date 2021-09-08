@@ -803,12 +803,14 @@
                     <span class="message">Проверьте адрес электронной почты</span>
                     <button type="submit" class="feedback-button">Оставить заявку</button>
                     <div class="form-agree">
-                        <span class="message aftercheckbox">Подтвердите согласие на обработку данных</span>
-                        <input type="checkbox" checked name="agreement" id="formAgreement" class="checkbox_input">
                         <label for="formAgreement" class="checkbox_label">
+                            <span class="message aftercheckbox">Подтвердите согласие на обработку данных</span>
+                              <input type="checkbox" checked name="agreement" id="formAgreement" class="check__input">
+                              <span class="check__box"></span>
                             <span>Я даю свое согласие на обработку персональных данных в соответствии с <a
                                     href="#">Условиями</a></span>
                         </label>
+
                     </div>
                 </form>
                 <h4 class="adres"> <span>Пресненская набережная</span> <br>
@@ -854,11 +856,13 @@
                 <span class="message">Уточните номер телефона</span>
                 <button type="submit" class="button button-recall">Отправить</button>
                 <div class="form-agree">
-                    <span class="message aftercheckbox">Подтвердите согласие на обработку данных</span>
-                    <input type="checkbox" class="checkbox_input" checked name="agreement" id="popupAgreement">
-                    <label for="popupAgreement" class="checkbox_label">
-                         <span>Я даю свое согласие на обработку
-                            персональных данных</span></label>
+                            <label for="popupAgreement" class="checkbox_label">
+                                <span class="message aftercheckbox">Подтвердите согласие на обработку данных</span>
+                                  <input type="checkbox" checked name="agreement" id="popupAgreement" class="check__input">
+                                  <span class="check__box"></span>
+                                <span>Я даю свое согласие на обработку персональных данных в соответствии с <a
+                                        href="#">Условиями</a></span>
+                            </label>
                 </div>
                 <div class="popup__close">
                     <img src="images/close-dark.svg" alt="close">
@@ -867,14 +871,8 @@
         </div>
     </div>
     <script type="module" src="scripts/main.js"></script>
-    <!-- <script src="scripts/section-nav.js"></script> -->
-    <!-- <script defer src="scripts/nav-burger.js"></script> -->
-    <!-- <script src="scripts/modal.js"></script> -->
-    <!-- <script src="scripts/dataSrc.js"></script> -->
     <script src="scripts/form.js"></script>
     <script src="scripts/inputmask.min.js"></script>
-    <!-- <script src="scripts/phone-mask.js"></script> -->
-    <!-- <script src="scripts/accordion.js"></script> -->
     <script src="scripts/tabs.js"></script>
     <script acync src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

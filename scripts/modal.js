@@ -10,37 +10,22 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         formPopup = document.querySelector('.popup');
 
 
-    function clearInputs(items){
-       
+    function clearInputs(items) {
 
-       items.forEach(item => {
-     if (item.getAttribute('checkbox')) {
-         console.log('check');
-         item.checked = true;
-     }
-         console.log('all');
-          item.value = '';
-     
-            
-            
-
-
-//  let checkbox = item.closest('.checkbox_label');
-//  let afterElem = document.createElement(':after');
-//  afterElem.style.cssText  = `  position: absolute;
-//  content: url('../images/checked-mark.svg');
-//  opacity: 1;
-//  top: -.5rem;
-//  left: 0px;
-// transition: all .3s ease-in;`;
-//  checkbox.after(afterElem);
-
-          
+        let check = document.querySelectorAll('.check__input');
+        check.forEach(box => {
+            box.checked = true;
         })
+        items.forEach(item => {
+
+            item.value = '';
+
+        })
+
 
     }
 
-    function closeForm(message, form, overlay ){
+    function closeForm(message, form, overlay) {
 
         message.remove();
 
@@ -48,7 +33,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
                                     opacity: 0;`;
 
         setTimeout(() => {
-           overlay.style.display = 'none';
+            overlay.style.display = 'none';
         }, 200)
 
         document.body.style.overflow = '';
@@ -99,10 +84,10 @@ function modal(triggerSelector, modalSelector, closeSelector) {
             item.classList.remove('_error');
         })
 
-        
+
         closeForm(smallHeader, formPopup, modal);
 
-        
+
     })
 
 
@@ -129,7 +114,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
             modalProto.forEach(item => {
 
-              //  item.style.display = 'none';
+                //  item.style.display = 'none';
                 clearInputs(inputs);
 
             })
