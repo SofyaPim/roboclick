@@ -1067,9 +1067,9 @@ p {
   opacity: 1;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:focus {
-  background-color: #2cd4d9;
+  background-color: #F2F5FE;
   color: #F2F5FE;
-  border: 1px solid #5333ed;
+  border: 1px solid #2cd4d9;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:active {
   background-color: #2cd4d9;
