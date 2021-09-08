@@ -10,11 +10,27 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         formPopup = document.querySelector('.popup');
 
 
-    const clearInputs = () => {
+    const clearInputs = (items) => {
+       
 
-        inputs.forEach(item => {
-            item.value = '';
+       items.forEach(item => {
+     
+             item.value = '';
+            
+
+//  let checkbox = item.closest('.checkbox_label');
+//  let afterElem = document.createElement(':after');
+//  afterElem.style.cssText  = `  position: absolute;
+//  content: url('../images/checked-mark.svg');
+//  opacity: 1;
+//  top: -.5rem;
+//  left: 0px;
+// transition: all .3s ease-in;`;
+//  checkbox.after(afterElem);
+
+          
         })
+
     }
 
 
@@ -53,7 +69,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
     close.addEventListener('click', () => {
         let errorItems = document.querySelectorAll('._error');
-        clearInputs();
+        clearInputs(inputs);
         messageItems.forEach(item => {
             item.style.opacity = 0;
         })
@@ -74,7 +90,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 opacity: 0;`;
 
         setTimeout(() => {
-            console.log('set');
+            // console.log('set');
             modal.style.display = 'none';
         }, 200)
 
@@ -108,7 +124,7 @@ opacity: 0;`;
             modalProto.forEach(item => {
 
               //  item.style.display = 'none';
-                clearInputs();
+                clearInputs(inputs);
 
             })
             smallHeader.remove();

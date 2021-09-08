@@ -40,6 +40,10 @@ a:active {
   color: inherit;
 }
 
+button:focus {
+  outline: none;
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -402,8 +406,9 @@ p {
   font-size: calc(1rem + .5vw);
   outline: none;
   transition: box-shadow 0.3s ease-in;
+  cursor: pointer;
 }
-.wrapper .overlay .popup .button:hover {
+.wrapper .overlay .popup .button:active {
   box-shadow: 2px 2px 10px #2cd4d9;
 }
 .wrapper .overlay .popup .button:focus {
@@ -448,7 +453,7 @@ p {
   opacity: 0;
   top: -0.5rem;
   left: 0px;
-  transition: content 0.5s ease-in;
+  transition: all 0.3s ease-in;
 }
 .wrapper .overlay .popup .form-agree .checkbox_label {
   cursor: pointer;
@@ -538,11 +543,12 @@ p {
   height: 40%;
   justify-content: space-between;
 }
-.wrapper .nav-bar .nav-bar-links a {
+.wrapper .nav-bar .nav-bar-links a:link {
   padding: 0.3rem;
   position: relative;
   cursor: pointer;
   font-size: calc(1rem + .5vw);
+  color: #363739;
 }
 .wrapper .nav-bar .nav-bar-links a::before {
   transition: all 0.5s ease-in;
@@ -553,8 +559,11 @@ p {
   width: 0rem;
   height: 1px;
 }
-.wrapper .nav-bar .nav-bar-links a:hover::before {
+.wrapper .nav-bar .nav-bar-links a:focus::before {
   width: 90%;
+}
+.wrapper .nav-bar .nav-bar-links a:active {
+  color: #2cd4d9;
 }
 .wrapper .nav-bar .social-icons {
   display: flex;
@@ -598,7 +607,10 @@ p {
   transition: color 0.3s ease-in;
   cursor: pointer;
 }
-.wrapper .about .phone-header a:hover {
+.wrapper .about .phone-header a:focus {
+  color: #2cd4d9;
+}
+.wrapper .about .phone-header a:active {
   color: #2cd4d9;
 }
 .wrapper .about .phone-header .phone-button {
@@ -612,7 +624,7 @@ p {
   transition-duration: 0.3s, 0.3s;
   color: #5333ed;
 }
-.wrapper .about .phone-header .phone-button:hover {
+.wrapper .about .phone-header .phone-button:active {
   background-color: #5333ed;
   color: #F2F5FE;
 }
@@ -653,7 +665,7 @@ p {
   font-weight: 300;
   color: #F2F5FE;
 }
-.wrapper .about__main .button:hover {
+.wrapper .about__main .button:active {
   background-color: #F2F5FE;
   color: #5333ed;
 }
@@ -816,7 +828,7 @@ p {
 .wrapper .work-with-us .stage-wrapper .stage-header__block:last-child {
   margin-bottom: 0;
 }
-.wrapper .work-with-us .stage-wrapper .stage-header__block:hover {
+.wrapper .work-with-us .stage-wrapper .stage-header__block:active {
   opacity: 0.8;
 }
 .wrapper .work-with-us .stage-wrapper .stage-header__block .stage-icon {
@@ -826,14 +838,14 @@ p {
   opacity: 1;
   color: #2cd4d9;
 }
-.wrapper .work-with-us .stage-wrapper .stage-header__block.active-header:hover {
+.wrapper .work-with-us .stage-wrapper .stage-header__block.active-header:active {
   opacity: 1;
 }
 .wrapper .work-with-us .stage-wrapper .active-header {
   opacity: 1;
   color: #2cd4d9;
 }
-.wrapper .work-with-us .stage-wrapper .active-header:hover {
+.wrapper .work-with-us .stage-wrapper .active-header:active {
   opacity: 1;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content {
@@ -987,19 +999,7 @@ p {
 .wrapper .prices .card-wrapper .wrap .card h2 {
   font-size: calc(1.5rem + 1vw);
 }
-.wrapper .prices .card-wrapper .wrap .card:hover, .wrapper .prices .card-wrapper .wrap .card:focus {
-  z-index: 99;
-}
-.wrapper .prices .card-wrapper .wrap .card:hover .card-title, .wrapper .prices .card-wrapper .wrap .card:focus .card-title {
-  color: #2cd4d9;
-}
-.wrapper .prices .card-wrapper .wrap .card:hover .price-title, .wrapper .prices .card-wrapper .wrap .card:focus .price-title {
-  opacity: 1;
-}
-.wrapper .prices .card-wrapper .wrap .card:hover .blue-rect, .wrapper .prices .card-wrapper .wrap .card:focus .blue-rect {
-  opacity: 0.7;
-}
-.wrapper .prices .card-wrapper .wrap .card .button:hover {
+.wrapper .prices .card-wrapper .wrap .card .button:active {
   border-color: #2cd4d9;
   color: #F2F5FE;
   background-color: #2cd4d9;
@@ -1030,7 +1030,7 @@ p {
   box-shadow: 10px 10px 40px #dedeec;
   border-radius: 0.5rem;
   cursor: pointer;
-  background-image: url("../images/blue-top.svg");
+  background-image: url("../images/aqua-top.svg");
   background-repeat: no-repeat;
   background-size: 105%;
   background-position: top;
@@ -1060,16 +1060,18 @@ p {
   background-color: #F2F5FE;
   transition: background-color 0.3s ease-in, color 0.3s ease, border 0.3s ease;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:hover {
-  background-image: url("../images/aqua-top.svg");
-}
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:hover h3 {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:active h3 {
   color: #F2F5FE;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:hover .price-title {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:active .price-title {
   opacity: 1;
 }
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:hover {
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:focus {
+  background-color: #2cd4d9;
+  color: #F2F5FE;
+  border: 1px solid #5333ed;
+}
+.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:active {
   background-color: #2cd4d9;
   color: #F2F5FE;
   border: 1px solid #2cd4d9;
@@ -1186,14 +1188,14 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.wrapper .faq .faq-wrapper .faq-item:hover, .wrapper .faq .faq-wrapper .faq-item:focus {
+.wrapper .faq .faq-wrapper .faq-item:active {
   cursor: pointer;
   background-color: #2cd4d9;
   border: 1px solid #F2F5FE;
   color: #F2F5FE;
   outline: none;
 }
-.wrapper .faq .faq-wrapper .faq-item:hover .faq-mark, .wrapper .faq .faq-wrapper .faq-item:focus .faq-mark {
+.wrapper .faq .faq-wrapper .faq-item:active .faq-mark {
   background-image: url("../images/plusWhite.svg");
 }
 .wrapper .faq .faq-wrapper .active > .faq-item {
@@ -1344,7 +1346,7 @@ p {
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
   cursor: pointer;
 }
-.wrapper .contacts .contacts-items .feedback-form .feedback-button:hover {
+.wrapper .contacts .contacts-items .feedback-form .feedback-button:active {
   color: #363739;
   background-color: #F2F5FE;
 }
@@ -1462,8 +1464,8 @@ p {
   width: 0rem;
   height: 1px;
 }
-.wrapper .footer .footer-nav nav a:hover::before {
-  width: 100%;
+.wrapper .footer .footer-nav nav a:active {
+  color: #2cd4d9;
 }
 .wrapper .footer .social-icons {
   display: flex;
@@ -1580,6 +1582,68 @@ p {
   }
   .wrapper .footer .social-icons {
     width: 30%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .wrapper .overlay .popup .button:hover {
+    box-shadow: 2px 2px 10px #2cd4d9;
+  }
+  .wrapper .nav-bar .nav-bar-links a:hover::before {
+    width: 90%;
+  }
+  .wrapper .about .phone-header a:hover {
+    color: #2cd4d9;
+  }
+  .wrapper .about .phone-header .phone-button:hover {
+    background-color: #5333ed;
+    color: #F2F5FE;
+  }
+  .wrapper .about__main .button:hover {
+    background-color: #F2F5FE;
+    color: #5333ed;
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-header__block:hover {
+    opacity: 0.8;
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-header__block.active-header:hover {
+    opacity: 1;
+  }
+  .wrapper .work-with-us .stage-wrapper .active-header:hover {
+    opacity: 1;
+  }
+  .wrapper .prices .card-wrapper .wrap .card:hover, .wrapper .prices .card-wrapper .wrap .card:focus {
+    z-index: 99;
+  }
+  .wrapper .prices .card-wrapper .wrap .card:hover .card-title, .wrapper .prices .card-wrapper .wrap .card:focus .card-title {
+    color: #2cd4d9;
+  }
+  .wrapper .prices .card-wrapper .wrap .card:hover .price-title, .wrapper .prices .card-wrapper .wrap .card:focus .price-title {
+    opacity: 1;
+  }
+  .wrapper .prices .card-wrapper .wrap .card:hover .blue-rect, .wrapper .prices .card-wrapper .wrap .card:focus .blue-rect {
+    opacity: 0.7;
+  }
+  .wrapper .prices .card-wrapper .wrap .card .button:hover {
+    border-color: #2cd4d9;
+    color: #F2F5FE;
+    background-color: #2cd4d9;
+  }
+  .wrapper .faq .faq-wrapper .faq-item:hover {
+    cursor: pointer;
+    background-color: #2cd4d9;
+    border: 1px solid #F2F5FE;
+    color: #F2F5FE;
+    outline: none;
+  }
+  .wrapper .faq .faq-wrapper .faq-item:hover .faq-mark {
+    background-image: url("../images/plusWhite.svg");
+  }
+  .wrapper .contacts .contacts-items .feedback-form .feedback-button:hover {
+    color: #363739;
+    background-color: #F2F5FE;
+  }
+  .wrapper .footer .footer-nav nav a:hover::before {
+    width: 100%;
   }
 }
 @media all and (max-width: 1024px) {

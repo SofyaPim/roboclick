@@ -20,9 +20,9 @@ const forms = () => {
         })
         return await res.text();
     }
-    const clearInputs = () => {
+    const clearInputs = (items) => {
 
-        inputs.forEach(item => {
+        items.forEach(item => {
             item.value = '';
         })
     }
@@ -166,7 +166,7 @@ const forms = () => {
                 })
                 .finally(() => {
 
-                    clearInputs();
+                    clearInputs(inputs);
 
 
                     setTimeout(() => {
