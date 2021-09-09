@@ -152,7 +152,7 @@ const forms = () => {
 
            statusMessage.textContent = message.loading;
 
-            postData('./sendmail.php', formData) // c ./server.php  проверено //
+            postData('./telegram.php', formData) // c ./server.php  проверено // //   - про   ./sendmail.php
                 .then(res => {
                     console.log(res);
 
