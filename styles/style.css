@@ -91,13 +91,13 @@ p {
     top: 40%;
   }
   60% {
-    top: 60%;
+    top: 50%;
   }
   80% {
-    top: 80%;
+    top: 60%;
   }
   100% {
-    top: 90%;
+    top: 70%;
   }
 }
 @keyframes floatSearch {
@@ -111,13 +111,13 @@ p {
     top: 40%;
   }
   60% {
-    top: 60%;
+    top: 50%;
   }
   80% {
-    top: 80%;
+    top: 60%;
   }
   100% {
-    top: 90%;
+    top: 70%;
   }
 }
 @-webkit-keyframes floatLeftSearch {
@@ -131,7 +131,7 @@ p {
     left: 50%;
   }
   60% {
-    left: 100%;
+    left: 83%;
   }
   80% {
     left: 30%;
@@ -151,7 +151,7 @@ p {
     left: 50%;
   }
   60% {
-    left: 100%;
+    left: 83%;
   }
   80% {
     left: 30%;

@@ -58,6 +58,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
                 let tarifname = title.querySelector('.card-title').innerText;
                 smallHeader.innerHTML = `Вы выбрали тариф <br> ${tarifname}`;
+                modalHeader.innerHTML = `Оформление заказа`;
                 modalHeader.after(smallHeader); //добавление названия тарифа
 
             }
