@@ -442,6 +442,10 @@ p {
   width: 1px;
   height: 1px;
   overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  border: 0;
+  padding: 0;
 }
 .wrapper .overlay .popup .form-agree .checkbox_label .check__box {
   position: absolute;
@@ -1403,6 +1407,10 @@ p {
   width: 1px;
   height: 1px;
   overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  border: 0;
+  padding: 0;
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label .check__box {
   position: absolute;
