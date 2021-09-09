@@ -45,7 +45,14 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
         item.addEventListener('click', (e) => {
 
-            let title = item.parentElement.parentElement;
+              let title = item.parentElement.parentElement;
+            console.log();
+            if(e.target.innerHTML.trim() === 'подробнее' || e.target.innerHTML.trim() === 'заказать обратный звонок'){
+                modalHeader.innerHTML = `Заказать обратный звонок `;
+
+            }
+
+          
 
             if (title.querySelector('.card-title')) {
 
@@ -54,6 +61,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
                 modalHeader.after(smallHeader); //добавление названия тарифа
 
             }
+
 
             modalProto.forEach(item => {
                 item.style.display = 'none';

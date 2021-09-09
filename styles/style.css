@@ -82,7 +82,7 @@ p {
 }
 @-webkit-keyframes floatSearch {
   0% {
-    top: 0%;
+    top: 10%;
   }
   20% {
     top: 20%;
@@ -97,12 +97,12 @@ p {
     top: 80%;
   }
   100% {
-    top: 100%;
+    top: 90%;
   }
 }
 @keyframes floatSearch {
   0% {
-    top: 0%;
+    top: 10%;
   }
   20% {
     top: 20%;
@@ -117,12 +117,12 @@ p {
     top: 80%;
   }
   100% {
-    top: 100%;
+    top: 90%;
   }
 }
 @-webkit-keyframes floatLeftSearch {
   0% {
-    left: 10%;
+    left: 0%;
   }
   20% {
     left: 30%;
@@ -131,18 +131,18 @@ p {
     left: 50%;
   }
   60% {
-    left: 70%;
+    left: 100%;
   }
   80% {
     left: 30%;
   }
   100% {
-    left: 10%;
+    left: 0%;
   }
 }
 @keyframes floatLeftSearch {
   0% {
-    left: 10%;
+    left: 0%;
   }
   20% {
     left: 30%;
@@ -151,13 +151,13 @@ p {
     left: 50%;
   }
   60% {
-    left: 70%;
+    left: 100%;
   }
   80% {
     left: 30%;
   }
   100% {
-    left: 10%;
+    left: 0%;
   }
 }
 .message {
@@ -243,7 +243,6 @@ p {
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: -3rem;
   left: 0px;
 }
 
@@ -448,16 +447,18 @@ p {
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='29' height='36' viewBox='0 0 29 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='10.5' width='28' height='25' rx='4.5' stroke='%235333ED'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 32 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='10.5' width='28' height='25' rx='4.5' stroke='%235333ED'/%3E%3C/svg%3E%0A");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: bottom;
   margin-left: -1rem;
   overflow: visible;
 }
 .wrapper .overlay .popup .form-agree .checkbox_label .check__input:checked + .check__box {
-  background-image: url("data:image/svg+xml,%3Csvg width='32' height='39' viewBox='0 0 32 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='13.5' width='28' height='25' rx='4.5' stroke='%235333ED'/%3E%3Cpath d='M4 10.7703L15.5 28L29 3' stroke='%2350D3E8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 32 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='13.5' width='28' height='25' rx='4.5' stroke='%235333ED'/%3E%3Cpath d='M4 10.7703L15.5 28L29 3' stroke='%2350D3E8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: bottom;
   transition: all 0.3s ease-in;
 }
 .wrapper .overlay .popup .form-agree .checkbox_label span {
@@ -574,6 +575,72 @@ p {
   margin-top: 1rem;
   cursor: pointer;
 }
+.wrapper .contacts-header {
+  padding: 0;
+}
+.wrapper .contacts-header .phone-header {
+  background-color: #F2F5FE;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.wrapper .contacts-header .phone-header__items {
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 2rem;
+}
+.wrapper .contacts-header .phone-header__items .phone {
+  white-space: nowrap;
+  margin-right: 2rem;
+  margin: auto;
+}
+.wrapper .contacts-header .phone-header__items .mail {
+  margin: auto;
+}
+.wrapper .contacts-header .phone-header__items .commit {
+  color: #363739;
+  display: none;
+}
+.wrapper .contacts-header .phone-header a {
+  color: #363739;
+  margin: auto;
+  font-size: calc(.8rem + .5vw);
+  transition: color 0.3s ease-in;
+  cursor: pointer;
+}
+.wrapper .contacts-header .phone-header a:focus {
+  color: #2cd4d9;
+}
+.wrapper .contacts-header .phone-header a:active {
+  color: #2cd4d9;
+}
+.wrapper .contacts-header .phone-header .phone-button {
+  width: initial;
+  border: 1px solid #5333ed;
+  background-color: #F2F5FE;
+  cursor: pointer;
+  padding: 1.5% 3%;
+  margin-right: 3%;
+  transition-property: background-color, color;
+  transition-duration: 0.3s, 0.3s;
+  color: #5333ed;
+  font-size: calc(.8rem + .5vw);
+}
+.wrapper .contacts-header .phone-header .phone-button:active {
+  background-color: #2cd4d9;
+  color: #F2F5FE;
+  border-color: #2cd4d9;
+}
 .wrapper .about {
   padding-top: 10%;
   padding-right: 6.25rem;
@@ -582,47 +649,6 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
-}
-.wrapper .about .phone-header {
-  background-color: #F2F5FE;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  padding: 1rem;
-}
-.wrapper .about .phone-header a {
-  color: #363739;
-  margin: auto;
-  font-size: 150%;
-  transition: color 0.3s ease-in;
-  cursor: pointer;
-}
-.wrapper .about .phone-header a:focus {
-  color: #2cd4d9;
-}
-.wrapper .about .phone-header a:active {
-  color: #2cd4d9;
-}
-.wrapper .about .phone-header .phone-button {
-  width: initial;
-  border: 1px solid #5333ed;
-  background-color: #F2F5FE;
-  cursor: pointer;
-  padding: 1.5% 3%;
-  margin-right: 3%;
-  transition-property: background-color color;
-  transition-duration: 0.3s, 0.3s;
-  color: #5333ed;
-}
-.wrapper .about .phone-header .phone-button:active {
-  background-color: #5333ed;
-  color: #F2F5FE;
 }
 .wrapper .about h1 {
   margin-bottom: calc(1rem + 1vh);
@@ -656,7 +682,7 @@ p {
   transition-duration: 0.3s, 0.3s;
   z-index: 5;
   position: relative;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(.8rem + .5vw);
   margin-bottom: 0;
   font-weight: 300;
   color: #F2F5FE;
@@ -697,6 +723,13 @@ p {
   grid-row: 1/2;
   grid-column: 1/3;
   z-index: 5;
+  line-height: 1.2;
+}
+.wrapper .propose h2 span {
+  display: block;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
 }
 .wrapper .propose__image {
   grid-column: 1/2;
@@ -733,10 +766,11 @@ p {
   z-index: 5;
   position: relative;
 }
-.wrapper .hints h3 {
-  position: relative;
-  padding-left: 8.75rem;
-  z-index: 5;
+.wrapper .hints h2 span {
+  display: block;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
 }
 .wrapper .hints .hint-stages {
   margin-top: 4.125rem;
@@ -773,8 +807,18 @@ p {
   padding-bottom: 2rem;
 }
 .wrapper .hints .hint-stages .stage__card .card__icon {
-  opacity: 0.7;
   width: 70%;
+  transition-property: transform, box-shadow, filter;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-timing-function: ease-in, ease-in, ease-in;
+  border-radius: 50%;
+}
+.wrapper .hints .hint-stages .stage__card .card__icon:focus {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 6px #2cd4d9;
+}
+.wrapper .hints .commit {
+  font-size: 0.8rem;
 }
 .wrapper .hints .search {
   position: absolute;
@@ -864,13 +908,7 @@ p {
   position: absolute;
   width: 90%;
   bottom: 1rem;
-  background-color: #f2f5febb;
-}
-.wrapper .work-with-us .stage-wrapper .stage-content__block__items .items-title h3 {
-  font-weight: 600;
-  opacity: 1;
-  padding: 1rem;
-  padding-bottom: 0;
+  background-color: #F2F5FE;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items .items-title p {
   text-align: left;
@@ -898,8 +936,11 @@ p {
 .wrapper .prices {
   background-color: #F2F5FE;
 }
-.wrapper .prices h3 {
-  padding-left: 8.75rem;
+.wrapper .prices h2 span {
+  display: block;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
 }
 .wrapper .prices .card-wrapper {
   position: relative;
@@ -1005,11 +1046,9 @@ p {
   display: none;
 }
 .wrapper .mobile-prices .swiper-pagination {
-  width: 90vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
-  margin-top: 3%;
-  margin-bottom: 2rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card {
   border-radius: 20px;
@@ -1366,22 +1405,24 @@ p {
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label .check__box {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='29' height='36' viewBox='0 0 29 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='10.5' width='28' height='25' rx='4.5' stroke='%23F2F5FE'/%3E%3C/svg%3E");
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 32 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='10.5' width='28' height='25' rx='4.5' stroke='%23F2F5FE'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: bottom;
   margin-left: -1rem;
   overflow: visible;
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label .check__input:checked + .check__box {
-  background-image: url("data:image/svg+xml,%3Csvg width='32' height='39' viewBox='0 0 32 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='13.5' width='28' height='25' rx='4.5' stroke='%23F2F5FE'/%3E%3Cpath d='M4 10.7703L15.5 28L29 3' stroke='%2350D3E8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 32 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='13.5' width='28' height='25' rx='4.5' stroke='%23F2F5FE'/%3E%3Cpath d='M4 10.7703L15.5 28L29 3' stroke='%2350D3E8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: bottom;
   transition: background-image 0.3s ease-in;
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label span {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label a {
   display: inline;
@@ -1584,22 +1625,30 @@ p {
   }
 }
 @media all and (min-width: 1024px) {
+  .wrapper .header .logo {
+    display: none;
+  }
   .wrapper .overlay .popup .button:hover {
     box-shadow: 2px 2px 10px #2cd4d9;
   }
   .wrapper .nav-bar .nav-bar-links a:hover::before {
     width: 90%;
   }
-  .wrapper .about .phone-header a:hover {
+  .wrapper .contacts-header .phone-header a:hover {
     color: #2cd4d9;
   }
-  .wrapper .about .phone-header .phone-button:hover {
-    background-color: #5333ed;
+  .wrapper .contacts-header .phone-header .phone-button:hover {
+    background-color: #2cd4d9;
     color: #F2F5FE;
+    border-color: #2cd4d9;
   }
   .wrapper .about__main .button:hover {
     background-color: #F2F5FE;
     color: #5333ed;
+  }
+  .wrapper .hints .hint-stages .stage__card .card__icon:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 6px #2cd4d9;
   }
   .wrapper .work-with-us .stage-wrapper .stage-header__block:hover {
     opacity: 0.8;
@@ -1682,6 +1731,12 @@ p {
   }
   .wrapper section {
     padding: 2rem 2rem;
+  }
+  .wrapper .contacts-header .phone-header .logo {
+    display: none;
+  }
+  .wrapper .contacts-header .phone-header__items {
+    width: 100%;
   }
   .wrapper .about {
     padding-right: 4rem;
@@ -1879,6 +1934,10 @@ p {
     margin-top: 0;
     margin-left: 1rem;
   }
+  .wrapper .contacts-header .phone-header {
+    justify-content: center;
+    padding: 1rem;
+  }
   .wrapper .faq .accordion {
     grid-column: 1/3;
   }
@@ -1946,6 +2005,7 @@ p {
   }
   .wrapper .prices {
     padding-bottom: 4rem;
+    padding-left: 0;
   }
   .wrapper .prices .card-wrapper {
     display: none;
@@ -2031,13 +2091,13 @@ p {
   .wrapper .header .social-icons .nav-title {
     font-size: calc(.7rem + 1vw);
   }
+  .wrapper .contacts-header .phone-header .phone-button {
+    display: none;
+  }
   .wrapper .about h1 {
     margin-bottom: 1rem;
     line-height: 0.9;
     font-size: calc(1.8rem + 1vw);
-  }
-  .wrapper .about .phone-header .phone-buttom {
-    display: none;
   }
   .wrapper .propose__image {
     grid-column: 1/3;
@@ -2135,9 +2195,12 @@ p {
   .wrapper .contacts .contacts-items .adres {
     font-size: calc(1rem + .5vw);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-content: center;
+    margin: auto;
+  }
+  .wrapper .contacts .contacts-items .adres span {
     margin: auto;
   }
   .wrapper .transform45deg {
@@ -2238,7 +2301,6 @@ p {
   .wrapper .propose {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    grid-template-rows: 10% 90%;
   }
   .wrapper .hints h2 {
     padding-bottom: 0;
@@ -2416,10 +2478,6 @@ p {
 
   .wrapper .about__main .button {
     width: 80vw;
-  }
-
-  .wrapper .propose {
-    grid-template-rows: 10% 90%;
   }
 
   .wrapper .propose__list ul {
