@@ -1714,13 +1714,13 @@ p {
     font-size: calc(2rem + 1vw);
   }
   .wrapper h2 {
-    font-size: calc(1rem + 1vw);
-    line-height: 3rem;
+    font-size: calc(1.3rem + 1vw);
+    line-height: 1.2;
     padding-left: 3rem;
   }
   .wrapper h3 {
     font-size: calc(.7rem + 1vw);
-    line-height: 2.5vw;
+    line-height: 1.2;
     font-weight: 300;
   }
   .wrapper h4 {
@@ -2303,9 +2303,6 @@ p {
   }
   .wrapper .hints h2 {
     padding-bottom: 0;
-  }
-  .wrapper .hints h3 {
-    padding-left: 0rem;
     line-height: 1.2;
   }
   .wrapper .hints .hint-stages {
@@ -2327,8 +2324,8 @@ p {
     border-top: 1px solid #F2F5FE;
   }
   .wrapper .hints .hint-stages .stage .stage__card .card__content p {
-    padding-top: 2rem;
-    font-size: 1.2rem;
+    padding-top: 1rem;
+    font-size: 1rem;
   }
   .wrapper .hints .hint-stages .stage .stage__card .card__icon {
     width: 50%;
