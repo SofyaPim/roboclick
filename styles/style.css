@@ -2079,7 +2079,7 @@ p {
     padding: 4rem 2rem;
   }
   .wrapper section.about {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
   }
   .wrapper h3 {
     font-size: calc(1rem + .7vw);
@@ -2247,7 +2247,6 @@ p {
   }
   .wrapper section.about {
     background: #5333ed;
-    padding: 10rem 2rem 2rem 2rem;
   }
   .wrapper .about {
     grid-template-columns: 1fr 1fr;
