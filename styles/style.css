@@ -1190,7 +1190,6 @@ p {
   grid-column: 2/3;
   grid-row: 2/3;
   overflow: hidden;
-  position: absolute;
 }
 .wrapper .faq .accordion__items {
   position: absolute;
@@ -1252,8 +1251,6 @@ p {
   width: 100%;
   padding: 0rem;
   background-color: #7aeff3;
-  margin-top: -0.3rem;
-  margin-bottom: 0.3rem;
   border-radius: 0.5rem;
   position: relative;
   z-index: 70;
@@ -1952,9 +1949,6 @@ p {
   }
   .wrapper .faq .faq-wrapper p {
     font-size: 16px;
-  }
-  .wrapper .faq .faq-wrapper .faq-item {
-    padding: 1rem;
   }
   .wrapper .faq .quest-image {
     width: 30vw;
