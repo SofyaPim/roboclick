@@ -401,7 +401,7 @@ p {
   border-radius: 0.5rem;
   background-color: #5333ed;
   border: 1px solid #5333ed;
-  color: #F2F5FE;
+  color: #FfFfFE;
   font-size: calc(1rem + .5vw);
   outline: none;
   transition: box-shadow 0.3s ease-in;
@@ -484,7 +484,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   position: fixed;
   z-index: 99;
   top: 0;
@@ -526,7 +526,7 @@ p {
   position: fixed;
   top: 0;
   z-index: 89;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   opacity: 1;
   display: flex;
   flex-direction: column;
@@ -584,7 +584,7 @@ p {
   padding: 0;
 }
 .wrapper .contacts-header .phone-header {
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   width: 100%;
   top: 0;
   left: 0;
@@ -632,7 +632,7 @@ p {
 .wrapper .contacts-header .phone-header .phone-button {
   width: initial;
   border: 1px solid #5333ed;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   cursor: pointer;
   padding: 1.5% 3%;
   margin-right: 3%;
@@ -643,14 +643,14 @@ p {
 }
 .wrapper .contacts-header .phone-header .phone-button:active {
   background-color: #2cd4d9;
-  color: #F2F5FE;
+  color: #FfFfFE;
   border-color: #2cd4d9;
 }
 .wrapper .about {
   padding-top: 10%;
   padding-right: 6.25rem;
   background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #5333ED;
-  color: #F2F5FE;
+  color: #FfFfFE;
   position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -679,7 +679,7 @@ p {
 .wrapper .about__main .button {
   width: 24%;
   height: 8%;
-  border: 1px solid #F2F5FE;
+  border: 1px solid #FfFfFE;
   background-color: #5847eecb;
   padding: 5% 20%;
   cursor: pointer;
@@ -690,10 +690,10 @@ p {
   font-size: calc(.8rem + .5vw);
   margin-bottom: 0;
   font-weight: 300;
-  color: #F2F5FE;
+  color: #FfFfFE;
 }
 .wrapper .about__main .button:active {
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   color: #5333ed;
 }
 .wrapper .about__mac-image {
@@ -710,19 +710,21 @@ p {
 }
 .wrapper .propose {
   padding-bottom: 8%;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   color: #060411;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 60%;
   grid-template-rows: 20% 80%;
   position: relative;
 }
 .wrapper .propose .search {
   position: absolute;
-  width: 10%;
   height: auto;
   z-index: 0;
-  display: none;
+  width: 40%;
+  left: 80%;
+  opacity: 0.3;
+  transform: rotate(-45deg);
 }
 .wrapper .propose h2 {
   grid-row: 1/2;
@@ -741,7 +743,7 @@ p {
   grid-row: 2/3;
 }
 .wrapper .propose__image .robot {
-  width: 70%;
+  width: 100%;
 }
 .wrapper .propose__list {
   grid-column: 2/3;
@@ -764,10 +766,10 @@ p {
 .wrapper .hints {
   position: relative;
   background: linear-gradient(180deg, #50D3E8 -50.31%, #5333ED 43.61%);
-  color: #F2F5FE;
+  color: #FfFfFE;
 }
 .wrapper .hints h2 {
-  color: #F2F5FE;
+  color: #FfFfFE;
   z-index: 5;
   position: relative;
 }
@@ -804,7 +806,7 @@ p {
   height: 40%;
   padding: 0 6%;
   padding-right: 0;
-  border-left: 1px solid #F2F5FE;
+  border-left: 1px solid #FfFfFE;
   padding-bottom: 4rem;
 }
 .wrapper .hints .hint-stages .stage__card .card__content p {
@@ -837,7 +839,7 @@ p {
 .wrapper .work-with-us h2 {
   position: relative;
   margin-bottom: 2rem;
-  color: #F2F5FE;
+  color: #FfFfFE;
 }
 .wrapper .work-with-us .stage-wrapper {
   width: 80%;
@@ -862,7 +864,7 @@ p {
 }
 .wrapper .work-with-us .stage-wrapper .stage-header__block {
   color: #363739;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   border-radius: 0px 10px 10px 0px;
   padding: 1rem 2rem;
   opacity: 0.5;
@@ -898,7 +900,7 @@ p {
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block {
   border-radius: 10px 0px 0px 10px;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   height: 100%;
   position: relative;
 }
@@ -913,7 +915,7 @@ p {
   position: absolute;
   width: 90%;
   bottom: 1rem;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items .items-title p {
   text-align: left;
@@ -939,7 +941,7 @@ p {
   background-image: url("../images/stage-money.jpg");
 }
 .wrapper .prices {
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
 }
 .wrapper .prices h2 span {
   display: block;
@@ -974,7 +976,7 @@ p {
   box-shadow: initial;
   margin-top: 0.5rem;
   border: 1px solid #5333ed;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   transition: border-color 0.3s ease-in, background-color 0.3s ease-in, color 0.3s ease-in;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
@@ -1043,7 +1045,7 @@ p {
 }
 .wrapper .prices .card-wrapper .wrap .card .button:active {
   border-color: #2cd4d9;
-  color: #F2F5FE;
+  color: #FfFfFE;
   background-color: #2cd4d9;
 }
 .wrapper .mobile-prices {
@@ -1082,7 +1084,7 @@ p {
   box-shadow: initial;
   margin-top: 0.5rem;
   border: 1px solid #5333ed;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   transition: border-color 0.3s ease-in, background-color 0.3s ease-in, color 0.3s ease-in;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
@@ -1097,23 +1099,23 @@ p {
   padding: 0.5rem;
   border: 1px solid #5333ed;
   outline: none;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   transition: background-color 0.3s ease-in, color 0.3s ease, border 0.3s ease;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:active h3 {
-  color: #F2F5FE;
+  color: #FfFfFE;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:active .price-title {
   opacity: 1;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:focus {
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   color: #2cd4d9;
   border: 1px solid #2cd4d9;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:active {
   background-color: #2cd4d9;
-  color: #F2F5FE;
+  color: #FfFfFE;
   border: 1px solid #2cd4d9;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .card-title {
@@ -1169,7 +1171,7 @@ p {
   grid-template-rows: 10% 90%;
   background: linear-gradient(180.65deg, rgba(21, 136, 156, 0.8) 35.71%, rgba(80, 211, 232, 0.8) 60.95%), #50D3E8;
   padding-bottom: 7rem;
-  color: #F2F5FE;
+  color: #FfFfFE;
 }
 .wrapper .faq h2 {
   grid-column: 1/3;
@@ -1207,9 +1209,9 @@ p {
   width: 100%;
   color: #363739;
   border-radius: 0.5rem;
-  border: 1px solid #F2F5FE;
+  border: 1px solid #FfFfFE;
   padding: 3%;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   transition: all 0.6s ease-in;
   margin-bottom: 0.1rem;
   display: flex;
@@ -1230,15 +1232,15 @@ p {
 .wrapper .faq .faq-wrapper .faq-item:active {
   cursor: pointer;
   background-color: #2cd4d9;
-  border: 1px solid #F2F5FE;
-  color: #F2F5FE;
+  border: 1px solid #FfFfFE;
+  color: #FfFfFE;
   outline: none;
 }
 .wrapper .faq .faq-wrapper .faq-item:active .faq-mark {
   background-image: url("../images/plusWhite.svg");
 }
 .wrapper .faq .faq-wrapper .active > .faq-item {
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   color: #2cd4d9;
 }
 .wrapper .faq .faq-wrapper .active > .faq-item .faq-mark {
@@ -1291,7 +1293,7 @@ p {
   grid-row: 1/2;
   padding-top: 4rem;
   padding-left: 15vw;
-  color: #F2F5FE;
+  color: #FfFfFE;
   margin-bottom: 2rem;
 }
 .wrapper .contacts .contacts-items {
@@ -1308,14 +1310,14 @@ p {
   font-size: 1.5rem;
 }
 .wrapper .contacts .contacts-items h4 {
-  color: #F2F5FE;
+  color: #FfFfFE;
   margin-left: 9vw;
   font-weight: 300;
   line-height: 1.5;
 }
 .wrapper .contacts .contacts-items p {
   padding-left: 15vw;
-  color: #F2F5FE;
+  color: #FfFfFE;
 }
 .wrapper .contacts .contacts-items .feedback-form {
   opacity: 0.7;
@@ -1329,20 +1331,20 @@ p {
 .wrapper .contacts .contacts-items .feedback-form input {
   background-color: initial;
   margin: 1rem;
-  border-bottom: 1px solid #F2F5FE;
+  border-bottom: 1px solid #FfFfFE;
   padding: 1rem 4rem;
   padding-left: 0;
-  color: #F2F5FE;
+  color: #FfFfFE;
   font-size: calc(.5rem + .9vw);
   outline: none;
 }
 .wrapper .contacts .contacts-items .feedback-form input:invalid {
   border: none;
-  border-bottom: 1px solid #F2F5FE;
+  border-bottom: 1px solid #FfFfFE;
 }
 .wrapper .contacts .contacts-items .feedback-form input:invalid:required {
   border: none;
-  border-bottom: 1px solid #F2F5FE;
+  border-bottom: 1px solid #FfFfFE;
 }
 .wrapper .contacts .contacts-items .feedback-form input:valid {
   border: none;
@@ -1352,27 +1354,27 @@ p {
   border-bottom: 1px solid #f54906;
 }
 .wrapper .contacts .contacts-items .feedback-form input::-moz-placeholder {
-  color: #F2F5FE;
+  color: #FfFfFE;
   width: 18rem;
   font-size: calc(.5rem + .9vw);
   opacity: 0.5;
 }
 .wrapper .contacts .contacts-items .feedback-form input:-ms-input-placeholder {
-  color: #F2F5FE;
+  color: #FfFfFE;
   width: 18rem;
   font-size: calc(.5rem + .9vw);
   opacity: 0.5;
 }
 .wrapper .contacts .contacts-items .feedback-form input::placeholder {
-  color: #F2F5FE;
+  color: #FfFfFE;
   width: 18rem;
   font-size: calc(.5rem + .9vw);
   opacity: 0.5;
 }
 .wrapper .contacts .contacts-items .feedback-form .feedback-button {
-  border: 1px solid #F2F5FE;
+  border: 1px solid #FfFfFE;
   border-radius: 0.7rem;
-  color: #F2F5FE;
+  color: #FfFfFE;
   font-size: calc(.7rem + .9vw);
   background-color: initial;
   margin: 1rem;
@@ -1385,7 +1387,7 @@ p {
 }
 .wrapper .contacts .contacts-items .feedback-form .feedback-button:active {
   color: #363739;
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree {
   position: relative;
@@ -1396,7 +1398,7 @@ p {
   align-items: center;
   position: relative;
   font-size: 0.7rem;
-  color: #F2F5FE;
+  color: #FfFfFE;
   padding-left: 1.5rem;
 }
 .wrapper .contacts .contacts-items .feedback-form .form-agree .checkbox_label .check__input {
@@ -1465,7 +1467,7 @@ p {
   align-items: center;
   background: linear-gradient(270deg, rgba(54, 55, 57, 0.8) 74.49%, rgba(80, 211, 232, 0.8) 132.76%), #363739;
   padding: 6.25rem 6.25rem 7.5rem 6.25rem;
-  color: #F2F5FE;
+  color: #FfFfFE;
   position: relative;
   flex-wrap: wrap;
 }
@@ -1501,7 +1503,7 @@ p {
   transition: all 0.5s ease-in;
   position: absolute;
   content: "";
-  background-color: #F2F5FE;
+  background-color: #FfFfFE;
   top: 100%;
   width: 0rem;
   height: 1px;
@@ -1560,9 +1562,6 @@ p {
   }
   .wrapper .about__main h3 {
     padding: 0;
-  }
-  .wrapper .propose__image .robot {
-    width: 40vw;
   }
   .wrapper .propose__list ul {
     width: 100%;
@@ -1645,11 +1644,11 @@ p {
   }
   .wrapper .contacts-header .phone-header .phone-button:hover {
     background-color: #2cd4d9;
-    color: #F2F5FE;
+    color: #FfFfFE;
     border-color: #2cd4d9;
   }
   .wrapper .about__main .button:hover {
-    background-color: #F2F5FE;
+    background-color: #FfFfFE;
     color: #5333ed;
   }
   .wrapper .hints .hint-stages .stage__card .card__icon:hover {
@@ -1679,14 +1678,14 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card .button:hover {
     border-color: #2cd4d9;
-    color: #F2F5FE;
+    color: #FfFfFE;
     background-color: #2cd4d9;
   }
   .wrapper .faq .faq-wrapper .faq-item:hover {
     cursor: pointer;
     background-color: #2cd4d9;
-    border: 1px solid #F2F5FE;
-    color: #F2F5FE;
+    border: 1px solid #FfFfFE;
+    color: #FfFfFE;
     outline: none;
   }
   .wrapper .faq .faq-wrapper .faq-item:hover .faq-mark {
@@ -1694,7 +1693,7 @@ p {
   }
   .wrapper .contacts .contacts-items .feedback-form .feedback-button:hover {
     color: #363739;
-    background-color: #F2F5FE;
+    background-color: #FfFfFE;
   }
   .wrapper .footer .footer-nav nav a:hover::before {
     width: 100%;
@@ -1755,7 +1754,7 @@ p {
   }
   .wrapper .propose {
     grid-template-columns: 30% 70%;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 25% 75%;
   }
   .wrapper .propose__image {
     grid-column: 1/2;
@@ -1860,17 +1859,17 @@ p {
     padding: 0.5rem 1rem 1rem 0rem;
   }
   .wrapper .contacts .contacts-items .feedback-form ::-moz-placeholder {
-    color: #F2F5FE;
+    color: #FfFfFE;
     width: 18rem;
     font-size: calc(.5rem + .9vw);
   }
   .wrapper .contacts .contacts-items .feedback-form :-ms-input-placeholder {
-    color: #F2F5FE;
+    color: #FfFfFE;
     width: 18rem;
     font-size: calc(.5rem + .9vw);
   }
   .wrapper .contacts .contacts-items .feedback-form ::placeholder {
-    color: #F2F5FE;
+    color: #FfFfFE;
     width: 18rem;
     font-size: calc(.5rem + .9vw);
   }
