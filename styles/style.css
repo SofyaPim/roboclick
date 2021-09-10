@@ -974,7 +974,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  box-shadow: 10px 10px 20px #9696ee;
+  box-shadow: 10px 10px 20px #b0b2b8c5;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: transform 0.3s ease-in;
@@ -1092,7 +1092,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  box-shadow: 10px 10px 20px #9696ee;
+  box-shadow: 10px 10px 20px #b0b2b8c5;
   border-radius: 0.5rem;
   cursor: pointer;
   padding: 1rem;
