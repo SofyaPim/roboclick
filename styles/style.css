@@ -211,6 +211,8 @@ p {
   text-align: center;
   transition: opacity 0.3s ease-in;
   opacity: 0.5;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .gift-icon {
@@ -908,12 +910,14 @@ p {
   background-size: cover;
   height: 100%;
   transition: background-image 0.3s ease-in;
+  border-radius: 10px 0px 0px 10px;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items .items-title {
   position: absolute;
   width: 90%;
   bottom: 1rem;
   background-color: #FfFfFE;
+  border-radius: 0px 10px 10px 0px;
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items .items-title p {
   text-align: left;
@@ -1007,10 +1011,9 @@ p {
   width: 1.2rem;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
-  font-size: 1rem;
-  padding-left: 0.5rem;
-  padding-top: 0;
-  line-height: 1;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  line-height: 1.2;
 }
 .wrapper .prices .card-wrapper .wrap .card .price {
   width: 100%;
@@ -1021,16 +1024,17 @@ p {
 }
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
-  width: 25%;
-  height: 65%;
+  width: 90%;
+  height: 60%;
   background-color: #2cd4d9;
-  opacity: 0.2;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
   left: 0;
-  top: 5rem;
+  top: 3.5rem;
+  opacity: 0.7;
   transition: opacity 0.3s ease-in;
 }
 .wrapper .prices .card-wrapper .wrap .card .card-title {
-  margin-bottom: 2rem;
   transition: color 0.3s ease-in;
 }
 .wrapper .prices .card-wrapper .wrap .card h2,
@@ -1045,6 +1049,21 @@ p {
   border-color: #2cd4d9;
   color: #FfFfFE;
   background-color: #2cd4d9;
+}
+.wrapper .prices .card-wrapper .wrap .card.economic .blue-rect {
+  background-color: #F8CCB6;
+}
+.wrapper .prices .card-wrapper .wrap .card.classic .blue-rect {
+  background-color: #BDB3B3;
+}
+.wrapper .prices .card-wrapper .wrap .card.premium .blue-rect {
+  background-color: #F4B75D;
+}
+.wrapper .prices .card-wrapper .wrap .card.elite .blue-rect {
+  background-color: #BFE83B;
+}
+.wrapper .prices .card-wrapper .wrap .card.vip .blue-rect {
+  background-color: #FA2061;
 }
 .wrapper .mobile-prices {
   position: relative;
@@ -1117,7 +1136,6 @@ p {
   border: 1px solid #2cd4d9;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .card-title {
-  margin-bottom: 4rem;
   font-weight: 600;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
@@ -1598,9 +1616,6 @@ p {
     padding: 1rem;
     width: 16vw;
   }
-  .wrapper .prices .card-wrapper .wrap .card .card-title {
-    margin-bottom: 2rem;
-  }
   .wrapper .prices .card-wrapper .wrap .card h2,
 .wrapper .prices .card-wrapper .wrap .card h3 {
     font-size: calc(1rem + 1vw);
@@ -1810,19 +1825,9 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
     display: flex;
-    margin-bottom: 0.3rem;
-  }
-  .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
-    font-size: 90%;
-    padding-left: 0.5rem;
-    padding-top: 0;
-    line-height: 1rem;
   }
   .wrapper .prices .card-wrapper .wrap .card .blue-rect {
     top: 3rem;
-  }
-  .wrapper .prices .card-wrapper .wrap .card .card-title {
-    margin-bottom: 2rem;
   }
   .wrapper .prices .card-wrapper .wrap .card h2,
 .wrapper .prices .card-wrapper .wrap .card h3 {
