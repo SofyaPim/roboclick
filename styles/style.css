@@ -1210,7 +1210,6 @@ p {
   grid-template-columns: 30% 70%;
   grid-template-rows: 10% 90%;
   background: linear-gradient(180.65deg, rgba(21, 136, 156, 0.8) 35.71%, rgba(80, 211, 232, 0.8) 60.95%), #50D3E8;
-  padding-bottom: 7rem;
   color: #FfFfFE;
 }
 .wrapper .faq h2 {
@@ -1587,7 +1586,7 @@ p {
   }
   .wrapper .faq .quest-image {
     margin-top: 2rem;
-    width: 25vw;
+    width: 20vw;
   }
   .wrapper .footer .social-icons {
     width: 20%;
@@ -2500,11 +2499,6 @@ p {
   }
   .wrapper .footer .social-icons img {
     margin: 0rem;
-  }
-}
-@media all and (max-width: 400px) {
-  .wrapper .faq {
-    padding-bottom: 11rem;
   }
 }
 @media all and (max-width: 375px) {
