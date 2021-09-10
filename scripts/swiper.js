@@ -33,12 +33,17 @@
 
 
 const swiper = new Swiper(".pricesSwiper", {
-    slidesPerView: 1.3,
+    slidesPerView: 1.2,
     spaceBetween: 30,
     breakpoints: {
+
      
       640: {
-        slidesPerView: 1.9,
+        slidesPerView: 2.1,
+        spaceBetween: 40
+      },
+      480: {
+        slidesPerView: 1.7,
         spaceBetween: 40
       }
     },
