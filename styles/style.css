@@ -970,9 +970,10 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  box-shadow: 10px 10px 40px #dedeec;
+  box-shadow: 10px 10px 20px #9696ee;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in;
 }
 .wrapper .prices .card-wrapper .wrap .card .button {
   box-shadow: initial;
@@ -1086,7 +1087,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  box-shadow: 10px 10px 40px #dedeec;
+  box-shadow: 10px 10px 20px #9696ee;
   border-radius: 0.5rem;
   cursor: pointer;
   background-image: url("../images/aqua-top.svg");
@@ -1679,6 +1680,7 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card:hover, .wrapper .prices .card-wrapper .wrap .card:focus {
     z-index: 99;
+    transform: scale(1.1);
   }
   .wrapper .prices .card-wrapper .wrap .card:hover .card-title, .wrapper .prices .card-wrapper .wrap .card:focus .card-title {
     color: #2cd4d9;
