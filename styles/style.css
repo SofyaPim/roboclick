@@ -534,7 +534,6 @@ p {
   justify-content: center;
   transition: transform 0.5s ease-in;
   padding-left: 3rem;
-  box-shadow: 0px 2px 20px #afbce2;
 }
 .wrapper .nav-bar .nav-bar-links {
   padding-left: 0;
@@ -701,7 +700,6 @@ p {
   position: relative;
 }
 .wrapper .about__mac-image .mac-image {
-  margin-top: 2rem;
   width: 100%;
 }
 .wrapper .about__mac-image .iMac {
@@ -723,7 +721,7 @@ p {
   z-index: 0;
   width: 40%;
   left: 80%;
-  opacity: 0.3;
+  opacity: 0.2;
   transform: rotate(-45deg);
 }
 .wrapper .propose h2 {
@@ -1741,7 +1739,7 @@ p {
     display: none;
   }
   .wrapper .contacts-header .phone-header__items {
-    width: 100%;
+    width: 60%;
   }
   .wrapper .about {
     padding-right: 4rem;
@@ -1943,6 +1941,10 @@ p {
     justify-content: center;
     padding: 1rem;
   }
+  .wrapper .contacts-header .phone-header .phone-header__items {
+    width: 50%;
+    margin: auto;
+  }
   .wrapper .faq .accordion {
     grid-column: 1/3;
   }
@@ -2095,6 +2097,9 @@ p {
   }
   .wrapper .contacts-header .phone-header .phone-button {
     display: none;
+  }
+  .wrapper .contacts-header .phone-header .phone-header__items {
+    width: 100%;
   }
   .wrapper .about h1 {
     margin-bottom: 1rem;
@@ -2303,6 +2308,11 @@ p {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+  .wrapper .propose .search {
+    width: 60%;
+    left: 60%;
+    opacity: 0.2;
+  }
   .wrapper .hints h2 {
     padding-bottom: 0;
     line-height: 1.2;
@@ -2334,7 +2344,7 @@ p {
     bottom: 2rem;
   }
   .wrapper section.work-with-us {
-    padding: 4rem 0rem;
+    padding: 4rem 1rem;
   }
   .wrapper section.work-with-us h2 {
     padding-left: 2rem;
@@ -2566,4 +2576,5 @@ p {
 }
 .wrapper .transformTransX {
   transform: translateX(0px);
+  box-shadow: 0px 2px 10px #363739d3;
 }/*# sourceMappingURL=style.css.map */
