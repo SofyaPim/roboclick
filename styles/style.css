@@ -210,7 +210,6 @@ p {
 .price-title {
   text-align: center;
   transition: opacity 0.3s ease-in;
-  opacity: 0.5;
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
@@ -912,6 +911,7 @@ p {
   display: flex;
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   transition: background-image 0.3s ease-in;
   border-radius: 10px 0px 0px 10px;
@@ -1016,7 +1016,7 @@ p {
   width: 1.2rem;
 }
 .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
-  font-size: 0.8rem;
+  font-size: calc(0.8rem + .2vw);
   padding-top: 1rem;
   line-height: 1.2;
 }
@@ -1035,11 +1035,12 @@ p {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   left: 0;
-  top: 3.5rem;
+  top: 5rem;
   opacity: 0.7;
   transition: opacity 0.3s ease-in;
 }
 .wrapper .prices .card-wrapper .wrap .card .card-title {
+  margin-bottom: 2rem;
   transition: color 0.3s ease-in;
 }
 .wrapper .prices .card-wrapper .wrap .card h2,
@@ -1129,12 +1130,6 @@ p {
   outline: none;
   background-color: #FfFfFE;
   transition: background-color 0.3s ease-in, color 0.3s ease, border 0.3s ease;
-}
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:active h3 {
-  color: #FfFfFE;
-}
-.wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card:active .price-title {
-  opacity: 1;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button:focus {
   background-color: #FfFfFE;
@@ -1726,9 +1721,6 @@ p {
   .wrapper .prices .card-wrapper .wrap .card:hover .card-title {
     color: #2cd4d9;
   }
-  .wrapper .prices .card-wrapper .wrap .card:hover .price-title {
-    opacity: 1;
-  }
   .wrapper .prices .card-wrapper .wrap .card:hover .blue-rect {
     opacity: 0.7;
   }
@@ -1872,6 +1864,10 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card .u-list .list-item {
     display: flex;
+  }
+  .wrapper .prices .card-wrapper .wrap .card .u-list .list-item p {
+    font-size: calc(0.8rem + .1vw);
+    padding-top: 0.5rem;
   }
   .wrapper .prices .card-wrapper .wrap .card .blue-rect {
     top: 3rem;
@@ -2416,9 +2412,8 @@ p {
     padding: 2rem 0rem;
     padding-bottom: 4rem;
   }
-  .wrapper .prices h3,
-.wrapper .prices h2 {
-    padding-left: 0;
+  .wrapper .prices h2 {
+    padding-left: 3rem;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price-title {
     padding-top: 0;
