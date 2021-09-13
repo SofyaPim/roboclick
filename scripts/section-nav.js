@@ -16,16 +16,25 @@
       if (item.getBoundingClientRect().top < 50 && item.getBoundingClientRect().bottom > 50) {
 
         headerTitle.textContent = linksItem[ind].innerText;
-        navBar.classList.remove('transformTransX');
+
+        if(document.documentElement.clientWidth >= 640){
+          console.log(document.documentElement.clientWidth);
+          navBar.classList.remove('transformTransX');
+        }
+        
 
       }
     });
-    if (!navBar.classList.contains('transformTransX')) {
 
-      l2.classList.remove('displayNone');
-      l1.classList.remove('transform45deg');
-      l3.classList.remove('transformMin45deg');
-    }
+
+
+if (!navBar.classList.contains('transformTransX')) {
+     
+  l2.classList.remove('displayNone');
+  l1.classList.remove('transform45deg');
+  l3.classList.remove('transformMin45deg');
+}
+   
  
 
 

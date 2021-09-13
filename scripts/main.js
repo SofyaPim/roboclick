@@ -19,9 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   phoneMask();
   tabs('.stage-header', '.stage-header__block', '.stage-content__block', 'active-header');
   showAnswers();
-  document.addEventListener('scroll', () => {
-    showSectionName('section', '.nav-title');
-  })
+ 
 
   const swiper = new Swiper(".pricesSwiper", {
     slidesPerView: 1.3,
@@ -52,4 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-});
+}); 
+document.addEventListener('scroll', () => {
+    showSectionName('section', '.nav-title');
+  });
