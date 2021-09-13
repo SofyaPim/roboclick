@@ -1,19 +1,18 @@
-const forms = () => {
+function forms() {
     const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('._req');
 
-  //  console.log(form);
-  //  console.log(inputs);
+
     const message = {
         loading: 'Загрузка ...',
         success: 'Спасибо, скоро с Вами свяжемся',
         failure: 'Что-то пошло не так'
 
     }
-//
+
 
     const postData = async (url, data) => {
-        // document.querySelector('.status-message').textContent = message.loading;
+      
         let res = await fetch(url, {
             method: "POST",
             body: data
@@ -139,7 +138,6 @@ const forms = () => {
             e.preventDefault();
 
             let inputsForm = item.querySelectorAll('input');
-            console.log(inputsForm);
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
@@ -182,8 +180,8 @@ const forms = () => {
 
 
 }
-
-document.addEventListener("DOMContentLoaded", forms);
+export default forms;
+//document.addEventListener("DOMContentLoaded", forms);
 
 
 

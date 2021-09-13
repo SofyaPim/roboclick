@@ -4,25 +4,51 @@ import showNav from "../scripts/nav-burger.js";
 import showSectionName from "../scripts/section-nav.js";
 import showAnswers from "../scripts/accordion.js";
 import phoneMask from "../scripts/phone-mask.js";
+import forms from "../scripts/form.js";
 
-
+import "./mapbasics.js";
+import "./swiper-bundle.min.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
- 
 
 
+  showNav('.nav-burger', '.nav-bar');
+  modal('.button', '.overlay', '.popup__close', '.tariff-name');
+  forms();
+  phoneMask();
+  tabs('.stage-header', '.stage-header__block', '.stage-content__block', 'active-header');
+  showAnswers();
   document.addEventListener('scroll', () => {
     showSectionName('section', '.nav-title');
   })
 
+  const swiper = new Swiper(".pricesSwiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 30,
+    breakpoints: {
 
-  tabs('.stage-header', '.stage-header__block', '.stage-content__block','active-header');
 
-  modal('.button', '.overlay', '.popup__close', '.tariff-name');
-  showNav('.nav-burger', '.nav-bar');
-  showAnswers();
-  phoneMask();
+      640: {
+        slidesPerView: 2.1,
+        spaceBetween: 40
+      },
+      480: {
+        slidesPerView: 1.7,
+        spaceBetween: 40
+      }
+    },
+
+    initialSlide: 2,
+    centeredSlides: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
+  })
+
+
 
 
 
