@@ -524,7 +524,7 @@ p {
 .wrapper .nav-bar {
   width: 40vw;
   transform: translateX(-40vw);
-  height: 100vh;
+  bottom: 0;
   position: fixed;
   top: 0;
   z-index: 89;

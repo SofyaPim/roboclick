@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   const swiper = new Swiper(".pricesSwiper", {
-    slidesPerView: 1.2,
+    slidesPerView: 1.3,
     spaceBetween: 30,
     breakpoints: {
 
