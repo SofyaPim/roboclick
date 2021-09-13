@@ -150,7 +150,7 @@ function forms() {
 
            statusMessage.textContent = message.loading;
 
-            postData('./telegram.php', formData) // c ./server.php  проверено // //   - про   ./sendmail.php
+            postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
                 .then(res => {
                     console.log(res);
 
