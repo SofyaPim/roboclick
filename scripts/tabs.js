@@ -40,5 +40,5 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass) {
 }
 
 
-// export default tabs;
-tabs('.stage-header', '.stage-header__block', '.stage-content__block','active-header');
+ export default tabs;
+// tabs('.stage-header', '.stage-header__block', '.stage-content__block','active-header');
