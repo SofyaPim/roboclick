@@ -20,16 +20,18 @@
         if(document.documentElement.clientWidth >= 640){
           console.log(document.documentElement.clientWidth);
           navBar.classList.remove('transformTransX');
+          document.body.style.overflow = '';
+        }else{
+          document.body.style.overflow = 'hidden';
         }
         
-
       }
     });
 
 
 
 if (!navBar.classList.contains('transformTransX')) {
-     
+  document.body.style.overflow = '';
   l2.classList.remove('displayNone');
   l1.classList.remove('transform45deg');
   l3.classList.remove('transformMin45deg');

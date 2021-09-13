@@ -19,10 +19,13 @@ function showNav(burger, nav) {
 
     }else if (e.target != navBar && e.target != header) {
       if (navBar.classList.contains('transformTransX')) {
+         document.body.style.overflow = ''; 
         navBar.classList.remove('transformTransX');
         l2.classList.remove('displayNone');
         l1.classList.remove('transform45deg');
-        l3.classList.remove('transformMin45deg')
+        l3.classList.remove('transformMin45deg');
+        
+
       }
     }
 
