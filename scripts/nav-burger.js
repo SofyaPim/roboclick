@@ -16,15 +16,15 @@ function showNav(burger, nav) {
       l1.classList.toggle('transform45deg');
       l3.classList.toggle('transformMin45deg');
       navBar.classList.toggle('transformTransX');
+      document.body.style.overflow = ''; 
 
     }else if (e.target != navBar && e.target != header) {
       if (navBar.classList.contains('transformTransX')) {
-         document.body.style.overflow = ''; 
         navBar.classList.remove('transformTransX');
         l2.classList.remove('displayNone');
         l1.classList.remove('transform45deg');
         l3.classList.remove('transformMin45deg');
-        
+        document.body.style.overflow = ''; 
 
       }
     }

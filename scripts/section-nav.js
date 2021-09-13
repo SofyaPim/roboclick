@@ -5,6 +5,7 @@
       headerTitle = document.querySelector(headerNav), // контент заголовка в хедере
       headerLinks = document.querySelector('.nav-bar-links'), // панель навигации
       navBar = document.querySelector('.nav-bar'),
+      
       linksItem = headerLinks.children, // коллекция ссылок
       l1 = document.querySelector('.line1'),
       l2 = document.querySelector('.line2'),
