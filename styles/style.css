@@ -951,7 +951,7 @@ p {
 }
 .wrapper .prices h2 span {
   display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }
@@ -1063,7 +1063,7 @@ p {
   background-color: #BDB3B3;
 }
 .wrapper .prices .card-wrapper .wrap .card.premium .blue-rect {
-  background-color: #F4B75D;
+  background-color: #Ffcc00;
 }
 .wrapper .prices .card-wrapper .wrap .card.elite .blue-rect {
   background-color: #BFE83B;
@@ -1124,7 +1124,7 @@ p {
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
   font-size: 2rem;
-  width: 90%;
+  width: 100%;
   padding: 0.5rem;
   border: 1px solid #5333ed;
   outline: none;
@@ -1195,7 +1195,7 @@ p {
   background-color: #BDB3B3;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card.premium .blue-rect {
-  background-color: #F4B75D;
+  background-color: #Ffcc00;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card.elite .blue-rect {
   background-color: #BFE83B;
@@ -2071,9 +2071,6 @@ p {
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
     padding: 2rem;
-  }
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
-    margin-bottom: 1rem;
   }
   .wrapper .faq .faq-wrapper {
     grid-column: 1/3;
