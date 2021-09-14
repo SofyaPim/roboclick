@@ -754,6 +754,7 @@ p {
   list-style-type: none;
   z-index: 5;
   position: relative;
+  padding-top: 1rem;
 }
 .wrapper .propose__list ul p {
   font-weight: 300;
@@ -765,8 +766,11 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: flex-start;
+}
+.wrapper .propose__list ul li img {
+  width: 1rem;
 }
 .wrapper .hints {
   position: relative;
