@@ -882,9 +882,6 @@ p {
 .wrapper .work-with-us .stage-wrapper .stage-header__block:last-child {
   margin-bottom: 0;
 }
-.wrapper .work-with-us .stage-wrapper .stage-header__block:active {
-  opacity: 0.8;
-}
 .wrapper .work-with-us .stage-wrapper .stage-header__block .stage-icon {
   display: none;
 }
