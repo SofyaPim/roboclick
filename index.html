@@ -110,7 +110,13 @@
 
             <div class="propose__image">
                 <img src="images/roboclick-aqua.svg" alt="search-icon" class="search">
-                <img src="images/pointer.png" alt="robot" class="robot">
+                <picture>
+                   
+                    <source srcset="images/pointer.png" media="(min-width: 500px)" class="robot">
+                     <img src="images/pointer-app.png" alt="pointer" class="robot">
+                     
+                </picture>
+                
             </div>
             <div class="propose__list">
                 <ul>
@@ -686,7 +692,11 @@
         </section>
         <section class="faq" id="faq">
             <h2>Вопросы и ответы</h2>
-            <img src="images/question.png" alt="question" class="quest-image">
+            <picture>
+                <source srcset="images/question.png" media="(min-width: 500px)" class="quest-image">
+                 <img src="images/question-app.png" alt="question" class="quest-image">
+            </picture>
+           
             <div class="accordion">
                 <ul class="faq-wrapper accordion__items">
                     <li class="accordion__item active">

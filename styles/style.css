@@ -935,21 +935,6 @@ p {
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items img {
   width: 100%;
 }
-.wrapper .work-with-us .stage-wrapper .stage-content__block__items.meeting {
-  background-image: url("../images/stage-meeting.jpg");
-}
-.wrapper .work-with-us .stage-wrapper .stage-content__block__items.tariff {
-  background-image: url("../images/stage-tariff.jpg");
-}
-.wrapper .work-with-us .stage-wrapper .stage-content__block__items.payment {
-  background-image: url("../images/stage-payment1.jpg");
-}
-.wrapper .work-with-us .stage-wrapper .stage-content__block__items.learning {
-  background-image: url("../images/mashine-learning.jpg");
-}
-.wrapper .work-with-us .stage-wrapper .stage-content__block__items.money {
-  background-image: url("../images/stage-money.jpg");
-}
 .wrapper .prices {
   background-color: #FfFfFE;
 }
