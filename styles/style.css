@@ -469,7 +469,7 @@ p {
 }
 .wrapper .overlay .popup .form-agree span.message {
   position: absolute;
-  top: 2rem;
+  top: 2.5rem;
 }
 .wrapper .header {
   width: 6.25rem;
@@ -751,7 +751,7 @@ p {
 }
 .wrapper .propose__list ul {
   width: 100%;
-  list-style-image: url("../images/list-marker.svg");
+  list-style-type: none;
   z-index: 5;
   position: relative;
 }
@@ -762,6 +762,11 @@ p {
 }
 .wrapper .propose__list ul li {
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
 }
 .wrapper .hints {
   position: relative;
