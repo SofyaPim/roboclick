@@ -12,7 +12,7 @@ import "./swiper-bundle.min.js";
 document.addEventListener("DOMContentLoaded", () => {
 
 
-
+ showSectionName('section', '.nav-title');
   showNav('.nav-burger', '.nav-bar');
   modal('.button', '.overlay', '.popup__close', '.tariff-name');
   forms();
@@ -51,6 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 }); 
-document.addEventListener('scroll', () => {
-    showSectionName('section', '.nav-title');
-  });
+// document.addEventListener('scroll', () => {
+   
+//   });

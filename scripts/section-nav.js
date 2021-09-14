@@ -1,6 +1,8 @@
-// document.addEventListener('scroll', () => {
-// })
+// 
+// 
   function showSectionName(section, headerNav){
+document.addEventListener('scroll', () => {
+
     let pageItem = document.querySelectorAll(section), //массив секций
       headerTitle = document.querySelector(headerNav), // контент заголовка в хедере
       headerLinks = document.querySelector('.nav-bar-links'), // панель навигации
@@ -17,9 +19,7 @@
       if (item.getBoundingClientRect().top < 50 && item.getBoundingClientRect().bottom > 50) {
 
         headerTitle.textContent = linksItem[ind].innerText;
-
         if(document.documentElement.clientWidth >= 640){
-          console.log(document.documentElement.clientWidth);
           navBar.classList.remove('transformTransX');
           document.body.style.overflow = '';
         }else{
@@ -40,7 +40,7 @@ if (!navBar.classList.contains('transformTransX')) {
    
  
 
-
+})
   }
 
 export default showSectionName;

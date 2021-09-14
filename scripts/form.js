@@ -138,6 +138,11 @@ function forms() {
             e.preventDefault();
 
             let inputsForm = item.querySelectorAll('input');
+            let tarifName = item.querySelector('h4');
+           
+            let tarif = tarifName.innerHTML;
+            let tarifTitle = tarif.slice(22);
+ console.log(tarifTitle);
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
             item.appendChild(statusMessage);
@@ -146,15 +151,15 @@ function forms() {
             }
 
             const formData = new FormData(item);
-
+  formData.append("Тариф", tarifTitle);   
 
            statusMessage.textContent = message.loading;
 
             postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
                 .then(res => {
-                    console.log(res);
+            
 
-
+   console.log(res);
                     statusMessage.textContent = message.success;
 
                 })

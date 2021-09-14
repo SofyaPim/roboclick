@@ -15,15 +15,6 @@
   scroll-behavior: smooth;
 }
 
-img {
-  opacity: 1;
-  transition: opacity 0.3s ease-in;
-}
-
-img[data-src] {
-  opacity: 0;
-}
-
 input,
 input:focus {
   padding: 0;
@@ -306,7 +297,7 @@ p {
   line-height: 1;
 }
 .wrapper p {
-  font-size: 16px;
+  font-size: calc(1rem + .5vw);
   line-height: 1.2;
   font-weight: 400;
 }
@@ -352,7 +343,7 @@ p {
   width: 50%;
   height: 100%;
   top: 0;
-  width: 50%;
+  width: 30%;
   transform: scale(0);
   transition-property: transform, opacity;
   transition-duration: 0.3s, 0.3s;
@@ -697,7 +688,7 @@ p {
   transition-duration: 0.3s, 0.3s;
   z-index: 5;
   position: relative;
-  font-size: calc(.8rem + .5vw);
+  font-size: calc(1rem + .5vw);
   margin-bottom: 0;
   font-weight: 300;
   color: #FfFfFE;
@@ -718,7 +709,7 @@ p {
   box-shadow: 12px 0px 20px #5333ed;
 }
 .wrapper .propose {
-  padding-bottom: 8%;
+  padding-bottom: 0%;
   background-color: #FfFfFE;
   color: #060411;
   display: grid;
@@ -743,7 +734,7 @@ p {
 }
 .wrapper .propose h2 span {
   display: block;
-  font-size: 1.2rem;
+  font-size: calc(1.2rem + .4vw);
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }
@@ -760,13 +751,13 @@ p {
 }
 .wrapper .propose__list ul {
   width: 100%;
-  list-style-image: url("../images/list-marker.png");
+  list-style-image: url("../images/list-marker.svg");
   z-index: 5;
   position: relative;
 }
 .wrapper .propose__list ul p {
   font-weight: 300;
-  line-height: 130%;
+  line-height: 1.3;
   padding: 0 1.5rem;
 }
 .wrapper .propose__list ul li {
@@ -791,6 +782,7 @@ p {
 .wrapper .hints .hint-stages {
   margin-top: 4.125rem;
   display: flex;
+  margin-bottom: 8rem;
 }
 .wrapper .hints .hint-stages .stage {
   display: flex;
@@ -812,7 +804,7 @@ p {
   position: relative;
 }
 .wrapper .hints .hint-stages .stage__card .card__content {
-  height: 40%;
+  height: 45%;
   padding: 0 6%;
   padding-right: 0;
   border-left: 1px solid #FfFfFE;
@@ -1060,10 +1052,10 @@ p {
   background-color: #2cd4d9;
 }
 .wrapper .prices .card-wrapper .wrap .card.economic .blue-rect {
-  background-color: #F8CCB6;
+  background-color: #BDB3B3;
 }
 .wrapper .prices .card-wrapper .wrap .card.classic .blue-rect {
-  background-color: #BDB3B3;
+  background-color: #F8CCB6;
 }
 .wrapper .prices .card-wrapper .wrap .card.premium .blue-rect {
   background-color: #Ffcc00;
@@ -1192,10 +1184,10 @@ p {
   padding-top: 2rem;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card.economic .blue-rect {
-  background-color: #F8CCB6;
+  background-color: #BDB3B3;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card.classic .blue-rect {
-  background-color: #BDB3B3;
+  background-color: #F8CCB6;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card.premium .blue-rect {
   background-color: #Ffcc00;
@@ -1220,24 +1212,21 @@ p {
   grid-row: 1/2;
   color: inherit;
 }
-.wrapper .faq .search {
-  width: 22vw;
-  position: absolute;
-  z-index: 1;
-  display: none;
-}
 .wrapper .faq .quest-image {
   margin-top: 2rem;
-  width: 0vw;
+  width: 80%;
 }
 .wrapper .faq .accordion {
   grid-column: 2/3;
   grid-row: 2/3;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 .wrapper .faq .accordion__items {
   position: absolute;
   list-style: none;
+  width: 100%;
 }
 .wrapper .faq .faq-wrapper {
   width: 100%;
@@ -1245,7 +1234,7 @@ p {
   padding-left: 0;
 }
 .wrapper .faq .faq-wrapper p {
-  font-size: 16px;
+  font-size: calc(1rem + .5vw);
 }
 .wrapper .faq .faq-wrapper .faq-item {
   width: 100%;
@@ -1590,7 +1579,9 @@ p {
   }
   .wrapper .faq .quest-image {
     margin-top: 2rem;
-    width: 20vw;
+  }
+  .wrapper .hints .hint-stages {
+    margin-bottom: 4rem;
   }
   .wrapper .footer .social-icons {
     width: 20%;
@@ -1619,13 +1610,17 @@ p {
     width: 100%;
   }
   .wrapper .propose__list ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .wrapper .propose__list ul p {
+    font-size: calc(1rem + .1vw);
   }
   .wrapper .hints h3 {
     padding-left: 6rem;
   }
   .wrapper .hints .hint-stages {
     margin-top: 4.125rem;
+    margin-bottom: 1rem;
   }
   .wrapper .hints .hint-stages .stage {
     display: flex;
@@ -1659,6 +1654,10 @@ p {
   }
   .wrapper .prices .card-wrapper .wrap .card h2 {
     font-size: calc(1.5rem + 1vw);
+  }
+  .wrapper .faq .quest-image {
+    margin-top: 2rem;
+    width: 120%;
   }
   .wrapper .contacts .contacts-items {
     display: flex;
@@ -1887,8 +1886,7 @@ p {
     padding: 1rem 2rem;
   }
   .wrapper .faq .quest-image {
-    margin-top: 2rem;
-    width: 30vw;
+    width: 150%;
   }
   .wrapper .contacts {
     padding-bottom: 0;
@@ -2002,7 +2000,6 @@ p {
     font-size: 16px;
   }
   .wrapper .faq .quest-image {
-    width: 0vw;
     opacity: 0;
   }
   .wrapper .work-with-us .stage-wrapper .stage-header__block {
@@ -2048,6 +2045,9 @@ p {
   }
   .wrapper .contacts .global-map-wrapper {
     width: 60vw;
+  }
+  .wrapper .propose {
+    padding-bottom: 2rem;
   }
   .wrapper .propose__list {
     grid-column: 1/3;
@@ -2223,8 +2223,7 @@ p {
     padding: 1rem;
   }
   .wrapper .faq .quest-image {
-    width: 0vw;
-    opacity: 0;
+    width: 140%;
   }
   .wrapper .faq .accordion {
     grid-column: 1/3;
@@ -2257,6 +2256,9 @@ p {
   }
   .wrapper .contacts .contacts-items .adres span {
     margin: auto;
+  }
+  .wrapper .footer .social-icons {
+    width: 40%;
   }
   .wrapper .transform45deg {
     transform: rotate(45deg) translateY(1.1rem);
@@ -2572,7 +2574,11 @@ p {
   }
 
   .wrapper .faq .quest-image {
-    width: 0vw;
+    width: 170%;
+  }
+
+  .wrapper .faq {
+    padding-bottom: 8rem;
   }
 
   .wrapper .faq .faq-wrapper p {
