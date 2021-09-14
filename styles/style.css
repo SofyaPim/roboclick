@@ -754,6 +754,7 @@ p {
   list-style-type: none;
   z-index: 5;
   position: relative;
+  padding: 0;
   padding-top: 1rem;
 }
 .wrapper .propose__list ul p {
@@ -2517,7 +2518,6 @@ p {
 
   .wrapper .propose__list ul {
     width: 100%;
-    padding: 0.5rem;
   }
 
   .wrapper .propose__list ul p {
