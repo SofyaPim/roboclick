@@ -853,6 +853,14 @@ p {
 .wrapper .hints-numbers__wrap .column {
   margin: 1rem;
   font-size: calc(3rem + .6vw);
+  min-width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.wrapper .hints-numbers__wrap .column p {
+  font-size: calc(.9rem + .3vw);
 }
 .wrapper .hints-numbers__wrap .column .red {
   color: #f54906;
@@ -2066,6 +2074,11 @@ p {
   .wrapper .propose__image .robot {
     display: none;
   }
+  .wrapper .hints-numbers__wrap .column {
+    margin: 0.5rem;
+    font-size: calc(2rem + .6vw);
+    min-width: 20%;
+  }
   .wrapper .prices {
     padding-bottom: 4rem;
     padding-left: 0;
@@ -2200,6 +2213,16 @@ p {
     margin-top: -20%;
     opacity: 0.5;
     width: 40%;
+  }
+  .wrapper .hints-numbers__wrap {
+    flex-direction: column;
+  }
+  .wrapper .hints-numbers__wrap .column {
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
   }
   .wrapper .work-with-us {
     padding: 2rem 0rem;
@@ -2397,6 +2420,13 @@ p {
   .wrapper .hints .hint-stages .stage .stage__card .card__icon {
     width: 50%;
     bottom: 2rem;
+  }
+  .wrapper .hints-numbers p {
+    margin-bottom: 1rem;
+  }
+  .wrapper .hints-numbers__wrap .column {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .wrapper section.work-with-us {
     padding: 4rem 1rem;
