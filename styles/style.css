@@ -1214,6 +1214,65 @@ p {
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card.vip .blue-rect {
   background-color: #FA2061;
 }
+.wrapper .tech-support {
+  background: rgba(202, 194, 194, 0.2);
+  background-image: url("../images/dispather.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 40%;
+}
+.wrapper .tech-support__items {
+  display: flex;
+  padding-top: 2rem;
+}
+.wrapper .tech-support__items .dispatcher {
+  width: 30%;
+}
+.wrapper .tech-support__items .dispatcher img {
+  width: 100%;
+  height: auto;
+}
+.wrapper .tech-support__items .support-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.wrapper .tech-support__items .support-items__card {
+  background-color: #FfFfFE;
+  width: 20vw;
+  height: 20vw;
+  margin: 0.5rem;
+  border-radius: 10vw;
+  box-shadow: 10px 10px 40px #C9CBD1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in;
+  padding: 1rem;
+}
+.wrapper .tech-support__items .support-items__card:hover {
+  transform: scale(1.1);
+}
+.wrapper .tech-support__items .support-items__card h3 {
+  color: #2cd4d9;
+  font-weight: 500;
+  font-size: calc(1rem + 1vw);
+  text-align: center;
+}
+.wrapper .tech-support__items .support-items__card p {
+  text-align: center;
+  font-size: calc(.8rem + .5vw);
+}
+.wrapper .tech-support__items .support-items__card .support-icon {
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+  width: 10vw;
+}
 .wrapper .faq {
   overflow: hidden;
   position: relative;
@@ -1671,6 +1730,12 @@ p {
   .wrapper .prices .card-wrapper .wrap .card h2 {
     font-size: calc(1.5rem + 1vw);
   }
+  .wrapper .tech-support__items .support-items__card h3 {
+    font-size: calc(1rem + .5vw);
+  }
+  .wrapper .tech-support__items .support-items__card p {
+    font-size: calc(.8rem + .2vw);
+  }
   .wrapper .faq .quest-image {
     margin-top: 2rem;
     width: 120%;
@@ -2097,6 +2162,24 @@ p {
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
     padding: 2rem;
   }
+  .wrapper .tech-support {
+    background-image: none;
+  }
+  .wrapper .tech-support__items .dispatcher {
+    width: 0%;
+  }
+  .wrapper .tech-support__items .support-items {
+    justify-content: space-evenly;
+  }
+  .wrapper .tech-support__items .support-items__card {
+    margin: 1rem;
+    width: 36vw;
+    height: 36vw;
+    border-radius: 18vw;
+  }
+  .wrapper .tech-support__items .support-items__card .support-icon {
+    width: 15vw;
+  }
   .wrapper .faq .faq-wrapper {
     grid-column: 1/3;
     margin-bottom: 0rem;
@@ -2481,6 +2564,23 @@ p {
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list {
     min-height: 18rem;
+  }
+  .wrapper .tech-support__items .support-items {
+    justify-content: flex-start;
+  }
+  .wrapper .tech-support__items .support-items .support-items__card {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 25vw;
+    margin: 0;
+  }
+  .wrapper .tech-support__items .support-items .support-items__card:nth-child(2n) {
+    margin-left: 10rem;
+  }
+  .wrapper .tech-support__items .support-items .support-items__card .support-icon {
+    width: 20vw;
+    bottom: 1rem;
+    right: 1rem;
   }
   .wrapper .faq {
     padding: 1rem;
