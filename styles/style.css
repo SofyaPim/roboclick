@@ -2575,7 +2575,7 @@ p {
     margin: 0;
   }
   .wrapper .tech-support__items .support-items .support-items__card:nth-child(2n) {
-    margin-left: 10rem;
+    margin-left: 9.5rem;
   }
   .wrapper .tech-support__items .support-items .support-items__card .support-icon {
     width: 20vw;
@@ -2708,6 +2708,10 @@ p {
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .blue-rect {
     height: 63%;
+  }
+
+  .wrapper .tech-support .tech-support__items .support-items .support-items__card:nth-child(2n) {
+    margin-left: 7rem;
   }
 
   .wrapper .faq .quest-image {
