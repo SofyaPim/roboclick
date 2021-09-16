@@ -841,6 +841,22 @@ p {
   z-index: 0;
   display: none;
 }
+.wrapper .hints-numbers__wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 2rem;
+  margin: auto;
+  width: 100%;
+}
+.wrapper .hints-numbers__wrap .column {
+  margin: 1rem;
+  font-size: calc(3rem + .6vw);
+}
+.wrapper .hints-numbers__wrap .column .red {
+  color: #f54906;
+}
 .wrapper .work-with-us {
   background: linear-gradient(270deg, rgba(87, 71, 239, 0.8) -16.43%, rgba(122, 216, 231, 0) 46.28%), #50D3E8;
 }
