@@ -1219,7 +1219,7 @@ p {
   background-image: url("../images/dispather.png");
   background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 40%;
+  background-size: 80%;
 }
 .wrapper .tech-support__items {
   display: flex;
