@@ -5,7 +5,7 @@ import showSectionName from "../scripts/section-nav.js";
 import showAnswers from "../scripts/accordion.js";
 import phoneMask from "../scripts/phone-mask.js";
 import forms from "../scripts/form.js";
-import changeImg from "./changeImg.js";
+
 import showStatistic from "./showStatistic.js";
 
 import "./mapbasics.js";
@@ -13,7 +13,7 @@ import "./swiper-bundle.min.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-changeImg();
+
  showSectionName('section', '.nav-title');
   showNav('.nav-burger', '.nav-bar');
   modal('.button', '.overlay', '.popup__close', '.tariff-name');
