@@ -841,6 +841,37 @@ p {
   z-index: 0;
   display: none;
 }
+.wrapper .hints-numbers {
+  background-image: url("../images/Chart.svg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-bottom: 10rem;
+}
+.wrapper .hints-numbers__wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 2rem;
+  margin: auto;
+  width: 100%;
+}
+.wrapper .hints-numbers__wrap .column {
+  margin: 1rem;
+  font-size: calc(3rem + .6vw);
+  min-width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.wrapper .hints-numbers__wrap .column p {
+  font-size: calc(.9rem + .3vw);
+}
+.wrapper .hints-numbers__wrap .column .red {
+  color: #f54906;
+}
 .wrapper .work-with-us {
   background: linear-gradient(270deg, rgba(87, 71, 239, 0.8) -16.43%, rgba(122, 216, 231, 0) 46.28%), #50D3E8;
 }
@@ -932,6 +963,21 @@ p {
 }
 .wrapper .work-with-us .stage-wrapper .stage-content__block__items img {
   width: 100%;
+}
+.wrapper .work-with-us .stage-wrapper .stage-content__block__items.meeting {
+  background-image: url("../images/stage-meeting.jpg");
+}
+.wrapper .work-with-us .stage-wrapper .stage-content__block__items.tariff {
+  background-image: url("../images/stage-tariff.jpg");
+}
+.wrapper .work-with-us .stage-wrapper .stage-content__block__items.payment {
+  background-image: url("../images/stage-payment.jpg");
+}
+.wrapper .work-with-us .stage-wrapper .stage-content__block__items.learning {
+  background-image: url("../images/mashine-learning.jpg");
+}
+.wrapper .work-with-us .stage-wrapper .stage-content__block__items.money {
+  background-image: url("../images/stage-money.jpg");
 }
 .wrapper .prices {
   background-color: #FfFfFE;
@@ -1189,6 +1235,65 @@ p {
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card.vip .blue-rect {
   background-color: #FA2061;
+}
+.wrapper .tech-support {
+  background: rgba(202, 194, 194, 0.2);
+  background-image: url("../images/dispather.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+.wrapper .tech-support__items {
+  display: flex;
+  padding-top: 2rem;
+}
+.wrapper .tech-support__items .dispatcher {
+  width: 30%;
+}
+.wrapper .tech-support__items .dispatcher img {
+  width: 100%;
+  height: auto;
+}
+.wrapper .tech-support__items .support-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.wrapper .tech-support__items .support-items__card {
+  background-color: #FfFfFE;
+  width: 20vw;
+  height: 20vw;
+  margin: 0.5rem;
+  border-radius: 10vw;
+  box-shadow: 10px 10px 40px #C9CBD1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in;
+  padding: 1rem;
+}
+.wrapper .tech-support__items .support-items__card:hover {
+  transform: scale(1.1);
+}
+.wrapper .tech-support__items .support-items__card h3 {
+  color: #2cd4d9;
+  font-weight: 500;
+  font-size: calc(1rem + 1vw);
+  text-align: center;
+}
+.wrapper .tech-support__items .support-items__card p {
+  text-align: center;
+  font-size: calc(.8rem + .5vw);
+}
+.wrapper .tech-support__items .support-items__card .support-icon {
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+  width: 10vw;
 }
 .wrapper .faq {
   overflow: hidden;
@@ -1647,6 +1752,12 @@ p {
   .wrapper .prices .card-wrapper .wrap .card h2 {
     font-size: calc(1.5rem + 1vw);
   }
+  .wrapper .tech-support__items .support-items__card h3 {
+    font-size: calc(1rem + .5vw);
+  }
+  .wrapper .tech-support__items .support-items__card p {
+    font-size: calc(.8rem + .2vw);
+  }
   .wrapper .faq .quest-image {
     margin-top: 2rem;
     width: 120%;
@@ -2050,6 +2161,15 @@ p {
   .wrapper .propose__image .robot {
     display: none;
   }
+  .wrapper .hints-numbers {
+    background-size: 70%;
+    padding-bottom: 7rem;
+  }
+  .wrapper .hints-numbers__wrap .column {
+    margin: 0.5rem;
+    font-size: calc(2rem + .6vw);
+    min-width: 20%;
+  }
   .wrapper .prices {
     padding-bottom: 4rem;
     padding-left: 0;
@@ -2067,6 +2187,24 @@ p {
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card {
     padding: 2rem;
+  }
+  .wrapper .tech-support {
+    background-image: none;
+  }
+  .wrapper .tech-support__items .dispatcher {
+    width: 0%;
+  }
+  .wrapper .tech-support__items .support-items {
+    justify-content: space-evenly;
+  }
+  .wrapper .tech-support__items .support-items__card {
+    margin: 1rem;
+    width: 36vw;
+    height: 36vw;
+    border-radius: 18vw;
+  }
+  .wrapper .tech-support__items .support-items__card .support-icon {
+    width: 15vw;
   }
   .wrapper .faq .faq-wrapper {
     grid-column: 1/3;
@@ -2185,6 +2323,16 @@ p {
     opacity: 0.5;
     width: 40%;
   }
+  .wrapper .hints-numbers__wrap {
+    flex-direction: column;
+  }
+  .wrapper .hints-numbers__wrap .column {
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+  }
   .wrapper .work-with-us {
     padding: 2rem 0rem;
   }
@@ -2201,6 +2349,21 @@ p {
   }
   .wrapper .work-with-us .stage-wrapper .stage-header__block h3 {
     display: none;
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-content__block__items.meeting {
+    background-image: url("../images/stage-meeting-app.jpg");
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-content__block__items.tariff {
+    background-image: url("../images/stage-tariff-app.jpg");
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-content__block__items.payment {
+    background-image: url("../images/stage-payment-app.jpg");
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-content__block__items.learning {
+    background-image: url("../images/mashine-learning-app.jpg");
+  }
+  .wrapper .work-with-us .stage-wrapper .stage-content__block__items.money {
+    background-image: url("../images/stage-money-app.jpg");
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .u-list {
     min-height: 23rem;
@@ -2382,6 +2545,17 @@ p {
     width: 50%;
     bottom: 2rem;
   }
+  .wrapper .hints-numbers {
+    background-size: 100%;
+    padding-bottom: 5rem;
+  }
+  .wrapper .hints-numbers p {
+    margin-bottom: 1rem;
+  }
+  .wrapper .hints-numbers__wrap .column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .wrapper section.work-with-us {
     padding: 4rem 1rem;
   }
@@ -2435,6 +2609,23 @@ p {
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .u-list {
     min-height: 18rem;
+  }
+  .wrapper .tech-support__items .support-items {
+    justify-content: flex-start;
+  }
+  .wrapper .tech-support__items .support-items .support-items__card {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 25vw;
+    margin: 0;
+  }
+  .wrapper .tech-support__items .support-items .support-items__card:nth-child(2n) {
+    margin-left: 9.5rem;
+  }
+  .wrapper .tech-support__items .support-items .support-items__card .support-icon {
+    width: 20vw;
+    bottom: 1rem;
+    right: 1rem;
   }
   .wrapper .faq {
     padding: 1rem;
@@ -2562,6 +2753,10 @@ p {
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .blue-rect {
     height: 63%;
+  }
+
+  .wrapper .tech-support .tech-support__items .support-items .support-items__card:nth-child(2n) {
+    margin-left: 7rem;
   }
 
   .wrapper .faq .quest-image {
