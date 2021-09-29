@@ -43,9 +43,9 @@ function showStatistic(section) {
             runNum = function () {}
             lessNum(500, '#minPrice', 45);
             lessNum = function () {}
-            console.log('gotcha!');
+           
         }
-        console.log(`Верхняя граница элемента - ${pageItemTop}`);
+        
     })
 
 
