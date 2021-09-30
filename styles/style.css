@@ -15,6 +15,10 @@
   scroll-behavior: smooth;
 }
 
+*:focus {
+  outline: none;
+}
+
 input,
 input:focus {
   padding: 0;
@@ -240,9 +244,9 @@ p {
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 1rem;
-  width: 1rem;
-  height: 1rem;
+  margin: 0 0.7rem;
+  width: 0.7rem;
+  height: 0.7rem;
 }
 
 .swiper-pagination-bullet {
@@ -832,9 +836,6 @@ p {
   transition-timing-function: ease-in, ease-in, ease-in;
   border-radius: 50%;
 }
-.wrapper .hints .commit {
-  font-size: 0.8rem;
-}
 .wrapper .hints .search {
   position: absolute;
   width: 16%;
@@ -1264,7 +1265,7 @@ p {
   background-color: #FfFfFE;
   width: 20vw;
   height: 20vw;
-  margin: 0.5rem;
+  margin: 1rem;
   border-radius: 10vw;
   box-shadow: 10px 10px 40px #C9CBD1;
   display: flex;
@@ -1275,6 +1276,7 @@ p {
   overflow: hidden;
   transition: transform 0.3s ease-in;
   padding: 1rem;
+  cursor: pointer;
 }
 .wrapper .tech-support__items .support-items__card:hover {
   transform: scale(1.1);
@@ -1288,6 +1290,7 @@ p {
 .wrapper .tech-support__items .support-items__card p {
   text-align: center;
   font-size: calc(.8rem + .5vw);
+  transition: opacity 0.3s ease-in;
 }
 .wrapper .tech-support__items .support-items__card .support-icon {
   position: absolute;
@@ -2577,7 +2580,6 @@ p {
   }
   .wrapper .prices {
     padding: 2rem 0rem;
-    padding-bottom: 4rem;
   }
   .wrapper .prices h2 {
     padding-left: 3rem;

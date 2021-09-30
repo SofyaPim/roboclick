@@ -5,14 +5,12 @@ import showSectionName from "../scripts/section-nav.js";
 import showAnswers from "../scripts/accordion.js";
 import phoneMask from "../scripts/phone-mask.js";
 import forms from "../scripts/form.js";
-
 import showStatistic from "./showStatistic.js";
-
+import mySwiper from "./swiper.js";
 import "./mapbasics.js";
-import "./swiper-bundle.min.js";
+import showDesk from "./showDesc.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-
 
  showSectionName('section', '.nav-title');
   showNav('.nav-burger', '.nav-bar');
@@ -22,29 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   tabs('.stage-header', '.stage-header__block', '.stage-content__block', 'active-header');
   showAnswers();
   showStatistic('#hints-numbers');
-  const swiper = new Swiper(".pricesSwiper", {
-    slidesPerView: 1.3,
-    spaceBetween: 30,
-    breakpoints: {
-
-
-      640: {
-        slidesPerView: 2.1,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 1.7,
-        spaceBetween: 40
-      }
-    },
-
-    initialSlide: 2,
-    centeredSlides: true,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    }
-  })
+  mySwiper();
+  showDesk('.support-items__card', '[data-desc]');
+ 
 
 }); 
