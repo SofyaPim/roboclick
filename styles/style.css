@@ -1278,9 +1278,6 @@ p {
   padding: 1rem;
   cursor: pointer;
 }
-.wrapper .tech-support__items .support-items__card:hover {
-  transform: scale(1.1);
-}
 .wrapper .tech-support__items .support-items__card h3 {
   color: #2cd4d9;
   font-weight: 500;
@@ -1832,6 +1829,9 @@ p {
     color: #FfFfFE;
     background-color: #2cd4d9;
   }
+  .wrapper .tech-support__items .support-items__card:hover {
+    transform: scale(1.1);
+  }
   .wrapper .faq .faq-wrapper .faq-item:hover {
     cursor: pointer;
     background-color: #ffffff;
@@ -1985,6 +1985,9 @@ p {
   .wrapper .prices .card-wrapper .wrap .card .button {
     box-shadow: initial;
     padding: 1rem 2rem;
+  }
+  .wrapper .tech-support__items .support-items__card:focus {
+    transform: scale(1.1);
   }
   .wrapper .faq .quest-image {
     width: 150%;
