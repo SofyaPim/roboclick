@@ -329,7 +329,7 @@ p {
   width: 100%;
   height: 100%;
   display: none;
-  transition: display 0.5s ease-in;
+  transition: display 0.3s ease-in;
   padding: 2rem;
 }
 .wrapper .overlay .popup {
@@ -570,7 +570,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 20%;
 }
 .wrapper .nav-bar .social-icons a img {
   width: 1.5rem;
@@ -1340,7 +1340,7 @@ p {
   width: 100%;
   color: #363739;
   border-radius: 0.5rem;
-  border: 1px solid #FfFfFE;
+  border: 1px solid #2cd4d9;
   padding: 3%;
   background-color: #FfFfFE;
   transition: all 0.6s ease-in;
@@ -1361,35 +1361,36 @@ p {
 }
 .wrapper .faq .faq-wrapper .faq-item:active {
   cursor: pointer;
-  background-color: #2cd4d9;
-  border: 1px solid #FfFfFE;
+  background-color: #ffffff;
+  border: 1px solid #2cd4d9;
   color: #FfFfFE;
   outline: none;
 }
 .wrapper .faq .faq-wrapper .faq-item:active .faq-mark {
-  background-image: url("../images/plusWhite.svg");
+  background-image: url("../images/plusAqua.svg");
 }
 .wrapper .faq .faq-wrapper .active > .faq-item {
-  background-color: #FfFfFE;
-  color: #2cd4d9;
+  background-color: #2cd4d9;
+  color: #ffffff;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 .wrapper .faq .faq-wrapper .active > .faq-item .faq-mark {
   border: #2cd4d9;
-  background-image: url("../images/minusAqua.svg");
+  background-image: url("../images/minus.svg");
   height: 2px;
 }
 .wrapper .faq .faq-wrapper .answer-item {
   color: #363739;
   width: 100%;
   padding: 0rem;
-  background-color: #7aeff3;
-  margin-bottom: 0.1rem;
+  background-color: #ffffff;
+  margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   position: relative;
   z-index: 70;
   max-height: 0;
   opacity: 0;
-  transition: all 0.6s ease-in;
+  transition: all 0.4s ease-in;
 }
 .wrapper .faq .faq-wrapper .answer-item p {
   padding: 2rem;
@@ -1398,6 +1399,7 @@ p {
 .wrapper .faq .faq-wrapper .active > .answer-item {
   max-height: 20rem;
   opacity: 1;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 .wrapper .faq .faq-wrapper .active > .answer-item p {
   transition: opacity 0.9s ease-in;
@@ -1461,10 +1463,9 @@ p {
 }
 .wrapper .contacts .contacts-items .feedback-form input {
   background-color: initial;
-  margin: 1rem;
   border-bottom: 1px solid #FfFfFE;
   padding: 1rem 4rem;
-  padding-left: 0;
+  padding-left: 1rem;
   color: #FfFfFE;
   font-size: calc(.5rem + .9vw);
   outline: none;
@@ -1652,7 +1653,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 10%;
+  width: 5rem;
   margin: auto;
 }
 .wrapper .footer .social-icons a img {
@@ -1682,9 +1683,6 @@ p {
   }
   .wrapper .hints .hint-stages {
     margin-bottom: 4rem;
-  }
-  .wrapper .footer .social-icons {
-    width: 20%;
   }
 }
 @media all and (max-width: 1440px) {
@@ -1779,9 +1777,6 @@ p {
   .wrapper .footer nav {
     margin-bottom: 1rem;
   }
-  .wrapper .footer .social-icons {
-    width: 30%;
-  }
 }
 @media all and (min-width: 1024px) {
   .wrapper .header .logo {
@@ -1839,13 +1834,13 @@ p {
   }
   .wrapper .faq .faq-wrapper .faq-item:hover {
     cursor: pointer;
-    background-color: #2cd4d9;
-    border: 1px solid #FfFfFE;
-    color: #FfFfFE;
+    background-color: #ffffff;
+    border: 1px solid #2cd4d9;
+    color: #2cd4d9;
     outline: none;
   }
   .wrapper .faq .faq-wrapper .faq-item:hover .faq-mark {
-    background-image: url("../images/plusWhite.svg");
+    background-image: url("../images/plus.svg");
   }
   .wrapper .contacts .contacts-items .feedback-form .feedback-button:hover {
     color: #363739;
@@ -2241,10 +2236,6 @@ p {
     margin-bottom: 1rem;
   }
 
-  .wrapper .nav-bar .social-icons {
-    width: 70%;
-  }
-
   .wrapper .footer .footer-nav nav a {
     padding: 0.5rem;
     margin-left: 0;
@@ -2253,9 +2244,6 @@ p {
 @media all and (max-width: 640px) {
   .wrapper .overlay .popup {
     width: 90%;
-  }
-  .wrapper .nav-bar .social-icons {
-    width: 80%;
   }
   .wrapper .nav-bar nav a::before {
     top: 3rem;
@@ -2414,9 +2402,6 @@ p {
   }
   .wrapper .contacts .contacts-items .adres span {
     margin: auto;
-  }
-  .wrapper .footer .social-icons {
-    width: 40%;
   }
   .wrapper .transform45deg {
     transform: rotate(45deg) translateY(1.1rem);
@@ -2678,7 +2663,6 @@ p {
   }
   .wrapper .footer .social-icons {
     margin: auto;
-    width: 60%;
     margin-bottom: 2rem;
   }
   .wrapper .footer .social-icons a {
@@ -2780,6 +2764,10 @@ p {
 @media all and (max-width: 320px) {
   .wrapper .faq {
     padding-bottom: 12rem;
+  }
+
+  .wrapper .nav-bar .social-icons {
+    width: 50%;
   }
 
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card h2 {

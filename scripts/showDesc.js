@@ -12,14 +12,26 @@ function showDesk(selectors, contentblock) {
         })
     }
     function mobileEvents(el, content) {
-        el.addEventListener('touchstart', () => {
+        el.addEventListener('focus', () => {
        
             content.style.opacity = 1;
            })
-           el.addEventListener('touchend', () => {
-         
+           el.addEventListener('blur', () => {
+       
             content.style.opacity = 0;
-        })
+           })
+
+           //may delete
+         
+        // el.addEventListener('touchstart', () => {
+       
+        //     content.style.opacity = 1;
+        //    })
+        //    //may delete
+        //    el.addEventListener('touchend', () => {
+         
+        //     content.style.opacity = 0;
+        // })
     }
 
     items.forEach(item => {
