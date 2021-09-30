@@ -12,11 +12,11 @@ function showDesk(selectors, contentblock) {
         })
     }
     function mobileEvents(el, content) {
-        el.addEventListener('pointermove', () => {
+        el.addEventListener('touchstart', () => {
        
             content.style.opacity = 1;
            })
-           el.addEventListener('pointerup', () => {
+           el.addEventListener('touchend', () => {
          
             content.style.opacity = 0;
         })
