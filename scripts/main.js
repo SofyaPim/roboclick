@@ -9,6 +9,7 @@ import showStatistic from "./showStatistic.js";
 import mySwiper from "./swiper.js";
 import "./mapbasics.js";
 import showDesk from "./showDesc.js";
+import myLocalStorage from "./localStorageTest.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   showStatistic('#hints-numbers');
   mySwiper();
   showDesk('.support-items__card', '[data-desc]');
+  myLocalStorage();
  
 
 }); 

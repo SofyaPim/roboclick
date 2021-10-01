@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  
     <link rel="manifest" href="images/favicon/site.webmanifest">
     <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#e5f8fd">
@@ -56,8 +57,7 @@
 
                 <a href="#"> <img src="images/telegram-icon-dark.svg" alt="telegram"> </a>
                 <a href="#"> <img src="images/whatsApp-icon-dark.svg" alt="whatsapp"> </a>
-                <!-- <a href="#"> <img src="images/vk-icon-dark.svg" alt="vk"> </a>
-                <a href="#"> <img src="images//youtube-icon-dark.svg" alt="youtube"> </a> -->
+              
             </div>
 
         </nav>
@@ -70,7 +70,7 @@
                         rel="noopener noreferrer">digitdc@gmail.com</a>
                 </div>
 
-                <button class="button phone-button">
+                <button  class="button phone-button">
                     заказать обратный звонок
                 </button>
             </div>
@@ -85,6 +85,31 @@
                 <button class="button">
                     подробнее
                 </button>
+                <div class="">
+                    <!-- visually-hidden  -->
+                    <p>До окончания действия скидки</p>
+                    <div class="timer-content timer">
+                        <div class="timer-content__item days">
+                            <div class="timer-content__item__numbers">00</div>
+                            <div class="timer-content__item__text">дней</div>
+                        </div>
+                        <div class="timer-content-separator">:</div>
+                        <div class="timer-content__item hours">
+                            <div class="timer-content__item__numbers">00</div>
+                            <div class="timer-content__item__text">часов</div>
+                        </div>
+                        <div class="timer-content-separator">:</div>
+                        <div class="timer-content__item minuts">
+                            <div class="timer-content__item__numbers">00</div>
+                            <div class="timer-content__item__text">минут</div>
+                        </div>
+                        <div class="timer-content-separator">:</div>
+                        <div class="timer-content__item seconds">
+                            <div class="timer-content__item__numbers">00</div>
+                            <div class="timer-content__item__text">секунд</div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <div class="about__mac-image">
@@ -205,6 +230,7 @@
             <img src="images/roboclick-aqua.svg" alt="search-icon" class="search">
         </section>
         <section class="hints-numbers" id="hints-numbers" >
+        
             <h2>Подсказки в цифрах</h2>
             <div class="hints-numbers__wrap">
                 <div class="column">
@@ -808,6 +834,7 @@
                 </svg>
             </div>
             <div class="support-items__card"  tabindex="0">
+                <!-- <canvas id="canvas" width="300" height="20"></canvas> -->
                 <h3>Личный менеджер</h3>
                 <p data-desc>Наш специалист в Вашем распоряженнии</p>
                 <svg class="support-icon"  viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -955,7 +982,7 @@
             </div>
         </section>
         <footer class="footer">
-            <a href="#about"><img class="logo" src="images/logo-white.svg" alt="roboClick"></a>
+            <a href="#about"class="logo"><img  src="images/logo-white.svg" alt="roboClick"></a>
             <div class="footer-nav">
                 <nav>
                     <a href="#about"> главная</a>
@@ -985,7 +1012,7 @@
                 <span class="message">Проверьте адрес электронной почты</span>
                 <input type="tel" name="phone" id="formPhone" placeholder="+7(777)777-77-77" class="_req">
                 <span class="message">Уточните номер телефона</span>
-                <button type="submit" class="button button-recall">Отправить</button>
+                <button id="date" type="submit" class="button button-recall">Отправить</button>
                 <div class="form-agree">
                     <label for="popupAgreement" class="checkbox_label">
                         <span class="message aftercheckbox">Подтвердите согласие на обработку данных</span>
@@ -1007,6 +1034,7 @@
     <script type="module" src="scripts/main.js"></script>
     <script src="scripts/inputmask.min.js"></script>
     <script async src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey"></script>
+  
 
 
 </body>

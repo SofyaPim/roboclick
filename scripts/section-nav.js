@@ -11,12 +11,11 @@ function showSectionName(section, headerNav){
           l2 = document.querySelector('.line2'),
           l3 = document.querySelector('.line3');  
           
-          console.log(pageItem);
+         
         pageItem.forEach((item, ind) => {
     
           if (item.getBoundingClientRect().top < 50 && item.getBoundingClientRect().bottom > 50) {
-             console.log(linksItem);
-            console.log(ind);
+           
             headerTitle.textContent = linksItem[ind].innerText;
             
             if(document.documentElement.clientWidth >= 640){
