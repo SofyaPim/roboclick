@@ -1698,6 +1698,9 @@ p {
   .wrapper h4 {
     line-height: 1rem;
   }
+  .wrapper .nav-bar .social-icons {
+    width: 30%;
+  }
   .wrapper .about__main h3 {
     padding: 0;
   }
