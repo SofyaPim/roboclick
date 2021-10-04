@@ -169,8 +169,27 @@ p {
   margin: -1px;
 }
 
-.timer {
+.timer-wrapper {
+  padding-top: 1rem;
+}
+.timer-wrapper .timer {
   display: flex;
+  margin-left: -1rem;
+}
+.timer-wrapper .timer p {
+  color: #2cd4d9;
+}
+.timer-wrapper .timer .timer-content__item__numbers {
+  margin: 1rem;
+  font-size: 2rem;
+  background-color: #ffffff;
+  color: #5333ed;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.timer-wrapper .timer .timer-content__item__text {
+  font-size: 1rem;
+  margin-left: 1rem;
 }
 
 .message {
