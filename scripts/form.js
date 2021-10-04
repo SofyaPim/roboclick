@@ -108,21 +108,22 @@ function forms() {
                 formData.delete('agreement');
                 statusMessage.textContent = message.loading;
 
-                // postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
-                //     .then(res => {
-                //         console.log(res);
+                postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
+                    .then(res => {
+                        console.log(res);
                       
-                //         statusMessage.textContent = message.success;
-                //     })
-                //     .catch(() => {
-                //         statusMessage.textContent = message.failure;
-                //     })
-                //     .finally(() => {
-                //         clearInputs(inputs);
-                //         setTimeout(() => {
-                //             statusMessage.remove();
-                //         }, 3000);
-                //     })
+                        statusMessage.textContent = message.success;
+                    })
+                    .catch((err) => {
+                   console.log(err);
+                        statusMessage.textContent = message.failure;
+                    })
+                    .finally(() => {
+                        clearInputs(inputs);
+                        setTimeout(() => {
+                            statusMessage.remove();
+                        }, 3000);
+                    })
             })
         })
     }
