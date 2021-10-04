@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   showDesk('.support-items__card', '[data-desc]');
 
   myLocalStorage();
+  console.log(new Date( +localStorage.getItem('day')));
 
 }); 
  
