@@ -248,7 +248,7 @@ p {
 }
 
 .translate {
-  transform: translateX(-100%);
+  transform: translateX(-110%);
 }
 
 .animated {
