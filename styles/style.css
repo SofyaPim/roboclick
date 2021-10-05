@@ -247,6 +247,14 @@ p {
   display: none;
 }
 
+.translate {
+  transform: translateX(-100%);
+}
+
+.lineTrough {
+  text-decoration: line-through;
+}
+
 .transform45deg {
   transform: rotate(45deg) translateY(11px) translateX(11px);
 }
@@ -1132,9 +1140,7 @@ p {
   padding-top: 0px;
   left: 15%;
   color: #f54906;
-  top: 10%;
-  transform: rotate(-15deg);
-  background-color: #ffffff7c;
+  top: -10%;
 }
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
@@ -1297,9 +1303,7 @@ p {
   padding-top: 0px;
   left: 30%;
   color: #f54906;
-  top: 30%;
-  transform: rotate(-15deg);
-  background-color: #ffffff7c;
+  top: 0%;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h3,
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {

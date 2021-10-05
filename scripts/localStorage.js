@@ -25,8 +25,12 @@ function myLocalStorage() {
             let parent = card.parentNode;
             lowPrice.innerHTML = `${discountPrice}$`;
             parent.appendChild(lowPrice);
+           card.classList.add('lineTrough');
+           
+
 
         })
+
 
     }
 
