@@ -1303,7 +1303,7 @@ p {
   padding-top: 0px;
   left: 30%;
   color: #f54906;
-  top: 0%;
+  top: 10%;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h3,
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {
@@ -2723,9 +2723,12 @@ p {
   .wrapper .prices h2 {
     padding-left: 3rem;
   }
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price-title {
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price .price-title {
     padding-top: 0;
     padding-bottom: 0;
+  }
+  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price .lowPrice {
+    top: -10%;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
     top: 2rem;
