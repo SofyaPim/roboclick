@@ -12,6 +12,7 @@ import showDesk from "./showDesc.js";
 import myLocalStorage from "./localStorage.js";
 import closeMsg from "./closeMessage.js";
 import throwItems from "./throwItems.js";
+import animateHeaders from "./animateHeaders.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -25,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
   showStatistic('#hints-numbers');
   mySwiper();
   showDesk('.support-items__card', '[data-desc]');
-
   myLocalStorage();
   closeMsg('timer-wrapper', 'timer-btn');
   throwItems('tech-support');
+  animateHeaders();
 
 }); 
  

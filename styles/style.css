@@ -251,6 +251,10 @@ p {
   transform: translateX(-100%);
 }
 
+.animated {
+  transition: transform 0.6s ease-in;
+}
+
 .lineTrough {
   text-decoration: line-through;
 }
