@@ -10,6 +10,8 @@ import mySwiper from "./swiper.js";
 import "./mapbasics.js";
 import showDesk from "./showDesc.js";
 import myLocalStorage from "./localStorage.js";
+import closeMsg from "./closeMessage.js";
+import throwItems from "./throwItems.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -25,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   showDesk('.support-items__card', '[data-desc]');
 
   myLocalStorage();
-  console.log(new Date( +localStorage.getItem('day')));
+  closeMsg('timer-wrapper', 'timer-btn');
+  throwItems('tech-support');
 
 }); 
  

@@ -11,13 +11,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-  
     <link rel="manifest" href="images/favicon/site.webmanifest">
     <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#e5f8fd">
     <meta name="theme-color" content="#e5f8fd">
-
-
     <link rel="stylesheet" href="styles/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/style.css">
     <title>DigitalGC</title>
@@ -85,10 +82,11 @@
                 <button class="button" id="date" >
                     подробнее
                 </button>
-                <div class="timer-wrapper" >
+                <div class="timer-wrapper" id="timer-wrapper" >
                     <!-- visually-hidden  -->
-                    <p>Успейте оплатить с 5% скидкой</p>
+                    <p class="timer-wrapper__head" >Успейте оплатить с 5% скидкой</p>
                     <div class="timer-content timer">
+                        <button class="timer-content__button"id="timer-btn">свернуть</button>
                         <div class="timer-content__item days">
                             <div class="timer-content__item__numbers">00</div>
                             <div class="timer-content__item__text">дней</div>
@@ -497,8 +495,6 @@
                             <div class="list-item">
                                 <p> 5 000 фраз лимит <br>анализатора </p>
                             </div>
-
-
                         </div>
                         <div class="price">
                             <h2 class="price-title">500$</h2>
@@ -509,8 +505,6 @@
                 </div>
                 <div class="wrap">
                     <div class="card classic" data-card>
-
-
                         <div class="u-list">
                             <h3 class="card-title">classic</h3>
                             <div class="list-item">
@@ -528,7 +522,6 @@
                             <div class="list-item">
                                 <p>1000 кликов</p>
                             </div>
-
                         </div>
                         <div class="price">
                             <h2 class="price-title">1000$</h2>
@@ -539,7 +532,6 @@
                 </div>
                 <div class="wrap">
                     <div class="card premium" data-card>
-
                         <img src="images/gift.svg" alt="gift-icon" class="gift-icon small">
                         <div class="u-list">
                             <h3 class="card-title">premium</h3>
@@ -561,7 +553,6 @@
                             <div class="list-item ">
                                 <p>склик Директа</p>
                             </div>
-
                         </div>
                         <div class="price">
                             <h2 class="price-title">2000$</h2>
@@ -572,7 +563,6 @@
                 </div>
                 <div class="wrap">
                     <div class="card elite" data-card>
-
                         <img src="images/gift.svg" alt="gift-icon" class="gift-icon">
                         <div class="u-list">
                             <h3 class="card-title">elite</h3>
@@ -594,7 +584,6 @@
                             <div class="list-item ">
                                 <p>склик Директа</p>
                             </div>
-
                         </div>
                         <div class="price">
                             <h2 class="price-title">5 000$</h2>
@@ -647,9 +636,6 @@
 
                     <div class="swiper-slide  mobile-prices-card" data-card>
                         <div class="card economic" tabindex="0">
-
-
-
                             <div class="u-list">
                                 <h3 class="card-title">economic</h3>
                                 <div class="list-item">
@@ -823,7 +809,7 @@
           
         </div>
         <div class="support-items">
-            <div class="support-items__card"  tabindex="0">
+            <div class="support-items__card" id="account-card" tabindex="0">
                 <h3>Личный кабинет</h3>
                 <p data-desc>Полный контроль над всем процессом работы</p>
                 <svg class="support-icon"  viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -833,7 +819,7 @@
                         </g>
                 </svg>
             </div>
-            <div class="support-items__card"  tabindex="0">
+            <div class="support-items__card" id="manager-card" tabindex="0">
                 <!-- <canvas id="canvas" width="300" height="20"></canvas> -->
                 <h3>Личный менеджер</h3>
                 <p data-desc>Наш специалист в Вашем распоряженнии</p>
@@ -844,7 +830,7 @@
                        
                 </svg>
             </div>
-            <div class="support-items__card"  tabindex="0">
+            <div class="support-items__card" id="report-card"  tabindex="0">
                 <h3>Регулярные отчеты</h3>
                 <p data-desc>Отслеживайте результат в любое время</p>
                 <svg class="support-icon"  viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -856,7 +842,7 @@
                         </g>
                 </svg>
             </div>
-            <div class="support-items__card"  tabindex="0">
+            <div class="support-items__card" id="learn-card"  tabindex="0">
                 <h3>Обучение</h3>
                 <p data-desc>Специалист обучает Вас пользоваться системой</p>
                 <svg class="support-icon"  viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -879,7 +865,7 @@
                         </g>
                 </svg>
             </div>
-            <div class="support-items__card" tabindex="0">
+            <div class="support-items__card" id="costs-card" tabindex="0">
                 <h3>Контроль расходов</h3>
                 <p data-desc>Наша система позволяет контролировать все расходы</p>
                 <svg class="support-icon"  viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1004,9 +990,10 @@
         </footer>
         <div class="overlay" data-modal>
             <form class="popup form__body" action="#" id="form">
+                <p>Получите скидку 5% при оплате в течении суток после отправления заявки</p>
                 <h3 class="popup-title">Оформление заказа</h3>
                 <input type="hidden" name="form_subject" value="поисковые подсказки">
-                <input type="hidden" name="discount" value="false" id="discountInput">
+                <input type="hidden" name="discount" value="" id="discountInput">
                 <input type="text" name="name" id="formName" placeholder="Ваше имя" class="_req">
                 <span class="message">Заполните корректно поле </span>
                 <input type="email" name="email" placeholder="Ваш Email" id="formEmail" class="_req _email">

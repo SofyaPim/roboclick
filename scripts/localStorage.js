@@ -3,8 +3,33 @@ function myLocalStorage() {
     //const btn = document.getElementById('date'); btns = document.querySelectorAll('[data-discount]')
     const submitBtns = document.querySelectorAll('[type="submit"]'),
         timer = document.querySelector('.timer-wrapper'),
-        discountInput = document.getElementById('discountInput');
+        discountInput = document.getElementById('discountInput'),
+
+        priceTitle = document.querySelectorAll('.price-title');
     let timeId;
+
+    function setDiscountPrice() {
+        priceTitle.forEach(card => {
+
+
+            let price = card.innerHTML;
+
+            let pattern = /\d+/g;
+            price = price.match(pattern).join([]);
+            let discountPrice = price - (price * 5) / 100;
+            console.log(price);
+            console.log(discountPrice);
+            // card.innerHTML = `${discountPrice}$`;//
+            let lowPrice = document.createElement('h2');
+            lowPrice.classList.add('lowPrice');
+            let parent = card.parentNode;
+            lowPrice.innerHTML = `${discountPrice}$`;
+            parent.appendChild(lowPrice);
+
+        })
+
+    }
+
 
     timer.classList.add('visually-hidden');
 
@@ -33,8 +58,19 @@ function myLocalStorage() {
         let secondsText = document.querySelector('.timer-content__item.seconds .timer-content__item__text');
 
         let now = Date.now();
-        let currentDay = localStorage.getItem('day');
-       // let currentDay = Date.now() + (3600000 * 24);
+        let currentDay;
+
+
+
+        if (localStorage.getItem('day')) {
+            currentDay = localStorage.getItem('day');
+            console.log(`day in Storage ${currentDay}`);
+        } else {
+            // currentDay = Date.now() + 2000 ;
+            currentDay = Date.now() + (3600000 * 24);
+            localStorage.setItem('day', currentDay.toString());
+            console.log(`set day  ${currentDay}`);
+        }
         let timeLeft = currentDay - now;
 
 
@@ -59,18 +95,18 @@ function myLocalStorage() {
         if (timeLeft >= 0) {
 
             timer.classList.remove('visually-hidden');
-            // discountInput.value = 'true';
+
 
 
         } else if (timeLeft <= 0) {
 
             localStorage.clear();
-            //  discountInput.value = 'false';
+
             daysVal.textContent = "00";
             hoursVal.textContent = "00";
             minutesVal.textContent = "00";
             secondsVal.textContent = "00";
-
+            //   setDiscountPrice = function () {}
             clearInterval(timeId);
             timer.classList.add('visually-hidden');
 
@@ -82,21 +118,19 @@ function myLocalStorage() {
     }
     submitBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            console.log('click');
-            if (timeId === undefined) {
-                // let currentDay = Date.now() + 25000;
-                let currentDay = Date.now() + (3600000 * 24); //!!!current time
-                localStorage.setItem('day', currentDay.toString());
-                runTimer();
-                timeId = setInterval(runTimer, 1000);
-                timer.classList.remove('visually-hidden');
-                let realTime = new Date(currentDay);
-                discountInput.value = realTime;
-                console.log(realTime);
 
-            } else {
-                return;
-            }
+            runTimer();
+            timeId = setInterval(runTimer, 1000);
+
+            timer.classList.remove('visually-hidden');
+            let localDay = new Date(+localStorage.getItem('day'));
+            console.log(`localDay ${localDay}`);
+            let realTime = localDay.toString().slice(7, 24);
+            discountInput.value = realTime;
+            console.log(realTime);
+
+
+
 
 
 
@@ -105,7 +139,7 @@ function myLocalStorage() {
 
     if (localStorage.getItem('day')) {
 
-
+        setDiscountPrice();
         timeId = setInterval(runTimer, 1000);
 
     }
