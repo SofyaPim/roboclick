@@ -121,19 +121,12 @@ function myLocalStorage() {
 
             runTimer();
             timeId = setInterval(runTimer, 1000);
-
             timer.classList.remove('visually-hidden');
             let localDay = new Date(+localStorage.getItem('day'));
             console.log(`localDay ${localDay}`);
             let realTime = localDay.toString().slice(7, 24);
             discountInput.value = realTime;
             console.log(realTime);
-
-
-
-
-
-
         });
     });
 
@@ -143,9 +136,6 @@ function myLocalStorage() {
         timeId = setInterval(runTimer, 1000);
 
     }
-
-
-
 
 
 }
