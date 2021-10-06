@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     timer(); 
   
-  //запускается заново
+  
   phoneMask();
   tabs('.stage-header', '.stage-header__block', '.stage-content__block', 'active-header');
   showAnswers();
@@ -34,7 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
   showDesk('.support-items__card', '[data-desc]');
   throwItems('tech-support');
   animateHeaders();
-// localStorage.clear();
-// localStorage.setItem('day', Date.now() + 3600000);
+  //console.log(new Date(Date.now() - (+localStorage.getItem('day')).toLocaleString())); //~Wed Oct 06 2021 18:45:16 GMT+0300 (Москва, стандартное время)
+  // console.log(new Date(Date.now() - (+localStorage.getItem('day'))).toLocaleString());
+   console.log(new Date (+localStorage.getItem('day')).toLocaleString());
+  // if((+localStorage.getItem('day') - Date.now())) > 36000){
+  //    localStorage.clear();
+  // }
+
+ //localStorage.setItem('day', Date.now() + 3600000);
 //console.log(new Date(+localStorage.getItem('day')));
 });

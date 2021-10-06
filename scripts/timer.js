@@ -5,7 +5,8 @@ function timer() {
 
     const timer = document.querySelector('.timer-wrapper'),
        priceTitle = document.querySelectorAll('.price-title'),
-        currentDay = +localStorage.getItem('day');
+        currentDay = +localStorage.getItem('day'),
+          now = Date.now();
     let timeId;
 
     function setDiscountPrice() {
@@ -29,9 +30,9 @@ function timer() {
     function removeDiscountPrice() {
         priceTitle.forEach(card => {
             card.classList.remove('lineTrough');
-            let redPrice = card.nextElementSibling.nextElementSibling;
-            console.log(redPrice);
-            redPrice.remove();
+            // let redPrice = card.nextElementSibling.nextElementSibling;
+            // console.log(redPrice);
+            // redPrice.remove();
         })
     }
 
@@ -61,7 +62,7 @@ function timer() {
         let hoursText = document.querySelector('.timer-content__item.hours .timer-content__item__text');
         let minutesText = document.querySelector('.timer-content__item.minutes .timer-content__item__text');
         let secondsText = document.querySelector('.timer-content__item.seconds .timer-content__item__text');
-        let now = Date.now();
+       
         // console.log(now);
 
         let timeLeft = currentDay - now;
@@ -85,17 +86,17 @@ function timer() {
            
             timer.classList.add('visually-hidden');
             clearInterval(timeId);
-        //    removeDiscountPrice();
+           removeDiscountPrice();
         }
 
     }
 
-    let left = currentDay - Date.now();
-   // console.log(left);
-
+     let left = currentDay - now;
+    console.log(+localStorage.getItem('day') - Date.now()); //left
+runTimer();
 
     if (left > 0) {
-        runTimer();
+        
         timer.classList.remove('visually-hidden');
         setDiscountPrice();
         timeId = setInterval(runTimer, 1000);

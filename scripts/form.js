@@ -1,7 +1,7 @@
 //import './localStorage.js';
 //import myLocalStorage from './localStorage.js';
 
-import localStorageData from "./localStorageData.js";
+
 import timer from "./timer.js";
 
 
@@ -113,12 +113,12 @@ function forms() {
 
 
             if (!localStorage.getItem('day')) {
-                let currentDay = Date.now() + 3600000;
+                let currentDay = Date.now() + 360000;
                 // currentDay = Date.now() + (3600000 * 24);
                 localStorage.setItem('day', currentDay.toString());
-                timer();
+               timer();
             }
-
+ 
 
             // let timeInput = item.querySelector('.timeInput');
             const locaStorageDay = +localStorage.getItem('day');

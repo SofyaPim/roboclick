@@ -20,7 +20,7 @@ function showItems(item, time){
     window.addEventListener('scroll', () => {
         // console.log(yard.getBoundingClientRect().top);
       //  console.log(yard.getBoundingClientRect().bottom);
-        if (yard.getBoundingClientRect().top > 70 && yard.getBoundingClientRect().top < 200 || yard.getBoundingClientRect().bottom < 300) {
+        if (yard.getBoundingClientRect().top > 70 && yard.getBoundingClientRect().top < 600 ) {
             showItems(manager, 0);
             showItems(account, 200);
             showItems(report, 400);
