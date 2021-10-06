@@ -4,16 +4,11 @@ function myLocalStorage() {
     const submitBtns = document.querySelectorAll('[type="submit"]'),
         timer = document.querySelector('.timer-wrapper'),
         discountInput = document.getElementById('discountInput'),
-
         priceTitle = document.querySelectorAll('.price-title');
-
     let timeId;
-
 
     function setDiscountPrice() {
         priceTitle.forEach(card => {
-
-
             let price = card.innerHTML;
             let pattern = /\d+/g;
             price = price.match(pattern).join([]);
@@ -25,8 +20,6 @@ function myLocalStorage() {
             lowPrice.innerHTML = `${discountPrice}$`;
             parent.appendChild(lowPrice);
             card.classList.add('lineTrough');
-
-
 
         })
 
@@ -42,7 +35,7 @@ function myLocalStorage() {
     }
 
 
-    timer.classList.add('visually-hidden');
+    //  timer.classList.add('visually-hidden');
 
     function declOfNum(number, titles) {
         let cases = [2, 0, 1, 1, 1, 2];
@@ -67,7 +60,6 @@ function myLocalStorage() {
         let hoursText = document.querySelector('.timer-content__item.hours .timer-content__item__text');
         let minutesText = document.querySelector('.timer-content__item.minutes .timer-content__item__text');
         let secondsText = document.querySelector('.timer-content__item.seconds .timer-content__item__text');
-
         let now = Date.now();
         let currentDay;
 
@@ -83,34 +75,24 @@ function myLocalStorage() {
             // localStorage.clear();
             console.log(`set day  ${currentDay}`);
         }
+
         let timeLeft = currentDay - now;
-
-
         let days = Math.floor(timeLeft / 1000 / 60 / 60 / 24);
         let hours = Math.floor(timeLeft / 1000 / 60 / 60) % 24;
         let minutes = Math.floor(timeLeft / 1000 / 60) % 60;
         let seconds = Math.floor(timeLeft / 1000) % 60;
 
-
-
         daysVal.textContent = addZero(days);
         hoursVal.textContent = addZero(hours);
         minutesVal.textContent = addZero(minutes);
         secondsVal.textContent = addZero(seconds);
-
+        timer.classList.remove('visually-hidden');
         daysText.textContent = declOfNum(days, ['день', 'дня', 'дней']);
         hoursText.textContent = declOfNum(hours, ['час', 'часа', 'часов']);
         minutesText.textContent = declOfNum(minutes, ['минута', 'минуты', 'минут']);
         secondsText.textContent = declOfNum(seconds, ['секунда', 'секунды', 'секунд']);
 
-
-        if (timeLeft >= 0) {
-
-            timer.classList.remove('visually-hidden');
-
-
-
-        } else if (timeLeft <= 0) {
+        if (timeLeft <= 0) {
 
             localStorage.clear();
             daysVal.textContent = "00";
@@ -120,17 +102,13 @@ function myLocalStorage() {
             timer.classList.add('visually-hidden');
             clearInterval(timeId);
             removeDiscountPrice();
-
-
-
         }
 
-
-
     }
+
+
     submitBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-
             runTimer();
             setDiscountPrice();
             timeId = setInterval(runTimer, 1000);
