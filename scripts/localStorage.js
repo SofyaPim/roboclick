@@ -6,32 +6,39 @@ function myLocalStorage() {
         discountInput = document.getElementById('discountInput'),
 
         priceTitle = document.querySelectorAll('.price-title');
+
     let timeId;
+
 
     function setDiscountPrice() {
         priceTitle.forEach(card => {
 
 
             let price = card.innerHTML;
-
             let pattern = /\d+/g;
             price = price.match(pattern).join([]);
             let discountPrice = price - (price * 5) / 100;
-            console.log(price);
-            console.log(discountPrice);
             // card.innerHTML = `${discountPrice}$`;//
             let lowPrice = document.createElement('h2');
             lowPrice.classList.add('lowPrice');
             let parent = card.parentNode;
             lowPrice.innerHTML = `${discountPrice}$`;
             parent.appendChild(lowPrice);
-           card.classList.add('lineTrough');
-           
+            card.classList.add('lineTrough');
+
 
 
         })
 
 
+    }
+
+    function removeDiscountPrice() {
+        priceTitle.forEach(card => {
+            card.classList.remove('lineTrough');
+            let redPrice = card.nextElementSibling.nextElementSibling;
+            redPrice.remove();
+        })
     }
 
 
@@ -70,9 +77,10 @@ function myLocalStorage() {
             currentDay = localStorage.getItem('day');
             console.log(`day in Storage ${currentDay}`);
         } else {
-            // currentDay = Date.now() + 2000 ;
-            currentDay = Date.now() + (3600000 * 24);
+            currentDay = Date.now() + 2000;
+            //  currentDay = Date.now() + (3600000 * 24);
             localStorage.setItem('day', currentDay.toString());
+            // localStorage.clear();
             console.log(`set day  ${currentDay}`);
         }
         let timeLeft = currentDay - now;
@@ -105,14 +113,14 @@ function myLocalStorage() {
         } else if (timeLeft <= 0) {
 
             localStorage.clear();
-
             daysVal.textContent = "00";
             hoursVal.textContent = "00";
             minutesVal.textContent = "00";
             secondsVal.textContent = "00";
-            //   setDiscountPrice = function () {}
-            clearInterval(timeId);
             timer.classList.add('visually-hidden');
+            clearInterval(timeId);
+            removeDiscountPrice();
+
 
 
         }
@@ -124,6 +132,7 @@ function myLocalStorage() {
         btn.addEventListener('click', () => {
 
             runTimer();
+            setDiscountPrice();
             timeId = setInterval(runTimer, 1000);
             timer.classList.remove('visually-hidden');
             let localDay = new Date(+localStorage.getItem('day'));
@@ -131,6 +140,7 @@ function myLocalStorage() {
             let realTime = localDay.toString().slice(7, 24);
             discountInput.value = realTime;
             console.log(realTime);
+
         });
     });
 

@@ -176,7 +176,7 @@ p {
   left: 0;
   right: 0;
   background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #5333ED;
-  z-index: 199;
+  z-index: 99;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -1140,7 +1140,7 @@ p {
 .wrapper .prices .card-wrapper .wrap .card .price .lowPrice {
   text-align: center;
   position: absolute;
-  z-index: 120;
+  z-index: 90;
   padding-top: 0px;
   left: 15%;
   color: #f54906;

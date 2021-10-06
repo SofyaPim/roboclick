@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   closeMsg('timer-wrapper', 'timer-btn');
   throwItems('tech-support');
   animateHeaders();
+  
 
 }); 
  
