@@ -30,7 +30,6 @@ function modal(triggerSelector, modalSelector, closeSelector) {
     function closeForm(message, form, overlay) {
 
         message.remove();
-
         form.style.cssText = `transform: scale(0);
                                     opacity: 0;`;
 
@@ -47,14 +46,12 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
         item.addEventListener('click', (e) => {
 
-              let title = item.parentElement.parentElement;
+            let title = item.parentElement.parentElement;
             console.log();
-            if(e.target.innerHTML.trim() === 'подробнее' || e.target.innerHTML.trim() === 'заказать обратный звонок'){
+            if (e.target.innerHTML.trim() === 'подробнее' || e.target.innerHTML.trim() === 'заказать обратный звонок') {
                 modalHeader.innerHTML = `Заказать обратный звонок `;
 
             }
-
-          
 
             if (title.querySelector('.card-title')) {
 
@@ -70,12 +67,10 @@ function modal(triggerSelector, modalSelector, closeSelector) {
                 item.style.display = 'none';
             })
 
-           
-           
- modal.style.display = 'block';
- // modal.style.cssText = `transform: scale(1)`;  
+
+            modal.style.display = 'block';
+
             setTimeout(() => {
-           
                 formPopup.style.cssText = `transform: scale(1);
                 opacity: 1;`;
 

@@ -8,7 +8,7 @@ function animateHeaders() {
             let parentTop = parent.getBoundingClientRect().top;
 //console.log(animateItems[3].parentNode.getBoundingClientRect().top);
 //console.log(animateItems[3]);
-            if ( parentTop > 500 && parentTop < 600) {
+            if ( parentTop > 50 && parentTop < 600) {
                setTimeout(() => {
                    item.classList.remove('translate');
                }, 100)

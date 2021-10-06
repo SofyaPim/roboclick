@@ -9,28 +9,32 @@ import showStatistic from "./showStatistic.js";
 import mySwiper from "./swiper.js";
 import "./mapbasics.js";
 import showDesk from "./showDesc.js";
-import myLocalStorage from "./localStorage.js";
+import timer from "./timer.js";
 import closeMsg from "./closeMessage.js";
 import throwItems from "./throwItems.js";
 import animateHeaders from "./animateHeaders.js";
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
- showSectionName('section', '.nav-title');
+  showSectionName('section', '.nav-title');
   showNav('.nav-burger', '.nav-bar');
   modal('.button', '.overlay', '.popup__close', '.tariff-name');
   forms();
+  closeMsg('timer-wrapper', 'timer-btn');
+  
+    timer(); 
+  
+  //запускается заново
   phoneMask();
   tabs('.stage-header', '.stage-header__block', '.stage-content__block', 'active-header');
   showAnswers();
   showStatistic('#hints-numbers');
   mySwiper();
   showDesk('.support-items__card', '[data-desc]');
-  myLocalStorage();
-  closeMsg('timer-wrapper', 'timer-btn');
   throwItems('tech-support');
   animateHeaders();
-  
-
-}); 
- 
+// localStorage.clear();
+// localStorage.setItem('day', Date.now() + 3600000);
+//console.log(new Date(+localStorage.getItem('day')));
+});

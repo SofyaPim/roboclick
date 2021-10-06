@@ -11,11 +11,11 @@ foreach ($_POST as $key => $val) {
 }
 
 $text .= "\n" . $_SERVER['REMOTE_ADDR'];
-$text .= "\n" . date('d.m.y H:i:s');
+ $text .= "\n" . date('d.m.y H:i:s');
 
 $param = [
     "chat_id" => $chat_id,
-    "text" => $text
+     "text" => $text
 ];
 
 $url = "https://api.telegram.org/bot" . $tg_bot_token . "/sendMessage?" . http_build_query($param);

@@ -39,7 +39,7 @@ function showSectionName(section, headerNav) {
 
 
 
-  })
+  },{passive: true})
 }
 
 export default showSectionName;
