@@ -281,7 +281,7 @@ p {
   text-align: center;
   transition: opacity 0.3s ease-in;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: -2rem;
 }
 
 .gift-icon {
@@ -1139,12 +1139,9 @@ p {
 }
 .wrapper .prices .card-wrapper .wrap .card .price .lowPrice {
   text-align: center;
-  position: absolute;
   z-index: 90;
-  padding-top: 0px;
-  right: 0;
+  margin-bottom: 1rem;
   color: #363739d3;
-  top: -10%;
 }
 .wrapper .prices .card-wrapper .wrap .card .blue-rect {
   position: absolute;
@@ -1302,12 +1299,9 @@ p {
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price .lowPrice {
   text-align: center;
-  position: absolute;
-  z-index: 120;
-  padding-top: 0px;
-  right: 0;
+  z-index: 90;
+  margin-bottom: 1rem;
   color: #363739d3;
-  top: 10%;
 }
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h3,
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card h2 {
@@ -2095,7 +2089,7 @@ p {
     padding-left: 0;
   }
   .wrapper .prices .card-wrapper .wrap .card h2 {
-    font-size: calc(1.5rem + 1vw);
+    font-size: calc(1.2rem + 1vw);
   }
   .wrapper .prices .card-wrapper .wrap .card .button {
     box-shadow: initial;
@@ -2730,9 +2724,6 @@ p {
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price .price-title {
     padding-top: 0;
     padding-bottom: 0;
-  }
-  .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price .lowPrice {
-    top: -10%;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .gift-icon.small {
     top: 2rem;
