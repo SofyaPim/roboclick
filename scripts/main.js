@@ -14,7 +14,7 @@ import closeMsg from "./closeMessage.js";
 import throwItems from "./throwItems.js";
 import animateHeaders from "./animateHeaders.js";
 
-import removeRedPrices from "./removeRedPrices.js";
+//import removeRedPrices from "./removeRedPrices.js";
 import setRedPrices from "./setRedPrices.js";
 
 
@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (+localStorage.getItem('day') - Date.now() < 0) { //запускает таймер на пустой форме?
 
     clearInterval(showTimer);
-    removeRedPrices();
+  //  console.log('clearInterval');
+   // removeRedPrices();
 
 
   } else {

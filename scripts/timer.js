@@ -61,8 +61,10 @@ function timer() {
 
 
     } else {
+
         timer.classList.add('visually-hidden');
-        removeRedPrices();
+        console.log('call removeRedPrices');
+         removeRedPrices();
     }
 
 

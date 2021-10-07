@@ -1,16 +1,20 @@
 function removeRedPrices() {
     const priceTitle = document.querySelectorAll('.price-title');
+
     console.log('remove redPrice');
 
     priceTitle.forEach(card => {
         card.classList.remove('lineTrough');
+        // let discountPrice = card.closest('.lowPrice');
+        // console.log(discountPrice);
+         card.style.opacity = 1;
 
-        card.style.opacity = 1;
-        let redPrice = card.nextElementSibling.nextElementSibling;
-
-        if (redPrice) {
-            redPrice.remove();
-        }
+        // if (discountPrice) {
+        //     discountPrice.remove();
+        // }
+        
+        card.previousElementSibling.remove();
+console.log(card.previousElementSibling);
     })
 
 }

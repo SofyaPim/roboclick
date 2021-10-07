@@ -9,12 +9,10 @@ function setRedPrices() {
         price = price.match(pattern).join([]);
         let discountPrice = price - (price * 5) / 100;
         let lowPrice = document.createElement('h2');
-        lowPrice.classList.add('lowPrice');
-      //  let parent = card.parentNode;
+       
         lowPrice.innerHTML = `${discountPrice}$`;
-     //   parent.appendChild(lowPrice);
         let newItem = card.insertAdjacentHTML('beforebegin', `<h2 class="lowPrice"> ${discountPrice}$</h2>`);
-          console.log(newItem);
+        console.log(newItem);
         card.style.opacity = .4;
         card.classList.add('lineTrough');
 
