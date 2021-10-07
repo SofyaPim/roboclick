@@ -147,7 +147,7 @@ function forms() {
             }
             // if (inputsForm.forEach( item => {item.value != ''})) {
 
-              
+
             //     console.log('not empty');
             // }
             formData.delete('agreement');
@@ -169,9 +169,12 @@ function forms() {
                 })
                 .finally(() => {
                     clearInputs(inputs);
-  timer();
-                setInterval(timer, 1000);
-                setRedPrices();
+
+                    if (+localStorage.getItem('day') - Date.now() > 0) {
+                        timer();
+                        setInterval(timer, 1000);
+                        setRedPrices();
+                    }
                     setTimeout(() => {
                         statusMessage.remove();
                     }, 3000);

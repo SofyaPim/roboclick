@@ -18,7 +18,7 @@ console.log('set red Price');
             lowPrice.innerHTML = `${discountPrice}$`;
             parent.appendChild(lowPrice);
             //  console.log(lowPrice);
-            card.style.opacity = .7;
+            card.style.opacity = .4;
             card.classList.add('lineTrough');
 
         })

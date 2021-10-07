@@ -1,4 +1,5 @@
-import setRedPrices from "./setRedPrices.js";
+import removeRedPrices from "./removeRedPrices.js";
+//import setRedPrices from "./setRedPrices.js";
 function timer() {
 
   
@@ -56,11 +57,11 @@ function timer() {
     }
 
     let left = currentDay - now;
-    console.log(+localStorage.getItem('day') - Date.now()); //left
+  
 
   
     if (left > 0) {
-
+  console.log(+localStorage.getItem('day') - Date.now()); //left
        
         runTimer();
    
@@ -69,7 +70,7 @@ function timer() {
 
     } else {
         timer.classList.add('visually-hidden');
-        
+        removeRedPrices();
     }
 
 

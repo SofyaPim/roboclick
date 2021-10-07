@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function clearLocalStorage() {
-if(+localStorage.getItem('day') - Date.now() < -250000){ //86 400 000 //24hours
+if(+localStorage.getItem('day') - Date.now() < -30000){ //86 400 000 //24hours
    localStorage.clear();
 }
    
