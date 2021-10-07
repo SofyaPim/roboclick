@@ -41,24 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     clearInterval(showTimer);
     removeRedPrices();
-    
+
 
   } else {
-    showTimer = setInterval(timer, 1000); 
+    showTimer = setInterval(timer, 1000);
     setRedPrices();
-    
-     
+
+
   }
 
   function clearLocalStorage() {
-if(+localStorage.getItem('day') - Date.now() < -30000){ //86 400 000 //24hours
-   localStorage.clear();
-}
-   
-    
+    if (+localStorage.getItem('day') - Date.now() < -30000) { //86 400 000 //24hours
+      localStorage.clear();
+    }
+
+
   }
   clearLocalStorage();
- //localStorage.clear();//test
+  //localStorage.clear();//test
   // console.log(((+localStorage.getItem('day')) - Date.now()  )); //~Wed Oct 06 2021 18:45:16 GMT+0300 (Москва, стандартное время)
   console.log(((+localStorage.getItem('day')) - Date.now()));
 

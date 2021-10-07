@@ -1,9 +1,4 @@
-//import './localStorage.js';
-//import myLocalStorage from './localStorage.js';
-
-
 import timer from "./timer.js";
-
 import setRedPrices from "./setRedPrices.js";
 
 function forms() {
@@ -55,9 +50,7 @@ function forms() {
                     prev.style.opacity = 0;
                 }
             })
-            // if (item.value === '') {
-            //     addErr();
-            // }
+
             switch (item.name) {
                 case 'phone':
                     if (!phoneValidate(item)) {
@@ -145,16 +138,12 @@ function forms() {
                 let tarifTitle = tarif.slice(22);
                 formData.append("Тариф", tarifTitle);
             }
-            // if (inputsForm.forEach( item => {item.value != ''})) {
 
-
-            //     console.log('not empty');
-            // }
             formData.delete('agreement');
             formData.append('Время окончания скидки', submitDay);
             statusMessage.textContent = message.loading;
 
-            //console.log(formData);
+
 
             //  !!!==============================
             postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php

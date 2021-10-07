@@ -1,20 +1,12 @@
 import removeRedPrices from "./removeRedPrices.js";
-//import setRedPrices from "./setRedPrices.js";
+
 function timer() {
 
-  
-
-    // console.log(now);
-
-
-
     const timer = document.querySelector('.timer-wrapper'),
-        // priceTitle = document.querySelectorAll('.price-title'),
         currentDay = +localStorage.getItem('day'),
         now = Date.now();
-    // let timeId;
 
-  timer.classList.remove('visually-hidden');
+    timer.classList.remove('visually-hidden');
 
 
     function declOfNum(number, titles) {
@@ -30,14 +22,14 @@ function timer() {
     };
 
     const runTimer = () => {
-  let daysVal = document.querySelector('.timer-content__item.days .timer-content__item__numbers');
-    let hoursVal = document.querySelector('.timer-content__item.hours .timer-content__item__numbers');
-    let minutesVal = document.querySelector('.timer-content__item.minutes .timer-content__item__numbers');
-    let secondsVal = document.querySelector('.timer-content__item.seconds .timer-content__item__numbers');
-    let daysText = document.querySelector('.timer-content__item.days .timer-content__item__text');
-    let hoursText = document.querySelector('.timer-content__item.hours .timer-content__item__text');
-    let minutesText = document.querySelector('.timer-content__item.minutes .timer-content__item__text');
-    let secondsText = document.querySelector('.timer-content__item.seconds .timer-content__item__text');
+        let daysVal = document.querySelector('.timer-content__item.days .timer-content__item__numbers');
+        let hoursVal = document.querySelector('.timer-content__item.hours .timer-content__item__numbers');
+        let minutesVal = document.querySelector('.timer-content__item.minutes .timer-content__item__numbers');
+        let secondsVal = document.querySelector('.timer-content__item.seconds .timer-content__item__numbers');
+        let daysText = document.querySelector('.timer-content__item.days .timer-content__item__text');
+        let hoursText = document.querySelector('.timer-content__item.hours .timer-content__item__text');
+        let minutesText = document.querySelector('.timer-content__item.minutes .timer-content__item__text');
+        let secondsText = document.querySelector('.timer-content__item.seconds .timer-content__item__text');
 
         let timeLeft = currentDay - now;
         let days = Math.floor(timeLeft / 1000 / 60 / 60 / 24);
@@ -57,15 +49,15 @@ function timer() {
     }
 
     let left = currentDay - now;
-  
 
-  
+
+
     if (left > 0) {
-  console.log(+localStorage.getItem('day') - Date.now()); //left
-       
+        console.log(+localStorage.getItem('day') - Date.now()); //left
+
         runTimer();
-   
-  timer.classList.remove('visually-hidden');
+
+        timer.classList.remove('visually-hidden');
 
 
     } else {
