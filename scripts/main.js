@@ -7,12 +7,13 @@ import phoneMask from "../scripts/phone-mask.js";
 import forms from "../scripts/form.js";
 import showStatistic from "./showStatistic.js";
 import mySwiper from "./swiper.js";
-import "./mapbasics.js";
+// import "./mapbasics.js";
 import showDesk from "./showDesc.js";
 import timer from "./timer.js";
 import closeMsg from "./closeMessage.js";
 import throwItems from "./throwItems.js";
 import animateHeaders from "./animateHeaders.js";
+import changePrices from "./changePrices.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,10 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
   modal('.button', '.overlay', '.popup__close', '.tariff-name');
   forms();
   closeMsg('timer-wrapper', 'timer-btn');
-  
-    timer(); 
-  
-  
   phoneMask();
   tabs('.stage-header', '.stage-header__block', '.stage-content__block', 'active-header');
   showAnswers();
@@ -34,13 +31,31 @@ document.addEventListener("DOMContentLoaded", () => {
   showDesk('.support-items__card', '[data-desc]');
   throwItems('tech-support');
   animateHeaders();
-  //console.log(new Date(Date.now() - (+localStorage.getItem('day')).toLocaleString())); //~Wed Oct 06 2021 18:45:16 GMT+0300 (Москва, стандартное время)
-  // console.log(new Date(Date.now() - (+localStorage.getItem('day'))).toLocaleString());
-   console.log(new Date (+localStorage.getItem('day')).toLocaleString());
-  // if((+localStorage.getItem('day') - Date.now())) > 36000){
-  //    localStorage.clear();
-  // }
+  changePrices();
 
- //localStorage.setItem('day', Date.now() + 3600000);
-//console.log(new Date(+localStorage.getItem('day')));
+  let showTimer;
+
+  if (+localStorage.getItem('day') - Date.now() < 0) {
+
+    clearInterval(showTimer);
+
+  } else {
+    showTimer = setInterval(timer, 1000); 
+     changePrices();
+  }
+
+  function clearLocalStorage() {
+if(+localStorage.getItem('day') - Date.now() < -250000){ //86 400 000 //24hours
+   localStorage.clear();
+}
+   
+    
+  }
+  clearLocalStorage();
+ // localStorage.clear();//test
+  // console.log(((+localStorage.getItem('day')) - Date.now()  )); //~Wed Oct 06 2021 18:45:16 GMT+0300 (Москва, стандартное время)
+  console.log(((+localStorage.getItem('day')) - Date.now()));
+
+  // console.log(new Date (+localStorage.getItem('day')).toLocaleString());
+
 });

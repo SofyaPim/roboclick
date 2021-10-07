@@ -3,7 +3,7 @@
 
 
 import timer from "./timer.js";
-
+import changePrices from "./changePrices.js";
 
 function forms() {
     const form = document.querySelectorAll('form'),
@@ -94,7 +94,7 @@ function forms() {
         })
         if (err <= 0) {
 
-
+  
             return true;
 
         } else {
@@ -108,25 +108,26 @@ function forms() {
 
         item.addEventListener('submit', (e) => {
             e.preventDefault();
+       timer();
+  setInterval(timer, 1000); 
+  changePrices();
 
-            //запускает таймер
-
-
+            //запускает таймер & setItem
             if (!localStorage.getItem('day')) {
-                let currentDay = Date.now() + 360000;
-                // currentDay = Date.now() + (3600000 * 24);
-                localStorage.setItem('day', currentDay.toString());
-               timer();
-            }
- 
+            //  let currentDay = Date.now() + 3600000;//hour
+               let currentDay = Date.now() + 900000;//15min
 
-            // let timeInput = item.querySelector('.timeInput');
+             //   let currentDay = Date.now() + (3600000 * 24);
+                localStorage.setItem('day', currentDay.toString());
+              
+    
+            }
+  
+//create field time to formData
             const locaStorageDay = +localStorage.getItem('day');
-            // console.log(locaStorageDay);
             const day = new Date(locaStorageDay);
             let submitDay = day.toString().slice(3, 24);
-            // console.log(submitDay);
-          // timeInput.value = submitDay;
+       
 
 
 

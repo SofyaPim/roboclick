@@ -176,7 +176,7 @@ p {
   left: 0;
   right: 0;
   background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #5333ED;
-  z-index: 99;
+  z-index: 109;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -1142,7 +1142,7 @@ p {
   position: absolute;
   z-index: 90;
   padding-top: 0px;
-  left: 15%;
+  right: 0;
   color: #f54906;
   top: -10%;
 }
@@ -1305,7 +1305,7 @@ p {
   position: absolute;
   z-index: 120;
   padding-top: 0px;
-  left: 30%;
+  right: 0;
   color: #f54906;
   top: 10%;
 }
