@@ -3,7 +3,8 @@
 
 
 import timer from "./timer.js";
-import changePrices from "./changePrices.js";
+
+import setRedPrices from "./setRedPrices.js";
 
 function forms() {
     const form = document.querySelectorAll('form'),
@@ -54,7 +55,9 @@ function forms() {
                     prev.style.opacity = 0;
                 }
             })
-
+            // if (item.value === '') {
+            //     addErr();
+            // }
             switch (item.name) {
                 case 'phone':
                     if (!phoneValidate(item)) {
@@ -94,7 +97,6 @@ function forms() {
         })
         if (err <= 0) {
 
-  
             return true;
 
         } else {
@@ -108,26 +110,24 @@ function forms() {
 
         item.addEventListener('submit', (e) => {
             e.preventDefault();
-       timer();
-  setInterval(timer, 1000); 
-  changePrices();
+
 
             //запускает таймер & setItem
             if (!localStorage.getItem('day')) {
-            //  let currentDay = Date.now() + 3600000;//hour
-               let currentDay = Date.now() + 900000;//15min
+                //  let currentDay = Date.now() + 3600000;//hour
+                let currentDay = Date.now() + 300000; //5min
 
-             //   let currentDay = Date.now() + (3600000 * 24);
+                //   let currentDay = Date.now() + (3600000 * 24);
                 localStorage.setItem('day', currentDay.toString());
-              
-    
+
+
             }
-  
-//create field time to formData
+
+            //create field time to formData
             const locaStorageDay = +localStorage.getItem('day');
             const day = new Date(locaStorageDay);
             let submitDay = day.toString().slice(3, 24);
-       
+
 
 
 
@@ -145,17 +145,21 @@ function forms() {
                 let tarifTitle = tarif.slice(22);
                 formData.append("Тариф", tarifTitle);
             }
+            // if (inputsForm.forEach( item => {item.value != ''})) {
 
+              
+            //     console.log('not empty');
+            // }
             formData.delete('agreement');
-            formData.append('Время окончания скидки', submitDay );
+            formData.append('Время окончания скидки', submitDay);
             statusMessage.textContent = message.loading;
 
-//console.log(formData);
+            //console.log(formData);
 
-          //  !!!==============================
+            //  !!!==============================
             postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
                 .then(res => {
-                   console.log(res);
+                    console.log(res);
 
                     statusMessage.textContent = message.success;
                 })
@@ -165,7 +169,9 @@ function forms() {
                 })
                 .finally(() => {
                     clearInputs(inputs);
-
+  timer();
+                setInterval(timer, 1000);
+                setRedPrices();
                     setTimeout(() => {
                         statusMessage.remove();
                     }, 3000);

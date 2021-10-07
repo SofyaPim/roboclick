@@ -13,7 +13,9 @@ import timer from "./timer.js";
 import closeMsg from "./closeMessage.js";
 import throwItems from "./throwItems.js";
 import animateHeaders from "./animateHeaders.js";
-import changePrices from "./changePrices.js";
+
+import removeRedPrices from "./removeRedPrices.js";
+import setRedPrices from "./setRedPrices.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,17 +33,21 @@ document.addEventListener("DOMContentLoaded", () => {
   showDesk('.support-items__card', '[data-desc]');
   throwItems('tech-support');
   animateHeaders();
-  changePrices();
+
 
   let showTimer;
 
-  if (+localStorage.getItem('day') - Date.now() < 0) {
+  if (+localStorage.getItem('day') - Date.now() < 0) { //запускает таймер на пустой форме?
 
     clearInterval(showTimer);
+    removeRedPrices();
+    
 
   } else {
     showTimer = setInterval(timer, 1000); 
-     changePrices();
+    setRedPrices();
+    
+     
   }
 
   function clearLocalStorage() {
@@ -52,7 +58,7 @@ if(+localStorage.getItem('day') - Date.now() < -250000){ //86 400 000 //24hour
     
   }
   clearLocalStorage();
- // localStorage.clear();//test
+ //localStorage.clear();//test
   // console.log(((+localStorage.getItem('day')) - Date.now()  )); //~Wed Oct 06 2021 18:45:16 GMT+0300 (Москва, стандартное время)
   console.log(((+localStorage.getItem('day')) - Date.now()));
 

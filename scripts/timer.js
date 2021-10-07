@@ -1,3 +1,4 @@
+import setRedPrices from "./setRedPrices.js";
 function timer() {
 
   
@@ -68,7 +69,7 @@ function timer() {
 
     } else {
         timer.classList.add('visually-hidden');
-   
+        
     }
 
 
