@@ -19,6 +19,7 @@ function changePrices() {
             lowPrice.innerHTML = `${discountPrice}$`;
             parent.appendChild(lowPrice);
             //  console.log(lowPrice);
+            card.style.opacity = .7;
             card.classList.add('lineTrough');
 
         })
@@ -31,7 +32,7 @@ function changePrices() {
         priceTitle.forEach(card => {
             card.classList.remove('lineTrough');
 
-
+            card.style.opacity = 1;
             let redPrice = card.nextElementSibling.nextElementSibling;
             //  console.log(redPrice);
             if (redPrice) {

@@ -1863,7 +1863,7 @@ p {
     padding-left: 0;
   }
   .wrapper .prices .card-wrapper .wrap .card h2 {
-    font-size: calc(1.5rem + 1vw);
+    font-size: calc(1.2rem + 1vw);
   }
   .wrapper .tech-support__items .support-items__card h3 {
     font-size: calc(1rem + .5vw);
