@@ -9,6 +9,22 @@ function forms() {
         success: 'Спасибо, скоро с Вами свяжемся',
         failure: 'Что-то пошло не так'
     }
+
+    // function closeForm( form, overlay) {
+
+        
+    //     form.style.cssText = `transform: scale(0);
+    //                                 opacity: 0;`;
+
+    //     setTimeout(() => {
+    //         overlay.style.display = 'none';
+    //     }, 200)
+
+    //     document.body.style.overflow = '';
+
+    // }
+
+
     const postData = async (url, data) => {
         let res = await fetch(url, {
             method: "POST",
@@ -21,6 +37,7 @@ function forms() {
             item.value = '';
         })
     }
+
 
     function phoneValidate(input) {
         let value = input.value;
