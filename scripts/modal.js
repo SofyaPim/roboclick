@@ -11,8 +11,8 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         priceTitle = document.createElement('h5'),
         inputs = document.querySelectorAll('._req'),
         formPopup = document.querySelector('.popup');
-        smallHeader.classList.add('_smalHeader');
-        priceTitle.classList.add('_priceTitle');
+    smallHeader.classList.add('_smalHeader');
+    priceTitle.classList.add('_priceTitle');
 
     function clearInputs(items) {
 
@@ -64,20 +64,25 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
             }
             if (title.querySelector('.price-title')) {
-               
-                    let oldPrice = title.querySelector('.price-title').innerText;
-                    let pattern = /\d+/g;
-                    oldPrice = oldPrice.match(pattern).join([]);
-let newPrice = oldPrice - (oldPrice * 5) / 100;
-                  priceTitle.innerHTML = ` <p class="_price"> Цена без скидки ${oldPrice}$ </p> <p class="_discount-price"> Цена со скидкой составляет ${newPrice}$ </p> `;
-               
-                  smallHeader.after(priceTitle);
 
-               
-               
+                let oldPrice = title.querySelector('.price-title').innerText;
+                let pattern = /\d+/g;
+                oldPrice = oldPrice.match(pattern).join([]);
+                let newPrice = oldPrice - (oldPrice * 5) / 100;
+                if (+localStorage.getItem('day') - Date.now() < 0) {
+                    priceTitle.innerHTML = ` <p class="_price"> Цена без скидки ${oldPrice}$ </p> `;
+                } else {
+                    priceTitle.innerHTML = ` <p class="_price"> Цена без скидки ${oldPrice}$ </p> <p class="_discount-price"> Цена со скидкой составляет ${newPrice}$ </p> `;
+
+                }
+
+                smallHeader.after(priceTitle);
+
+
+
 
             }
-            
+
             modalProto.forEach(item => {
                 item.style.display = 'none';
             })
@@ -139,7 +144,6 @@ let newPrice = oldPrice - (oldPrice * 5) / 100;
 
             modalProto.forEach(item => {
 
-                //  item.style.display = 'none';
                 clearInputs(inputs);
 
             })

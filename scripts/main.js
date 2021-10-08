@@ -14,6 +14,7 @@ import closeMsg from "./closeMessage.js";
 import throwItems from "./throwItems.js";
 import animateHeaders from "./animateHeaders.js";
 import setRedPrices from "./setRedPrices.js";
+import removeRedPrices from "./removeRedPrices.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,20 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let showTimer;
 
-  if (+localStorage.getItem('day') - Date.now() < 0) { //запускает таймер на пустой форме?
+  if (+localStorage.getItem('day') - Date.now() < 0) {
+    console.log(`разница ${+localStorage.getItem('day') - Date.now()}`);
     clearInterval(showTimer);
+
+  
   } else {
     showTimer = setInterval(timer, 1000);
     setRedPrices();
   }
 
   function clearLocalStorage() {
-    if (+localStorage.getItem('day') - Date.now() < -30000) { //86 400 000 //24hours
+    if (+localStorage.getItem('day') - Date.now() < -3000000) { //86 400 000 //24hours
       localStorage.clear();
     }
   }
   clearLocalStorage();
-  //localStorage.clear();//test
+ // localStorage.clear();//test
+ // removeRedPrices();//test
   // console.log(((+localStorage.getItem('day')) - Date.now()  )); //~Wed Oct 06 2021 18:45:16 GMT+0300 (Москва, стандартное время)
   console.log(((+localStorage.getItem('day')) - Date.now()));
   // console.log(new Date (+localStorage.getItem('day')).toLocaleString());

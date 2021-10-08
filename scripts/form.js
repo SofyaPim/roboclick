@@ -68,7 +68,7 @@ function forms() {
             })
 
             switch (item.name) {
-                case 'Tелефон':
+                case 'телефон':
                     if (!phoneValidate(item)) {
                         let sibling = item.nextElementSibling;
                         addErr();
@@ -76,7 +76,7 @@ function forms() {
                         sibling.style.opacity = 1;
                     }
                     break;
-                case 'Имя':
+                case 'имя':
                     if (item.value.length === 0) {
                         let sibling = item.nextElementSibling;
                         addErr();
@@ -92,7 +92,7 @@ function forms() {
                         prev.style.opacity = 1;
                     }
                     break;
-                case 'Почта':
+                case 'почта':
                     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(item.value)) {
                         let sibling = item.nextElementSibling;
                         addErr();
@@ -130,12 +130,15 @@ function forms() {
             }
 
             //create field time to formData
+
             const locaStorageDay = +localStorage.getItem('day');
             const day = new Date(locaStorageDay);
             let submitDay = day.toString().slice(3, 24);
+            
             let inputsForm = item.querySelectorAll('input');
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
+
             let bodyMessage = document.createElement('div');
             bodyMessage.classList.add('afterSubmitMsg');
 
@@ -151,15 +154,15 @@ function forms() {
                 formData.append("Тариф", tarifTitle);
                 //==in future??!!
 
-                 
+
             }
-            if(item.querySelector('._discount-price')){
+            if (item.querySelector('._discount-price')) {
                 let price = item.querySelector('._discount-price').innerHTML;
                 let pattern = /\d+/g;
                 price = price.match(pattern).join([]);
-                formData.append('Цена', price );
+                formData.append('Цена', `${price}$`.toString());
             }
-  
+
 
             formData.delete('agreement');
             formData.append('Время окончания скидки', submitDay);
@@ -172,6 +175,7 @@ function forms() {
                     console.log(res);
                     statusMessage.textContent = message.success;
                     bodyMessage.textContent = message.success;
+
 
                 })
                 .catch((err) => {
