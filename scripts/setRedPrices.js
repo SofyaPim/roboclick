@@ -11,8 +11,11 @@ function setRedPrices() {
         let lowPrice = document.createElement('h2');
        
         lowPrice.innerHTML = `${discountPrice}$`;
-        let newItem = card.insertAdjacentHTML('beforebegin', `<h2 class="lowPrice"> ${discountPrice}$</h2>`);
-        console.log(newItem);
+        if(!card.previousElementSibling){
+            card.insertAdjacentHTML('beforebegin', `<h2 class="lowPrice"> ${discountPrice}$</h2>`);
+        }
+         console.log(card.previousElementSibling);
+     //   console.log(newItem);
         card.style.opacity = .4;
         card.classList.add('lineTrough');
 

@@ -10,19 +10,20 @@ function forms() {
         failure: 'Что-то пошло не так'
     }
 
-    // function closeForm( form, overlay) {
+    function closeForm(form, overlay) {
 
-        
-    //     form.style.cssText = `transform: scale(0);
-    //                                 opacity: 0;`;
 
-    //     setTimeout(() => {
-    //         overlay.style.display = 'none';
-    //     }, 200)
+        form.style.cssText = `transform: scale(0);
+                                    opacity: 0;`;
 
-    //     document.body.style.overflow = '';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 200)
 
-    // }
+        document.body.style.overflow = '';
+
+    }
+
 
 
     const postData = async (url, data) => {
@@ -121,15 +122,12 @@ function forms() {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
 
-
             //запускает таймер & setItem
             if (!localStorage.getItem('day')) {
                 //  let currentDay = Date.now() + 3600000;//hour
                 let currentDay = Date.now() + 300000; //5min
-
                 //   let currentDay = Date.now() + (3600000 * 24);
                 localStorage.setItem('day', currentDay.toString());
-
 
             }
 
@@ -138,13 +136,15 @@ function forms() {
             const day = new Date(locaStorageDay);
             let submitDay = day.toString().slice(3, 24);
 
-
-
-
             let inputsForm = item.querySelectorAll('input');
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
+             let bodyMessage = document.createElement('div');
+            bodyMessage.classList.add('afterSubmitMsg');
+
             item.appendChild(statusMessage);
+          //  item.append(statusMessage);
+        
             if (!Validate(inputsForm)) {
                 return;
             }
@@ -158,16 +158,21 @@ function forms() {
 
             formData.delete('agreement');
             formData.append('Время окончания скидки', submitDay);
-            statusMessage.textContent = message.loading;
 
+             statusMessage.textContent = message.loading;
 
+ 
 
             //  !!!==============================
             postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
                 .then(res => {
                     console.log(res);
-
+                     
                     statusMessage.textContent = message.success;
+                    bodyMessage.textContent = message.success; 
+                  
+            
+
                 })
                 .catch((err) => {
                     console.log(err);
@@ -181,9 +186,30 @@ function forms() {
                         setInterval(timer, 1000);
                         setRedPrices();
                     }
+                //     statusMessage.style.cssText = `
+                //     position: absolute;
+
+                //     width: 100%;
+                //     height: 50%;
+                //      right: 0;
+                //      top: 0;
+                    
+                //      background-color: #9d9fa500;
+                //      display: flex;
+                //      align-items: center;
+                //   justify-content: center;
+                //   font-size: 4rem;
+
+                //     `;
+ document.body.append(bodyMessage);
                     setTimeout(() => {
                         statusMessage.remove();
-                    }, 3000);
+                        bodyMessage.remove();
+                    }, 2000);
+
+                   setTimeout(closeForm(item, item.parentNode), 1000);
+                  
+
                 })
         })
     })

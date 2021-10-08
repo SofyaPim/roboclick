@@ -34,7 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   throwItems('tech-support');
   animateHeaders();
 
-
+//   let bodyMessage = document.createElement('div');
+//   bodyMessage.classList.add('afterSubmitMsg');
+// bodyMessage.textContent = 'Спасибо скоро с Вами свяжемся';
+//   document.body.append(bodyMessage);
+  
   let showTimer;
 
   if (+localStorage.getItem('day') - Date.now() < 0) { //запускает таймер на пустой форме?

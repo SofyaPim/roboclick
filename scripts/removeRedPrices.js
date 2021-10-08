@@ -12,9 +12,14 @@ function removeRedPrices() {
         // if (discountPrice) {
         //     discountPrice.remove();
         // }
-        
-        card.previousElementSibling.remove();
-console.log(card.previousElementSibling);
+        try {
+               card.previousElementSibling.remove();
+               console.log(card.previousElementSibling);
+        } catch (error) {
+            console.log('discountPrice is gone')
+        }
+     
+
     })
 
 }
