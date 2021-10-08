@@ -9,13 +9,13 @@ function setRedPrices() {
         price = price.match(pattern).join([]);
         let discountPrice = price - (price * 5) / 100;
         let lowPrice = document.createElement('h2');
-       
+
         lowPrice.innerHTML = `${discountPrice}$`;
-        if(!card.previousElementSibling){
+        if (!card.previousElementSibling) {
             card.insertAdjacentHTML('beforebegin', `<h2 class="lowPrice"> ${discountPrice}$</h2>`);
         }
-         console.log(card.previousElementSibling);
-     //   console.log(newItem);
+        console.log(card.previousElementSibling);
+
         card.style.opacity = .4;
         card.classList.add('lineTrough');
 

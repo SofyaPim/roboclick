@@ -12,10 +12,8 @@ function forms() {
 
     function closeForm(form, overlay) {
 
-
         form.style.cssText = `transform: scale(0);
                                     opacity: 0;`;
-
         setTimeout(() => {
             overlay.style.display = 'none';
         }, 200)
@@ -70,7 +68,7 @@ function forms() {
             })
 
             switch (item.name) {
-                case 'phone':
+                case 'Tелефон':
                     if (!phoneValidate(item)) {
                         let sibling = item.nextElementSibling;
                         addErr();
@@ -78,7 +76,7 @@ function forms() {
                         sibling.style.opacity = 1;
                     }
                     break;
-                case 'name':
+                case 'Имя':
                     if (item.value.length === 0) {
                         let sibling = item.nextElementSibling;
                         addErr();
@@ -94,7 +92,7 @@ function forms() {
                         prev.style.opacity = 1;
                     }
                     break;
-                case 'email':
+                case 'Почта':
                     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(item.value)) {
                         let sibling = item.nextElementSibling;
                         addErr();
@@ -135,16 +133,13 @@ function forms() {
             const locaStorageDay = +localStorage.getItem('day');
             const day = new Date(locaStorageDay);
             let submitDay = day.toString().slice(3, 24);
-
             let inputsForm = item.querySelectorAll('input');
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
-             let bodyMessage = document.createElement('div');
+            let bodyMessage = document.createElement('div');
             bodyMessage.classList.add('afterSubmitMsg');
 
             item.appendChild(statusMessage);
-          //  item.append(statusMessage);
-        
             if (!Validate(inputsForm)) {
                 return;
             }
@@ -154,24 +149,29 @@ function forms() {
                 let tarif = tarifName.innerHTML;
                 let tarifTitle = tarif.slice(22);
                 formData.append("Тариф", tarifTitle);
+                //==in future??!!
+
+                 
             }
+            if(item.querySelector('._discount-price')){
+                let price = item.querySelector('._discount-price').innerHTML;
+                let pattern = /\d+/g;
+                price = price.match(pattern).join([]);
+                formData.append('Цена', price );
+            }
+  
 
             formData.delete('agreement');
             formData.append('Время окончания скидки', submitDay);
+            statusMessage.textContent = message.loading;
 
-             statusMessage.textContent = message.loading;
-
- 
 
             //  !!!==============================
             postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
                 .then(res => {
                     console.log(res);
-                     
                     statusMessage.textContent = message.success;
-                    bodyMessage.textContent = message.success; 
-                  
-            
+                    bodyMessage.textContent = message.success;
 
                 })
                 .catch((err) => {
@@ -186,29 +186,15 @@ function forms() {
                         setInterval(timer, 1000);
                         setRedPrices();
                     }
-                //     statusMessage.style.cssText = `
-                //     position: absolute;
 
-                //     width: 100%;
-                //     height: 50%;
-                //      right: 0;
-                //      top: 0;
-                    
-                //      background-color: #9d9fa500;
-                //      display: flex;
-                //      align-items: center;
-                //   justify-content: center;
-                //   font-size: 4rem;
-
-                //     `;
- document.body.append(bodyMessage);
+                    document.body.append(bodyMessage);
                     setTimeout(() => {
                         statusMessage.remove();
                         bodyMessage.remove();
                     }, 2000);
 
-                   setTimeout(closeForm(item, item.parentNode), 1000);
-                  
+                    setTimeout(closeForm(item, item.parentNode), 1000);
+
 
                 })
         })

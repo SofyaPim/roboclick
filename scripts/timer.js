@@ -5,7 +5,7 @@ function timer() {
     const timer = document.querySelector('.timer-wrapper'),
         currentDay = +localStorage.getItem('day'),
         now = Date.now();
-
+let timerId;
     timer.classList.remove('visually-hidden');
 
 
@@ -56,15 +56,16 @@ function timer() {
         console.log(+localStorage.getItem('day') - Date.now()); //left
 
         runTimer();
+        timerId = setInterval(runTimer, 1000);
 
         timer.classList.remove('visually-hidden');
 
 
     } else {
-
+clearInterval(runTimer);
         timer.classList.add('visually-hidden');
         console.log('call removeRedPrices');
-         removeRedPrices();
+        removeRedPrices();
     }
 
 

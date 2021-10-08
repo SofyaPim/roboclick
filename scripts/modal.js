@@ -8,9 +8,11 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         modalProto = document.querySelectorAll('[data-modal]'),
         messageItems = document.querySelectorAll('span.message'),
         smallHeader = document.createElement('h4'),
+        priceTitle = document.createElement('h5'),
         inputs = document.querySelectorAll('._req'),
         formPopup = document.querySelector('.popup');
-
+        smallHeader.classList.add('_smalHeader');
+        priceTitle.classList.add('_priceTitle');
 
     function clearInputs(items) {
 
@@ -61,8 +63,21 @@ function modal(triggerSelector, modalSelector, closeSelector) {
                 modalHeader.after(smallHeader); //добавление названия тарифа
 
             }
+            if (title.querySelector('.price-title')) {
+               
+                    let oldPrice = title.querySelector('.price-title').innerText;
+                    let pattern = /\d+/g;
+                    oldPrice = oldPrice.match(pattern).join([]);
+let newPrice = oldPrice - (oldPrice * 5) / 100;
+                  priceTitle.innerHTML = ` <p class="_price"> Цена без скидки ${oldPrice}$ </p> <p class="_discount-price"> Цена со скидкой составляет ${newPrice}$ </p> `;
+               
+                  smallHeader.after(priceTitle);
 
+               
+               
 
+            }
+            
             modalProto.forEach(item => {
                 item.style.display = 'none';
             })
