@@ -1,27 +1,30 @@
-function initLazyLoading(root){
-    const lazyEls = [...root.querySelectorAll("[data-img]")];
-    console.log(lazyEls);
+function initLazyLoading(root) {
   
-    lazyEls.forEach((el) => {
-      new IntersectionObserver(
-        (entries) => {
-        
-          if (entries[0].isIntersecting) {
-            const { src } = el.dataset;
-            if (!src) return;
-            if (!el.hasAttribute("src")) {
-              el.setAttribute("src", src);
-              el.removeAttribute("data-img");
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.querySelectorAll('[data-img]')) {
+                    let dataItems = entry.target.querySelectorAll('[data-img]');
+                    dataItems.forEach(el => {
+                        const src = el.dataset.img;
+                        console.log(src);
+                        if (!el.hasAttribute("src")) {
+                            el.setAttribute("src", src);
+                            el.removeAttribute("data-img");
+                        }
+                    })
+                    console.log(dataItems);
+                }
             }
-           
-          } 
-        },
-        {
-          threshold: 0.3
-        }
-      ).observe(el);
-    });
-  };
-  export default initLazyLoading;
-//   initLazyLoading(document.querySelector(".wrapper"));
-  
+        })
+
+    }, {
+        threshold: .1
+    })
+    document.querySelectorAll('section').forEach(item => {
+        observer.observe(item)
+    })
+
+
+};
+export default initLazyLoading;
