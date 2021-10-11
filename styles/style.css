@@ -288,12 +288,6 @@ p {
   text-decoration: line-through;
 }
 
-.commit p {
-  margin: 0;
-  font-size: 0.5rem;
-  color: #5333ed;
-}
-
 .price-title {
   text-align: center;
   transition: opacity 0.3s ease-in;
@@ -566,6 +560,10 @@ p {
 .wrapper .overlay .popup .form-agree span.message {
   position: absolute;
   top: 2.5rem;
+}
+.wrapper .overlay .popup .commit {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 .wrapper .header {
   width: 6.25rem;

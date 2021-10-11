@@ -28,7 +28,15 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
 
     }
+    let discountMessage = modal.querySelector('._discount-message');
+    //     if (+localStorage.getItem('day') - Date.now() < 0 && localStorage.getItem('day') !== null) {
+    //       //  console.log(localStorage.getItem('day'));
 
+    //    // console.log(discountMessage);
+    //     discountMessage.innerHTML = 'Со времени Вашей последней заявки еще не прошел месяц, поэтому скидка на действует'
+    //     }else if(localStorage.getItem('day') === null || +localStorage.getItem('day') - Date.now() > 0) {
+    //         discountMessage.innerHTML = 'Получите скидку 5% при оплате в течении суток после отправления заявки'
+    //     }
     function closeForm(message, form, overlay) {
 
         message.remove();
@@ -47,33 +55,49 @@ function modal(triggerSelector, modalSelector, closeSelector) {
     trigger.forEach(item => {
 
         item.addEventListener('click', (e) => {
+            if (+localStorage.getItem('day') - Date.now() < 0 && localStorage.getItem('day') !== null) {
+                //  console.log(localStorage.getItem('day'));
 
-            let title = item.parentElement.parentElement;
+                // console.log(discountMessage);
+                discountMessage.innerHTML = 'Со времени Вашей последней заявки еще не прошел месяц, поэтому скидка на действует'
+            } else if (localStorage.getItem('day') === null || +localStorage.getItem('day') - Date.now() > 0) {
+                discountMessage.innerHTML = 'Получите скидку 5% при оплате в течении суток после отправления заявки'
+            }
+
+            let triggerParent = item.parentElement.parentElement;
             console.log();
             if (e.target.innerHTML.trim() === 'подробнее' || e.target.innerHTML.trim() === 'заказать обратный звонок') {
                 modalHeader.innerHTML = `Заказать обратный звонок `;
 
             }
 
-            if (title.querySelector('.card-title')) {
+            if (triggerParent.querySelector('.card-title')) {
 
-                let tarifname = title.querySelector('.card-title').innerText;
+                let tarifname = triggerParent.querySelector('.card-title').innerText;
                 smallHeader.innerHTML = `Вы выбрали тариф <br> ${tarifname}`;
                 modalHeader.innerHTML = `Оформление заказа`;
                 modalHeader.after(smallHeader); //добавление названия тарифа
 
             }
-            if (title.querySelector('.price-title')) {
 
-                let oldPrice = title.querySelector('.price-title').innerText;
+
+
+
+
+
+            if (triggerParent.querySelector('.price-title')) {
+
+                let oldPrice = triggerParent.querySelector('.price-title').innerText;
                 let pattern = /\d+/g;
                 oldPrice = oldPrice.match(pattern).join([]);
                 let newPrice = oldPrice - (oldPrice * 5) / 100;
-                if (+localStorage.getItem('day') - Date.now() < 0) {
-                    priceTitle.innerHTML = ` <p class="_price"> Цена без скидки ${oldPrice}$ </p> `;
-                } else {
-                    priceTitle.innerHTML = ` <p class="_price"> Цена без скидки ${oldPrice}$ </p> <p class="_discount-price"> Цена со скидкой составляет ${newPrice}$ </p> `;
+                if (triggerParent.querySelector('.price-title') && +localStorage.getItem('day') - Date.now() < 0 && localStorage.getItem('day') !== null) {
+                    priceTitle.innerHTML = ` <p class="_discount-price"> Цена без скидки ${oldPrice}$ </p> `;
+                } else if (triggerParent.querySelector('.price-title') && +localStorage.getItem('day') - Date.now() > 0 && localStorage.getItem('day') !== null) {
+                    priceTitle.innerHTML = ` <p class="_discount-price"> Цена со скидкой составляет ${newPrice}$ </p> `;
 
+                } else if (triggerParent.querySelector('.price-title') && localStorage.getItem('day') === null) {
+                    priceTitle.innerHTML = ` <p class="_price"> Цена без скидки ${oldPrice}$ </p> <p class="_discount-price"> Цена со скидкой составляет ${newPrice}$ </p> `
                 }
 
                 smallHeader.after(priceTitle);

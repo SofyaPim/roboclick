@@ -1,5 +1,5 @@
 import timer from "./timer.js";
-import setRedPrices from "./setRedPrices.js";
+// import setRedPrices from "./setRedPrices.js";
 
 function forms() {
     const form = document.querySelectorAll('form'),
@@ -120,11 +120,10 @@ function forms() {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            //запускает таймер & setItem
+            // setItem
             if (!localStorage.getItem('day')) {
-                //  let currentDay = Date.now() + 3600000;//hour
-                let currentDay = Date.now() + 300000; //5min
-                //   let currentDay = Date.now() + (3600000 * 24);
+                let discountTime = 60000; //1min //(3600000 * 24)//24hours//3600000 //hour
+                let currentDay = Date.now() + discountTime;
                 localStorage.setItem('day', currentDay.toString());
 
             }
@@ -134,7 +133,7 @@ function forms() {
             const locaStorageDay = +localStorage.getItem('day');
             const day = new Date(locaStorageDay);
             let submitDay = day.toString().slice(3, 24);
-            
+
             let inputsForm = item.querySelectorAll('input');
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
@@ -147,16 +146,16 @@ function forms() {
                 return;
             }
             const formData = new FormData(item);
-            if (item.querySelector('h4')) {
-                let tarifName = item.querySelector('h4');
+            if (item.querySelector('._smalHeader')) {
+                let tarifName = item.querySelector('._smalHeader');
                 let tarif = tarifName.innerHTML;
                 let tarifTitle = tarif.slice(22);
                 formData.append("Тариф", tarifTitle);
-                //==in future??!!
-
 
             }
+
             if (item.querySelector('._discount-price')) {
+
                 let price = item.querySelector('._discount-price').innerHTML;
                 let pattern = /\d+/g;
                 price = price.match(pattern).join([]);
@@ -165,7 +164,13 @@ function forms() {
 
 
             formData.delete('agreement');
-            formData.append('Время окончания скидки', submitDay);
+            if (+localStorage.getItem('day') - Date.now() > 0) {
+                formData.append('Время окончания скидки', submitDay);
+            } else {
+                formData.append('Скидка', 'без скидки');
+            }
+
+
             statusMessage.textContent = message.loading;
 
 
@@ -187,8 +192,7 @@ function forms() {
 
                     if (+localStorage.getItem('day') - Date.now() > 0) {
                         timer();
-                        setInterval(timer, 1000);
-                        setRedPrices();
+
                     }
 
                     document.body.append(bodyMessage);
@@ -196,8 +200,10 @@ function forms() {
                         statusMessage.remove();
                         bodyMessage.remove();
                     }, 2000);
+                    if (!item.classList.contains('feedback-form')) {
+                        setTimeout(closeForm(item, item.parentNode), 1000);
+                    }
 
-                    setTimeout(closeForm(item, item.parentNode), 1000);
 
 
                 })
