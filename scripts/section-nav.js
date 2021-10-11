@@ -1,8 +1,8 @@
 function showSectionName(section, headerNav) {
   document.addEventListener('scroll', () => {
 
-    let pageItem = document.querySelectorAll("[data-section]"),
-      headerTitle = document.querySelector(headerNav),
+    //let pageItem = document.querySelectorAll("[data-section]"),
+    let headerTitle = document.querySelector(headerNav),
       headerLinks = document.querySelector('.nav-bar-links'),
       navBar = document.querySelector('.nav-bar'),
 
@@ -12,21 +12,44 @@ function showSectionName(section, headerNav) {
       l3 = document.querySelector('.line3');
 
 
-    pageItem.forEach((item, ind) => {
+    // pageItem.forEach((item, ind) => {
 
-      if (item.getBoundingClientRect().top < 50 && item.getBoundingClientRect().bottom > 50) {
+    //   if (item.getBoundingClientRect().top < 50 && item.getBoundingClientRect().bottom > 50) {
 
-        headerTitle.textContent = linksItem[ind].innerText;
+    //     headerTitle.textContent = linksItem[ind].innerText;
 
-        if (document.documentElement.clientWidth >= 640) {
-          navBar.classList.remove('transformTransX');
-          document.body.style.overflow = '';
-        } else {
-          document.body.style.overflow = 'hidden';
+    //     if (document.documentElement.clientWidth >= 640) {
+    //       navBar.classList.remove('transformTransX');
+    //       document.body.style.overflow = '';
+    //     } else {
+    //       document.body.style.overflow = 'hidden';
+    //     }
+
+    //   }
+    // });
+
+    let observer = new IntersectionObserver((entries) => {
+
+      entries.forEach((entry, ind) => {
+        if (entry.isIntersecting) {
+          if (entry.target.querySelectorAll('[data-section]')) {
+            headerTitle.textContent = linksItem[ind].innerText;
+            if (document.documentElement.clientWidth >= 640) {
+              navBar.classList.remove('transformTransX');
+              document.body.style.overflow = '';
+            } else {
+              document.body.style.overflow = 'hidden';
+            }
+          }
         }
+      })
 
-      }
-    });
+    }, {
+      threshold: .3
+    })
+    document.querySelectorAll('[data-section]').forEach(item => {
+      observer.observe(item)
+    })
 
 
 
