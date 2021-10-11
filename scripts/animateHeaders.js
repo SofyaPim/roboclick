@@ -10,11 +10,14 @@ function animateHeaders() {
 
                 setTimeout(() => {
                     item.classList.remove('translate');
+                   
 
                 }, 200)
-                setTimeout(() => {
+                 setTimeout(() => {
                     item.classList.remove('opacity');
-                }, 100)
+
+
+                }, 600)
 
                 //item.classList.remove('opacity');
 
