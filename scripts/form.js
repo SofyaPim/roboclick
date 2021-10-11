@@ -5,7 +5,7 @@ function forms() {
     const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('._req');
     const message = {
-        loading: 'Загрузка ...',
+        loading: 'Загрузка...',//  <img src="./images/Spinner.gif"> 
         success: 'Спасибо, скоро с Вами свяжемся',
         failure: 'Что-то пошло не так'
     }
@@ -116,42 +116,32 @@ function forms() {
 
     form.forEach(item => {
 
-
-
         item.addEventListener('submit', (e) => {
-            let inputsForm = item.querySelectorAll('input');
-            let statusMessage = document.createElement('div');
-            let discountTime = 60000; //1min //(3600000 * 24)//24hours//3600000 //hour
-            let currentDay = Date.now() + discountTime;
-            const locaStorageDay = +localStorage.getItem('day');
-            const day = new Date(locaStorageDay);
-            let submitDay = day.toString().slice(3, 24);
-            let bodyMessage = document.createElement('div');
-            bodyMessage.classList.add('afterSubmitMsg');
-            statusMessage.classList.add('status-message');
-            item.appendChild(statusMessage);
             e.preventDefault();
-            if (!Validate(inputsForm)) {
+            let inputsForm = item.querySelectorAll('input');
+             if (!Validate(inputsForm)) {
                 return;
             }
-
-
             //create field time to formData
-
             if (!localStorage.getItem('day')) {
-
+                let discountTime = 60000; //1min //(3600000 * 24)//24hours//3600000 //hour
+                let currentDay = Date.now() + discountTime;
                 localStorage.setItem('day', currentDay.toString());
 
             }
 
+            const locaStorageDay = +localStorage.getItem('day');
+            const day = new Date(locaStorageDay);
+            let submitDay = day.toString().slice(3, 24);
 
-            if (Validate(inputs)) {
+            let statusMessage = document.createElement('div');
+            statusMessage.classList.add('status-message');
 
-            }
+            let bodyMessage = document.createElement('div');
+            bodyMessage.classList.add('afterSubmitMsg');
 
-
-
-
+            item.appendChild(statusMessage);
+           
             const formData = new FormData(item);
             if (item.querySelector('._smalHeader')) {
                 let tarifName = item.querySelector('._smalHeader');
@@ -177,10 +167,8 @@ function forms() {
                 formData.append('Скидка', 'без скидки');
             }
 
-
             statusMessage.textContent = message.loading;
-
-
+           
             //  !!!==============================
             postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
                 .then(res => {

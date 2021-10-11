@@ -6,14 +6,17 @@ function animateHeaders() {
 
             let parent = item.parentNode;
             let parentTop = parent.getBoundingClientRect().top;
-            // console.log(animateItems[3].parentNode.getBoundingClientRect().top);
-            // console.log(animateItems[3]);
             if (parentTop < 600) {
+
                 setTimeout(() => {
                     item.classList.remove('translate');
+
+                }, 200)
+                setTimeout(() => {
+                    item.classList.remove('opacity');
                 }, 100)
 
-
+                //item.classList.remove('opacity');
 
             }
 

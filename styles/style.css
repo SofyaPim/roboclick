@@ -268,8 +268,12 @@ p {
   transform: translateX(100%);
 }
 
+.opacity {
+  opacity: 0;
+}
+
 .animated {
-  transition: transform 0.6s ease-in;
+  transition: transform 0.6s ease-out;
 }
 
 .lineTrough {
@@ -2032,7 +2036,7 @@ p {
     height: 3rem;
   }
   .wrapper .propose {
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 33% 67%;
     grid-template-rows: 25% 75%;
   }
   .wrapper .propose__image {
