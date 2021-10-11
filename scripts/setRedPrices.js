@@ -1,8 +1,6 @@
 function setRedPrices() {
     const priceTitle = document.querySelectorAll('.price-title');
 
-    //  console.log('set red Price');
-
     priceTitle.forEach(card => {
         let price = card.innerHTML;
         let pattern = /\d+/g;
@@ -14,8 +12,7 @@ function setRedPrices() {
         if (!card.previousElementSibling) {
             card.insertAdjacentHTML('beforebegin', `<h2 class="lowPrice"> ${discountPrice}$</h2>`);
         }
-        //  console.log(card.previousElementSibling);
-
+     
         card.style.opacity = .4;
         card.classList.add('lineTrough');
 

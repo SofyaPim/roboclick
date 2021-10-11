@@ -1,5 +1,5 @@
 import timer from "./timer.js";
-// import setRedPrices from "./setRedPrices.js";
+
 
 function forms() {
     const form = document.querySelectorAll('form'),
@@ -105,6 +105,12 @@ function forms() {
             }
         })
         if (err <= 0) {
+            if (!localStorage.getItem('day')) {
+                let discountTime = 60000; //1min //(3600000 * 24)//24hours//3600000 //hour
+                let currentDay = Date.now() + discountTime;
+                localStorage.setItem('day', currentDay.toString());
+
+            }
 
             return true;
 
@@ -119,14 +125,6 @@ function forms() {
 
         item.addEventListener('submit', (e) => {
             e.preventDefault();
-
-            // setItem
-            if (!localStorage.getItem('day')) {
-                let discountTime = 60000; //1min //(3600000 * 24)//24hours//3600000 //hour
-                let currentDay = Date.now() + discountTime;
-                localStorage.setItem('day', currentDay.toString());
-
-            }
 
             //create field time to formData
 
@@ -178,6 +176,7 @@ function forms() {
             postData('./telegram.php', formData) // c ./server.php  проверено // //   - проверено   ./sendmail.php
                 .then(res => {
                     console.log(res);
+
                     statusMessage.textContent = message.success;
                     bodyMessage.textContent = message.success;
 

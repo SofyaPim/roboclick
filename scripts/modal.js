@@ -10,7 +10,8 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         smallHeader = document.createElement('h4'),
         priceTitle = document.createElement('h5'),
         inputs = document.querySelectorAll('._req'),
-        formPopup = document.querySelector('.popup');
+        formPopup = document.querySelector('.popup'),
+         discountMessage = modal.querySelector('._discount-message');
     smallHeader.classList.add('_smalHeader');
     priceTitle.classList.add('_priceTitle');
 
@@ -28,15 +29,8 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
 
     }
-    let discountMessage = modal.querySelector('._discount-message');
-    //     if (+localStorage.getItem('day') - Date.now() < 0 && localStorage.getItem('day') !== null) {
-    //       //  console.log(localStorage.getItem('day'));
+    
 
-    //    // console.log(discountMessage);
-    //     discountMessage.innerHTML = 'Со времени Вашей последней заявки еще не прошел месяц, поэтому скидка на действует'
-    //     }else if(localStorage.getItem('day') === null || +localStorage.getItem('day') - Date.now() > 0) {
-    //         discountMessage.innerHTML = 'Получите скидку 5% при оплате в течении суток после отправления заявки'
-    //     }
     function closeForm(message, form, overlay) {
 
         message.remove();
@@ -56,9 +50,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
         item.addEventListener('click', (e) => {
             if (+localStorage.getItem('day') - Date.now() < 0 && localStorage.getItem('day') !== null) {
-                //  console.log(localStorage.getItem('day'));
-
-                // console.log(discountMessage);
+             
                 discountMessage.innerHTML = 'Со времени Вашей последней заявки еще не прошел месяц, поэтому скидка на действует'
             } else if (localStorage.getItem('day') === null || +localStorage.getItem('day') - Date.now() > 0) {
                 discountMessage.innerHTML = 'Получите скидку 5% при оплате в течении суток после отправления заявки'
@@ -137,7 +129,8 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         errorItems.forEach(item => {
             item.classList.remove('_error');
         })
-
+        smallHeader.remove();
+        priceTitle.remove();
 
         closeForm(smallHeader, formPopup, modal);
 
@@ -148,12 +141,13 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
 
     modal.addEventListener('click', (e) => {
+          let errorItems = document.querySelectorAll('._error');
 
         if (e._clickWithoutModal) {
             return;
         }
 
-        let errorItems = document.querySelectorAll('._error');
+      
 
         errorItems.forEach(item => {
             item.classList.remove('_error');
@@ -173,6 +167,8 @@ function modal(triggerSelector, modalSelector, closeSelector) {
             })
             closeForm(smallHeader, formPopup, modal);
         }
+        smallHeader.remove();
+        priceTitle.remove();
 
     })
 
