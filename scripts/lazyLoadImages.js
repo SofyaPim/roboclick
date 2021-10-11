@@ -1,5 +1,5 @@
-function initLazyLoading(root) {
-  
+function lazyLoadImages(root) {
+  document.querySelector(root);
     let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -13,7 +13,7 @@ function initLazyLoading(root) {
                             el.removeAttribute("data-img");
                         }
                     })
-                    console.log(dataItems);
+                   // console.log(dataItems);
                 }
             }
         })
@@ -27,4 +27,4 @@ function initLazyLoading(root) {
 
 
 };
-export default initLazyLoading;
+export default lazyLoadImages;

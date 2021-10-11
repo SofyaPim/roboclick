@@ -10,7 +10,7 @@ function showSectionName(section, headerNav) {
       l1 = document.querySelector('.line1'),
       l2 = document.querySelector('.line2'),
       l3 = document.querySelector('.line3');
-
+    //console.log(linksItem);
 
     // pageItem.forEach((item, ind) => {
 
@@ -31,6 +31,7 @@ function showSectionName(section, headerNav) {
     let observer = new IntersectionObserver((entries) => {
 
       entries.forEach((entry, ind) => {
+
         if (entry.isIntersecting) {
           if (entry.target.querySelectorAll('[data-section]')) {
             headerTitle.textContent = linksItem[ind].innerText;
@@ -48,10 +49,9 @@ function showSectionName(section, headerNav) {
       threshold: .3
     })
     document.querySelectorAll('[data-section]').forEach(item => {
+      //console.log(item);
       observer.observe(item)
     })
-
-
 
     if (!navBar.classList.contains('transformTransX')) {
       document.body.style.overflow = '';
@@ -59,8 +59,6 @@ function showSectionName(section, headerNav) {
       l1.classList.remove('transform45deg');
       l3.classList.remove('transformMin45deg');
     }
-
-
 
   })
 }

@@ -13,7 +13,7 @@ import timer from "./timer.js";
 import closeMsg from "./closeMessage.js";
 import throwItems from "./throwItems.js";
 import animateHeaders from "./animateHeaders.js";
-import initLazyLoading from "./interSectionObserver.js";
+import lazyLoadImages from "./lazyLoadImages.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,9 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   showDesk('.support-items__card', '[data-desc]');
   throwItems('tech-support');
   animateHeaders();
-
   timer();
-  initLazyLoading(document.querySelector(".wrapper"));
+  lazyLoadImages(".wrapper");
 
   let discountTime = -30000; //86 400 000 //24hours
   function clearLocalStorage() {

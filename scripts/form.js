@@ -105,7 +105,7 @@ function forms() {
             }
         })
         if (err <= 0) {
-          
+
 
             return true;
 
@@ -119,31 +119,39 @@ function forms() {
 
 
         item.addEventListener('submit', (e) => {
+            let inputsForm = item.querySelectorAll('input');
+            let statusMessage = document.createElement('div');
+            let discountTime = 60000; //1min //(3600000 * 24)//24hours//3600000 //hour
+            let currentDay = Date.now() + discountTime;
+            const locaStorageDay = +localStorage.getItem('day');
+            const day = new Date(locaStorageDay);
+            let submitDay = day.toString().slice(3, 24);
+            let bodyMessage = document.createElement('div');
+            bodyMessage.classList.add('afterSubmitMsg');
+            statusMessage.classList.add('status-message');
+            item.appendChild(statusMessage);
             e.preventDefault();
+            if (!Validate(inputsForm)) {
+                return;
+            }
+
 
             //create field time to formData
-              if (!localStorage.getItem('day')) {
-                let discountTime = 60000; //1min //(3600000 * 24)//24hours//3600000 //hour
-                let currentDay = Date.now() + discountTime;
+
+            if (!localStorage.getItem('day')) {
+
                 localStorage.setItem('day', currentDay.toString());
 
             }
 
-            const locaStorageDay = +localStorage.getItem('day');
-            const day = new Date(locaStorageDay);
-            let submitDay = day.toString().slice(3, 24);
 
-            let inputsForm = item.querySelectorAll('input');
-            let statusMessage = document.createElement('div');
-            statusMessage.classList.add('status-message');
+            if (Validate(inputs)) {
 
-            let bodyMessage = document.createElement('div');
-            bodyMessage.classList.add('afterSubmitMsg');
-
-            item.appendChild(statusMessage);
-            if (!Validate(inputsForm)) {
-                return;
             }
+
+
+
+
             const formData = new FormData(item);
             if (item.querySelector('._smalHeader')) {
                 let tarifName = item.querySelector('._smalHeader');
