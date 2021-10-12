@@ -1,5 +1,5 @@
 function lazyLoadImages(root) {
-  document.querySelector(root);
+    document.querySelector(root);
     let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -7,13 +7,13 @@ function lazyLoadImages(root) {
                     let dataItems = entry.target.querySelectorAll('[data-img]');
                     dataItems.forEach(el => {
                         const src = el.dataset.img;
-                        console.log(src);
+                        // console.log(src);
                         if (!el.hasAttribute("src")) {
                             el.setAttribute("src", src);
                             el.removeAttribute("data-img");
                         }
                     })
-                   // console.log(dataItems);
+                    // console.log(dataItems);
                 }
             }
         })

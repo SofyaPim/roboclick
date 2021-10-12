@@ -65,15 +65,15 @@
          left = +localStorage.getItem('day') - Date.now();
          if (left < 0) {
              clearInterval(timerId);
-           
+
              daysVal.textContent = "00";
              hoursVal.textContent = "00";
              minutesVal.textContent = "00";
              secondsVal.textContent = "00";
              setTimeout(() => {
                  timer.classList.add('visually-hidden');
-             },500);
-               
+             }, 500);
+
              removeRedPrices();
          }
 

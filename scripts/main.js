@@ -18,7 +18,7 @@ import lazyLoadImages from "./lazyLoadImages.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  showSectionName('section', '.nav-title');
+  showSectionName();
   showNav('.nav-burger', '.nav-bar');
   modal('.button', '.overlay', '.popup__close', '.tariff-name');
   forms();

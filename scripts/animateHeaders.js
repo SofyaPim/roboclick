@@ -1,29 +1,23 @@
 function animateHeaders() {
-    let animateItems = document.querySelectorAll('.animated');
 
-    window.addEventListener('scroll', () => {
-        animateItems.forEach(item => {
-
-            let parent = item.parentNode;
-            let parentTop = parent.getBoundingClientRect().top;
-            if (parentTop < 600) {
-
-                setTimeout(() => {
-                    item.classList.remove('translate');
-                   
-
-                }, 200)
-                 setTimeout(() => {
-                    item.classList.remove('opacity');
-
-
-                }, 600)
-
-                //item.classList.remove('opacity');
-
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.querySelectorAll('.animated')) {
+                    let headers = entry.target.querySelectorAll('.animated');
+                    headers.forEach(el => {
+                        el.classList.remove('translate');
+                        el.classList.remove('opacity');
+                    })
+                }
             }
-
         })
+
+    }, {
+        threshold: .25
+    })
+    document.querySelectorAll('section').forEach(item => {
+        observer.observe(item)
     })
 
 }
