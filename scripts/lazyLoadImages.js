@@ -19,7 +19,7 @@ function lazyLoadImages(root) {
         })
 
     }, {
-        threshold: .1
+        threshold: .001
     })
     document.querySelectorAll('section').forEach(item => {
         observer.observe(item)
