@@ -2748,6 +2748,7 @@ p {
   }
   .wrapper .prices h2 {
     padding-left: 3rem;
+    padding-top: 2rem;
   }
   .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .price .price-title {
     padding-top: 0;
@@ -2795,8 +2796,12 @@ p {
     right: 1rem;
   }
   .wrapper .faq {
+    grid-template-rows: 20% 80%;
     padding: 1rem;
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
+  }
+  .wrapper .faq h2{
+    padding-top: 2rem;
   }
   .wrapper .faq .faq-wrapper p {
     font-size: 16px;

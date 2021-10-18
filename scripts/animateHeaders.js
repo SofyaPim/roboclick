@@ -22,7 +22,7 @@ function animateHeaders() {
         })
 
     }, {
-        threshold: .25
+        threshold: .2
     })
     document.querySelectorAll('section').forEach(item => {
         observer.observe(item)
