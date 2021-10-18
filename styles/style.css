@@ -155,6 +155,12 @@ p {
     left: 0%;
   }
 }
+.moveUp{
+  transition: padding .3s ease-in;
+}
+.paddingTop{
+  padding-top:3rem;
+}
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -169,13 +175,14 @@ p {
   margin: -1px;
 }
 
+
 .timer-wrapper {
   padding-top: 1rem;
   padding-top: 1rem;
   position: fixed;
   left: 0;
   right: 0;
-  background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #5333ED;
+  background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #047385;
   z-index: 109;
   align-items: center;
   display: flex;
@@ -431,7 +438,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: #5333ed;
+  color: #047385;
   position: absolute;
   overflow: visible;
   margin: auto;
@@ -459,7 +466,7 @@ p {
   font-weight: 700;
 }
 .wrapper .overlay .popup input {
-  border: 1px solid #5333ed;
+  border: 1px solid #047385;
   width: 100%;
   padding: 1vh;
   border-radius: 0.5rem;
@@ -488,8 +495,8 @@ p {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  background-color: #5333ed;
-  border: 1px solid #5333ed;
+  background-color: #047385;
+  border: 1px solid #047385;
   color: #FfFfFE;
   font-size: calc(1rem + .5vw);
   outline: none;
@@ -523,7 +530,7 @@ p {
   align-items: center;
   position: relative;
   font-size: 0.7rem;
-  color: #5333ed;
+  color: #047385;
   padding-left: 1rem;
 }
 .wrapper .overlay .popup .form-agree .checkbox_label .check__input {
@@ -544,7 +551,7 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  border: 1px solid #5333ed;
+  border: 1px solid #047385;
   border-radius: 5px;
   margin-left: -1rem;
   overflow: visible;
@@ -732,14 +739,14 @@ p {
 }
 .wrapper .contacts-header .phone-header .phone-button {
   width: initial;
-  border: 1px solid #5333ed;
+  border: 1px solid #047385;
   background-color: #FfFfFE;
   cursor: pointer;
   padding: 1.5% 3%;
   margin-right: 3%;
   transition-property: background-color, color;
   transition-duration: 0.3s, 0.3s;
-  color: #5333ed;
+  color: #047385;
   font-size: calc(.8rem + .5vw);
 }
 .wrapper .contacts-header .phone-header .phone-button:active {
@@ -750,7 +757,10 @@ p {
 .wrapper .about {
   padding-top: 10%;
   padding-right: 6.25rem;
-  background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #5333ED;
+  /* background: linear-gradient(240.59deg, rgba(105, 176, 249, 0.8) 18.61%, rgba(88, 76, 239, 0.8) 63.63%), #047385; */
+  background-image:url('../images/main.jpg');
+  background-size:cover;
+  background-position: center center;
   color: #FfFfFE;
   position: relative;
   display: grid;
@@ -781,7 +791,7 @@ p {
   width: 24%;
   height: 8%;
   border: 1px solid #FfFfFE;
-  background-color: #5847eecb;
+  background-color: #1cb8d0e7;
   padding: 5% 20%;
   cursor: pointer;
   transition-property: background-color color;
@@ -795,7 +805,7 @@ p {
 }
 .wrapper .about__main .button:active {
   background-color: #FfFfFE;
-  color: #5333ed;
+  color: #047385;
 }
 .wrapper .about__mac-image {
   grid-column: 2/3;
@@ -806,7 +816,7 @@ p {
 }
 .wrapper .about__mac-image .iMac {
   border-radius: 20px;
-  box-shadow: 12px 0px 20px #5333ed;
+  box-shadow: 12px 0px 20px #047385;
 }
 .wrapper .propose {
   padding-bottom: 0%;
@@ -877,7 +887,7 @@ p {
 }
 .wrapper .hints {
   position: relative;
-  background: linear-gradient(180deg, #50D3E8 -50.31%, #5333ED 43.61%);
+  background: linear-gradient(180deg, #50D3E8 -50.31%, #047385 43.61%);
   color: #FfFfFE;
 }
 .wrapper .hints h2 {
@@ -974,7 +984,7 @@ p {
   color: #f54906;
 }
 .wrapper .work-with-us {
-  background: linear-gradient(270deg, rgba(87, 71, 239, 0.8) -16.43%, rgba(122, 216, 231, 0) 46.28%), #50D3E8;
+  background: linear-gradient(270deg, #047385 -16.43%, rgba(122, 216, 231, 0) 46.28%), #50D3E8;
 }
 .wrapper .work-with-us h2 {
   position: relative;
@@ -1118,12 +1128,12 @@ p {
 .wrapper .prices .card-wrapper .wrap .card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
-  border: 1px solid #5333ed;
+  border: 1px solid #047385;
   background-color: #FfFfFE;
   transition: border-color 0.3s ease-in, background-color 0.3s ease-in, color 0.3s ease-in;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
-  color: #5333ed;
+  color: #047385;
   cursor: pointer;
   outline: none;
   margin: auto;
@@ -1244,12 +1254,12 @@ p {
 .wrapper .mobile-prices .mobile-prices-wrapper .mobile-prices-card .card .button {
   box-shadow: initial;
   margin-top: 0.5rem;
-  border: 1px solid #5333ed;
+  border: 1px solid #047385;
   background-color: #FfFfFE;
   transition: border-color 0.3s ease-in, background-color 0.3s ease-in, color 0.3s ease-in;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
-  color: #5333ed;
+  color: #047385;
   cursor: pointer;
   outline: none;
   margin: auto;
@@ -1269,7 +1279,7 @@ p {
   font-size: 2rem;
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #5333ed;
+  border: 1px solid #047385;
   outline: none;
   background-color: #FfFfFE;
   transition: background-color 0.3s ease-in, color 0.3s ease, border 0.3s ease;
@@ -1354,11 +1364,11 @@ p {
   background-color: #FA2061;
 }
 .wrapper .tech-support {
-  background: rgba(202, 194, 194, 0.2);
+  background: #FFFDF3;
   background-image: url("../images/dispather.png");
   background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 60%;
 }
 .wrapper .tech-support__items {
   display: flex;
@@ -1397,7 +1407,7 @@ p {
   overflow: hidden;
 }
 .wrapper .tech-support__items .support-items__card h3 {
-  color: #2cd4d9;
+  color: #047385;
   font-weight: 500;
   font-size: calc(1rem + 1vw);
   text-align: center;
@@ -1433,10 +1443,11 @@ p {
   overflow: hidden;
   position: relative;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 70% 30%;
   grid-template-rows: 10% 90%;
   background: linear-gradient(180.65deg, rgba(21, 136, 156, 0.8) 35.71%, rgba(80, 211, 232, 0.8) 60.95%), #50D3E8;
   color: #FfFfFE;
+ 
 }
 .wrapper .faq h2 {
   grid-column: 1/3;
@@ -1444,14 +1455,20 @@ p {
   color: inherit;
 }
 .wrapper .faq .quest-image {
-  margin-top: 2rem;
-  width: 80%;
-}
-.wrapper .faq .accordion {
   grid-column: 2/3;
   grid-row: 2/3;
+  margin-top: 2rem;
+  width: 80%;
+  
+ position: absolute;
+ bottom: -7rem;
+ right: -7rem;
+}
+.wrapper .faq .accordion {
+  grid-column: 1/2;
+  grid-row: 2/3;
   overflow: hidden;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 }
 .wrapper .faq .accordion__items {
@@ -1895,7 +1912,9 @@ p {
   }
   .wrapper .faq .quest-image {
     margin-top: 2rem;
-    width: 120%;
+    width: 60%; 
+    bottom: -5rem;
+    right: -3.5rem;
   }
   .wrapper .contacts .contacts-items {
     display: flex;
@@ -1936,7 +1955,7 @@ p {
   }
   .wrapper .about__main .button:hover {
     background-color: #FfFfFE;
-    color: #5333ed;
+    color: #047385;
   }
   .wrapper .hints .hint-stages .stage__card .card__icon:hover {
     transform: scale(1.1);
@@ -1975,6 +1994,11 @@ p {
     border: 1px solid #2cd4d9;
     color: #2cd4d9;
     outline: none;
+  }
+  .wrapper .faq .quest-image{
+    width: 70%; 
+    bottom: -4rem;
+    right: -3rem;
   }
   .wrapper .faq .faq-wrapper .faq-item:hover .faq-mark {
     background-image: url("../images/plus.svg");
@@ -2126,9 +2150,9 @@ p {
   .wrapper .tech-support__items .support-items__card:focus {
     transform: scale(1.1);
   }
-  .wrapper .faq .quest-image {
+  /* .wrapper .faq .quest-image {
     width: 150%;
-  }
+  } */
   .wrapper .contacts {
     padding-bottom: 0;
   }
@@ -2548,9 +2572,9 @@ p {
   .wrapper .faq .faq-wrapper .active > .answer-item p {
     padding: 1rem;
   }
-  .wrapper .faq .quest-image {
-    width: 140%;
-  }
+ /* .wrapper .faq .quest-image {
+     width: 140%; 
+  }*/
   .wrapper .faq .accordion {
     grid-column: 1/3;
     grid-row: 2/3;
@@ -2623,7 +2647,7 @@ p {
     display: none;
   }
   .wrapper section.about {
-    background: #5333ed;
+    background: #047385;
   }
   .wrapper .about {
     grid-template-columns: 1fr 1fr;
@@ -2930,9 +2954,9 @@ p {
     margin-left: 7rem;
   }
 
-  .wrapper .faq .quest-image {
-    width: 170%;
-  }
+  /* .wrapper .faq .quest-image {
+    width: 170%; 
+  }*/
 
   .wrapper .faq {
     padding-bottom: 8rem;
